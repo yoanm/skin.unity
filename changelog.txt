@@ -1,4 +1,4 @@
-[B]07/07/2015 - 0.2.6 [ALPHA] [/B]
+[B]12/09/2015 - 0.2.6 [ALPHA] [/B]
 [CLEANUP] Skin Coding
 [CODED] Picture Views
 [CODED] Live TV Views
