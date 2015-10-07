@@ -956,8 +956,8 @@
 			<control type="group">
 				
 				<!--sub menus-->
-				<include condition="!Skin.HasSetting(AutoHideHomepageSubmenu)">skinshortcuts-template-submenu</include>
-				<include condition="Skin.HasSetting(AutoHideHomepageSubmenu)">HomeSubMenu</include>
+				<include condition="Skin.HasSetting(AutoShowHomepageSubmenu)">skinshortcuts-template-submenu</include>
+				<include condition="!Skin.HasSetting(AutoShowHomepageSubmenu)">HomeSubMenu</include>
 				
 			</control>
 			

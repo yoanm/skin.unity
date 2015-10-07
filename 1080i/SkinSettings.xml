@@ -456,14 +456,6 @@
 						<label>$ADDON[script.skinshortcuts 32071]</label>
 					</control>
 					
-					<!--auto hide submenu-->
-					<control type="radiobutton" id="231">
-						<width>995</width>
-						<label>31115</label>
-						<onclick>Skin.ToggleSetting(AutoHideHomepageSubmenu)</onclick>
-						<selected>Skin.HasSetting(AutoHideHomepageSubmenu)</selected>
-					</control>
-					
 					<!--customize skin shortcuts menu-->
 					<control type="button" id="232">
 						<width>995</width>
@@ -478,6 +470,50 @@
 						<label>$ADDON[script.skinshortcuts 32037]</label>
 						<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 						<enable>System.HasAddon(script.skinshortcuts)</enable>
+					</control>
+					
+					<control type="group" id="234">
+						<width>995</width>
+						<height>60</height>
+					
+						<!--auto hide submenu-->
+						<control type="radiobutton" id="231">
+							<left>0</left>
+							<top>0</top>
+							<width>995</width>
+							<onup>233</onup>
+							<ondown>202</ondown>
+							<aligny>top</aligny>
+							<textoffsety>5</textoffsety>
+							<label>31113</label>
+							<onclick>Skin.ToggleSetting(AutoShowHomepageSubmenu)</onclick>
+							<selected>Skin.HasSetting(AutoShowHomepageSubmenu)</selected>
+						</control>
+						
+						<control type="label">
+							<left>30</left>
+							<top>20</top>
+							<width>965</width>
+							<height>40</height>
+							<font>breadcrumb.tertiary</font>
+							<textcolor>$VAR[Colour.500]</textcolor>
+							<aligny>center</aligny>
+							<label>31114</label>
+							<visible>!Control.HasFocus(231)</visible>
+						</control>
+						
+						<control type="label">
+							<left>30</left>
+							<top>20</top>
+							<width>965</width>
+							<height>40</height>
+							<font>breadcrumb.tertiary</font>
+							<textcolor>white</textcolor>
+							<aligny>center</aligny>
+							<label>31114</label>
+							<visible>Control.HasFocus(231)</visible>
+						</control>
+					
 					</control>
 					
 				</control>

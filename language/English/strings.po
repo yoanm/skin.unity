@@ -291,11 +291,15 @@ msgctxt "#31112"
 msgid "Options"
 msgstr ""
 
-#empty strings from id 31113 to 31114
-
-msgctxt "#31115"
-msgid "Auto-hide the Sub-menu"
+msgctxt "#31113"
+msgid "Auto-show the Sub-menu"
 msgstr ""
+
+msgctxt "#31114"
+msgid "WARNING: This option requires skinshortscuts 0.6.0 or greater from Git"
+msgstr ""
+
+#empty string with id 31115
 
 msgctxt "#31116"
 msgid "Show Recently added Albums"
