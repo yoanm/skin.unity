@@ -1,3 +1,6 @@
+[B]07/10/2015 - 0.2.8 [/B]
+[FIXED] Submenu default reversed since new submenu requires git version of skinshortcuts
+
 [B]06/10/2015 - 0.2.7 [/B]
 [CLEANUP] Remove Skin Debug Aids
 [CODED] RSS Editor
