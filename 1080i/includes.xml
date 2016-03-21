@@ -1359,14 +1359,14 @@
 			<height>68</height>
 			<defaultcontrol always="true">603</defaultcontrol>
 			<control type="button" id="600">
-				<left>0</left>
-				<top>3</top>
-				<width>58</width>
-				<height>58</height>
+				<left>30</left>
+				<top>8</top>
+				<width>48</width>
+				<height>48</height>
 				<label>-</label>
 				<texturefocus colordiffuse="$VAR[Colour.500]">OSDPrevTrackNF.png</texturefocus>
 				<texturenofocus colordiffuse="text.primary">OSDPrevTrackNF.png</texturenofocus>
-				<onleft>50</onleft>
+				<onleft>605</onleft>
 				<onright>606</onright>
 				<onup>610</onup>
 				<ondown>611</ondown>
@@ -1374,10 +1374,10 @@
 				<onclick>XBMC.PlayerControl(Previous)</onclick>
 			</control>
 			<control type="button" id="606">
-				<left>58</left>
-				<top>3</top>
-				<width>58</width>
-				<height>58</height>
+				<left>80</left>
+				<top>8</top>
+				<width>48</width>
+				<height>48</height>
 				<label>-</label>
 				<texturefocus colordiffuse="$VAR[Colour.500]">OSDRewindNF.png</texturefocus>
 				<texturenofocus colordiffuse="text.primary">OSDRewindNF.png</texturenofocus>
@@ -1390,12 +1390,12 @@
 				<visible>Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo</visible>
 			</control>
 			<control type="group">
-				<animation effect="slide" start="0,0" end="58,0" time="0" condition="Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo">Conditional</animation>
+				<animation effect="slide" start="0,0" end="50,0" time="0" condition="Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo">Conditional</animation>
 				<control type="togglebutton" id="603">
-					<left>58</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>80</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<label>-</label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDPauseNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDPauseNF.png</texturenofocus>
@@ -1410,10 +1410,10 @@
 					<onclick>XBMC.PlayerControl(Play)</onclick>
 				</control>
 				<control type="button" id="601">
-					<left>116</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>130</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<label>-</label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDStopNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDStopNF.png</texturenofocus>
@@ -1426,10 +1426,10 @@
 					<onclick>XBMC.PlayerControl(Stop)</onclick>
 				</control>
 				<control type="button" id="607">
-					<left>174</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>180</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<label>-</label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDForwardNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDForwardNF.png</texturenofocus>
@@ -1442,10 +1442,11 @@
 					<visible>Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo</visible>
 				</control>
 				<control type="button" id="602">
-					<left>174</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<animation effect="slide" start="0,0" end="50,0" time="0" condition="Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo">Conditional</animation>
+					<left>180</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<label>-</label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDNextTrackNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDNextTrackNF.png</texturenofocus>
@@ -1455,16 +1456,15 @@
 					<ondown>611</ondown>
 					<onback>50</onback>
 					<onclick>XBMC.PlayerControl(Next)</onclick>
-					<animation effect="slide" start="0,0" end="58,0" time="0" condition="Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo">Conditional</animation>
 				</control>
 			</control>
 			<control type="group">
 				<visible>!Window.IsVisible(MusicPlaylist) + !Window.IsVisible(VideoPlaylist) + !Player.HasVideo</visible>
 				<control type="button" id="604">
-					<left>232</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>230</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<label>-</label>
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
@@ -1476,64 +1476,64 @@
 					<onback>50</onback>
 				</control>
 				<control type="image">
-					<left>232</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>230</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<texture colordiffuse="text.primary">OSDRepeatNF.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 					<visible>!Control.HasFocus(604)</visible>
 				</control>
 				<control type="image">
-					<left>232</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>230</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<texture colordiffuse="$VAR[Colour.500]">OSDRepeatNF.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 					<visible>Control.HasFocus(604)</visible>
 				</control>
 				<control type="image">
-					<left>232</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>230</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<texture colordiffuse="text.primary">OSDRepeatOneNF.png</texture>
 					<visible>Playlist.IsRepeatOne</visible>
 					<visible>!Control.HasFocus(604)</visible>
 				</control>
 				<control type="image">
-					<left>232</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>230</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<texture colordiffuse="$VAR[Colour.500]">OSDRepeatOneNF.png</texture>
 					<visible>Playlist.IsRepeatOne</visible>
 					<visible>Control.HasFocus(604)</visible>
 				</control>
 				<control type="image">
-					<left>232</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>230</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<texture colordiffuse="text.primary">OSDRepeatAllNF.png</texture>
 					<visible>Playlist.IsRepeat</visible>
 					<visible>!Control.HasFocus(604)</visible>
 				</control>
 				<control type="image">
-					<left>232</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>230</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<texture colordiffuse="$VAR[Colour.500]">OSDRepeatAllNF.png</texture>
 					<visible>Playlist.IsRepeat</visible>
 					<visible>Control.HasFocus(604)</visible>
 				</control>
 				<control type="togglebutton" id="605">
-					<left>290</left>
-					<top>3</top>
-					<width>58</width>
-					<height>58</height>
+					<left>280</left>
+					<top>8</top>
+					<width>48</width>
+					<height>48</height>
 					<label>-</label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDRandomOffNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDRandomOffNF.png</texturenofocus>
