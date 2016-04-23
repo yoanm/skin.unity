@@ -55,7 +55,6 @@
 		<!--main content-->
 		<control type="group">
 			<top>205</top>
-			<left>-265</left>
 			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			
@@ -63,60 +62,38 @@
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">Hidden</animation>
 			
 			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))">Conditional</animation>
-						
+			
 			<!--title bars and backgrounds-->
-			<control type="group">
+			<include name="DynamicDialogBackground">
+				<param name="dialog-left" value="265" />
+				<param name="dialog-width" value="1390" />
+				<param name="dialog-height" value="783" />
+				<param name="glow-width" value="1470" />
+				<param name="glow-height" value="863" />
+				<param name="sidebar-visible" value="true" />
+			</include>
 			
-				<!--background glow-->
-				<control type="image">
-					<left>495</left>
-					<top>-40</top>
-					<width>1470</width>
-					<height>1140</height>
-					<texture>backgrounds/settings bg.png</texture>
-				</control>
-			
-				<!--background-->
-				<control type="image">
-					<left>535</left>
-					<top>0</top>
-					<width>1390</width>
-					<height>783</height>
-					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-				</control>
-					
-				<!--title background-->
-				<control type="image">
-					<left>535</left>
-					<top>0</top>
-					<width>1390</width>
-					<height>115</height>
-					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-				</control>
-				
-				<!--close window button-->
-				<control type="button">
-					<left>540</left>
-					<top>0</top>
-					<width>50</width>
-					<height>25</height>
-					<label>-</label>
-					<font>-</font>
-					<onclick>PreviousMenu</onclick>
-					<texturefocus>DialogCloseButton-focus.png</texturefocus>
-					<texturenofocus>DialogCloseButton.png</texturenofocus>
-					<onleft>9000</onleft>
-					<onright>9000</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-					<visible>system.getbool(input.enablemouse)</visible>
-				</control>
-				
+			<!--close window button-->
+			<control type="button">
+				<left>270</left>
+				<top>0</top>
+				<width>50</width>
+				<height>25</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			
 			<!--title-->
 			<control type="label">
-				<left>580</left>
+				<left>310</left>
 				<top>25</top>
 				<width>1545</width>
 				<height>60</height>
@@ -127,39 +104,10 @@
 				<label>$ADDON[service.openelec.settings 600]</label>
 			</control>
 			
-			<!--side bar-->
-			<control type="image">
-				<left>535</left>
-				<top>115</top>
-				<width>375</width>
-				<height>668</height>
-				<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
-			</control>
-			
-			<!--side blade shadow-->
-			<control type="image">
-				<left>909</left>
-				<top>115</top>
-				<width>20</width>
-				<height>668</height>
-				<texture>sidebarshadow.png</texture>
-				<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
-			</control>
-			
-			<!--title shadow-->
-			<control type="image">
-				<left>535</left>
-				<top>115</top>
-				<width>1390</width>
-				<height>20</height>
-				<texture>homeshadow.png</texture>
-				<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
-			</control>
-			
 			<!--left buttons-->
 			<control type="list" id="1000">
-				<left>545</left>
-				<top>125</top>
+				<left>275</left>
+				<top>120</top>
 				<width>390</width>
 				<height>520</height>
 				<onleft>1500</onleft>
@@ -214,19 +162,19 @@
 			
 			<!--logo-->
 			<control type="image">
-				<left>565</left>
+				<left>295</left>
 				<top>650</top>
 				<width>330</width>
 				<height>120</height>
 				<aspectratio>keep</aspectratio>
-				<texture>openelec/Logo.png</texture>
+				<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/$INFO[Container(5533).Property(DIST_MEDIA)]/Logo.png</texture>
 			</control>
 			
 			<!--scrollbar-->
 			<control type="scrollbar" id="1097">
-				<left>1935</left>
-				<top>115</top>
-				<height>668</height>
+				<left>1665</left>
+				<top>110</top>
+				<height>673</height>
 				<onleft>1100</onleft>
 				<onright>1500</onright>
 				<visible>StringCompare(Container(1000).ListItem.Property(listTyp), 1100)</visible>
@@ -234,9 +182,9 @@
 			
 			<!--scrollbar-->
 			<control type="scrollbar" id="1098">
-				<left>1935</left>
-				<top>115</top>
-				<height>668</height>
+				<left>1665</left>
+				<top>110</top>
+				<height>673</height>
 				<onleft>1200</onleft>
 				<onright>1500</onright>
 				<visible>StringCompare(Container(1000).ListItem.Property(listTyp), 1200)</visible>
@@ -244,9 +192,9 @@
 			
 			<!--scrollbar-->
 			<control type="scrollbar" id="1099">
-				<left>1935</left>
-				<top>115</top>
-				<height>668</height>
+				<left>1665</left>
+				<top>110</top>
+				<height>673</height>
 				<onleft>1300</onleft>
 				<onright>1500</onright>
 				<visible>StringCompare(Container(1000).ListItem.Property(listTyp), 1300)</visible>
@@ -254,10 +202,10 @@
 			
 			<!-- Other Content (right)-->
 			<control type="group">
-				<left>920</left>
-				<top>125</top>
+				<left>650</left>
+				<top>120</top>
 				<width>995</width>
-				<height>648</height>
+				<height>653</height>
 				
 				<!-- About -->
 				<control type="group" id="1900">
@@ -272,7 +220,7 @@
 						<top>15</top>
 						<width>256</width>
 						<height>256</height>
-						<texture border="1">openelec/icon.png</texture>
+						<texture border="1">special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/default/icon.png</texture>
 					</control>
 					
 					<control type="label">
@@ -349,7 +297,7 @@
 						<top>140</top>
 						<width>700</width>
 						<height>3</height>
-						<texture>openelec/blue_line.png</texture>
+						<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/default/blue_line.png</texture>
 					</control>
 					
 					<control type="textbox">
@@ -484,7 +432,7 @@
 								<width>33</width>
 								<height>33</height>
 								<aspectratio>keep</aspectratio>
-								<texture border="5">openelec/do.png</texture>
+								<texture border="5">special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/do.png</texture>
 							</control>
 							
 						</control>
@@ -635,7 +583,7 @@
 								<width>33</width>
 								<height>33</height>
 								<aspectratio>keep</aspectratio>
-								<texture border="5">openelec/do.png</texture>
+								<texture border="5">special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/do.png</texture>
 							</control>
 							
 						</control>
@@ -666,7 +614,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(netType), ethernet)</visible>
-							<texture>openelec/eth.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/eth.png</texture>
 						</control>
 						
 						<!-- Icon wifi -->
@@ -677,7 +625,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(netType), wifi)</visible>
-							<texture>openelec/wlan.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/wlan.png</texture>
 						</control>
 						
 						<!-- Connection Name -->
@@ -769,7 +717,7 @@
 							<height>54</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(State), online)</visible>
-							<texture>openelec/connected.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/connected.png</texture>
 						</control>
 						
 						<!-- Favorite Symbol (bottom right) -->
@@ -780,7 +728,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Favorite), 1)</visible>
-							<texture>openelec/Favorite.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/Favorite.png</texture>
 						</control>
 						
 						<!-- Secure Symbol (bottom right) -->
@@ -791,7 +739,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<visible>IntegerGreaterThan(ListItem.Property(Security), 0)</visible>
-							<texture>openelec/Key.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/Key.png</texture>
 						</control>
 						
 					</itemlayout>
@@ -815,7 +763,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(netType), ethernet)</visible>
-							<texture>openelec/eth.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/eth.png</texture>
 						</control>
 						
 						<!-- Icon wifi -->
@@ -826,7 +774,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(netType), wifi)</visible>
-							<texture>openelec/wlan.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/wlan.png</texture>
 						</control>
 						
 						<control type="group">
@@ -1010,7 +958,7 @@
 							<height>54</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(State), online)</visible>
-							<texture>openelec/connected.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/connected.png</texture>
 						</control>
 						
 						<!-- Favorite Symbol (bottom right) -->
@@ -1021,7 +969,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Favorite), 1)</visible>
-							<texture>openelec/Favorite.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/Favorite.png</texture>
 						</control>
 						
 						<!-- Secure Symbol (bottom right) -->
@@ -1032,7 +980,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<visible>IntegerGreaterThan(ListItem.Property(Security), 0)</visible>
-							<texture>openelec/Key.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/Key.png</texture>
 						</control>
 						
 					</focusedlayout>
@@ -1072,7 +1020,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), default)</visible>
-							<texture>openelec/bt.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt.png</texture>
 						</control>
 						
 						<!-- modem -->
@@ -1083,7 +1031,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), modem)</visible>
-							<texture>openelec/bt-modem.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-modem.png</texture>
 						</control>
 						
 						<!-- audio -->
@@ -1094,7 +1042,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), audio-card)</visible>
-							<texture>openelec/bt-audio-card.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-audio-card.png</texture>
 						</control>
 						
 						<!-- Camera Photo -->
@@ -1105,7 +1053,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), camera-photo)</visible>
-							<texture>openelec/bt-camera-photo.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-camera-photo.png</texture>
 						</control>
 						
 						<!-- Icon phone -->
@@ -1116,7 +1064,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), phone)</visible>
-							<texture>openelec/bt-phone.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-phone.png</texture>
 						</control>
 						
 						<!-- camera-video -->
@@ -1127,7 +1075,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), camera-video)</visible>
-							<texture>openelec/bt-camera-video.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-camera-video.png</texture>
 						</control>
 						
 						<!-- input-mouse -->
@@ -1138,7 +1086,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), input-mouse)</visible>
-							<texture>openelec/bt-input-mouse.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-input-mouse.png</texture>
 						</control>
 						
 						<!-- input-gaming -->
@@ -1149,7 +1097,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), input-gaming)</visible>
-							<texture>openelec/bt-input-gaming.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-input-gaming.png</texture>
 						</control>
 						
 						<!-- input-keyboard -->
@@ -1160,7 +1108,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), input-keyboard)</visible>
-							<texture>openelec/bt-input-keyboard.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-input-keyboard.png</texture>
 						</control>
 						
 						<!-- input-tablet -->
@@ -1171,7 +1119,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), input-tablet)</visible>
-							<texture>openelec/bt-input-tablet.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-input-tablet.png</texture>
 						</control>
 						
 						<!-- Printer -->
@@ -1182,7 +1130,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), printer)</visible>
-							<texture>openelec/bt-printer.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-printer.png</texture>
 						</control>
 						
 						<!-- Computer -->
@@ -1193,7 +1141,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), computer)</visible>
-							<texture>openelec/bt-computer.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-computer.png</texture>
 						</control>
 						
 						<!-- Connection Name -->
@@ -1238,7 +1186,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Paired), 1)</visible>
-							<texture>openelec/Favorite.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/Favorite.png</texture>
 						</control>
 						
 						<!-- Trusted Symbol (bottom right) -->
@@ -1249,7 +1197,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<visible>IntegerGreaterThan(ListItem.Property(Trusted), 0)</visible>
-							<texture>openelec/Key.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/Key.png</texture>
 						</control>
 						
 					</itemlayout>
@@ -1273,7 +1221,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), default)</visible>
-							<texture>openelec/bt.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt.png</texture>
 						</control>
 						
 						<!-- modem -->
@@ -1284,7 +1232,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), modem)</visible>
-							<texture>openelec/bt-modem.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-modem.png</texture>
 						</control>
 						
 						<!-- audio -->
@@ -1295,7 +1243,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), audio-card)</visible>
-							<texture>openelec/bt-audio-card.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-audio-card.png</texture>
 						</control>
 						
 						<!-- Camera Photo -->
@@ -1306,7 +1254,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), camera-photo)</visible>
-							<texture>openelec/bt-camera-photo.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-camera-photo.png</texture>
 						</control>
 						
 						<!-- Icon phone -->
@@ -1317,7 +1265,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), phone)</visible>
-							<texture>openelec/bt-phone.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-phone.png</texture>
 						</control>
 						
 						<!-- camera-video -->
@@ -1328,7 +1276,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), camera-video)</visible>
-							<texture>openelec/bt-camera-video.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-camera-video.png</texture>
 						</control>
 						
 						<!-- input-mouse -->
@@ -1339,7 +1287,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), input-mouse)</visible>
-							<texture>openelec/bt-input-mouse.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-input-mouse.png</texture>
 						</control>
 						
 						<!-- input-gaming -->
@@ -1350,7 +1298,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), input-gaming)</visible>
-							<texture>openelec/bt-input-gaming.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-input-gaming.png</texture>
 						</control>
 						
 						<!-- input-keyboard -->
@@ -1361,7 +1309,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), input-keyboard)</visible>
-							<texture>openelec/bt-input-keyboard.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-input-keyboard.png</texture>
 						</control>
 						
 						<!-- input-tablet -->
@@ -1372,7 +1320,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), input-tablet)</visible>
-							<texture>openelec/bt-input-tablet.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-input-tablet.png</texture>
 						</control>
 						
 						<!-- Printer -->
@@ -1383,7 +1331,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), printer)</visible>
-							<texture>openelec/bt-printer.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-printer.png</texture>
 						</control>
 						
 						<!-- Computer -->
@@ -1394,7 +1342,7 @@
 							<height>72</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Icon), computer)</visible>
-							<texture>openelec/bt-computer.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/bt-computer.png</texture>
 						</control>
 						
 						<!-- Connection Name -->
@@ -1477,7 +1425,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<visible>StringCompare(ListItem.Property(Paired), 1)</visible>
-							<texture>openelec/Favorite.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/Favorite.png</texture>
 						</control>
 						
 						<!-- Trusted Symbol (bottom right) -->
@@ -1488,7 +1436,7 @@
 							<height>30</height>
 							<aspectratio>keep</aspectratio>
 							<visible>IntegerGreaterThan(ListItem.Property(Trusted), 0)</visible>
-							<texture>openelec/Key.png</texture>
+							<texture>special://xbmc/addons/service.openelec.settings/resources/skins/Default/media/icons/Key.png</texture>
 						</control>
 						
 					</focusedlayout>
@@ -1502,7 +1450,7 @@
 			
 				<!--seperator-->
 				<control type="image">
-					<left>930</left>
+					<left>660</left>
 					<top>720</top>
 					<width>975</width>
 					<height>1</height>
@@ -1512,7 +1460,7 @@
 				
 				<!--setting description-->
 				<control type="textbox" id="1400">
-					<left>935</left>
+					<left>665</left>
 					<top>727</top>
 					<width>960</width>
 					<height>50</height>
@@ -1525,7 +1473,7 @@
 			</control>
 			
 			<control type="button" id="1504">
-				<left>1280</left>
+				<left>1010</left>
 				<top>635</top>
 				<width>270</width>
 				<height>60</height>
@@ -1541,7 +1489,7 @@
 			</control>
 			
 			<control type="button" id="1503">
-				<left>1590</left>
+				<left>1320</left>
 				<top>635</top>
 				<width>270</width>
 				<height>60</height>
@@ -1557,7 +1505,7 @@
 			</control>
 			
 			<control type="button" id="1502">
-				<left>1590</left>
+				<left>1320</left>
 				<top>705</top>
 				<width>270</width>
 				<height>60</height>
@@ -1573,7 +1521,7 @@
 			</control>
 			
 			<control type="button" id="1501">
-				<left>1280</left>
+				<left>1010</left>
 				<top>705</top>
 				<width>270</width>
 				<height>60</height>
@@ -1589,7 +1537,7 @@
 			</control>
 			
 			<control type="button" id="1500">
-				<left>970</left>
+				<left>700</left>
 				<top>705</top>
 				<width>270</width>
 				<height>60</height>
