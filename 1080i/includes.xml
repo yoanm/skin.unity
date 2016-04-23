@@ -359,6 +359,153 @@
 		<pulseonselect>false</pulseonselect>
 	</include>
 	
+	<include name="DynamicDialogBackground">
+		<param name="dialog-left" default="0" />
+		<param name="dialog-top" default="0" />
+		<param name="dialog-width" default="1920" />
+		<param name="dialog-height" default="1080" />
+		<param name="glow-width" default="2000" />
+		<param name="glow-height" default="1160" />
+		<param name="title-height" default="110" />
+		<param name="subtitle-visible" default="false" />
+		<param name="subtitle-height" default="80" />
+		<param name="sidebar-visible" default="false" />
+		<param name="sidebar-width" default="375" />
+		<param name="buttonbar-visible" default="false" />
+		<param name="buttonbar-top" default="1010" />
+		<param name="buttonbar-height" default="70" />
+		<param name="background-visible" default="false" />
+		<param name="background-image" default="special://skin/backgrounds/settings.jpg" />
+		<definition>
+			<control type="group">
+				<left>$PARAM[dialog-left]</left>
+				<top>$PARAM[dialog-top]</top>
+				
+				<!--background glow-->
+				<control type="image">
+					<left>-40</left>
+					<top>-40</top>
+					<width>$PARAM[glow-width]</width>
+					<height>$PARAM[glow-height]</height>
+					<texture background="true" border="40,40,40,40">backgrounds/dialog bg.png</texture>
+				</control>
+			
+				<!--background-->
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>$PARAM[dialog-width]</width>
+					<height>$PARAM[dialog-height]</height>
+					<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
+				</control>
+				
+				<!--background image-->
+				<control type="image">
+					<visible>$PARAM[background-visible]</visible>
+					<left>0</left>
+					<top>0</top>
+					<width>$PARAM[dialog-width]</width>
+					<height>$PARAM[dialog-height]</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true">$PARAM[background-image]</texture>
+				</control>
+				
+				<control type="group">
+					<visible>$PARAM[sidebar-visible]</visible>
+				
+					<!--side bar-->
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>$PARAM[sidebar-width]</width>
+						<height>$PARAM[dialog-height]</height>
+						<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
+					</control>
+				
+					<!--side blade shadow-->
+					<control type="image">
+						<left>$PARAM[sidebar-width]</left>
+						<top>0</top>
+						<width>20</width>
+						<height>$PARAM[dialog-height]</height>
+						<texture background="true">sidebarshadow.png</texture>
+						<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
+					</control>
+					
+				</control>
+				
+				<control type="group">
+					<visible>$PARAM[subtitle-visible]</visible>
+					<top>$PARAM[title-height]</top>
+				
+					<!--subtitle background-->
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>$PARAM[dialog-width]</width>
+						<height>$PARAM[subtitle-height]</height>
+						<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
+					</control>
+					
+					<!--subtitle shadow-->
+					<control type="image">
+						<left>0</left>
+						<top>$PARAM[subtitle-height]</top>
+						<width>$PARAM[dialog-width]</width>
+						<height>20</height>
+						<texture background="true">homeshadow.png</texture>
+						<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
+					</control>
+					
+				</control>
+				
+				<!--title background-->
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>$PARAM[dialog-width]</width>
+					<height>$PARAM[title-height]</height>
+					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
+				</control>
+				
+				<!--title shadow-->
+				<control type="image">
+					<left>0</left>
+					<top>$PARAM[title-height]</top>
+					<width>$PARAM[dialog-width]</width>
+					<height>20</height>
+					<texture background="true">homeshadow.png</texture>
+					<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
+				</control>
+				
+				<control type="group">
+					<visible>$PARAM[buttonbar-visible]</visible>
+				
+					<!--buttons bg-->
+					<control type="image">
+						<left>0</left>
+						<top>$PARAM[buttonbar-top]</top>
+						<width>$PARAM[dialog-width]</width>
+						<height>$PARAM[buttonbar-height]</height>
+						<texture background="true" colordiffuse="primary">backgrounds/white.png</texture>
+					</control>
+			
+					<!--buttons shadow-->
+					<control type="image">
+						<left>0</left>
+						<top>$PARAM[buttonbar-top]</top>
+						<width>$PARAM[dialog-width]</width>
+						<height>10</height>
+						<texture background="true">homeshadow.png</texture>
+						<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
+					</control>
+					
+				</control>
+				
+			</control>
+		</definition>
+	</include>
+	
 	<include name="AnimatedCircleButtonGroup">
 		<param name="button-id" />
 		<param name="button-width" />
