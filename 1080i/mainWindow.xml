@@ -162,7 +162,7 @@
 			
 			<!--logo-->
 			<control type="image">
-				<left>295</left>
+				<left>287</left>
 				<top>650</top>
 				<width>330</width>
 				<height>120</height>
