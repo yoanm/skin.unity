@@ -57,7 +57,7 @@
 			<width>1920</width>
 			<height>1080</height>
 			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
-			<visible>IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
+			<visible>IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 		</control>
 		<control type="image">
 			<left>0</left>

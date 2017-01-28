@@ -4,7 +4,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(510)</visible>
 			<include>VisibleFadeEffect</include>
-			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
 			<left>0</left>
 			<top>660</top>
 			<control type="wraplist" id="510">
