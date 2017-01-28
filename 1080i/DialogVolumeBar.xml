@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-
 	<defaultcontrol>1</defaultcontrol>
-	
 	<controls>
-		
 		<!--all content-->
 		<control type="group">
 			<left>529r</left>
@@ -13,7 +9,6 @@
 			<animation effect="slide" start="0,0" end="-100,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
 			<animation effect="slide" start="0,0" end="-40,0" time="0" condition="SubString(System.Time,am) | SubString(System.Time,pm)">Conditional</animation>
-			
 			<!--glow-->
 			<control type="image">
 				<left>-10</left>
@@ -22,7 +17,6 @@
 				<height>65</height>
 				<texture colordiffuse="tertiary">backgrounds/volume.png</texture>
 			</control>
-			
 			<!--background-->
 			<control type="image">
 				<left>0</left>
@@ -31,11 +25,9 @@
 				<height>45</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-			
 			<!--normal audio-->
 			<control type="group">
 				<visible>!player.passthrough</visible>
-				
 				<!--volume icon-->
 				<control type="image">
 					<left>304</left>
@@ -45,7 +37,6 @@
 					<aspectratio>keep</aspectratio>
 					<texture colordiffuse="text.primary">VolumeIcon.png</texture>
 				</control>
-				
 				<!--volume bar-->
 				<control type="progress" id="1">
 					<left>10</left>
@@ -54,13 +45,10 @@
 					<height>7</height>
 					<info>Player.Volume</info>
 				</control>
-				
 			</control>
-			
 			<!--passthrough audio-->
 			<control type="group">
 				<visible>player.passthrough</visible>
-				
 				<!--volume icon-->
 				<control type="image">
 					<left>304</left>
@@ -70,7 +58,6 @@
 					<aspectratio>keep</aspectratio>
 					<texture colordiffuse="text.primary">VolumeIcon.png</texture>
 				</control>
-				
 				<control type="label">
 					<description>Passthrough Label</description>
 					<left>-45</left>
@@ -83,11 +70,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 				</control>
-				
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>

@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include name="PictureWrapView">
-	
 		<control type="group">
 			<visible>Control.IsVisible(510)</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))">Conditional</animation>
 			<left>0</left>
 			<top>660</top>
-			
 			<control type="wraplist" id="510">
 				<left>-38</left>
 				<top>8</top>
@@ -25,9 +22,7 @@
 				<focusposition>3</focusposition>
 				<orientation>horizontal</orientation>
 				<preloaditems>4</preloaditems>
-				
 				<itemlayout height="300" width="285">
-				
 					<control type="image">
 						<left>22</left>
 						<top>60</top>
@@ -39,7 +34,6 @@
 						<fadetime>200</fadetime>
 						<texture border="2">ThumbBG.png</texture>
 					</control>
-					
 					<control type="image">
 						<left>38</left>
 						<top>75</top>
@@ -48,11 +42,8 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="300" width="285">
-				
 					<control type="image">
 						<left>22</left>
 						<top>60</top>
@@ -66,7 +57,6 @@
 						<animation reversible="false" effect="zoom" start="22,60,160,160" end="-15,-8,210,210" time="200">focus</animation>
 						<animation reversible="false" effect="zoom" end="22,60,160,160" start="-15,-8,210,210" time="200">unfocus</animation>
 					</control>
-					
 					<control type="image">
 						<left>38</left>
 						<top>75</top>
@@ -77,11 +67,8 @@
 						<animation reversible="false" effect="zoom" start="38,75,140,140" end="8,15,180,180" time="200">focus</animation>
 						<animation reversible="false" effect="zoom" end="38,75,140,140" start="8,15,180,180" time="200">unfocus</animation>
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<control type="scrollbar" id="60">
 				<left>465</left>
 				<top>320</top>
@@ -93,17 +80,12 @@
 				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(510)</visible>
 			</control>
-			
 		</control>
-		
 	</include>
-	
 	<include name="PictureThumbView">
-	
 		<!--all content-->
 		<control type="group">
 			<visible>Control.IsVisible(514)</visible>
-			
 			<!--content list-->
 			<control type="panel" id="514">
 				<left>90</left>
@@ -118,9 +100,7 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<preloaditems>2</preloaditems>
-				
 				<itemlayout height="200" width="200">
-				
 					<!--background (fallback)-->
 					<control type="image">
 						<left>0</left>
@@ -132,7 +112,6 @@
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/square shadow small.png</bordertexture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-
 					<!--background (no fallback)-->
 					<control type="image">
 						<left>0</left>
@@ -144,7 +123,6 @@
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/square shadow small.png</bordertexture>
 						<visible>!SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 					<!--icon (fallback)-->
 					<control type="image">
 						<left>5</left>
@@ -154,7 +132,6 @@
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[Listitem.Icon]</texture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-				
 					<!--icon (no fallback)-->
 					<control type="image">
 						<left>5</left>
@@ -165,11 +142,8 @@
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 						<visible>!SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="200" width="200">
-				
 					<!--background (fallback)-->
 					<control type="image">
 						<left>0</left>
@@ -181,7 +155,6 @@
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-
 					<!--background (no fallback)-->
 					<control type="image">
 						<left>0</left>
@@ -193,7 +166,6 @@
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
 						<visible>!SubString(ListItem.Icon,Default)</visible>
 					</control>
-				
 					<!--icon (fallback)-->
 					<control type="image">
 						<left>5</left>
@@ -203,7 +175,6 @@
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[Listitem.Icon]</texture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-				
 					<!--icon (no fallback)-->
 					<control type="image">
 						<left>5</left>
@@ -214,11 +185,8 @@
 						<texture background="true">$INFO[Listitem.Icon]</texture>
 						<visible>!SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
 				<left>750</left>
@@ -229,12 +197,10 @@
 				<orientation>vertical</orientation>
 				<visible>Control.IsVisible(514)</visible>
 			</control>
-			
 			<!--picture info-->
 			<control type="group">
 				<left>875</left>
 				<top>170</top>
-				
 				<!--background-->
 				<control type="image">
 					<left>0</left>
@@ -243,7 +209,6 @@
 					<height>640</height>
 					<texture background="true" colordiffuse="button.nf">backgrounds/white.png</texture>
 				</control>
-				
 				<!--picture-->
 				<control type="image">
 					<left>0</left>
@@ -254,7 +219,6 @@
 					<fadetime>600</fadetime>
 					<aspectratio>keep</aspectratio>
 				</control>
-				
 				<!--info strip background-->
 				<control type="image">
 					<left>0</left>
@@ -263,7 +227,6 @@
 					<height>60</height>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-			
 				<!--fanart shadow-->
 				<control type="image">
 					<left>0</left>
@@ -273,7 +236,6 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
-					
 				<!--secondary label-->
 				<control type="label">
 					<left>15</left>
@@ -287,7 +249,6 @@
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
-				
 				<!--background-->
 				<control type="image">
 					<left>0</left>
@@ -296,7 +257,6 @@
 					<height>85</height>
 					<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-			
 				<!--info strip shadow-->
 				<control type="image">
 					<left>0</left>
@@ -306,15 +266,12 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
-				
 			</control>
-
 			<control type="grouplist">
 				<left>875</left>
 				<top>880</top>
 				<usecontrolcoords>true</usecontrolcoords>
 				<itemgap>0</itemgap>
-				
 				<control type="label">
 					<left>15</left>
 					<top>0</top>
@@ -325,7 +282,6 @@
 					<label>$LOCALIZE[31326]</label>
 					<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
 				</control>
-				
 				<control type="label">
 					<left>155</left>
 					<top>-35</top>
@@ -335,7 +291,6 @@
 					<textcolor>text.primary</textcolor>
 					<label>$INFO[ListItem.PictureDateTime]</label>
 				</control>
-				
 				<control type="label">
 					<left>15</left>
 					<top>0</top>
@@ -346,7 +301,6 @@
 					<label>$LOCALIZE[31327]</label>
 					<visible>!IsEmpty(ListItem.PictureResolution)</visible>
 				</control>
-				
 				<control type="label">
 					<left>155</left>
 					<top>-35</top>
@@ -356,11 +310,7 @@
 					<textcolor>text.primary</textcolor>
 					<label>$INFO[ListItem.PictureResolution]</label>
 				</control>
-				
 			</control>
-			
 		</control>
-		
 	</include>
-	
 </includes>

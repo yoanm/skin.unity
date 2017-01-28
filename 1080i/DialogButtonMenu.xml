@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window type="buttonMenu">
-
 	<defaultcontrol>9000</defaultcontrol>
-	
 	<controls>
-		
 		<!--all content-->
 		<control type="group">
 			<include>SideBladeRight</include>
-					
 			<!--close window button-->
 			<control type="button" id="20">
 				<left>1925</left>
@@ -27,7 +22,6 @@
 				<ondown>2</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
-		
 			<!--title-->
 			<control type="label">
 				<left>1920</left>
@@ -40,7 +34,6 @@
 				<aligny>center</aligny>
 				<label>31064</label>
 			</control>
-		
 			<!--buttons grouplist-->
 			<control type="grouplist" id="9000">
 				<left>1930</left>
@@ -53,7 +46,6 @@
 				<ondown>9000</ondown>
 				<itemgap>0</itemgap>
 				<align>left</align>
-				
 				<control type="button" id="2">
 					<description>Exit button</description>
 					<include>ButtonCommonValues</include>
@@ -62,7 +54,6 @@
 					<label>13012</label>
 					<align>right</align>
 				</control>
-				
 				<control type="button" id="3">
 					<description>Shutdown button</description>
 					<include>ButtonCommonValues</include>
@@ -71,7 +62,6 @@
 					<label>13016</label>
 					<align>right</align>
 				</control>
-				
 				<control type="button" id="4">
 					<description>Custom Shutdown Timer</description>
 					<include>ButtonCommonValues</include>
@@ -81,7 +71,6 @@
 					<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					<align>right</align>
 				</control>
-				
 				<control type="button" id="5">
 					<description>Cancel Shutdown Timer</description>
 					<include>ButtonCommonValues</include>
@@ -90,7 +79,6 @@
 					<visible>System.HasAlarm(shutdowntimer)</visible>
 					<align>right</align>
 				</control>
-				
 				<control type="button" id="6">
 					<description>Suspend button</description>
 					<include>ButtonCommonValues</include>
@@ -99,7 +87,6 @@
 					<label>13011</label>
 					<align>right</align>
 				</control>
-				
 				<control type="button" id="7">
 					<description>Hibernate button</description>
 					<include>ButtonCommonValues</include>
@@ -108,7 +95,6 @@
 					<label>13010</label>
 					<align>right</align>
 				</control>
-				
 				<control type="button" id="8">
 					<description>Reboot button</description>
 					<include>ButtonCommonValues</include>
@@ -117,7 +103,6 @@
 					<label>13013</label>
 					<align>right</align>
 				</control>
-				
 				<control type="button" id="9">
 					<description>Logoff button</description>
 					<include>ButtonCommonValues</include>
@@ -128,7 +113,6 @@
 					<visible>System.Loggedon</visible>
 					<align>right</align>
 				</control>
-				
 				<control type="togglebutton" id="10">
 					<description>Master mode button</description>
 					<include>ButtonCommonValues</include>
@@ -137,7 +121,6 @@
 					<visible>System.HasLocks</visible>
 					<align>right</align>
 				</control>
-				
 				<!--settings-->
 				<control type="button" id="14">
 					<include>ButtonCommonValues</include>
@@ -145,12 +128,10 @@
 					<onclick>ActivateWindow(Settings)</onclick>
 					<align>right</align>
 				</control>
-				
 				<control type="group" id="11">
 					<width>510</width>
 					<height>105</height>
 					<visible>System.HasAlarm(shutdowntimer)</visible>
-					
 					<!--alarm background-->
 					<control type="image">
 						<left>0</left>
@@ -159,7 +140,6 @@
 						<height>110</height>
 						<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
 					</control>
-					
 					<control type="textbox">
 						<left>0</left>
 						<top>10</top>
@@ -171,9 +151,7 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[31329] [B]$INFO[System.Alarmpos][/B]</label>
 					</control>
-					
 				</control>
-				
 				<control type="button" id="12">
 					<description>Inhibit idle shutdown</description>
 					<include>ButtonCommonValues</include>
@@ -182,7 +160,6 @@
 					<visible>System.HasShutdown +!System.IsInhibit</visible>
 					<align>right</align>
 				</control>
-				
 				<control type="button" id="13">
 					<description>Allow idle shutdown</description>
 					<include>ButtonCommonValues</include>
@@ -190,11 +167,7 @@
 					<visible>System.HasShutdown + System.IsInhibit</visible>
 					<align>right</align>
 				</control>
-				
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>

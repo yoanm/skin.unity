@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-		
 	<views>50,51,500,550,551,509,506,511,512,513</views>
-	
 	<controls>
-		
 		<!--backgrounds (e.g. fanart-->
 		<control type="group">
 			<include>CommonBackground</include>
 		</control>
-		
 		<!--views-->
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -38,7 +32,6 @@
 			<include>AddonInfoThumbView1</include>
 			<!-- view id = 551 -->
 		</control>
-		
 		<!--general window furniture-->
 		<control type="group">
 			<include>Clock</include>
@@ -47,10 +40,8 @@
 			<include>MainWindowMouseButtons</include>
 			<include>ScrollOffsetLabel</include>
 		</control>
-		
 		<!--breadcrumbs-->
 		<control type="group">
-			
 			<!--breadcrumb bg-->
 			<control type="image">
 				<left>64</left>
@@ -59,7 +50,6 @@
 				<height>45</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-			
 			<!--breadcrumb strip-->
 			<control type="image">
 				<left>60</left>
@@ -68,7 +58,6 @@
 				<height>45</height>
 				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 			</control>
-			
 			<!--breadcrumb labels-->
 			<control type="grouplist">
 				<left>73</left>
@@ -78,13 +67,11 @@
 				<orientation>horizontal</orientation>
 				<align>left</align>
 				<itemgap>8</itemgap>
-				
 				<control type="label">
 					<width min="0" max="200">auto</width>
 					<include>WindowTitleCommons</include>
 					<label>$LOCALIZE[10516]</label>
 				</control>
-				
 				<control type="label">
 					<textcolor>$VAR[Colour.500]</textcolor>
 					<width min="0" max="270">auto</width>
@@ -92,9 +79,7 @@
 					<label>[LOWERCASE]$INFO[Container.FolderName][/LOWERCASE]</label>
 					<visible>!IsEmpty(Container.FolderName)</visible>
 				</control>
-				
 			</control>
-					
 			<!--sort method bg-->
 			<control type="image">
 				<left>64</left>
@@ -103,7 +88,6 @@
 				<height>34</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-		
 			<!--sort method strip-->
 			<control type="image">
 				<left>60</left>
@@ -112,7 +96,6 @@
 				<height>34</height>
 				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 			</control>
-		
 			<!--sort method label-->
 			<control type="label">
 				<left>73</left>
@@ -125,9 +108,7 @@
 				<textcolor>text.primary</textcolor>
 				<label>$INFO[Container.SortMethod,$LOCALIZE[31062] ]</label>
 			</control>
-			
 		</control>
-		
 		<!--fake button to hide left blade-->
 		<control type="button" id="73">
 			<left>0</left>
@@ -140,15 +121,12 @@
 			<texturefocus>-</texturefocus>
 			<visible>ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)</visible>
 		</control>
-		
 		<!--dialog fade-->
 		<include>BehindDialogFadeOut</include>
-		
 		<!--view options-->
 		<control type="group">
 			<left>-375</left>
 			<include>SideBladeLeft</include>
-			
 			<!--buttons grouplist-->
 			<control type="grouplist" id="9000">
 				<left>10</left>
@@ -161,7 +139,6 @@
 				<ondown>9000</ondown>
 				<onback>50</onback>
 				<itemgap>0</itemgap>
-				
 				<!--control type="label" id="200">
 					<width>375</width>
 					<height>52</height>
@@ -171,20 +148,17 @@
 					<align>center</align>
 					<aligny>center</aligny>
 				</control-->
-				
 				<!--view as-->
 				<control type="button" id="2">
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>-</label>
 				</control>
-				
 				<!--sort by-->
 				<control type="button" id="3">
 					<include>ButtonCommonValues</include>
 					<label>103</label>
 				</control>
-				
 				<!--ascending/descending-->
 				<control type="togglebutton" id="4">
 					<include>ButtonCommonValues</include>
@@ -192,7 +166,6 @@
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 				</control>
-				
 				<!--filter basic-->
 				<control type="edit" id="19">
 					<visible>!Container.CanFilterAdvanced</visible>
@@ -200,7 +173,6 @@
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 				</control>
-				
 				<!--filter advanced-->
 				<control type="radiobutton" id="98">
 					<visible>Container.CanFilterAdvanced</visible>
@@ -210,7 +182,6 @@
 					<onclick>right</onclick>
 					<onclick>Filter</onclick>
 				</control>
-				
 				<!--show info (509)-->
 				<control type="radiobutton" id="100">
 					<textwidth>255</textwidth>
@@ -220,7 +191,6 @@
 					<selected>Skin.HasSetting(View509HideInfo)</selected>
 					<visible>Control.IsVisible(509)</visible>
 				</control>
-				
 				<!--hide fanart-->
 				<control type="radiobutton" id="30">
 					<label>31119</label>
@@ -228,7 +198,6 @@
 					<onclick>Skin.ToggleSetting(HideBackGroundFanart)</onclick>
 					<selected>Skin.HasSetting(HideBackGroundFanart)</selected>
 				</control>
-				
 				<!--show extra fanart-->
 				<control type="radiobutton" id="31">
 					<label>31066</label>
@@ -237,16 +206,13 @@
 					<selected>Skin.HasSetting(MusicExtraFanart)</selected>
 					<enable>!Skin.HasSetting(HideBackGroundFanart)</enable>
 				</control>
-					
 				<!--artists path-->
-				<control type="button" id="32"> 
-					<label>31069</label>
+				<control type="button" id="32">					<label>31069</label>
 					<include>ButtonCommonValues</include>
 					<label2>$INFO[Skin.String(artists.path)]</label2>
 					<onclick>Skin.SetPath(artists.path)</onclick>
 					<visible>Skin.HasSetting(MusicExtraFanart)</visible>
 				</control>
-				
 				<!--choose colour-->
 				<control type="button" id="33">
 					<label>$LOCALIZE[31919]</label>
@@ -254,7 +220,6 @@
 					<onclick>SetFocus(50)</onclick>
 					<onclick>ActivateWindow(1100)</onclick>
 				</control>
-				
 				<!--control type="label" id="201">
 					<width>375</width>
 					<height>52</height>
@@ -264,20 +229,17 @@
 					<align>center</align>
 					<aligny>center</aligny>
 				</control-->
-				
 				<!--search-->
 				<control type="button" id="8">
 					<include>ButtonCommonValues</include>
 					<label>137</label>
 				</control>
-				
 				<!--party mode-->
 				<control type="radiobutton" id="16">
 					<label>589</label>
 					<include>ButtonCommonValues</include>
 					<visible>Container.Content(MusicVideos)</visible>
 				</control>
-				
 				<!--control type="label" id="203">
 					<width>375</width>
 					<height>52</height>
@@ -287,7 +249,6 @@
 					<align>center</align>
 					<aligny>center</aligny>
 				</control-->
-				
 				<!--update library-->
 				<control type="togglebutton" id="20">
 					<textwidth>352</textwidth>
@@ -296,14 +257,9 @@
 					<altlabel>13353</altlabel>
 					<usealttexture>library.isscanningmusic</usealttexture>
 				</control>
-				
 				<!--now playing controls-->
 				<include>CommonNowPlaying_Controls</include>
-				
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>

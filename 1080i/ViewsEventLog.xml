@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <includes>
-
 	<include name="EventListView">
-		
 		<!--all content-->
 		<control type="group">
-		
 			<visible>Control.IsVisible(570)</visible>
 			<include>VisibleFadeEffect</include>
-			
 			<!--content list-->
 			<control type="list" id="570">
 				<left>220</left>
@@ -23,9 +18,7 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				
 				<itemlayout height="100" width="1004">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -34,7 +27,6 @@
 						<height>90</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-					
 					<!--event name-->
 					<control type="label">
 						<left>19</left>
@@ -48,7 +40,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<!--date time-->
 					<control type="textbox">
 						<left>835</left>
@@ -62,7 +53,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<!--event info-->
 					<control type="textbox">
 						<left>19</left>
@@ -76,11 +66,8 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(Event.Description)]</label>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="100" width="1004">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -90,7 +77,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
-				
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
@@ -100,7 +86,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
-					
 					<!--event name-->
 					<control type="label">
 						<left>19</left>
@@ -114,7 +99,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<!--date time-->
 					<control type="textbox">
 						<left>835</left>
@@ -128,7 +112,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<!--event info-->
 					<control type="textbox">
 						<left>19</left>
@@ -142,11 +125,8 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(Event.Description)]</label>
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<!--thumb (fallback)-->
 			<control type="image">
 				<left>1241</left>
@@ -159,7 +139,6 @@
 				<bordersize>10</bordersize>
 				<visible>SubString(ListItem.Icon,default)</visible>
 			</control>
-			
 			<!--thumb (no fallback)-->
 			<control type="image">
 				<left>1241</left>
@@ -172,7 +151,6 @@
 				<bordersize>10</bordersize>
 				<visible>!SubString(ListItem.Icon,default)</visible>
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
 				<left>1234</left>
@@ -181,19 +159,13 @@
 				<onright>2</onright>
 				<orientation>vertical</orientation>
 			</control>
-			
 		</control>
-		
 	</include>
-	
 	<include name="EventBigListView">
-	
 		<!--all content-->
 		<control type="group">
-		
 			<visible>Control.IsVisible(571)</visible>
 			<include>VisibleFadeEffect</include>
-			
 			<!--content list-->
 			<control type="list" id="571">
 				<left>220</left>
@@ -207,9 +179,7 @@
 				<viewtype label="537">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				
 				<itemlayout height="100" width="1474">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -218,7 +188,6 @@
 						<height>90</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-				
 					<!--thumb (fallback)-->
 					<control type="image">
 						<left>11</left>
@@ -229,7 +198,6 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>SubString(ListItem.Icon,default)</visible>
 					</control>
-				
 					<!--thumb (no fallback)-->
 					<control type="image">
 						<left>6</left>
@@ -240,7 +208,6 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>!SubString(ListItem.Icon,default)</visible>
 					</control>
-					
 					<!--event name-->
 					<control type="label">
 						<left>100</left>
@@ -254,7 +221,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<!--date time-->
 					<control type="textbox">
 						<left>1305</left>
@@ -268,7 +234,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<!--event info-->
 					<control type="textbox">
 						<left>100</left>
@@ -282,11 +247,8 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(Event.Description)]</label>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="100" width="1474">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -296,7 +258,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
-				
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
@@ -306,7 +267,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
-				
 					<!--thumb (fallback)-->
 					<control type="image">
 						<left>11</left>
@@ -317,7 +277,6 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-				
 					<!--thumb (no fallback)-->
 					<control type="image">
 						<left>6</left>
@@ -328,7 +287,6 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>!SubString(ListItem.Icon,default)</visible>
 					</control>
-					
 					<!--event name-->
 					<control type="label">
 						<left>100</left>
@@ -342,7 +300,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<!--date time-->
 					<control type="textbox">
 						<left>1305</left>
@@ -356,7 +313,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<!--event info-->
 					<control type="textbox">
 						<left>100</left>
@@ -370,11 +326,8 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(Event.Description)]</label>
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
 				<left>1704</left>
@@ -383,9 +336,6 @@
 				<onright>2</onright>
 				<orientation>vertical</orientation>
 			</control>
-			
 		</control>
-		
 	</include>
-
 </includes>

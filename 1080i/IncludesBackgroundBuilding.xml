@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <includes>
-
 	<include name="CommonBackground">
-	
 		<control type="image">
 			<description>Normal Default Background Image</description>
 			<left>0</left>
@@ -16,7 +13,6 @@
 			<visible>![Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
-		
 		<control type="image">
 			<description>User Set Background Image</description>
 			<left>0</left>
@@ -28,7 +24,6 @@
 			<visible>Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))</visible>
 			<include>VisibleFadeEffect</include>
 		</control>
-		
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
@@ -42,7 +37,6 @@
 			<include>Window_OpenClose_Animation</include>
 			<visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Window.IsVisible(MovieInformation) + !Skin.HasSetting(HideWindowedTrailer)]</visible>
 		</control>
-		
 		<control type="multiimage">
 			<left>0</left>
 			<top>0</top>
@@ -57,7 +51,6 @@
 			<include>Window_OpenClose_Animation</include>
 			<visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] + Container.Content(Movies)</visible>
 		</control>
-		
 		<control type="visualisation">
 			<left>0</left>
 			<top>0</top>
@@ -66,7 +59,6 @@
 			<visible>Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 			<visible>IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))</visible>
 		</control>
-		
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
@@ -76,7 +68,6 @@
 			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 			<visible>![Window.IsVisible(MovieInformation) + !Skin.HasSetting(HideWindowedTrailer)]</visible>
 		</control>
-		
 		<control type="videowindow">
 			<left>0</left>
 			<top>0</top>
@@ -85,7 +76,6 @@
 			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo) + !Window.IsVisible(TVChannels) + !Window.IsVisible(RadioChannels)</visible>
 			<visible>![Window.IsVisible(MovieInformation) + !Skin.HasSetting(HideWindowedTrailer)]</visible>
 		</control>
-		
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
@@ -96,7 +86,5 @@
 			<include>backgroundfade</include>
 			<include>Window_OpenClose_Animation</include>
 		</control>
-		
 	</include>
-	
 </includes>

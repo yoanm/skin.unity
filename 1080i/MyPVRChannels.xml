@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	
 	<views>50</views>
-	
 	<controls>
-	
 		<include>CommonBackground</include>
 		<include>MainWindowMouseButtons</include>
 		<include>PVRHeader</include>
 		<include>Clock</include>
-		
 		<control type="group">
-				
 			<control type="image">
 				<left>64</left>
 				<top>94r</top>
@@ -23,7 +16,6 @@
 				<height>34</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-		
 			<control type="image">
 				<left>60</left>
 				<top>94r</top>
@@ -31,7 +23,6 @@
 				<height>34</height>
 				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 			</control>
-			
 			<control type="label">
 				<description>Page Count Label</description>
 				<left>73</left>
@@ -46,20 +37,16 @@
 				<label>$INFO[Container.NumItems] $LOCALIZE[31025] [COLOR=$VAR[Colour.500]]$INFO[Container.CurrentPage, $LOCALIZE[31024] ]$INFO[Container.NumPages,/,][/COLOR]</label>
 				<include>Window_OpenClose_Animation</include>
 			</control>
-			
 		</control>
-		
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
 			<description>TV Channels group</description>
 			<visible>Control.IsVisible(50)</visible>
 			<include>VisibleFadeEffect</include>
-			
 			<!--tv info-->
 			<control type="group">
 				<left>781</left>
 				<top>200</top>
-				
 				<!--background-->
 				<control type="image">
 					<left>-10</left>
@@ -68,7 +55,6 @@
 					<height>710</height>
 					<texture background="true" colordiffuse="tertiary">backgrounds/media info 3 bg.png</texture>
 				</control>
-				
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -77,7 +63,6 @@
 					<texture>black-back.png</texture>
 					<visible>Player.HasVideo</visible>
 				</control>
-				
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -87,7 +72,6 @@
 					<include>VisibleFadeEffect</include>
 					<visible>!Player.HasVideo</visible>
 				</control>
-				
 				<control type="videowindow">
 					<left>0</left>
 					<top>0</top>
@@ -96,7 +80,6 @@
 					<visible>Player.HasVideo</visible>
 					<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 				</control>
-				
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
@@ -106,7 +89,6 @@
 					<colordiffuse>DDFFFFFF</colordiffuse>
 					<visible>Player.HasVideo</visible>
 				</control>
-				
 				<control type="label">
 					<left>15</left>
 					<top>0</top>
@@ -119,7 +101,6 @@
 					<label>$INFO[Player.Title]</label>
 					<visible>Player.HasVideo</visible>
 				</control>
-				
 				<!--thumb-->
 				<control type="image">
 					<left>715</left>
@@ -129,7 +110,6 @@
 					<aspectratio align="left" aligny="center">keep</aspectratio>
 					<texture background="true">$INFO[MusicPlayer.Cover]</texture>
 				</control>
-				
 				<!--thumb-->
 				<control type="image">
 					<left>715</left>
@@ -139,7 +119,6 @@
 					<aspectratio align="left" aligny="center">keep</aspectratio>
 					<texture background="true">$INFO[VideoPlayer.Cover]</texture>
 				</control>
-				
 				<!--info strip background-->
 				<control type="image">
 					<left>0</left>
@@ -148,7 +127,6 @@
 					<height>60</height>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-			
 				<!--fanart shadow-->
 				<control type="image">
 					<left>0</left>
@@ -157,7 +135,6 @@
 					<height>10</height>
 					<texture>homeshadow.png</texture>
 				</control>
-					
 				<!--secondary label-->
 				<control type="label">
 					<left>15</left>
@@ -172,7 +149,6 @@
 					<label>$INFO[Container(50).ListItem.Title]$INFO[ListItem.Duration, • ]$INFO[ListItem.Genre, • ,]</label>
 					<visible>!Container.Content(Seasons)</visible>
 				</control>
-				
 				<!--plot (movies)-->
 				<control type="textbox">
 					<left>15</left>
@@ -185,7 +161,6 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="10000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-				
 				<control type="label">
 					<left>0</left>
 					<top>630</top>
@@ -198,7 +173,6 @@
 					<visible>Container(50).ListItem.HasEpg</visible>
 					<label>$INFO[Container(50).ListItem.StartTime]</label>
 				</control>
-				
 				<control type="progress">
 					<description>Progressbar</description>
 					<left>110</left>
@@ -208,7 +182,6 @@
 					<visible>Container(50).ListItem.HasEpg</visible>
 					<info>Container(50).ListItem.Progress</info>
 				</control>
-				
 				<control type="label">
 					<left>882</left>
 					<top>630</top>
@@ -221,7 +194,6 @@
 					<visible>Container(50).ListItem.HasEpg</visible>
 					<label>$INFO[Container(50).ListItem.EndTime]</label>
 				</control>
-				
 				<control type="label">
 					<left>15</left>
 					<top>655</top>
@@ -234,7 +206,6 @@
 					<visible>!IsEmpty(Container(50).ListItem.NextTitle)</visible>
 					<label>$LOCALIZE[19031]: $INFO[Container(50).ListItem.NextTitle]</label>
 				</control>
-			
 				<!--info strip shadow-->
 				<control type="image">
 					<left>0</left>
@@ -243,9 +214,7 @@
 					<height>10</height>
 					<texture>homeshadow.png</texture>
 				</control>
-				
 			</control>
-			
 			<!--content list-->
 			<control type="list" id="50">
 				<left>151</left>
@@ -259,9 +228,7 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>70</pagecontrol>
 				<scrolltime>200</scrolltime>
-				
 				<itemlayout height="100" width="604">
-				
 					<!--unfocused bg-->
 					<control type="image">
 						<left>4</left>
@@ -270,11 +237,9 @@
 						<height>90</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-					
 					<control type="group">
 						<left>4</left>
 						<top>4</top>
-					
 						<!--channel number-->
 						<control type="label">
 							<left>15</left>
@@ -287,7 +252,6 @@
 							<align>left</align>
 							<info>ListItem.ChannelNumberLabel</info>
 						</control>
-						
 						<!--recording icon-->
 						<control type="image">
 							<left>10</left>
@@ -298,7 +262,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<!--channel name-->
 						<control type="label">
 							<left>75</left>
@@ -312,7 +275,6 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
-						
 						<!--show title (no icon)-->
 						<control type="label">
 							<left>75</left>
@@ -328,7 +290,6 @@
 							<visible>IsEmpty(Listitem.Icon)</visible>
 							<scroll>false</scroll>
 						</control>
-						
 						<!--show title (icon)-->
 						<control type="label">
 							<left>75</left>
@@ -344,7 +305,6 @@
 							<visible>!IsEmpty(Listitem.Icon)</visible>
 							<scroll>false</scroll>
 						</control>
-						
 						<!--progress-->
 						<control type="progress">
 							<description>Progressbar</description>
@@ -356,7 +316,6 @@
 							<info>ListItem.Progress</info>
 							<visible>ListItem.HasEpg</visible>
 						</control>
-						
 						<!--channel icon-->
 						<control type="image">
 							<left>510</left>
@@ -368,13 +327,9 @@
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
-					
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="100" width="604">
-					
 					<!--focused bg-->
 					<control type="image">
 						<left>4</left>
@@ -384,7 +339,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
-					
 					<!--focused bg nib-->
 					<control type="image">
 						<left>0</left>
@@ -394,11 +348,9 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
-					
 					<control type="group">
 						<left>4</left>
 						<top>4</top>
-					
 						<!--channel number-->
 						<control type="label">
 							<left>15</left>
@@ -411,7 +363,6 @@
 							<align>left</align>
 							<info>ListItem.ChannelNumberLabel</info>
 						</control>
-						
 						<!--recording icon-->
 						<control type="image">
 							<left>10</left>
@@ -422,7 +373,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<!--channel name-->
 						<control type="label">
 							<left>75</left>
@@ -436,7 +386,6 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
-						
 						<!--show title (no icon)-->
 						<control type="label">
 							<left>75</left>
@@ -451,7 +400,6 @@
 							<label>$INFO[ListItem.Title]</label>
 							<visible>IsEmpty(Listitem.Icon)</visible>
 						</control>
-						
 						<!--show title (icon)-->
 						<control type="label">
 							<left>75</left>
@@ -466,7 +414,6 @@
 							<label>$INFO[ListItem.Title]</label>
 							<visible>!IsEmpty(Listitem.Icon)</visible>
 						</control>
-						
 						<!--progress-->
 						<control type="progress">
 							<description>Progressbar</description>
@@ -477,7 +424,6 @@
 							<info>ListItem.Progress</info>
 							<visible>ListItem.HasEpg</visible>
 						</control>
-						
 						<!--channel icon-->
 						<control type="image">
 							<left>510</left>
@@ -489,13 +435,9 @@
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
-					
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="70">
 				<left>764</left>
@@ -504,13 +446,10 @@
 				<onright>100</onright>
 				<orientation>vertical</orientation>
 			</control>
-			
 		</control>
-		
 		<include>CommonNowPlaying</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
-		
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
@@ -521,9 +460,6 @@
 			<animation effect="fade" time="200">Hidden</animation>
 			<visible>Window.IsActive(FileBrowser) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRTimerSetting) | Window.IsActive(PVRGroupManager) | Window.IsActive(PVRGuideSearch)</visible>
 		</control>
-		
 		<include>PVRSideBlade</include>
-		
 	</controls>
-	
 </window>

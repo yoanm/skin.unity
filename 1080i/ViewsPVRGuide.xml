@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <includes>
-
 	<!-- ID: 10 -->
 	<include name="PVRGuideViewTimeline">
-	
 		<control type="group">
 			<description>TV Guide Timeline</description>
 			<visible>Control.IsVisible(10)</visible>
 			<include>VisibleFadeEffect</include>
-			
 			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))">Conditional</animation>
-			
 			<!--title bars and backgrounds-->
 			<include name="DynamicDialogBackground">
 				<param name="dialog-left" value="265" />
@@ -23,7 +18,6 @@
 				<param name="title-height" value="60" />
 				<param name="sidebar-visible" value="true" />
 			</include>
-			
 			<!--seperator-->
 			<control type="image">
 				<left>665</left>
@@ -33,7 +27,6 @@
 				<aspectratio>stretch</aspectratio>
 				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 			</control>
-			
 			<control type="epggrid" id="10">
 				<viewtype label="19032">list</viewtype>
 				<description>EPG Grid</description>
@@ -45,15 +38,12 @@
 				<scrolltime>350</scrolltime>
 				<timeblocks>30</timeblocks>
 				<rulerunit>6</rulerunit>
-
 				<onleft>101</onleft>
 				<onright>101</onright>
 				<onup>10</onup>
 				<ondown>10</ondown>
 				<onback>101</onback>
-				
 				<rulerlayout height="70" width="60">
-				
 					<control type="label" id="2">
 						<left>5</left>
 						<top>-5</top>
@@ -66,11 +56,8 @@
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 				</rulerlayout>
-				
 				<channellayout height="72" width="375">
-				
 					<control type="label">
 						<left>23</left>
 						<top>8</top>
@@ -83,8 +70,6 @@
 						<selectedcolor>white</selectedcolor>
 						<info>ListItem.ChannelNumber</info>
 					</control>
-					
-					
 					<control type="label" id="1">
 						<left>93</left>
 						<top>0</top>
@@ -97,11 +82,8 @@
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
-					
 				</channellayout>
-				
 				<focusedchannellayout height="72" width="375">
-					
 					<control type="image">
 						<left>8</left>
 						<top>0</top>
@@ -111,7 +93,6 @@
 						<include>VisibleFadeEffect</include>
 						<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(10)">Conditional</animation>
 					</control>
-					
 					<control type="label">
 						<left>23</left>
 						<top>8</top>
@@ -124,7 +105,6 @@
 						<selectedcolor>$VAR[Colour.900]</selectedcolor>
 						<info>ListItem.ChannelNumber</info>
 					</control>
-					
 					<control type="label" id="1">
 						<left>93</left>
 						<top>0</top>
@@ -137,11 +117,8 @@
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
-					
 				</focusedchannellayout>
-				
 				<itemlayout height="72" width="60">
-				
 					<control type="image" id="2">
 						<width>58</width>
 						<height>70</height>
@@ -151,7 +128,6 @@
 						<texture colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="25" time="0" condition="true">Conditional</animation>
 					</control>
-					
 					<control type="label" id="1">
 						<left>10</left>
 						<top>4</top>
@@ -164,7 +140,6 @@
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
-					
 					<control type="image">
 						<left>9</left>
 						<top>42</top>
@@ -173,7 +148,6 @@
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
-					
 					<control type="image">
 						<left>9</left>
 						<top>42</top>
@@ -182,7 +156,6 @@
 						<texture>PVR-HasTimer.png</texture>
 						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
-					
 					<control type="image">
 						<left>9</left>
 						<top>42</top>
@@ -191,11 +164,8 @@
 						<texture>PVR-HasRecording.png</texture>
 						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="72" width="60">
-					
 					<control type="image" id="2">
 						<width>58</width>
 						<height>70</height>
@@ -204,7 +174,6 @@
 						<aspectratio>stretch</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					</control>
-					
 					<control type="label" id="1">
 						<left>10</left>
 						<top>4</top>
@@ -217,7 +186,6 @@
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
-					
 					<control type="image">
 						<left>9</left>
 						<top>42</top>
@@ -226,7 +194,6 @@
 						<texture>PVR-IsRecording.png</texture>
 						<visible>ListItem.IsRecording</visible>
 					</control>
-					
 					<control type="image">
 						<left>9</left>
 						<top>42</top>
@@ -235,7 +202,6 @@
 						<texture>PVR-HasTimer.png</texture>
 						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 					</control>
-					
 					<control type="image">
 						<left>9</left>
 						<top>42</top>
@@ -244,17 +210,12 @@
 						<texture>PVR-HasRecording.png</texture>
 						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<control type="group">
-			
 				<visible>!IsEmpty(ListItem.Label)</visible>
 				<left>240</left>
 				<top>860</top>
-				
 				<control type="image">
 					<left>95</left>
 					<top>10</top>
@@ -263,7 +224,6 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 				</control>
-				
 				<control type="label">
 					<left>420</left>
 					<top>5</top>
@@ -273,7 +233,6 @@
 					<font>kai.primary</font>
 					<textcolor>text.primary</textcolor>
 				</control>
-				
 				<control type="label">
 					<left>420</left>
 					<top>37</top>
@@ -283,7 +242,6 @@
 					<font>secondary.info.light</font>
 					<textcolor>text.primary</textcolor>
 				</control>
-				
 				<control type="textbox">
 					<description>Plot value</description>
 					<left>420</left>
@@ -296,25 +254,18 @@
 					<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
 					<label>$INFO[ListItem.Plot]</label>
 				</control>
-				
 			</control>
-			
 		</control>
-		
 	</include>
-	
 	<!-- ID: 11 -->
 	<include name="PVRGuideViewNow">
-
 		<control type="group">
 			<description>TV Guide Now</description>
 			<visible>Control.IsVisible(11)</visible>
 			<include>VisibleFadeEffect</include>
-
 			<control type="group">
 				<left>135</left>
 				<top>200</top>
-
 				<!--title background-->
 				<control type="image">
 					<left>4</left>
@@ -323,7 +274,6 @@
 					<height>60</height>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-
 				<control type="label">
 					<description>Time label</description>
 					<left>0</left>
@@ -336,7 +286,6 @@
 					<aligny>center</aligny>
 					<label>555</label>
 				</control>
-
 				<control type="label">
 					<description>Channel label</description>
 					<left>150</left>
@@ -349,7 +298,6 @@
 					<aligny>center</aligny>
 					<label>19148</label>
 				</control>
-
 				<control type="label">
 					<description>Title</description>
 					<left>525</left>
@@ -362,7 +310,6 @@
 					<aligny>center</aligny>
 					<label>369</label>
 				</control>
-
 				<control type="label">
 					<description>Status header label</description>
 					<left>1440</left>
@@ -375,7 +322,6 @@
 					<aligny>center</aligny>
 					<label>126</label>
 				</control>
-
 				<control type="list" id="11">
 					<viewtype label="19030">list</viewtype>
 					<left>0</left>
@@ -388,9 +334,7 @@
 					<onright>76</onright>
 					<pagecontrol>76</pagecontrol>
 					<scrolltime>200</scrolltime>
-					
 					<itemlayout height="70">
-
 						<!--background-->
 						<control type="image">
 							<left>4</left>
@@ -399,7 +343,6 @@
 							<height>60</height>
 							<texture background="true" colordiffuse="button.nf">backgrounds/white.png</texture>
 						</control>
-
 						<control type="label">
 							<left>0</left>
 							<top>0</top>
@@ -412,7 +355,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.StartTime</info>
 						</control>
-						
 						<control type="image">
 							<left>165</left>
 							<top>8</top>
@@ -421,7 +363,6 @@
 							<info>ListItem.Icon</info>
 							<aspectratio>keep</aspectratio>
 						</control>
-						
 						<control type="label">
 							<left>225</left>
 							<top>0</top>
@@ -434,7 +375,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.ChannelName</info>
 						</control>
-						
 						<control type="label">
 							<left>540</left>
 							<top>0</top>
@@ -447,7 +387,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -457,7 +396,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1508</left>
 							<top>0</top>
@@ -471,7 +409,6 @@
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -481,7 +418,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1500</left>
 							<top>0</top>
@@ -495,11 +431,8 @@
 							<label>31510</label>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 					</itemlayout>
-					
 					<focusedlayout height="160">
-						
 						<!--background-->
 						<control type="image">
 							<left>4</left>
@@ -509,7 +442,6 @@
 							<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(11)">Conditional</animation>
 						</control>
-						
 						<!--background nib-->
 						<control type="image">
 							<left>0</left>
@@ -519,7 +451,6 @@
 							<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(11)">Conditional</animation>
 						</control>
-
 						<control type="image">
 							<left>150</left>
 							<top>0</top>
@@ -528,7 +459,6 @@
 							<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(11)">Conditional</animation>
 						</control>
-						
 						<control type="image">
 							<left>1440</left>
 							<top>0</top>
@@ -537,7 +467,6 @@
 							<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(11)">Conditional</animation>
 						</control>
-						
 						<control type="label">
 							<left>0</left>
 							<top>0</top>
@@ -550,7 +479,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.StartTime</info>
 						</control>
-						
 						<control type="image">
 							<left>165</left>
 							<top>8</top>
@@ -559,7 +487,6 @@
 							<info>ListItem.Icon</info>
 							<aspectratio>keep</aspectratio>
 						</control>
-						
 						<control type="label">
 							<left>225</left>
 							<top>0</top>
@@ -572,7 +499,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.ChannelName</info>
 						</control>
-						
 						<control type="label">
 							<left>540</left>
 							<top>0</top>
@@ -585,7 +511,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
-						
 						<control type="textbox">
 							<description>Plot Value for TVShow</description>
 							<left>75</left>
@@ -598,7 +523,6 @@
 							<pagecontrol>-</pagecontrol>
 							<label>$INFO[ListItem.Plot]</label>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -608,7 +532,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1508</left>
 							<top>0</top>
@@ -622,7 +545,6 @@
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -632,7 +554,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1500</left>
 							<top>0</top>
@@ -646,11 +567,8 @@
 							<label>31510</label>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 					</focusedlayout>
-					
 				</control>
-				
 				<!--scrollbar-->
 				<control type="scrollbar" id="76">
 					<left>1664</left>
@@ -660,11 +578,8 @@
 					<onright>101</onright>
 					<orientation>vertical</orientation>
 				</control>
-				
 			</control>
-			
 			<control type="group">
-				
 				<control type="image">
 					<left>64</left>
 					<top>94r</top>
@@ -672,7 +587,6 @@
 					<height>34</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-			
 				<control type="image">
 					<left>60</left>
 					<top>94r</top>
@@ -680,7 +594,6 @@
 					<height>34</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-
 				<control type="label">
 					<description>Page Count Label</description>
 					<left>73</left>
@@ -695,24 +608,18 @@
 					<label>$INFO[Container(11).NumItems] $LOCALIZE[31025] [COLOR=$VAR[Colour.500]]$INFO[Container(11).CurrentPage, $LOCALIZE[31024] ]$INFO[Container(11).NumPages,/,][/COLOR]</label>
 					<include>Window_OpenClose_Animation</include>
 				</control>
-				
 			</control>
-			
 		</control>
-
 	</include>
 	<!-- ID: 12 -->
 	<include name="PVRGuideViewNext">
-
 		<control type="group">
 			<description>TV Guide Now</description>
 			<visible>Control.IsVisible(12)</visible>
 			<include>VisibleFadeEffect</include>
-
 			<control type="group">
 				<left>135</left>
 				<top>200</top>
-
 				<!--title background-->
 				<control type="image">
 					<left>4</left>
@@ -721,7 +628,6 @@
 					<height>60</height>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-
 				<control type="label">
 					<description>Time label</description>
 					<left>0</left>
@@ -734,7 +640,6 @@
 					<aligny>center</aligny>
 					<label>555</label>
 				</control>
-
 				<control type="label">
 					<description>Channel label</description>
 					<left>150</left>
@@ -747,7 +652,6 @@
 					<aligny>center</aligny>
 					<label>19148</label>
 				</control>
-
 				<control type="label">
 					<description>Title</description>
 					<left>525</left>
@@ -760,7 +664,6 @@
 					<aligny>center</aligny>
 					<label>369</label>
 				</control>
-
 				<control type="label">
 					<description>Status header label</description>
 					<left>1440</left>
@@ -773,7 +676,6 @@
 					<aligny>center</aligny>
 					<label>126</label>
 				</control>
-
 				<control type="list" id="12">
 					<viewtype label="19031">list</viewtype>
 					<left>0</left>
@@ -786,9 +688,7 @@
 					<onright>76</onright>
 					<pagecontrol>76</pagecontrol>
 					<scrolltime>200</scrolltime>
-					
 					<itemlayout height="70">
-
 						<!--background-->
 						<control type="image">
 							<left>4</left>
@@ -797,7 +697,6 @@
 							<height>60</height>
 							<texture background="true" colordiffuse="button.nf">backgrounds/white.png</texture>
 						</control>
-
 						<control type="label">
 							<left>0</left>
 							<top>0</top>
@@ -810,7 +709,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.StartTime</info>
 						</control>
-						
 						<control type="image">
 							<left>165</left>
 							<top>8</top>
@@ -819,7 +717,6 @@
 							<info>ListItem.Icon</info>
 							<aspectratio>keep</aspectratio>
 						</control>
-						
 						<control type="label">
 							<left>225</left>
 							<top>0</top>
@@ -832,7 +729,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.ChannelName</info>
 						</control>
-						
 						<control type="label">
 							<left>540</left>
 							<top>0</top>
@@ -845,7 +741,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -855,7 +750,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1508</left>
 							<top>0</top>
@@ -869,7 +763,6 @@
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -879,7 +772,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1500</left>
 							<top>0</top>
@@ -893,11 +785,8 @@
 							<label>31510</label>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 					</itemlayout>
-					
 					<focusedlayout height="160">
-						
 						<!--background-->
 						<control type="image">
 							<left>4</left>
@@ -907,7 +796,6 @@
 							<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(12)">Conditional</animation>
 						</control>
-						
 						<!--background nib-->
 						<control type="image">
 							<left>0</left>
@@ -917,7 +805,6 @@
 							<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(12)">Conditional</animation>
 						</control>
-
 						<control type="image">
 							<left>150</left>
 							<top>0</top>
@@ -926,7 +813,6 @@
 							<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(12)">Conditional</animation>
 						</control>
-						
 						<control type="image">
 							<left>1440</left>
 							<top>0</top>
@@ -935,7 +821,6 @@
 							<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(12)">Conditional</animation>
 						</control>
-						
 						<control type="label">
 							<left>0</left>
 							<top>0</top>
@@ -948,7 +833,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.StartTime</info>
 						</control>
-						
 						<control type="image">
 							<left>165</left>
 							<top>8</top>
@@ -957,7 +841,6 @@
 							<info>ListItem.Icon</info>
 							<aspectratio>keep</aspectratio>
 						</control>
-						
 						<control type="label">
 							<left>225</left>
 							<top>0</top>
@@ -970,7 +853,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.ChannelName</info>
 						</control>
-						
 						<control type="label">
 							<left>540</left>
 							<top>0</top>
@@ -983,7 +865,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
-						
 						<control type="textbox">
 							<description>Plot Value for TVShow</description>
 							<left>75</left>
@@ -996,7 +877,6 @@
 							<pagecontrol>-</pagecontrol>
 							<label>$INFO[ListItem.Plot]</label>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -1006,7 +886,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1508</left>
 							<top>0</top>
@@ -1020,7 +899,6 @@
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -1030,7 +908,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1500</left>
 							<top>0</top>
@@ -1044,11 +921,8 @@
 							<label>31510</label>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 					</focusedlayout>
-					
 				</control>
-				
 				<!--scrollbar-->
 				<control type="scrollbar" id="76">
 					<left>1664</left>
@@ -1058,11 +932,8 @@
 					<onright>101</onright>
 					<orientation>vertical</orientation>
 				</control>
-				
 			</control>
-			
 			<control type="group">
-				
 				<control type="image">
 					<left>64</left>
 					<top>94r</top>
@@ -1070,7 +941,6 @@
 					<height>34</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-			
 				<control type="image">
 					<left>60</left>
 					<top>94r</top>
@@ -1078,7 +948,6 @@
 					<height>34</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-
 				<control type="label">
 					<description>Page Count Label</description>
 					<left>73</left>
@@ -1093,24 +962,18 @@
 					<label>$INFO[Container(12).NumItems] $LOCALIZE[31025] [COLOR=$VAR[Colour.500]]$INFO[Container(12).CurrentPage, $LOCALIZE[31024] ]$INFO[Container(12).NumPages,/,][/COLOR]</label>
 					<include>Window_OpenClose_Animation</include>
 				</control>
-				
 			</control>
-			
 		</control>
-
 	</include>
 	<!-- ID: 13 -->
 	<include name="PVRGuideViewChannel">
-
 		<control type="group">
 			<description>TV Guide Now</description>
 			<visible>Control.IsVisible(13)</visible>
 			<include>VisibleFadeEffect</include>
-
 			<control type="group">
 				<left>135</left>
 				<top>200</top>
-
 				<!--title background-->
 				<control type="image">
 					<left>4</left>
@@ -1119,7 +982,6 @@
 					<height>60</height>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-
 				<control type="label">
 					<description>Time label</description>
 					<left>0</left>
@@ -1132,7 +994,6 @@
 					<aligny>center</aligny>
 					<label>555</label>
 				</control>
-
 				<control type="label">
 					<description>Channel label</description>
 					<left>150</left>
@@ -1145,7 +1006,6 @@
 					<aligny>center</aligny>
 					<label>19148</label>
 				</control>
-
 				<control type="label">
 					<description>Title</description>
 					<left>525</left>
@@ -1158,7 +1018,6 @@
 					<aligny>center</aligny>
 					<label>369</label>
 				</control>
-
 				<control type="label">
 					<description>Status header label</description>
 					<left>1440</left>
@@ -1171,7 +1030,6 @@
 					<aligny>center</aligny>
 					<label>126</label>
 				</control>
-
 				<control type="list" id="13">
 					<viewtype label="19029">list</viewtype>
 					<left>0</left>
@@ -1184,9 +1042,7 @@
 					<onright>76</onright>
 					<pagecontrol>76</pagecontrol>
 					<scrolltime>200</scrolltime>
-					
 					<itemlayout height="70">
-
 						<!--background-->
 						<control type="image">
 							<left>4</left>
@@ -1195,7 +1051,6 @@
 							<height>60</height>
 							<texture background="true" colordiffuse="button.nf">backgrounds/white.png</texture>
 						</control>
-
 						<control type="label">
 							<left>0</left>
 							<top>0</top>
@@ -1208,7 +1063,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.StartTime</info>
 						</control>
-						
 						<control type="image">
 							<left>165</left>
 							<top>8</top>
@@ -1217,7 +1071,6 @@
 							<info>ListItem.Icon</info>
 							<aspectratio>keep</aspectratio>
 						</control>
-						
 						<control type="label">
 							<left>225</left>
 							<top>0</top>
@@ -1230,7 +1083,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.ChannelName</info>
 						</control>
-						
 						<control type="label">
 							<left>540</left>
 							<top>0</top>
@@ -1243,7 +1095,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -1253,7 +1104,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1508</left>
 							<top>0</top>
@@ -1267,7 +1117,6 @@
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -1277,7 +1126,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1500</left>
 							<top>0</top>
@@ -1291,11 +1139,8 @@
 							<label>31510</label>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 					</itemlayout>
-					
 					<focusedlayout height="160">
-						
 						<!--background-->
 						<control type="image">
 							<left>4</left>
@@ -1305,7 +1150,6 @@
 							<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(13)">Conditional</animation>
 						</control>
-						
 						<!--background nib-->
 						<control type="image">
 							<left>0</left>
@@ -1315,7 +1159,6 @@
 							<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(13)">Conditional</animation>
 						</control>
-
 						<control type="image">
 							<left>150</left>
 							<top>0</top>
@@ -1324,7 +1167,6 @@
 							<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(13)">Conditional</animation>
 						</control>
-						
 						<control type="image">
 							<left>1440</left>
 							<top>0</top>
@@ -1333,7 +1175,6 @@
 							<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(13)">Conditional</animation>
 						</control>
-						
 						<control type="label">
 							<left>0</left>
 							<top>0</top>
@@ -1346,7 +1187,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.StartTime</info>
 						</control>
-						
 						<control type="image">
 							<left>165</left>
 							<top>8</top>
@@ -1355,7 +1195,6 @@
 							<info>ListItem.Icon</info>
 							<aspectratio>keep</aspectratio>
 						</control>
-						
 						<control type="label">
 							<left>225</left>
 							<top>0</top>
@@ -1368,7 +1207,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.ChannelName</info>
 						</control>
-						
 						<control type="label">
 							<left>540</left>
 							<top>0</top>
@@ -1381,7 +1219,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
-						
 						<control type="textbox">
 							<description>Plot Value for TVShow</description>
 							<left>75</left>
@@ -1394,7 +1231,6 @@
 							<pagecontrol>-</pagecontrol>
 							<label>$INFO[ListItem.Plot]</label>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -1404,7 +1240,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1508</left>
 							<top>0</top>
@@ -1418,7 +1253,6 @@
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="image">
 							<left>1455</left>
 							<top>15</top>
@@ -1428,7 +1262,6 @@
 							<aspectratio>keep</aspectratio>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 						<control type="label">
 							<left>1500</left>
 							<top>0</top>
@@ -1442,11 +1275,8 @@
 							<label>31510</label>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
-						
 					</focusedlayout>
-					
 				</control>
-				
 				<!--scrollbar-->
 				<control type="scrollbar" id="76">
 					<left>1664</left>
@@ -1456,11 +1286,8 @@
 					<onright>101</onright>
 					<orientation>vertical</orientation>
 				</control>
-				
 			</control>
-			
 			<control type="group">
-				
 				<control type="image">
 					<left>64</left>
 					<top>94r</top>
@@ -1468,7 +1295,6 @@
 					<height>34</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-			
 				<control type="image">
 					<left>60</left>
 					<top>94r</top>
@@ -1476,7 +1302,6 @@
 					<height>34</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-
 				<control type="label">
 					<description>Page Count Label</description>
 					<left>73</left>
@@ -1491,11 +1316,7 @@
 					<label>$INFO[Container(13).NumItems] $LOCALIZE[31025] [COLOR=$VAR[Colour.500]]$INFO[Container(13).CurrentPage, $LOCALIZE[31024] ]$INFO[Container(13).NumPages,/,][/COLOR]</label>
 					<include>Window_OpenClose_Animation</include>
 				</control>
-				
 			</control>
-			
 		</control>
-
 	</include>
-	
 </includes>

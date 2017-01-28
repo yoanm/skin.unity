@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-
 	<defaultcontrol always="true">570</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-		
 	<views>570,571</views>
-	
 	<controls>
-	
 		<!--all content-->
 		<control type="group">
-		
 			<!--backgrounds (e.g. fanart-->
 			<control type="group">
 				<include>CommonBackground</include>
 			</control>
-			
 			<!--views-->
 			<control type="group">
 				<include>Window_OpenClose_Animation</include>
@@ -25,7 +18,6 @@
 				<include>EventBigListView</include>
 				<!-- view id = 571 -->
 			</control>
-			
 			<!--general window furniture-->
 			<control type="group">
 				<include>Clock</include>
@@ -34,10 +26,8 @@
 				<include>MainWindowMouseButtons</include>
 				<include>ScrollOffsetLabel</include>
 			</control>
-			
 			<!--breadcrumbs-->
 			<control type="group">
-				
 				<!--breadcrumb bg-->
 				<control type="image">
 					<left>64</left>
@@ -46,7 +36,6 @@
 					<height>45</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-				
 				<!--breadcrumb strip-->
 				<control type="image">
 					<left>60</left>
@@ -55,7 +44,6 @@
 					<height>45</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-				
 				<!--breadcrumb labels-->
 				<control type="grouplist">
 					<left>73</left>
@@ -65,15 +53,12 @@
 					<orientation>horizontal</orientation>
 					<align>left</align>
 					<itemgap>8</itemgap>
-					
 					<control type="label">
 						<width min="0" max="385">auto</width>
 						<include>WindowTitleCommons</include>
 						<label>$LOCALIZE[14111]</label>
 					</control>
-					
 				</control>
-						
 				<!--sort method bg-->
 				<control type="image">
 					<left>64</left>
@@ -82,7 +67,6 @@
 					<height>34</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-			
 				<!--sort method strip-->
 				<control type="image">
 					<left>60</left>
@@ -91,7 +75,6 @@
 					<height>34</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-			
 				<!--sort method label-->
 				<control type="label">
 					<left>73</left>
@@ -104,9 +87,7 @@
 					<textcolor>text.primary</textcolor>
 					<label>$INFO[Container.SortMethod,$LOCALIZE[31062] ]</label>
 				</control>
-				
 			</control>
-			
 			<!--fake button to hide left blade-->
 			<control type="button" id="73">
 				<left>0</left>
@@ -119,15 +100,12 @@
 				<texturefocus>-</texturefocus>
 				<visible>ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)</visible>
 			</control>
-			
 			<!--dialog fade-->
 			<include>BehindDialogFadeOut</include>
-			
 			<!--view options-->
 			<control type="group">
 				<left>-375</left>
 				<include>SideBladeLeft</include>
-				
 				<!--buttons grouplist-->
 				<control type="grouplist" id="9000">
 					<left>10</left>
@@ -140,14 +118,12 @@
 					<ondown>9000</ondown>
 					<onback>570</onback>
 					<itemgap>0</itemgap>
-					
 					<!--view as-->
 					<control type="button" id="2">
 						<textwidth>352</textwidth>
 						<include>ButtonCommonValues</include>
 						<label>-</label>
 					</control>
-					
 					<!--ascending/descending-->
 					<control type="togglebutton" id="4">
 						<include>ButtonCommonValues</include>
@@ -155,26 +131,22 @@
 						<altlabel>31050</altlabel>
 						<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 					</control>
-					
 					<!--level button-->
 					<control type="button" id="21">
 						<textwidth>255</textwidth>
 						<include>ButtonCommonValues</include>
 						<label>-</label>
 					</control>
-					
 					<!--current level only-->
 					<control type="radiobutton" id="22">
 						<label>-</label>
 						<include>ButtonCommonValues</include>
 					</control>
-					
 					<!--clear button-->
 					<control type="button" id="20">
 						<include>ButtonCommonValues</include>
 						<label>192</label>
 					</control>
-					
 					<!--choose colour-->
 					<control type="button" id="32">
 						<label>$LOCALIZE[31919]</label>
@@ -182,16 +154,10 @@
 						<onclick>SetFocus(50)</onclick>
 						<onclick>ActivateWindow(1100)</onclick>
 					</control>
-					
 					<!--now playing controls-->
 					<include>CommonNowPlaying_Controls</include>
-					
 				</control>
-				
 			</control>
-		
 		</control>
-		
 	</controls>
-	
 </window>

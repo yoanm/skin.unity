@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-
 	<defaultcontrol always="true">5</defaultcontrol>
-
 	<controls>
-	
 		<!--all content-->
 		<control type="group">
 			<visible>!Window.IsActive(FileBrowser) + !Window.IsActive(ShutdownMenu)</visible>
 			<animation effect="slide" start="850,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="850,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			
 			<animation effect="slide" start="850,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
 			<animation effect="slide" start="0,0" end="850,0" time="400" tween="quadratic" easing="out">Hidden</animation>
-			
 			<!--title bars and backgrounds-->
 			<include name="DynamicDialogBackground">
 				<param name="dialog-left" value="1100" />
@@ -23,7 +17,6 @@
 				<param name="title-height" value="90" />
 				<param name="buttonbar-visible" value="true" />
 			</include>
-			
 			<!--close window button-->
 			<control type="button">
 				<left>1105</left>
@@ -41,12 +34,10 @@
 				<ondown>9000</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
-			
 			<!--main content-->
 			<control type="group">
 				<left>1100</left>
 				<top>0</top>
-				
 				<!--title-->
 				<control type="label" id="2">
 					<left>15</left>
@@ -59,7 +50,6 @@
 					<textcolor>white</textcolor>
 					<label>587</label>
 				</control>
-
 				<!--options-->
 				<control type="grouplist" id="5">
 					<description>control area</description>
@@ -74,9 +64,7 @@
 					<onleft>9001</onleft>
 					<onright>9001</onright>
 				</control>
-				
 			</control>
-			
 			<!--bottom buttons-->
 			<control type="grouplist" id="9001">
 				<left>1135</left>
@@ -89,7 +77,6 @@
 				<onright>9001</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
-				
 				<!--ok button-->
 				<include name="AnimatedCircleButtonGroup">
 					<param name="button-id" value="28" />
@@ -101,7 +88,6 @@
 					<param name="button-onleft" value="27" />
 					<param name="button-onright" value="27" />
 				</include>
-				
 				<!--cancel button-->
 				<include name="AnimatedCircleButtonGroup">
 					<param name="button-id" value="27" />
@@ -113,42 +99,33 @@
 					<param name="button-onleft" value="28" />
 					<param name="button-onright" value="28" />
 				</include>
-
 			</control>
-			
 		</control>
-		
 		<!--button-->
 		<control type="button" id="7">
 			<left>0</left>
 			<top>0</top>
 		</control>
-		
 		<!--radio button-->
 		<control type="radiobutton" id="8">
 			<left>0</left>
 			<top>0</top>
 		</control>
-		
 		<!--spin control-->
 		<control type="spincontrolex" id="9">
 			<left>0</left>
 			<top>0</top>
 			<reverse>yes</reverse>
 		</control>
-		
 		<!--edit-->
 		<control type="edit" id="12">
 			<left>0</left>
 			<top>0</top>
 		</control>
-		
 		<!--slider-->
 		<control type="sliderex" id="13">
 			<left>0</left>
 			<top>0</top>
 		</control>
-
 	</controls>
-	
 </window>

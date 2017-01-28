@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-
 	<defaultcontrol>-</defaultcontrol>
-	
 	<controls>
-	
 		<control type="image" id="1">
 			<description>Pointer Image</description>
 			<left>0</left>
@@ -13,7 +10,6 @@
 			<height>48</height>
 			<texture>pointer-nofocus.png</texture>
 		</control>
-		
 		<control type="image" id="2">
 			<description>Pointer Focus Image</description>
 			<left>0</left>
@@ -22,7 +18,6 @@
 			<height>48</height>
 			<texture>pointer-focus.png</texture>
 		</control>
-		
 		<control type="image" id="3">
 			<description>Pointer Drag Image</description>
 			<left>0</left>
@@ -31,7 +26,6 @@
 			<height>48</height>
 			<texture>pointer-focus-drag.png</texture>
 		</control>
-		
 		<control type="image" id="4">
 			<description>Pointer Click Image</description>
 			<left>0</left>
@@ -40,7 +34,5 @@
 			<height>48</height>
 			<texture>pointer-focus-click.png</texture>
 		</control>
-		
 	</controls>
-	
 </window>

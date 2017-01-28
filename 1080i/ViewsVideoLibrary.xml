@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <includes>
-
 	<include name="PosterWrapView">
-			
 		<!--content list-->
 		<control type="list" id="501">
 			<visible>Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)</visible>
@@ -23,9 +20,7 @@
 			<preloaditems>4</preloaditems>
 			<focusposition>1</focusposition>
 			<movement>3</movement>
-			
 			<itemlayout height="500" width="362">
-			
 				<!--bg (fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -38,7 +33,6 @@
 					<bordersize>5</bordersize>
 					<bordertexture colordiffuse="tertiary">backgrounds/poster shadow small.png</bordertexture>
 				</control>
-			
 				<!--thumb (fallback)-->
 				<control type="image">
 					<left>5</left>
@@ -49,7 +43,6 @@
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 					<visible>SubString(ListItem.Icon,Default)</visible>
 				</control>
-			
 				<!--thumb (no fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -62,7 +55,6 @@
 					<bordertexture colordiffuse="tertiary">backgrounds/poster shadow small.png</bordertexture>
 					<visible>!SubString(ListItem.Icon,Default)</visible>
 				</control>
-			
 				<!--overlay background-->
 				<control type="image">
 					<left>5</left>
@@ -72,7 +64,6 @@
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 				</control>
-				
 				<!--watched icon-->
 				<control type="image">
 					<left>5</left>
@@ -82,7 +73,6 @@
 					<texture colordiffuse="white">$INFO[ListItem.Overlay]</texture>
 					<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 				</control>
-				
 				<!--resumable icon-->
 				<control type="image">
 					<left>5</left>
@@ -92,11 +82,8 @@
 					<texture colordiffuse="white">OverlayWatching.png</texture>
 					<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 				</control>
-				
 			</itemlayout>
-			
 			<focusedlayout height="500" width="362">
-			
 				<!--bg (fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -109,7 +96,6 @@
 					<bordersize>5</bordersize>
 					<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
 				</control>
-			
 				<!--thumb (fallback)-->
 				<control type="image">
 					<left>5</left>
@@ -120,7 +106,6 @@
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 					<visible>SubString(ListItem.Icon,Default)</visible>
 				</control>
-			
 				<!--thumb (no fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -133,7 +118,6 @@
 					<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
 					<visible>!SubString(ListItem.Icon,Default)</visible>
 				</control>
-			
 				<!--info background-->
 				<control type="image">
 					<left>5</left>
@@ -142,7 +126,6 @@
 					<height>120</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-					
 				<!--main label-->
 				<control type="textbox">
 					<left>20</left>
@@ -155,7 +138,6 @@
 					<align>left</align>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
-					
 				<!--secondary label-->
 				<control type="label">
 					<left>22</left>
@@ -168,7 +150,6 @@
 					<align>left</align>
 					<label>$INFO[ListItem.Rating]$INFO[ListItem.Year, • ,]$INFO[ListItem.Duration, • , $LOCALIZE[31063]]</label>
 				</control>
-			
 				<!--overlay background-->
 				<control type="image">
 					<left>5</left>
@@ -178,7 +159,6 @@
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 				</control>
-				
 				<!--watched icon-->
 				<control type="image">
 					<left>5</left>
@@ -188,7 +168,6 @@
 					<texture colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Overlay]</texture>
 					<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 				</control>
-				
 				<!--resumable icon-->
 				<control type="image">
 					<left>5</left>
@@ -198,11 +177,8 @@
 					<texture colordiffuse="$VAR[Colour.500]">OverlayWatching.png</texture>
 					<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 				</control>
-				
 			</focusedlayout>
-			
 		</control>
-		
 		<!--scrollbar-->
 		<control type="scrollbar" id="60">
 			<left>60</left>
@@ -215,18 +191,14 @@
 			<orientation>horizontal</orientation>
 			<visible>Control.IsVisible(501)</visible>
 		</control>
-		
 	</include>
-	
 	<include name="PosterWrapView2_Fanart">
-	
 		<!--label-->
 		<control type="group">
 			<left>0</left>
 			<top>525</top>
 			<visible>Control.IsVisible(508) + [[ListItem.IsFolder + Container.Content(Movies)] | Skin.HasSetting(View508HideInfo) | Container.Content(Sets)]</visible>
 			<include>VisibleFadeEffect</include>
-			
 			<control type="label">
 				<left>60</left>
 				<top>80</top>
@@ -240,15 +212,12 @@
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
-			
 		</control>
-		
 		<control type="group">
 			<visible>Control.IsVisible(508)</visible>
 			<include>VisibleFadeEffect</include>
 			<left>0</left>
 			<top>645</top>
-			
 			<!--content list-->
 			<control type="list" id="508">
 				<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Sets)</visible>
@@ -267,9 +236,7 @@
 				<movement>3</movement>
 				<orientation>horizontal</orientation>
 				<preloaditems>4</preloaditems>
-				
 				<itemlayout height="300" width="181">
-				
 					<!--bg (fallback)-->
 					<control type="image">
 						<left>0</left>
@@ -282,7 +249,6 @@
 						<bordertexture>backgrounds/poster shadow small l.png</bordertexture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-				
 					<!--thumb (fallback)-->
 					<control type="image">
 						<left>5</left>
@@ -293,7 +259,6 @@
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-				
 					<!--thumb (no fallback)-->
 					<control type="image">
 						<left>0</left>
@@ -306,7 +271,6 @@
 						<bordertexture>backgrounds/poster shadow small l.png</bordertexture>
 						<visible>!SubString(ListItem.Icon,Default)</visible>
 					</control>
-			
 					<!--overlay background-->
 					<control type="image">
 						<left>5</left>
@@ -316,7 +280,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 					</control>
-					
 					<!--watched icon-->
 					<control type="image">
 						<left>5</left>
@@ -326,7 +289,6 @@
 						<texture colordiffuse="white">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
-					
 					<!--resumable icon-->
 					<control type="image">
 						<left>5</left>
@@ -336,11 +298,8 @@
 						<texture colordiffuse="white">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="465" width="181">
-				
 					<!--bg (fallback)-->
 					<control type="image">
 						<left>0</left>
@@ -353,7 +312,6 @@
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-				
 					<!--thumb (fallback)-->
 					<control type="image">
 						<left>5</left>
@@ -364,7 +322,6 @@
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-				
 					<!--thumb (no fallback)-->
 					<control type="image">
 						<left>0</left>
@@ -377,7 +334,6 @@
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
 						<visible>!SubString(ListItem.Icon,Default)</visible>
 					</control>
-			
 					<!--overlay background-->
 					<control type="image">
 						<left>5</left>
@@ -387,7 +343,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 					</control>
-					
 					<!--watched icon-->
 					<control type="image">
 						<left>5</left>
@@ -397,7 +352,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
-					
 					<!--resumable icon-->
 					<control type="image">
 						<left>5</left>
@@ -407,11 +361,8 @@
 						<texture colordiffuse="$VAR[Colour.500]">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
 				<left>60</left>
@@ -424,16 +375,13 @@
 				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(508)</visible>
 			</control>
-			
 		</control>
-		
 		<!--movies info-->
 		<control type="group">
 			<left>360</left>
 			<top>210</top>
 			<visible>Control.IsVisible(508) + ![ListItem.IsFolder + Container.Content(Movies)] + !Skin.HasSetting(View508HideInfo) + !Container.Content(Sets)</visible>
 			<include>VisibleFadeEffect</include>
-			
 			<!--background-->
 			<control type="image">
 				<left>-10</left>
@@ -442,7 +390,6 @@
 				<height>455</height>
 				<texture colordiffuse="tertiary">backgrounds/poster wrap 2 bg.png</texture>
 			</control>
-			
 			<!--title-->
 			<control type="label">
 				<left>30</left>
@@ -456,15 +403,12 @@
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
-			
 			<!--movies info-->
 			<control type="group">
 				<top>-10</top>
 				<visible>Container.Content(Movies)</visible>
-			
 				<!--year-->
 				<control type="group">
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -477,7 +421,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[562]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -490,13 +433,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Year]</label>
 					</control>
-					
 				</control>
-				
 				<!--duration-->
 				<control type="group">
 					<top>35</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -509,7 +449,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[2050]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -522,13 +461,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Duration] $LOCALIZE[12391]</label>
 					</control>
-					
 				</control>
-				
 				<!--mpaa-->
 				<control type="group">
 					<top>70</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -541,7 +477,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[31068]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -554,13 +489,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Mpaa]</label>
 					</control>
-					
 				</control>
-				
 				<!--rating and votes-->
 				<control type="group">
 					<top>105</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -573,7 +505,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[563]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -586,13 +517,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.RatingAndVotes]</label>
 					</control>
-					
 				</control>
-				
 				<!--genre-->
 				<control type="group">
 					<top>140</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -605,7 +533,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[515]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -618,13 +545,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Genre]</label>
 					</control>
-					
 				</control>
-				
 				<!--director-->
 				<control type="group">
 					<top>175</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -637,7 +561,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[20339]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -650,13 +573,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Director]</label>
 					</control>
-					
 				</control>
-				
 				<!--writer-->
 				<control type="group">
 					<top>210</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -669,7 +589,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[20417]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -682,13 +601,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Writer]</label>
 					</control>
-					
 				</control>
-				
 				<!--studio-->
 				<control type="group">
 					<top>245</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -701,7 +617,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[572]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -714,19 +629,14 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Studio]</label>
 					</control>
-					
 				</control>
-
 			</control>
-			
 			<!--tv shows info-->
 			<control type="group">
 				<top>-10</top>
 				<visible>Container.Content(TVShows)</visible>
-			
 				<!--year-->
 				<control type="group">
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -739,7 +649,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[562]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -752,13 +661,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Year]</label>
 					</control>
-					
 				</control>
-				
 				<!--premiered-->
 				<control type="group">
 					<top>35</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -771,7 +677,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[31322]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -784,13 +689,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Premiered]</label>
 					</control>
-					
 				</control>
-				
 				<!--mpaa-->
 				<control type="group">
 					<top>70</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -803,7 +705,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[31068]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -816,13 +717,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Mpaa]</label>
 					</control>
-					
 				</control>
-				
 				<!--rating and votes-->
 				<control type="group">
 					<top>105</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -835,7 +733,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[563]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -848,13 +745,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.RatingAndVotes]</label>
 					</control>
-					
 				</control>
-				
 				<!--genre-->
 				<control type="group">
 					<top>140</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -867,7 +761,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[515]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -880,13 +773,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Genre]</label>
 					</control>
-					
 				</control>
-				
 				<!--studio-->
 				<control type="group">
 					<top>175</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -899,7 +789,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[572]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -912,13 +801,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Studio]</label>
 					</control>
-					
 				</control>
-				
 				<!--episodes-->
 				<control type="group">
 					<top>210</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -931,7 +817,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[20360]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -944,13 +829,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.episode]</label>
 					</control>
-					
 				</control>
-				
 				<!--unwatched-->
 				<control type="group">
 					<top>245</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -963,7 +845,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[16101]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -976,13 +857,10 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 					</control>
-					
 				</control>
-				
 				<!--path-->
 				<control type="group">
 					<top>280</top>
-							
 					<control type="label">
 						<left>30</left>
 						<top>100</top>
@@ -995,7 +873,6 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$LOCALIZE[31067]</label>
 					</control>
-								
 					<control type="label">
 						<left>200</left>
 						<top>100</top>
@@ -1008,11 +885,8 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Path]</label>
 					</control>
-					
 				</control>
-
 			</control>
-								
 			<!--seperator-->
 			<control type="image">
 				<left>470</left>
@@ -1021,7 +895,6 @@
 				<height>325</height>
 				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 			</control>
-					
 			<!--plot-->
 			<control type="textbox">
 				<left>500</left>
@@ -1034,7 +907,6 @@
 				<label>$INFO[ListItem.Plot]</label>
 				<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
-					
 			<!--audio/video flags-->
 			<control type="group">
 				<left>30</left>
@@ -1043,7 +915,6 @@
 				<include>media.flags.small</include>
 				<animation effect="zoom" start="100" end="80" center="30,375" time="0" condition="true">Conditional</animation>
 			</control>
-			
 			<control type="grouplist">
 				<description>MPAA Rating Flagging Images</description>
 				<left>142</left>
@@ -1054,19 +925,14 @@
 				<orientation>horizontal</orientation>
 				<include>VideoMPAAFlaggingConditions</include>
 			</control>
-			
 		</control>
-		
 	</include>
-	
 	<include name="MediaListView2">
-	
 		<!--all content-->
 		<control type="group">
 			<left>25</left>
 			<visible>Control.IsVisible(504)</visible>
 			<include>VisibleFadeEffect</include>
-			
 			<!--content list-->
 			<control type="list" id="504">
 				<left>170</left>
@@ -1081,9 +947,7 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)</visible>
-				
 				<itemlayout height="70" width="1004">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -1092,7 +956,6 @@
 						<height>60</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-					
 					<!--main label-->
 					<control type="label">
 						<left>19</left>
@@ -1106,7 +969,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<!--secondary label (non videos)-->
 					<control type="label">
 						<left>385</left>
@@ -1121,7 +983,6 @@
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>!Window.IsVisible(Videos)</visible>
 					</control>
-					
 					<!--secondary label (videos)-->
 					<control type="label">
 						<left>319</left>
@@ -1137,7 +998,6 @@
 						<visible>Window.IsVisible(Videos)</visible>
 						<animation effect="slide" start="0,0" end="41,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 					</control>
-					
 					<!--hd/sd flag-->
 					<control type="image">
 						<left>918</left>
@@ -1148,7 +1008,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>!ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--3d flag-->
 					<control type="image">
 						<left>918</left>
@@ -1159,7 +1018,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--watched icon-->
 					<control type="image">
 						<left>959</left>
@@ -1169,7 +1027,6 @@
 						<texture colordiffuse="white">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
-					
 					<!--resumable icon-->
 					<control type="image">
 						<left>959</left>
@@ -1179,11 +1036,8 @@
 						<texture colordiffuse="white">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="70" width="1004">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -1193,7 +1047,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
-				
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
@@ -1203,7 +1056,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
-					
 					<!--main label-->
 					<control type="label">
 						<left>19</left>
@@ -1217,7 +1069,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<!--secondary label (non videos)-->
 					<control type="label">
 						<left>385</left>
@@ -1232,7 +1083,6 @@
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>!Window.IsVisible(Videos)</visible>
 					</control>
-					
 					<!--secondary label (videos)-->
 					<control type="label">
 						<left>319</left>
@@ -1248,7 +1098,6 @@
 						<visible>Window.IsVisible(Videos)</visible>
 						<animation effect="slide" start="0,0" end="41,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 					</control>
-					
 					<!--hd/sd flag-->
 					<control type="image">
 						<left>918</left>
@@ -1259,7 +1108,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>!ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--3d flag-->
 					<control type="image">
 						<left>918</left>
@@ -1270,7 +1118,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--watched icon-->
 					<control type="image">
 						<left>959</left>
@@ -1280,7 +1127,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
-					
 					<!--resumable icon-->
 					<control type="image">
 						<left>959</left>
@@ -1290,11 +1136,8 @@
 						<texture colordiffuse="$VAR[Colour.500]">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
 				<left>1184</left>
@@ -1304,13 +1147,11 @@
 				<orientation>vertical</orientation>
 				<showonepage>true</showonepage>
 			</control>
-			
 			<!--movies / tv shows info-->
 			<control type="group">
 				<left>1201</left>
 				<top>200</top>
 				<visible>Control.IsVisible(504) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)]</visible>
-				
 				<!--background-->
 				<control type="image">
 					<left>-20</left>
@@ -1319,7 +1160,6 @@
 					<height>730</height>
 					<texture background="true" colordiffuse="tertiary">backgrounds/info bg.png</texture>
 				</control>
-				
 				<!--fanart (fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -1330,7 +1170,6 @@
 					<texture background="true" colordiffuse="$VAR[Colour.500]">Fanart_Fallback_Small.png</texture>
 					<visible>IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				
 				<!--fanart (no fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -1343,7 +1182,6 @@
 					<bordersize>0</bordersize>
 					<visible>!IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				
 				<!--info strip background-->
 				<control type="image">
 					<left>0</left>
@@ -1353,7 +1191,6 @@
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					<animation effect="slide" start="0,0" end="0,-7" time="0" condition="Container.Content(TVShows) | Container.Content(Seasons)">Conditional</animation>
 				</control>
-			
 				<!--fanart shadow-->
 				<control type="image">
 					<left>0</left>
@@ -1364,7 +1201,6 @@
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-7" time="0" condition="Container.Content(TVShows) | Container.Content(Seasons)">Conditional</animation>
 				</control>
-					
 				<!--secondary label-->
 				<control type="label">
 					<left>15</left>
@@ -1380,7 +1216,6 @@
 					<visible>!Container.Content(Seasons)</visible>
 					<animation effect="slide" start="0,0" end="0,-7" time="0" condition="Container.Content(TVShows) | Container.Content(Seasons)">Conditional</animation>
 				</control>
-					
 				<!--secondary label-->
 				<control type="label">
 					<left>15</left>
@@ -1395,7 +1230,6 @@
 					<label>$INFO[listitem.episode] $LOCALIZE[20360] ($INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])</label>
 					<visible>Container.Content(Seasons)</visible>
 				</control>
-				
 				<!--plot (movies)-->
 				<control type="textbox">
 					<left>15</left>
@@ -1409,7 +1243,6 @@
 					<visible>Container.Content(Movies)</visible>
 					<autoscroll time="2000" delay="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-				
 				<!--plot (tv shows)-->
 				<control type="textbox">
 					<left>15</left>
@@ -1423,7 +1256,6 @@
 					<visible>Container.Content(TVShows)</visible>
 					<autoscroll time="2000" delay="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-				
 				<!--plot (tv shows)-->
 				<control type="textbox">
 					<left>15</left>
@@ -1437,7 +1269,6 @@
 					<visible>Container.Content(Seasons)</visible>
 					<autoscroll time="2000" delay="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-			
 				<!--info strip shadow-->
 				<control type="image">
 					<left>0</left>
@@ -1448,7 +1279,6 @@
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-7" time="0" condition="Container.Content(TVShows) | Container.Content(Seasons)">Conditional</animation>
 				</control>
-				
 				<!--audio/video flags-->
 				<control type="group">
 					<left>10</left>
@@ -1457,15 +1287,12 @@
 					<include>media.flags.small</include>
 					<animation effect="zoom" start="100" end="96" center="10,600" time="0" condition="true">Conditional</animation>
 				</control>
-				
 			</control>
-			
 			<!--episodes info-->
 			<control type="group">
 				<left>1201</left>
 				<top>200</top>
 				<visible>Control.IsVisible(504) + Container.Content(Episodes)</visible>
-				
 				<!--background glow-->
 				<control type="image">
 					<left>-20</left>
@@ -1474,7 +1301,6 @@
 					<height>730</height>
 					<texture background="true" colordiffuse="tertiary">backgrounds/info bg.png</texture>
 				</control>
-				
 				<!--background-->
 				<control type="image">
 					<left>0</left>
@@ -1483,7 +1309,6 @@
 					<height>690</height>
 					<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-				
 				<!--thumb (fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -1494,7 +1319,6 @@
 					<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
 					<visible>!SubString(ListItem.Icon,default)</visible>
 				</control>
-				
 				<!--thumb (no fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -1507,7 +1331,6 @@
 					<bordersize>0</bordersize>
 					<visible>!SubString(ListItem.Icon,default)</visible>
 				</control>
-				
 				<!--info strip background-->
 				<control type="image">
 					<left>0</left>
@@ -1517,7 +1340,6 @@
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					<animation effect="slide" start="0,0" end="0,-7" time="0" condition="Container.Content(TVShows) | Container.Content(Seasons)">Conditional</animation>
 				</control>
-			
 				<!--fanart shadow-->
 				<control type="image">
 					<left>0</left>
@@ -1528,7 +1350,6 @@
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-7" time="0" condition="Container.Content(TVShows) | Container.Content(Seasons)">Conditional</animation>
 				</control>
-					
 				<!--secondary label-->
 				<control type="label">
 					<left>15</left>
@@ -1542,7 +1363,6 @@
 					<aligny>center</aligny>
 					<label>$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[31063]]$INFO[listitem.Season, • S,x]$INFO[listitem.Episode,E,]</label>
 				</control>
-				
 				<!--plot-->
 				<control type="textbox">
 					<left>15</left>
@@ -1555,7 +1375,6 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="2000" delay="5000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-			
 				<!--info strip shadow-->
 				<control type="image">
 					<left>0</left>
@@ -1566,7 +1385,6 @@
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 					<animation effect="slide" start="0,0" end="0,-7" time="0" condition="Container.Content(TVShows) | Container.Content(Seasons)">Conditional</animation>
 				</control>
-				
 				<!--audio/video flags-->
 				<control type="group">
 					<left>10</left>
@@ -1574,21 +1392,13 @@
 					<include>media.flags.small</include>
 					<animation effect="zoom" start="100" end="96" center="10,600" time="0" condition="true">Conditional</animation>
 				</control>
-				
 			</control>
-			
 		</control>
-		
-	</include>	
-	
-	<include name="MediaListView3">
-		
+	</include>	<include name="MediaListView3">
 		<!--all content-->
 		<control type="group">
-		
 			<visible>Control.IsVisible(503)</visible>
 			<include>VisibleFadeEffect</include>
-			
 			<!--content list-->
 			<control type="list" id="503">
 				<left>530</left>
@@ -1603,9 +1413,7 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)</visible>
-				
 				<itemlayout height="70" width="1004">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -1614,7 +1422,6 @@
 						<height>60</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-					
 					<!--main label-->
 					<control type="label">
 						<left>19</left>
@@ -1628,7 +1435,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<!--secondary label (non videos)-->
 					<control type="label">
 						<left>225</left>
@@ -1643,7 +1449,6 @@
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>!Window.IsVisible(Videos)</visible>
 					</control>
-					
 					<!--secondary label (videos)-->
 					<control type="label">
 						<left>159</left>
@@ -1659,7 +1464,6 @@
 						<visible>Window.IsVisible(Videos)</visible>
 						<animation effect="slide" start="0,0" end="41,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 					</control>
-					
 					<!--hd/sd flag-->
 					<control type="image">
 						<left>758</left>
@@ -1670,7 +1474,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>!ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--3d flag-->
 					<control type="image">
 						<left>758</left>
@@ -1681,7 +1484,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--watched icon-->
 					<control type="image">
 						<left>799</left>
@@ -1691,7 +1493,6 @@
 						<texture colordiffuse="white">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
-					
 					<!--resumable icon-->
 					<control type="image">
 						<left>799</left>
@@ -1701,11 +1502,8 @@
 						<texture colordiffuse="white">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="70" width="1004">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -1715,7 +1513,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
-				
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
@@ -1725,7 +1522,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
-					
 					<!--main label-->
 					<control type="label">
 						<left>19</left>
@@ -1739,7 +1535,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<!--secondary label (non videos)-->
 					<control type="label">
 						<left>225</left>
@@ -1754,7 +1549,6 @@
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>!Window.IsVisible(Videos)</visible>
 					</control>
-					
 					<!--secondary label (videos)-->
 					<control type="label">
 						<left>159</left>
@@ -1770,7 +1564,6 @@
 						<visible>Window.IsVisible(Videos)</visible>
 						<animation effect="slide" start="0,0" end="41,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 					</control>
-					
 					<!--hd/sd flag-->
 					<control type="image">
 						<left>758</left>
@@ -1781,7 +1574,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>!ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--3d flag-->
 					<control type="image">
 						<left>758</left>
@@ -1792,7 +1584,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--watched icon-->
 					<control type="image">
 						<left>799</left>
@@ -1802,7 +1593,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
-					
 					<!--resumable icon-->
 					<control type="image">
 						<left>799</left>
@@ -1812,11 +1602,8 @@
 						<texture colordiffuse="$VAR[Colour.500]">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
 				<left>1384</left>
@@ -1826,16 +1613,12 @@
 				<orientation>vertical</orientation>
 				<showonepage>true</showonepage>
 			</control>
-			
-			<!--tv shows info-->			
-			<control type="group">
+			<!--tv shows info-->			<control type="group">
 				<left>931</left>
 				<top>200</top>
 				<visible>Container.Content(TVShows)</visible>
-				
 				<!--poster-->
 				<control type="group">
-				
 					<!--poster bg (fallback)-->
 					<control type="image">
 						<left>-881</left>
@@ -1847,7 +1630,6 @@
 						<bordersize>10</bordersize>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 					<!--poster (fallback)-->
 					<control type="image">
 						<left>-871</left>
@@ -1858,7 +1640,6 @@
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 					<!--poster-->
 					<control type="image">
 						<left>-881</left>
@@ -1871,13 +1652,10 @@
 						<bordersize>10</bordersize>
 						<visible>!SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 				</control>
-				
 				<!--info-->
 				<control type="group">
 					<left>0</left>
-				
 					<!--background glow-->
 					<control type="image">
 						<left>452</left>
@@ -1886,7 +1664,6 @@
 						<height>730</height>
 						<texture background="true" colordiffuse="tertiary">backgrounds/info bg.png</texture>
 					</control>
-					
 					<!--info strip background-->
 					<control type="image">
 						<left>470</left>
@@ -1895,7 +1672,6 @@
 						<height>130</height>
 						<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					</control>
-						
 					<!--secondary label-->
 					<control type="label">
 						<left>485</left>
@@ -1909,7 +1685,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Premiered]</label>
 					</control>
-						
 					<!--secondary label-->
 					<control type="label">
 						<left>485</left>
@@ -1923,7 +1698,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Genre]</label>
 					</control>
-						
 					<!--secondary label-->
 					<control type="label">
 						<left>485</left>
@@ -1937,7 +1711,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[listitem.episode] $LOCALIZE[20360] ($INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])</label>
 					</control>
-					
 					<!--plot-->
 					<control type="textbox">
 						<left>485</left>
@@ -1950,7 +1723,6 @@
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
-			
 					<!--info strip shadow-->
 					<control type="image">
 						<left>470</left>
@@ -1959,20 +1731,14 @@
 						<height>10</height>
 						<texture>homeshadow.png</texture>
 					</control>
-					
 				</control>
-				
 			</control>
-
-			<!--episodes info-->			
-			<control type="group">
+			<!--episodes info-->			<control type="group">
 				<left>931</left>
 				<top>200</top>
 				<visible>Container.Content(Episodes)</visible>
-				
 				<!--poster-->
 				<control type="group">
-				
 					<!--poster bg (fallback)-->
 					<control type="image">
 						<left>-881</left>
@@ -1984,7 +1750,6 @@
 						<bordersize>10</bordersize>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 					<!--poster (fallback)-->
 					<control type="image">
 						<left>-871</left>
@@ -1995,7 +1760,6 @@
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 					<!--poster-->
 					<control type="image">
 						<left>-881</left>
@@ -2008,13 +1772,10 @@
 						<bordersize>10</bordersize>
 						<visible>!SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 				</control>
-				
 				<!--info-->
 				<control type="group">
 					<left>0</left>
-				
 					<!--background glow-->
 					<control type="image">
 						<left>452</left>
@@ -2023,7 +1784,6 @@
 						<height>730</height>
 						<texture background="true" colordiffuse="tertiary">backgrounds/info bg.png</texture>
 					</control>
-					
 					<!--info strip background-->
 					<control type="image">
 						<left>470</left>
@@ -2032,7 +1792,6 @@
 						<height>130</height>
 						<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					</control>
-						
 					<!--secondary label-->
 					<control type="label">
 						<left>485</left>
@@ -2046,7 +1805,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Premiered]</label>
 					</control>
-						
 					<!--secondary label-->
 					<control type="label">
 						<left>485</left>
@@ -2060,7 +1818,6 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[20373] $INFO[ListItem.Season] / $LOCALIZE[20359] $INFO[ListItem.Episode]</label>
 					</control>
-						
 					<!--secondary label-->
 					<control type="label">
 						<left>485</left>
@@ -2074,7 +1831,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Duration,, $LOCALIZE[31063]]</label>
 					</control>
-					
 					<!--plot-->
 					<control type="textbox">
 						<left>485</left>
@@ -2087,7 +1843,6 @@
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
-			
 					<!--info strip shadow-->
 					<control type="image">
 						<left>470</left>
@@ -2096,20 +1851,14 @@
 						<height>10</height>
 						<texture>homeshadow.png</texture>
 					</control>
-					
 				</control>
-				
 			</control>
-
-			<!--seasons info-->			
-			<control type="group">
+			<!--seasons info-->			<control type="group">
 				<left>931</left>
 				<top>200</top>
 				<visible>Container.Content(Seasons)</visible>
-				
 				<!--poster-->
 				<control type="group">
-				
 					<!--poster bg (fallback)-->
 					<control type="image">
 						<left>-881</left>
@@ -2121,7 +1870,6 @@
 						<bordersize>10</bordersize>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 					<!--poster (fallback)-->
 					<control type="image">
 						<left>-871</left>
@@ -2132,7 +1880,6 @@
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 					<!--poster-->
 					<control type="image">
 						<left>-881</left>
@@ -2145,13 +1892,10 @@
 						<bordersize>10</bordersize>
 						<visible>!SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 				</control>
-				
 				<!--info-->
 				<control type="group">
 					<left>0</left>
-				
 					<!--background glow-->
 					<control type="image">
 						<left>452</left>
@@ -2160,7 +1904,6 @@
 						<height>730</height>
 						<texture background="true" colordiffuse="tertiary">backgrounds/info bg.png</texture>
 					</control>
-					
 					<!--info strip background-->
 					<control type="image">
 						<left>470</left>
@@ -2169,7 +1912,6 @@
 						<height>60</height>
 						<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					</control>
-						
 					<!--secondary label-->
 					<control type="label">
 						<left>485</left>
@@ -2183,7 +1925,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[listitem.episode] $LOCALIZE[20360] ($INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])</label>
 					</control>
-					
 					<!--plot-->
 					<control type="textbox">
 						<left>485</left>
@@ -2196,7 +1937,6 @@
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
-			
 					<!--info strip shadow-->
 					<control type="image">
 						<left>470</left>
@@ -2205,20 +1945,15 @@
 						<height>10</height>
 						<texture>homeshadow.png</texture>
 					</control>
-					
 				</control>
-				
 			</control>
-			
 			<!--movies info-->
 			<control type="group">
 				<left>931</left>
 				<top>200</top>
 				<visible>Container.Content(Movies)</visible>
-				
 				<!--poster-->
 				<control type="group">
-				
 					<!--poster bg (fallback)-->
 					<control type="image">
 						<left>-881</left>
@@ -2230,7 +1965,6 @@
 						<bordersize>10</bordersize>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 					<!--poster (fallback)-->
 					<control type="image">
 						<left>-871</left>
@@ -2241,7 +1975,6 @@
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 					<!--poster-->
 					<control type="image">
 						<left>-881</left>
@@ -2254,13 +1987,10 @@
 						<bordersize>10</bordersize>
 						<visible>!SubString(ListItem.Icon,Default)</visible>
 					</control>
-					
 				</control>
-				
 				<!--info-->
 				<control type="group">
 					<left>0</left>
-				
 					<!--background glow-->
 					<control type="image">
 						<left>452</left>
@@ -2269,7 +1999,6 @@
 						<height>730</height>
 						<texture background="true" colordiffuse="tertiary">backgrounds/info bg.png</texture>
 					</control>
-					
 					<!--info strip background-->
 					<control type="image">
 						<left>470</left>
@@ -2278,7 +2007,6 @@
 						<height>130</height>
 						<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					</control>
-						
 					<!--secondary label-->
 					<control type="label">
 						<left>485</left>
@@ -2292,7 +2020,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Year]</label>
 					</control>
-						
 					<!--secondary label-->
 					<control type="label">
 						<left>485</left>
@@ -2306,7 +2033,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Duration,, $LOCALIZE[31063]]</label>
 					</control>
-						
 					<!--secondary label-->
 					<control type="label">
 						<left>485</left>
@@ -2320,7 +2046,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Genre]</label>
 					</control>
-					
 					<!--plot (movies)-->
 					<control type="textbox">
 						<left>485</left>
@@ -2333,7 +2058,6 @@
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
-			
 					<!--info strip shadow-->
 					<control type="image">
 						<left>470</left>
@@ -2342,7 +2066,6 @@
 						<height>10</height>
 						<texture>homeshadow.png</texture>
 					</control>
-					
 					<!--audio/video flags-->
 					<control type="group">
 						<left>485</left>
@@ -2351,22 +2074,15 @@
 						<include>media.flags.small</include>
 						<animation effect="zoom" start="100" end="84" center="485,600" time="0" condition="true">Conditional</animation>
 					</control>
-					
 				</control>
-				
 			</control>
-			
 		</control>
-		
 	</include>
-	
 	<include name="MediaListView4">
-	
 		<!-- allcontent-->
 		<control type="group">
 			<visible>Control.IsVisible(515)</visible>
 			<include>VisibleFadeEffect</include>
-			
 			<!--content list-->
 			<control type="list" id="515">
 				<left>60</left>
@@ -2381,9 +2097,7 @@
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
-				
 				<itemlayout height="70" width="518">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -2392,7 +2106,6 @@
 						<height>60</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-					
 					<!--main label-->
 					<control type="label">
 						<left>19</left>
@@ -2406,7 +2119,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<!--secondary label (non videos)-->
 					<control type="label">
 						<left>170</left>
@@ -2421,7 +2133,6 @@
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>!Window.IsVisible(Videos)</visible>
 					</control>
-					
 					<!--secondary label (videos)-->
 					<control type="label">
 						<left>104</left>
@@ -2437,7 +2148,6 @@
 						<visible>Window.IsVisible(Videos)</visible>
 						<animation effect="slide" start="0,0" end="41,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 					</control>
-					
 					<!--hd/sd flag-->
 					<control type="image">
 						<left>703</left>
@@ -2448,7 +2158,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>!ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--3d flag-->
 					<control type="image">
 						<left>703</left>
@@ -2459,7 +2168,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--watched icon-->
 					<control type="image">
 						<left>744</left>
@@ -2469,7 +2177,6 @@
 						<texture colordiffuse="white">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
-					
 					<!--resumable icon-->
 					<control type="image">
 						<left>744</left>
@@ -2479,11 +2186,8 @@
 						<texture colordiffuse="white">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="70" width="518">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -2493,7 +2197,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
-				
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
@@ -2503,7 +2206,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="Control.HasFocus(60)">Conditional</animation>
 					</control>
-					
 					<!--main label-->
 					<control type="label">
 						<left>19</left>
@@ -2517,7 +2219,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<!--secondary label (non videos)-->
 					<control type="label">
 						<left>170</left>
@@ -2532,7 +2233,6 @@
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>!Window.IsVisible(Videos)</visible>
 					</control>
-					
 					<!--secondary label (videos)-->
 					<control type="label">
 						<left>104</left>
@@ -2548,7 +2248,6 @@
 						<visible>Window.IsVisible(Videos)</visible>
 						<animation effect="slide" start="0,0" end="41,0" delay="0" time="0" condition="![Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]">conditional</animation>
 					</control>
-					
 					<!--hd/sd flag-->
 					<control type="image">
 						<left>703</left>
@@ -2559,7 +2258,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>!ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--3d flag-->
 					<control type="image">
 						<left>703</left>
@@ -2570,7 +2268,6 @@
 						<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 						<visible>ListItem.IsStereoscopic</visible>
 					</control>
-					
 					<!--watched icon-->
 					<control type="image">
 						<left>744</left>
@@ -2580,7 +2277,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Overlay]</texture>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable</visible>
 					</control>
-					
 					<!--resumable icon-->
 					<control type="image">
 						<left>744</left>
@@ -2590,11 +2286,8 @@
 						<texture colordiffuse="$VAR[Colour.500]">OverlayWatching.png</texture>
 						<visible>Window.IsVisible(Videos) + ListItem.IsResumable</visible>
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
 				<left>859</left>
@@ -2604,13 +2297,11 @@
 				<orientation>vertical</orientation>
 				<showonepage>true</showonepage>
 			</control>
-			
 			<!--movie info-->
 			<control type="group">
 				<left>876</left>
 				<top>200</top>
 				<visible>Container.Content(Movies)</visible>
-				
 				<!--background-->
 				<control type="image">
 					<left>-10</left>
@@ -2619,7 +2310,6 @@
 					<height>710</height>
 					<texture background="true" colordiffuse="tertiary">backgrounds/media info 3 bg.png</texture>
 				</control>
-				
 				<!--fanart (fallback)-->
 				<control type="image">
 					<left>2</left>
@@ -2630,7 +2320,6 @@
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<visible>IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				
 				<!--fanart (no fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -2640,7 +2329,6 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 				</control>
-				
 				<!--thumb (fallback)-->
 				<control type="image">
 					<left>715</left>
@@ -2651,7 +2339,6 @@
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 					<visible>SubString(ListItem.Icon,Default)</visible>
 				</control>
-				
 				<!--thumb (no fallback)-->
 				<control type="image">
 					<left>715</left>
@@ -2662,7 +2349,6 @@
 					<texture background="true">$VAR[PosterThumb]</texture>
 					<visible>!SubString(ListItem.Icon,Default)</visible>
 				</control>
-				
 				<!--info strip background-->
 				<control type="image">
 					<left>0</left>
@@ -2671,7 +2357,6 @@
 					<height>60</height>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-			
 				<!--fanart shadow-->
 				<control type="image">
 					<left>0</left>
@@ -2681,7 +2366,6 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
-					
 				<!--secondary label-->
 				<control type="label">
 					<left>15</left>
@@ -2696,7 +2380,6 @@
 					<label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[31063]]$INFO[ListItem.Genre, • ,]</label>
 					<visible>!Container.Content(Seasons)</visible>
 				</control>
-				
 				<!--plot (movies)-->
 				<control type="textbox">
 					<left>15</left>
@@ -2709,7 +2392,6 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="10000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-			
 				<!--info strip shadow-->
 				<control type="image">
 					<left>0</left>
@@ -2719,7 +2401,6 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
-				
 				<!--audio/video flags-->
 				<control type="group">
 					<left>10</left>
@@ -2727,15 +2408,12 @@
 					<include>media.flags.small</include>
 					<animation effect="zoom" start="100" end="90" center="10,600" time="0" condition="true">Conditional</animation>
 				</control>
-				
 			</control>
-			
 			<!--tv show info-->
 			<control type="group">
 				<left>876</left>
 				<top>200</top>
 				<visible>Container.Content(TVShows)</visible>
-				
 				<!--background-->
 				<control type="image">
 					<left>-10</left>
@@ -2744,7 +2422,6 @@
 					<height>710</height>
 					<texture background="true" colordiffuse="tertiary">backgrounds/media info 3 bg.png</texture>
 				</control>
-				
 				<!--fanart (fallback)-->
 				<control type="image">
 					<left>2</left>
@@ -2755,7 +2432,6 @@
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<visible>IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				
 				<!--fanart (no fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -2765,7 +2441,6 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 				</control>
-				
 				<!--thumb (fallback)-->
 				<control type="image">
 					<left>715</left>
@@ -2776,7 +2451,6 @@
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 					<visible>SubString(ListItem.Icon,Default)</visible>
 				</control>
-				
 				<!--thumb (no fallback)-->
 				<control type="image">
 					<left>715</left>
@@ -2787,7 +2461,6 @@
 					<texture background="true">$VAR[PosterThumb]</texture>
 					<visible>!SubString(ListItem.Icon,Default)</visible>
 				</control>
-				
 				<!--info strip background-->
 				<control type="image">
 					<left>0</left>
@@ -2796,7 +2469,6 @@
 					<height>60</height>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-			
 				<!--fanart shadow-->
 				<control type="image">
 					<left>0</left>
@@ -2806,7 +2478,6 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
-					
 				<!--secondary label-->
 				<control type="label">
 					<left>15</left>
@@ -2821,7 +2492,6 @@
 					<label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[31063]]$INFO[ListItem.Genre, • ,]</label>
 					<visible>!Container.Content(Seasons)</visible>
 				</control>
-				
 				<!--plot (tv shows)-->
 				<control type="textbox">
 					<left>15</left>
@@ -2834,7 +2504,6 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="10000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-			
 				<!--info strip shadow-->
 				<control type="image">
 					<left>0</left>
@@ -2844,15 +2513,12 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
-				
 			</control>
-			
 			<!--seasons info-->
 			<control type="group">
 				<left>876</left>
 				<top>200</top>
 				<visible>Container.Content(Seasons)</visible>
-				
 				<!--background-->
 				<control type="image">
 					<left>-10</left>
@@ -2861,7 +2527,6 @@
 					<height>710</height>
 					<texture background="true" colordiffuse="tertiary">backgrounds/media info 3 bg.png</texture>
 				</control>
-				
 				<!--fanart (fallback)-->
 				<control type="image">
 					<left>2</left>
@@ -2872,7 +2537,6 @@
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<visible>IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
-				
 				<!--fanart (no fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -2882,7 +2546,6 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 				</control>
-				
 				<!--thumb (fallback)-->
 				<control type="image">
 					<left>715</left>
@@ -2893,7 +2556,6 @@
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 					<visible>SubString(ListItem.Icon,Default)</visible>
 				</control>
-				
 				<!--thumb (no fallback)-->
 				<control type="image">
 					<left>715</left>
@@ -2904,7 +2566,6 @@
 					<texture background="true">$VAR[PosterThumb]</texture>
 					<visible>!SubString(ListItem.Icon,Default)</visible>
 				</control>
-				
 				<!--info strip background-->
 				<control type="image">
 					<left>0</left>
@@ -2913,7 +2574,6 @@
 					<height>60</height>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-			
 				<!--fanart shadow-->
 				<control type="image">
 					<left>0</left>
@@ -2923,7 +2583,6 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
-					
 				<!--secondary label-->
 				<control type="label">
 					<left>15</left>
@@ -2938,7 +2597,6 @@
 					<label>$INFO[listitem.episode] $LOCALIZE[20360] ($INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])</label>
 					<visible>Container.Content(Seasons)</visible>
 				</control>
-				
 				<!--plot (seasons)-->
 				<control type="textbox">
 					<left>15</left>
@@ -2951,7 +2609,6 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="10000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-			
 				<!--info strip shadow-->
 				<control type="image">
 					<left>0</left>
@@ -2961,15 +2618,12 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
-				
 			</control>
-			
 			<!--episodes info-->
 			<control type="group">
 				<left>876</left>
 				<top>200</top>
 				<visible>Container.Content(Episodes)</visible>
-				
 				<!--background-->
 				<control type="image">
 					<left>-10</left>
@@ -2978,7 +2632,6 @@
 					<height>710</height>
 					<texture background="true" colordiffuse="tertiary">backgrounds/media info 3 bg.png</texture>
 				</control>
-				
 				<!--thumb (fallback)-->
 				<control type="image">
 					<left>2</left>
@@ -2989,7 +2642,6 @@
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
 					<visible>SubString(ListItem.Icon,default)</visible>
 				</control>
-				
 				<!--thumb (no fallback)-->
 				<control type="image">
 					<left>0</left>
@@ -3000,7 +2652,6 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<visible>!SubString(ListItem.Icon,default)</visible>
 				</control>
-				
 				<!--poster (fallback)-->
 				<control type="image">
 					<left>715</left>
@@ -3011,7 +2662,6 @@
 					<texture colordiffuse="$VAR[Colour.500]" background="true">DefaultFolder.png</texture>
 					<visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
 				</control>
-				
 				<!--poster-->
 				<control type="image">
 					<left>715</left>
@@ -3022,7 +2672,6 @@
 					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
 					<visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
 				</control>
-				
 				<!--info strip background-->
 				<control type="image">
 					<left>0</left>
@@ -3031,7 +2680,6 @@
 					<height>60</height>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-			
 				<!--fanart shadow-->
 				<control type="image">
 					<left>0</left>
@@ -3041,7 +2689,6 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
-					
 				<!--secondary label-->
 				<control type="label">
 					<left>15</left>
@@ -3056,7 +2703,6 @@
 					<label>$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[31063]]$INFO[ListItem.Genre, • ,]</label>
 					<visible>!Container.Content(Seasons)</visible>
 				</control>
-				
 				<!--plot (movies)-->
 				<control type="textbox">
 					<left>15</left>
@@ -3069,7 +2715,6 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="10000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-			
 				<!--info strip shadow-->
 				<control type="image">
 					<left>0</left>
@@ -3079,7 +2724,6 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
 				</control>
-				
 				<!--audio/video flags-->
 				<control type="group">
 					<left>10</left>
@@ -3087,11 +2731,7 @@
 					<include>media.flags.small</include>
 					<animation effect="zoom" start="100" end="90" center="10,600" time="0" condition="true">Conditional</animation>
 				</control>
-				
 			</control>
-			
 		</control>
-		
 	</include>
-
 </includes>

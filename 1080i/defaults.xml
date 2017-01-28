@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<default type="image">
 		<left>0</left>
 		<top>0</top>
 		<texture>-</texture>
 		<colorkey>0</colorkey>
 	</default>
-	
 	<default type="label">
 		<label>-</label>
 		<font>label</font>
 		<textcolor>text.primary</textcolor>
 		<disabledcolor>disabled</disabledcolor>
 	</default>
-	
 	<default type="fadelabel">
 		<left>120</left>
 		<top>90</top>
@@ -22,7 +19,6 @@
 		<textcolor>text.primary</textcolor>
 		<disabledcolor>disabled</disabledcolor>
 	</default>
-	
 	<default type="button">
 		<width>180</width>
 		<height>60</height>
@@ -37,7 +33,6 @@
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>
-	
 	<default type="togglebutton">
 		<left>210</left>
 		<top>250</top>
@@ -54,7 +49,6 @@
 		<disabledcolor>disabled</disabledcolor>
 		<pulseonselect>no</pulseonselect>
 	</default>
-	
 	<default type="textbox">
 		<left>330</left>
 		<top>332</top>
@@ -64,7 +58,6 @@
 		<textcolor>text.primary</textcolor>
 		<font>label</font>
 	</default>
-	
 	<default type="progress">
 		<left>150</left>
 		<top>488</top>
@@ -74,7 +67,6 @@
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
-	
 	<default type="spincontrol">
 		<left>495</left>
 		<top>189</top>
@@ -97,7 +89,6 @@
 		<textoffsety>0</textoffsety>
 		<pulseonselect>no</pulseonselect>
 	</default>
-	
 	<default type="spincontrolex">
 		<left>795</left>
 		<top>240</top>
@@ -122,7 +113,6 @@
 		<reverse>yes</reverse>
 		<pulseonselect>no</pulseonselect>
 	</default>
-	
 	<default type="radiobutton">
 		<left>450</left>
 		<top>300</top>
@@ -147,7 +137,6 @@
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>
-	
 	<default type="selectbutton">
 		<left>735</left>
 		<top>502</top>
@@ -167,12 +156,10 @@
 		<disabledcolor>disabled</disabledcolor>
 		<aligny>center</aligny>
 	</default>
-	
 	<default type="slider">
 		<controloffsetx>75</controloffsetx>
 		<controloffsety>0</controloffsety>
 	</default>
-	
 	<default type="sliderex">
 		<height>60</height>
 		<textoffsetx>15</textoffsetx>
@@ -189,21 +176,18 @@
 		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 	</default>
-	
 	<default type="mover">
 		<left>90</left>
 		<top>288</top>
 		<texturefocus>CalibrateTopLeft.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 	</default>
-	
 	<default type="resize">
 		<left>90</left>
 		<top>288</top>
 		<texturefocus>CalibratePixelRatio.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 	</default>
-	
 	<default type="edit">
 		<left>450</left>
 		<top>300</top>
@@ -220,7 +204,6 @@
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>
-			
 	<default type="scrollbar">
 		<width>7</width>
 		<height>690</height>
@@ -232,5 +215,4 @@
 		<showonepage>false</showonepage>
 		<orientation>vertical</orientation>
 	</default>
-	
 </includes>

@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-
 	<defaultcontrol always="true">9000</defaultcontrol>
-	
 	<controls>
-		
 		<!--all content-->
 		<control type="group">
 			<visible>!Window.IsVisible(AddonSettings) + !Window.IsActive(TextViewer) + !Window.IsActive(ShutdownMenu)</visible>
 			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			
 			<animation effect="slide" start="-1650,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">Hidden</animation>
-			
 			<!--title bars and backgrounds-->
 			<include name="DynamicDialogBackground">
 				<param name="dialog-left" value="355" />
@@ -23,7 +17,6 @@
 				<param name="sidebar-visible" value="true" />
 				<param name="sidebar-width" value="350" />
 			</include>
-			
 			<!--close window button-->
 			<control type="button">
 				<left>360</left>
@@ -41,12 +34,10 @@
 				<ondown>3</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
-			
 			<!--main content-->
 			<control type="group">
 				<left>355</left>
 				<top>0</top>
-				
 				<!--title-->
 				<control type="label" id="2">
 					<left>45</left>
@@ -59,7 +50,6 @@
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[24003]</label>
 				</control>
-
 				<control type="image">
 					<left>10</left>
 					<top>120</top>
@@ -68,7 +58,6 @@
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Icon]</texture>
 				</control>
-				
 				<control type="label">
 					<description>Addon Title value</description>
 					<left>385</left>
@@ -82,11 +71,9 @@
 					<textcolor>text.primary</textcolor>
 					<scroll>true</scroll>
 				</control>
-				
 				<control type="group">
 					<left>370</left>
 					<top>195</top>
-					
 					<control type="label">
 						<description>Type txt</description>
 						<left>15</left>
@@ -99,7 +86,6 @@
 						<font>secondary.info</font>
 						<textcolor>$VAR[Colour.500]</textcolor>
 					</control>
-					
 					<control type="label">
 						<description>Type Value</description>
 						<left>240</left>
@@ -112,7 +98,6 @@
 						<font>secondary.info</font>
 						<scroll>true</scroll>
 					</control>
-					
 					<control type="label">
 						<description>Author txt</description>
 						<left>15</left>
@@ -125,7 +110,6 @@
 						<font>secondary.info</font>
 						<textcolor>$VAR[Colour.500]</textcolor>
 					</control>
-					
 					<control type="label">
 						<description>Author Value</description>
 						<left>240</left>
@@ -138,7 +122,6 @@
 						<font>secondary.info</font>
 						<scroll>true</scroll>
 					</control>
-					
 					<control type="label">
 						<description>Version txt</description>
 						<left>15</left>
@@ -151,7 +134,6 @@
 						<font>secondary.info</font>
 						<textcolor>$VAR[Colour.500]</textcolor>
 					</control>
-					
 					<control type="label">
 						<description>Version Value</description>
 						<left>240</left>
@@ -164,7 +146,6 @@
 						<font>secondary.info</font>
 						<scroll>true</scroll>
 					</control>
-					
 					<control type="label">
 						<description>Rating txt</description>
 						<left>15</left>
@@ -177,7 +158,6 @@
 						<font>secondary.info</font>
 						<textcolor>$VAR[Colour.500]</textcolor>
 					</control>
-					
 					<control type="image">
 						<description>Rating value</description>
 						<left>232</left>
@@ -187,7 +167,6 @@
 						<aspectratio align="left">keep</aspectratio>
 						<texture fallback="LeftRating/rating0.png">$INFO[ListItem.Property(Addon.StarRating),LeftRating/]</texture>
 					</control>
-					
 					<control type="label">
 						<description>Summary txt</description>
 						<left>15</left>
@@ -200,7 +179,6 @@
 						<font>secondary.info</font>
 						<textcolor>$VAR[Colour.500]</textcolor>
 					</control>
-					
 					<control type="fadelabel">
 						<description>Summary Value</description>
 						<left>240</left>
@@ -214,7 +192,6 @@
 						<scrollout>false</scrollout>
 						<pauseatend>2000</pauseatend>
 					</control>
-					
 					<control type="image">
 						<left>-5</left>
 						<top>240</top>
@@ -222,7 +199,6 @@
 						<height>1</height>
 						<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					</control>
-					
 					<control type="label">
 						<description>Description txt</description>
 						<left>0</left>
@@ -235,10 +211,8 @@
 						<font>secondary.info</font>
 						<textcolor>$VAR[Colour.500]</textcolor>
 					</control>
-					
 					<control type="group">
 						<visible>!IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
-						
 						<control type="label">
 							<description>Description Page Count</description>
 							<left>365</left>
@@ -251,7 +225,6 @@
 							<font>label</font>
 							<textcolor>text.primary</textcolor>
 						</control>
-						
 						<control type="textbox" id="400">
 							<description>Description</description>
 							<left>15</left>
@@ -264,7 +237,6 @@
 							<label>$INFO[ListItem.Property(Addon.Description)]</label>
 							<pagecontrol>60</pagecontrol>
 						</control>
-						
 						<!--scrollbar-->
 						<control type="scrollbar" id="60">
 							<left>825</left>
@@ -275,7 +247,6 @@
 							<onleft>9000</onleft>
 							<onright>61</onright>
 						</control>
-
 						<control type="label">
 							<description>Disclaimer txt</description>
 							<left>0</left>
@@ -288,7 +259,6 @@
 							<font>secondary.info</font>
 							<textcolor>orange</textcolor>
 						</control>
-						
 						<control type="textbox">
 							<description>Disclaimer</description>
 							<left>15</left>
@@ -301,12 +271,9 @@
 							<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
 							<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 						</control>
-						
 					</control>
-					
 					<control type="group">
 						<visible>IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
-						
 						<control type="label">
 							<description>Description Page Count</description>
 							<left>365</left>
@@ -319,7 +286,6 @@
 							<font>label</font>
 							<textcolor>text.primary</textcolor>
 						</control>
-						
 						<control type="textbox" id="401">
 							<description>Description</description>
 							<left>15</left>
@@ -332,7 +298,6 @@
 							<label>$INFO[ListItem.Property(Addon.Description)]</label>
 							<pagecontrol>61</pagecontrol>
 						</control>
-						
 						<!--scrollbar-->
 						<control type="scrollbar" id="61">
 							<left>825</left>
@@ -345,11 +310,8 @@
 							<onleft>60</onleft>
 							<onright>9000</onright>
 						</control>
-
 					</control>
-					
 				</control>
-				
 				<control type="grouplist" id="9000">
 					<left>10</left>
 					<top>475</top>
@@ -360,7 +322,6 @@
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<itemgap>3</itemgap>
-					
 					<control type="button" id="9">
 						<description>Configure Addon</description>
 						<width>330</width>
@@ -373,7 +334,6 @@
 						<selectedcolor>$VAR[Colour.900]</selectedcolor>
 						<disabledcolor>$VAR[Colour.400]</disabledcolor>
 					</control>
-					
 					<control type="button" id="8">
 						<description>Update Addon button</description>
 						<width>330</width>
@@ -386,7 +346,6 @@
 						<selectedcolor>$VAR[Colour.900]</selectedcolor>
 						<disabledcolor>$VAR[Colour.400]</disabledcolor>
 					</control>
-					
 					<control type="radiobutton" id="13">
 						<description>Auto-update button</description>
 						<width>330</width>
@@ -404,7 +363,6 @@
 						<focusedcolor>$VAR[Colour.900]</focusedcolor>
 						<disabledcolor>$VAR[Colour.400]</disabledcolor>
 					</control>
-					
 					<control type="button" id="12">
 						<description>Launch Addon button</description>
 						<width>330</width>
@@ -417,7 +375,6 @@
 						<selectedcolor>$VAR[Colour.900]</selectedcolor>
 						<disabledcolor>$VAR[Colour.400]</disabledcolor>
 					</control>
-					
 					<control type="button" id="6">
 						<description>Install/UnInstall Addon button</description>
 						<width>330</width>
@@ -430,7 +387,6 @@
 						<selectedcolor>$VAR[Colour.900]</selectedcolor>
 						<disabledcolor>$VAR[Colour.400]</disabledcolor>
 					</control>
-					
 					<control type="button" id="7">
 						<description>Enable/Disable Addon button</description>
 						<width>330</width>
@@ -443,7 +399,6 @@
 						<selectedcolor>$VAR[Colour.900]</selectedcolor>
 						<disabledcolor>$VAR[Colour.400]</disabledcolor>
 					</control>
-					
 					<control type="button" id="10">
 						<description>Changelog button</description>
 						<width>330</width>
@@ -456,14 +411,11 @@
 						<selectedcolor>$VAR[Colour.900]</selectedcolor>
 						<disabledcolor>$VAR[Colour.400]</disabledcolor>
 					</control>
-					
 				</control>
-				
 				<control type="group">
 					<visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
 					<left>0</left>
 					<top>950</top>
-					
 					<control type="image">
 						<description>background image</description>
 						<left>0</left>
@@ -472,7 +424,6 @@
 						<height>130</height>
 						<texture background="true" colordiffuse="primary">backgrounds/white.png</texture>
 					</control>
-
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
@@ -481,7 +432,6 @@
 						<texture>homeshadow.png</texture>
 						<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 					</control>
-					
 					<control type="image">
 						<description>Icon image</description>
 						<left>20</left>
@@ -490,7 +440,6 @@
 						<height>90</height>
 						<texture colordiffuse="text.primary">DefaultIconError.png</texture>
 					</control>
-					
 					<control type="label">
 						<description>header label</description>
 						<left>150</left>
@@ -503,7 +452,6 @@
 						<aligny>center</aligny>
 						<textcolor>text.primary</textcolor>
 					</control>
-					
 					<control type="textbox">
 						<description>Reason label</description>
 						<left>150</left>
@@ -515,13 +463,8 @@
 						<align>left</align>
 						<textcolor>text.primary</textcolor>
 					</control>
-					
 				</control>
-				
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>

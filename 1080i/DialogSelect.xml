@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window type="dialog">
-
 	<defaultcontrol always="true">3</defaultcontrol>
-	
 	<controls>
-	
 		<!--all content-->
 		<control type="group">
 			<visible>!Window.IsActive(FileBrowser)</visible>
 			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			
 			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">Hidden</animation>
-			
 			<animation effect="slide" start="0,0" end="-35,0" time="300" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
-			
 			<!--title bars and backgrounds-->
 			<include name="DynamicDialogBackground">
 				<param name="dialog-left" value="355" />
@@ -25,7 +18,6 @@
 				<param name="subtitle-visible" value="true" />
 				<param name="subtitle-height" value="55" />
 			</include>
-			
 			<!--close window button-->
 			<control type="button">
 				<left>360</left>
@@ -43,12 +35,10 @@
 				<ondown>9000</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
-			
 			<!--main content-->
 			<control type="group">
 				<left>355</left>
 				<top>0</top>
-				
 				<!--title-->
 				<control type="label" id="1">
 					<left>45</left>
@@ -60,7 +50,6 @@
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
 				</control>
-				
 				<!--file count (simple)-->
 				<control type="label">
 					<left>360</left>
@@ -75,7 +64,6 @@
 					<label>$INFO[Container(3).NumItems] $LOCALIZE[31025] ($LOCALIZE[31024] $INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages])</label>
 					<visible>Control.IsVisible(3)</visible>
 				</control>
-				
 				<!--file count (advanced)-->
 				<control type="label">
 					<left>360</left>
@@ -90,7 +78,6 @@
 					<label>$INFO[Container(6).NumItems] $LOCALIZE[31025] ($LOCALIZE[31024] $INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages])</label>
 					<visible>Control.IsVisible(6)</visible>
 				</control>
-				
 				<!--no settings-->
 				<control type="label" id="4">
 					<left>30</left>
@@ -98,7 +85,6 @@
 					<width>1155</width>
 					<align>center</align>
 				</control>
-		
 				<!--content list (simple)-->
 				<control type="list" id="3">
 					<left>30</left>
@@ -112,9 +98,7 @@
 					<pagecontrol>61</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
-					
 					<itemlayout height="67">
-						
 						<!--label-->
 						<control type="label">
 							<left>15</left>
@@ -128,11 +112,8 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
-						
 					</itemlayout>
-					
 					<focusedlayout height="67">
-				
 						<!--background-->
 						<control type="image">
 							<left>0</left>
@@ -142,7 +123,6 @@
 							<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(3)">Conditional</animation>
 						</control>
-						
 						<!--label-->
 						<control type="label">
 							<left>15</left>
@@ -156,11 +136,8 @@
 							<selectedcolor>$VAR[Colour.Alt]</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
-						
 					</focusedlayout>
-					
 				</control>
-				
 				<!--content list (advanced)-->
 				<control type="list" id="6">
 					<left>30</left>
@@ -174,9 +151,7 @@
 					<pagecontrol>61</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
-					
 					<itemlayout height="135">
-						
 						<!--icon-->
 						<control type="image">
 							<left>5</left>
@@ -186,7 +161,6 @@
 							<texture>$INFO[Listitem.Icon]</texture>
 							<visible>!SubString(ListItem.Icon,Default)</visible>
 						</control>
-						
 						<!--default icon-->
 						<control type="image">
 							<left>5</left>
@@ -196,7 +170,6 @@
 							<texture colordiffuse="text.primary">$INFO[Listitem.Icon]</texture>
 							<visible>SubString(ListItem.Icon,Default)</visible>
 						</control>
-						
 						<!--title-->
 						<control type="label">
 							<left>133</left>
@@ -210,7 +183,6 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 						</control>
-						
 						<!--description-->
 						<control type="textbox">
 							<left>133</left>
@@ -224,11 +196,8 @@
 							<selectedcolor>$VAR[Colour.500]</selectedcolor>
 							<label>$INFO[ListItem.Property(Addon.Summary)]</label>
 						</control>
-						
 					</itemlayout>
-					
 					<focusedlayout height="135">
-				
 						<!--background-->
 						<control type="image">
 							<left>0</left>
@@ -238,7 +207,6 @@
 							<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(6)">Conditional</animation>
 						</control>
-						
 						<!--icon-->
 						<control type="image">
 							<left>5</left>
@@ -247,7 +215,6 @@
 							<height>115</height>
 							<texture>$INFO[Listitem.Icon]</texture>
 						</control>
-						
 						<!--title-->
 						<control type="label">
 							<left>133</left>
@@ -261,7 +228,6 @@
 							<selectedcolor>$VAR[Colour.Alt]</selectedcolor>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 						</control>
-						
 						<!--description-->
 						<control type="textbox">
 							<left>133</left>
@@ -274,11 +240,8 @@
 							<textcolor>white</textcolor>
 							<label>$INFO[ListItem.Property(Addon.Summary)]</label>
 						</control>
-						
 					</focusedlayout>
-					
 				</control>
-				
 				<control type="scrollbar" id="61">
 					<left>1195</left>
 					<top>190</top>
@@ -294,7 +257,6 @@
 					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
 					<visible>Control.IsVisible(3)</visible>
 				</control>
-				
 				<control type="scrollbar" id="61">
 					<left>1195</left>
 					<top>190</top>
@@ -310,11 +272,9 @@
 					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
 					<visible>Control.IsVisible(6)</visible>
 				</control>
-		
 				<!--buttons bar-->
 				<control type="group">
 					<visible>Control.IsVisible(5)</visible>
-				
 					<!--buttons bg-->
 					<control type="image">
 						<left>0</left>
@@ -323,7 +283,6 @@
 						<height>70</height>
 						<texture colordiffuse="primary">backgrounds/white.png</texture>
 					</control>
-			
 					<!--buttons shadow-->
 					<control type="image">
 						<left>0</left>
@@ -333,12 +292,10 @@
 						<texture>homeshadow.png</texture>
 						<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 					</control>
-					
 					<!--bottom buttons-->
 					<control type="group">
 						<left>955</left>
 						<top>1015</top>
-						
 						<!--add button-->
 						<include name="AnimatedCircleButtonGroup">
 							<param name="button-id" value="5" />
@@ -350,15 +307,9 @@
 							<param name="button-onleft" value="5" />
 							<param name="button-onright" value="5" />
 						</include>
-						
 					</control>
-					
 				</control>
-				
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>

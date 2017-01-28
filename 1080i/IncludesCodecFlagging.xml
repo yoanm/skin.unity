@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <includes>
-
 	<variable name="typehackflagging">
 		<value condition="[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]">bluray</value>
 		<value condition="substring(ListItem.FilenameAndPath,hddvd)">hddvd</value>
@@ -9,7 +7,6 @@
 		<value condition="[substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)]">TV</value>
 		<value condition="substring(ListItem.FilenameAndPath,vhs)">vhs</value>
 	</variable>
-	
 	<variable name="rating">
 		<value condition="substring(listitem.mpaa,Rated G)">mpaa_general</value>
 		<value condition="substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)">mpaa_pg</value>
@@ -17,25 +14,19 @@
 		<value condition="substring(Listitem.mpaa,Rated R)">mpaa_restricted</value>
 		<value condition="substring(Listitem.mpaa,Rated NC)">mpaa_nc17</value>
 	</variable>
-	
 	<variable name="videocodec">
 		<value condition="[substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]">divx</value>
 		<value>$INFO[ListItem.VideoCodec]</value>
 	</variable>
-	
 	<include name="media.flags">
-	
 		<control type="group">
-			
 			<control type="group"> <!--flag bg-->
-		
 				<control type="image">
 					<width>85</width>
 					<height>40</height>
 					<texture>flags/base.png</texture>
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
-			
 				<control type="image">
 					<left>85</left>
 					<width>123</width>
@@ -43,7 +34,6 @@
 					<texture>flags/base 2.png</texture>
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
-			
 				<control type="image">
 					<left>208</left>
 					<width>105</width>
@@ -51,7 +41,6 @@
 					<texture>flags/base.png</texture>
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
-			
 				<control type="image">
 					<left>330</left>
 					<width>115</width>
@@ -59,7 +48,6 @@
 					<texture>flags/base 3.png</texture>
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
-			
 				<control type="image">
 					<left>445</left>
 					<width>65</width>
@@ -67,11 +55,8 @@
 					<texture>flags/base.png</texture>
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
-			
 			</control>
-			
 			<control type="group"> <!--flags-->
-		
 				<control type="image"> <!--resolution-->
 					<top>2</top>
 					<width>85</width>
@@ -79,7 +64,6 @@
 					<texture fallback="flags/resolution/defaultscreen.png">$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-			
 				<control type="image"> <!--video codec-->
 					<left>90</left>
 					<top>2</top>
@@ -88,7 +72,6 @@
 					<texture fallback="flags/videocodec/default.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-			
 				<control type="image"> <!--aspect ratio-->
 					<left>213</left>
 					<top>2</top>
@@ -97,7 +80,6 @@
 					<texture fallback="flags/aspectratio/default.png">$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-			
 				<control type="image"> <!--audio codec-->
 					<left>330</left>
 					<top>2</top>
@@ -106,7 +88,6 @@
 					<texture fallback="flags/audio/default.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-			
 				<control type="image"> <!--audio channels-->
 					<left>445</left>
 					<top>2</top>
@@ -115,26 +96,18 @@
 					<texture fallback="flags/audio/default channel.png">$INFO[ListItem.AudioChannels,flags/audio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-			
 			</control>
-			
 		</control>
-		
 	</include>
-	
 	<include name="media.flags.small">
-	
 		<control type="group">
-			
 			<control type="group"> <!--flag bg-->
-		
 				<control type="image">
 					<width>85</width>
 					<height>40</height>
 					<texture>flags/base.png</texture>
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
-			
 				<control type="image">
 					<left>85</left>
 					<width>123</width>
@@ -142,7 +115,6 @@
 					<texture>flags/base 2.png</texture>
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
-			
 				<control type="image">
 					<left>208</left>
 					<width>105</width>
@@ -150,7 +122,6 @@
 					<texture>flags/base.png</texture>
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
-			
 				<control type="image">
 					<left>330</left>
 					<width>115</width>
@@ -158,7 +129,6 @@
 					<texture>flags/base 3.png</texture>
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
-			
 				<control type="image">
 					<left>445</left>
 					<width>65</width>
@@ -166,11 +136,8 @@
 					<texture>flags/base.png</texture>
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
-			
 			</control>
-			
 			<control type="group"> <!--flags-->
-		
 				<control type="image"> <!--resolution-->
 					<left>5</left>
 					<top>5</top>
@@ -179,7 +146,6 @@
 					<texture fallback="flags/resolution/defaultscreen.png">$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-			
 				<control type="image"> <!--video codec-->
 					<left>97</left>
 					<top>5</top>
@@ -188,7 +154,6 @@
 					<texture fallback="flags/videocodec/default.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-			
 				<control type="image"> <!--aspect ratio-->
 					<left>222</left>
 					<top>5</top>
@@ -197,7 +162,6 @@
 					<texture fallback="flags/aspectratio/default.png">$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-			
 				<control type="image"> <!--audio codec-->
 					<left>342</left>
 					<top>5</top>
@@ -206,7 +170,6 @@
 					<texture fallback="flags/audio/default.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-			
 				<control type="image"> <!--audio channels-->
 					<left>451</left>
 					<top>5</top>
@@ -215,15 +178,10 @@
 					<texture fallback="flags/audio/default channel.png">$INFO[ListItem.AudioChannels,flags/audio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-			
 			</control>
-			
 		</control>
-		
 	</include>
-	
 	<include name="VideoCodecFlaggingConditions">
-	
 		<control type="image">
 			<description>Video rez Image</description>
 			<width>82</width>
@@ -231,7 +189,6 @@
 			<aspectratio align="right">keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
 		</control>
-		
 		<control type="image">
 			<description>Codec Image</description>
 			<width>120</width>
@@ -239,11 +196,8 @@
 			<aspectratio align="left">keep</aspectratio>
 			<texture>$VAR[videocodec,flagging/video/,.png]</texture>
 		</control>
-		
 	</include>
-	
 	<include name="VideoStereoscopicsFlaggingConditions">
-	
 		<control type="image">
 			<description>Video stereoscopics flagging image</description>
 			<width>82</width>
@@ -252,11 +206,8 @@
 			<texture>flagging/video/3D.png</texture>
 			<visible>ListItem.IsStereoscopic</visible>
 		</control>
-		
 	</include>
-	
 	<include name="VideoTypeHackFlaggingConditions">
-	
 		<control type="image">
 			<description>Video Type Image</description>
 			<width>120</width>
@@ -265,9 +216,7 @@
 			<texture>$VAR[typehackflagging,flagging/video/,.png]</texture>
 			<visible>!Skin.HasSetting(HideFilenameFlagging)</visible>
 		</control>
-		
 	</include>
-	
 	<include name="VideoMPAAFlaggingConditions">
 		<control type="image">
 			<description>Rating image</description>
@@ -276,9 +225,7 @@
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[rating,flagging/ratings/,.png]</texture>
 		</control>
-		
 	</include>
-	
 	<include name="AudioCodecFlaggingConditions">
 		<control type="image">
 			<description>Audio Codec Image</description>
@@ -287,11 +234,8 @@
 			<aspectratio align="right">keep</aspectratio>
 			<texture>$INFO[ListItem.AudioCodec,flagging/audio/,.png]</texture>
 		</control>
-		
 	</include>
-	
 	<include name="AudioChannelsFlaggingConditions">
-	
 		<control type="image">
 			<description>Audio Codec Image</description>
 			<width>82</width>
@@ -299,11 +243,8 @@
 			<aspectratio align="left">keep</aspectratio>
 			<texture>$INFO[ListItem.AudioChannels,flagging/audio/,.png]</texture>
 		</control>
-		
 	</include>
-	
 	<include name="AspectCodecFlaggingConditions">
-	
 		<control type="image">
 			<description>Aspectratio Image</description>
 			<width>82</width>
@@ -311,7 +252,5 @@
 			<aspectratio align="right">keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
 		</control>
-		
 	</include>
-	
 </includes>

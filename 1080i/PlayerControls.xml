@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-
 	<defaultcontrol always="true">100</defaultcontrol>
 	<visible>Player.HasMedia + Window.IsActive(PlayerControls) + !Window.IsActive(FullscreenVideo) + !Window.IsActive(Visualisation)</visible>
-	
 	<animation type="WindowOpen">
 		<effect type="slide" start="0,665" end="0,0" time="300" tween="quadratic" easing="out" />
 	</animation>
-	
 	<animation type="WindowClose">
 		<effect type="slide" start="0,0" end="0,-765" time="300" tween="quadratic" easing="out" />
 	</animation>
-	
 	<controls>
-		
 		<!--all content-->
 		<control type="group">
 			<top>-10</top>
-		
 			<!--background-->
 			<control type="image">
 				<left>0</left>
@@ -26,7 +20,6 @@
 				<height>270</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-			
 			<!--title bg-->
 			<control type="image">
 				<left>0</left>
@@ -35,7 +28,6 @@
 				<height>40</height>
 				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 			</control>
-			
 			<!--title shadow-->
 			<control type="image">
 				<left>0</left>
@@ -45,7 +37,6 @@
 				<texture>homeshadow.png</texture>
 				<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 			</control>
-			
 			<!--buttons bg-->
 			<control type="image">
 				<left>0</left>
@@ -54,7 +45,6 @@
 				<height>70</height>
 				<texture colordiffuse="primary">backgrounds/white.png</texture>
 			</control>
-			
 			<!--buttons shadow-->
 			<control type="image">
 				<left>0</left>
@@ -64,7 +54,6 @@
 				<texture>homeshadow.png</texture>
 				<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 			</control>
-			
 			<!--top shadow-->
 			<control type="image">
 				<left>0</left>
@@ -73,7 +62,6 @@
 				<height>30</height>
 				<texture flipy="true">homeshadow.png</texture>
 			</control>
-			
 			<!--bottom shadow-->
 			<control type="image">
 				<left>0</left>
@@ -82,7 +70,6 @@
 				<height>30</height>
 				<texture>homeshadow.png</texture>
 			</control>
-			
 			<!--close button-->
 			<control type="button">
 				<description>Close Window button</description>
@@ -101,13 +88,11 @@
 				<ondown>10</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
-			
 			<control type="group" id="100">
 				<left>575</left>
 				<top>670</top>
 				<defaultcontrol always="true">603</defaultcontrol>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				
 				<control type="button" id="600">
 					<left>0</left>
 					<top>0</top>
@@ -123,7 +108,6 @@
 					<onclick>XBMC.PlayerControl(Previous)</onclick>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 				<control type="button" id="601">
 					<left>75</left>
 					<top>0</top>
@@ -139,7 +123,6 @@
 					<onclick>XBMC.PlayerControl(Rewind)</onclick>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 				<control type="togglebutton" id="603">
 					<left>150</left>
 					<top>0</top>
@@ -158,7 +141,6 @@
 					<onclick>XBMC.PlayerControl(Play)</onclick>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 				<control type="button" id="602">
 					<left>225</left>
 					<top>0</top>
@@ -175,7 +157,6 @@
 					<onclick>XBMC.PlayerControl(Stop)</onclick>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 				<control type="button" id="604">
 					<left>300</left>
 					<top>0</top>
@@ -191,7 +172,6 @@
 					<onclick>XBMC.PlayerControl(Forward)</onclick>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 				<control type="button" id="605">
 					<left>375</left>
 					<top>0</top>
@@ -207,7 +187,6 @@
 					<onclick>XBMC.PlayerControl(Next)</onclick>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 				<control type="button" id="606">
 					<left>450</left>
 					<top>0</top>
@@ -225,10 +204,8 @@
 					<animation effect="fade" start="100" end="30" time="100" condition="!Player.CanRecord">Conditional</animation>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 				<control type="group">
 					<animation effect="slide" start="0,0" end="60,0" time="0" condition="!Player.HasAudio">Conditional</animation>
-					
 					<control type="button" id="607">
 						<left>600</left>
 						<top>-5</top>
@@ -244,7 +221,6 @@
 						<ondown>100</ondown>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
-					
 					<control type="image">
 						<left>600</left>
 						<top>-5</top>
@@ -255,7 +231,6 @@
 						<visible>!Control.HasFocus(607)</visible>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
-					
 					<control type="image">
 						<left>600</left>
 						<top>-5</top>
@@ -266,7 +241,6 @@
 						<visible>Control.HasFocus(607)</visible>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
-					
 					<control type="image">
 						<left>600</left>
 						<top>-5</top>
@@ -277,7 +251,6 @@
 						<visible>!Control.HasFocus(607)</visible>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
-					
 					<control type="image">
 						<left>600</left>
 						<top>-5</top>
@@ -288,7 +261,6 @@
 						<visible>Control.HasFocus(607)</visible>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
-					
 					<control type="image">
 						<left>600</left>
 						<top>-5</top>
@@ -299,7 +271,6 @@
 						<visible>!Control.HasFocus(607)</visible>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
-					
 					<control type="image">
 						<left>600</left>
 						<top>-5</top>
@@ -310,7 +281,6 @@
 						<visible>Control.HasFocus(607)</visible>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
-					
 					<control type="togglebutton" id="608">
 						<left>675</left>
 						<top>-5</top>
@@ -329,7 +299,6 @@
 						<ondown>100</ondown>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
-					
 					<control type="togglebutton" id="609">
 						<left>750</left>
 						<top>0</top>
@@ -354,17 +323,13 @@
 						<visible>Player.HasAudio</visible>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
-					
 				</control>
-				
 			</control>
-			
 			<control type="group" id="100">
 				<left>690</left>
 				<top>670</top>
 				<defaultcontrol always="true">700</defaultcontrol>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
-				
 				<control type="button" id="701">
 					<left>0</left>
 					<top>0</top>
@@ -382,7 +347,6 @@
 					<enable>Player.SeekEnabled</enable>
 					<animation effect="fade" start="100" end="50" time="100" condition="true">Conditional</animation>
 				</control>
-				
 				<control type="button" id="702">
 					<left>75</left>
 					<top>0</top>
@@ -399,7 +363,6 @@
 					<onclick>XBMC.PlayerControl(Stop)</onclick>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 				<control type="togglebutton" id="703">
 					<left>150</left>
 					<top>0</top>
@@ -421,7 +384,6 @@
 					<enable>Player.PauseEnabled</enable>
 					<animation effect="fade" start="100" end="50" time="100" condition="true">Conditional</animation>
 				</control>
-				
 				<control type="button" id="704">
 					<left>225</left>
 					<top>0</top>
@@ -439,7 +401,6 @@
 					<enable>Player.SeekEnabled</enable>
 					<animation effect="fade" start="100" end="50" time="100" condition="true">Conditional</animation>
 				</control>
-				
 				<control type="button" id="700">
 					<left>375</left>
 					<top>0</top>
@@ -455,7 +416,6 @@
 					<onclick>ChannelDown</onclick>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 				<control type="button" id="705">
 					<left>450</left>
 					<top>0</top>
@@ -471,7 +431,6 @@
 					<onclick>ChannelUp</onclick>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 				<control type="button" id="706">
 					<left>525</left>
 					<top>0</top>
@@ -489,9 +448,7 @@
 					<animation effect="fade" start="100" end="30" time="100" condition="!Player.CanRecord">Conditional</animation>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
-				
 			</control>
-			
 			<!-- Music Info -->
 			<control type="group">
 				<left>465</left>
@@ -499,7 +456,6 @@
 				<visible>Player.HasAudio</visible>
 				<include>SmallMusicInfo</include>
 			</control>
-			
 			<!-- Video Info -->
 			<control type="group">
 				<left>615</left>
@@ -507,9 +463,6 @@
 				<visible>Player.HasVideo</visible>
 				<include>SmallVideoInfo</include>
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>

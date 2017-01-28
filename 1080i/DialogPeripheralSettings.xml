@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-
 	<controls>
-		
 		<!--all content-->
 		<control type="group">
 			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			
 			<animation effect="slide" start="0,0" end="-35,0" time="300" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
-			
 			<!--title bars and backgrounds-->
 			<include name="DynamicDialogBackground">
 				<param name="dialog-left" value="355" />
@@ -18,7 +13,6 @@
 				<param name="glow-width" value="1290" />
 				<param name="buttonbar-visible" value="true" />
 			</include>
-			
 			<!--close window button-->
 			<control type="button">
 				<left>360</left>
@@ -36,12 +30,10 @@
 				<ondown>9000</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
-			
 			<!--main content-->
 			<control type="group">
 				<left>355</left>
 				<top>0</top>
-				
 				<!--title-->
 				<control type="label" id="2">
 					<left>45</left>
@@ -54,7 +46,6 @@
 					<textcolor>white</textcolor>
 					<label>-</label>
 				</control>
-				
 				<control type="grouplist" id="5">
 					<animation effect="slide" start="0,0" end="8,0" time="0" condition="!Control.IsVisible(60)">Conditional</animation>
 					<description>control area</description>
@@ -69,7 +60,6 @@
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 				</control>
-				
 				<control type="scrollbar" id="60">
 					<left>1195</left>
 					<top>135</top>
@@ -83,37 +73,31 @@
 					<ondown>60</ondown>
 					<onup>60</onup>
 				</control>
-								
 				<control type="button" id="7">
 					<description>Default Button</description>
 					<left>0</left>
 					<top>0</top>
 				</control>
-				
 				<control type="radiobutton" id="8">
 					<description>Default RadioButton</description>
 					<left>0</left>
 					<top>0</top>
 				</control>
-				
 				<control type="spincontrolex" id="9">
 					<description>Default SpinControlex</description>
 					<left>0</left>
 					<top>0</top>
 				</control>
-				
 				<control type="image" id="11">
 					<description>separator image</description>
 					<height>0</height>
 					<texture>-</texture>
 				</control>
-				
 				<control type="sliderex" id="13">
 					<description>Default Slider</description>
 					<left>0</left>
 					<top>0</top>
 				</control>
-				
 				<!--label-->
 				<control type="label" id="14">
 					<left>0</left>
@@ -124,7 +108,6 @@
 					<textoffsetx>5</textoffsetx>
 					<aligny>center</aligny>
 				</control>
-				
 				<!--bottom buttons-->
 				<control type="grouplist" id="9000">
 					<left>105</left>
@@ -137,7 +120,6 @@
 					<onright>9000</onright>
 					<onup>5</onup>
 					<ondown>5</ondown>
-					
 					<!--ok button-->
 					<include name="AnimatedCircleButtonGroup">
 						<param name="button-id" value="28" />
@@ -149,7 +131,6 @@
 						<param name="button-onleft" value="50" />
 						<param name="button-onright" value="29" />
 					</include>
-					
 					<!--cancel button-->
 					<include name="AnimatedCircleButtonGroup">
 						<param name="button-id" value="29" />
@@ -161,7 +142,6 @@
 						<param name="button-onleft" value="28" />
 						<param name="button-onright" value="50" />
 					</include>
-					
 					<!--default button-->
 					<include name="AnimatedCircleButtonGroup">
 						<param name="button-id" value="50" />
@@ -173,13 +153,8 @@
 						<param name="button-onleft" value="29" />
 						<param name="button-onright" value="28" />
 					</include>
-					
 				</control>
-				
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>

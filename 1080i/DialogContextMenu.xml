@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-
 	<defaultcontrol>1000</defaultcontrol>
 	<include>dialogeffect</include>
-	
 	<controls>
-	
-		<!--all content-->		
-		<control type="group">
+		<!--all content-->		<control type="group">
 			<include>SideBladeRight</include>
 			<visible>!Window.IsActive(shutdownmenu)</visible>
-		
 			<!--close window button-->
 			<control type="button">
 				<left>1925</left>
@@ -29,7 +23,6 @@
 				<ondown>2</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
-		
 			<!--title-->
 			<control type="label">
 				<left>1920</left>
@@ -42,7 +35,6 @@
 				<aligny>center</aligny>
 				<label>31065</label>
 			</control>
-			
 			<!--buttons grouplist-->
 			<control type="grouplist" id="996">
 				<left>1930</left>
@@ -51,15 +43,11 @@
 				<height max="1005">auto</height>
 				<itemgap>3</itemgap>
 			</control>
-			
 			<!--button appearance-->
 			<control type="button" id="1000">
 				<include>ButtonCommonValues</include>
 				<align>right</align>
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>

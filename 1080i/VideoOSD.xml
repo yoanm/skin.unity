@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-
 	<defaultcontrol always="true">100</defaultcontrol>
-	
 	<onunload>Skin.Reset(SubtitleSection)</onunload>
-	
 	<controls>
-		
 		<!--background-->
 		<control type="image" id="1">
 			<left>390</left>
@@ -16,7 +12,6 @@
 			<texture colordiffuse="tertiary">backgrounds/osd bg.png</texture>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 		</control>
-		
 		<control type="slider" id="87">
 			<description>Seek Slider</description>
 			<left>415</left>
@@ -27,7 +22,6 @@
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV) | Skin.HasSetting(SubtitleSection)]</visible>
 		</control>
-		
 		<!-- !LiveTV -->
 		<control type="group" id="100">
 			<left>420</left>
@@ -35,7 +29,6 @@
 			<defaultcontrol always="true">202</defaultcontrol>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
-			
 			<control type="button" id="200">
 				<left>0</left>
 				<top>0</top>
@@ -51,7 +44,6 @@
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Previous)</onclick>
 			</control>
-			
 			<control type="button" id="201">
 				<left>75</left>
 				<top>0</top>
@@ -67,7 +59,6 @@
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Rewind)</onclick>
 			</control>
-			
 			<control type="togglebutton" id="202">
 				<left>150</left>
 				<top>0</top>
@@ -87,7 +78,6 @@
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
-			
 			<control type="button" id="203">
 				<left>225</left>
 				<top>0</top>
@@ -103,7 +93,6 @@
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
-			
 			<control type="button" id="204">
 				<left>300</left>
 				<top>0</top>
@@ -119,7 +108,6 @@
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Forward)</onclick>
 			</control>
-			
 			<control type="button" id="205">
 				<left>375</left>
 				<top>0</top>
@@ -135,9 +123,7 @@
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
-			
 		</control>
-		
 		<!-- LiveTV -->
 		<control type="group" id="100">
 			<left>420</left>
@@ -145,7 +131,6 @@
 			<defaultcontrol always="true">301</defaultcontrol>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<visible>VideoPlayer.Content(LiveTV)</visible>
-			
 			<control type="button" id="300">
 				<left>0</left>
 				<top>0</top>
@@ -161,7 +146,6 @@
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Previous)</onclick>
 			</control>
-			
 			<control type="button" id="301">
 				<left>75</left>
 				<top>0</top>
@@ -177,7 +161,6 @@
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
-			
 			<control type="button" id="302">
 				<left>150</left>
 				<top>0</top>
@@ -195,7 +178,6 @@
 				<enable>Player.SeekEnabled</enable>
 				<animation effect="fade" start="100" end="50" time="100" condition="!Player.SeekEnabled">Conditional</animation>
 			</control>
-			
 			<control type="togglebutton" id="303">
 				<left>225</left>
 				<top>0</top>
@@ -217,7 +199,6 @@
 				<enable>Player.PauseEnabled</enable>
 				<animation effect="fade" start="100" end="50" time="100" condition="!Player.PauseEnabled">Conditional</animation>
 			</control>
-			
 			<control type="button" id="304">
 				<left>300</left>
 				<top>0</top>
@@ -233,7 +214,6 @@
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
-			
 			<control type="button" id="305">
 				<left>375</left>
 				<top>0</top>
@@ -251,7 +231,6 @@
 				<enable>Player.SeekEnabled</enable>
 				<animation effect="fade" start="100" end="50" time="100" condition="!Player.SeekEnabled">Conditional</animation>
 			</control>
-			
 			<control type="button" id="306">
 				<left>450</left>
 				<top>0</top>
@@ -268,7 +247,6 @@
 				<onclick>ActivateWindow(PVROSDChannels)</onclick>
 				<onclick>Dialog.Close(VideoOSD)</onclick>
 			</control>
-			
 			<control type="button" id="307">
 				<left>525</left>
 				<top>0</top>
@@ -285,21 +263,17 @@
 				<onclick>ActivateWindow(PVROSDGuide)</onclick>
 				<onclick>Dialog.Close(VideoOSD)</onclick>
 			</control>
-			
 		</control>
-		
 		<!-- !LiveTV -->
 		<control type="group">
 			<left>840r</left>
 			<top>82r</top>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
-			
 			<control type="group">
 				<left>0</left>
 				<top>0</top>
 				<animation effect="slide" start="0,0" end="75,0" time="0" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
-				
 				<control type="button" id="251">
 					<left>0</left>
 					<top>0</top>
@@ -315,7 +289,6 @@
 					<ondown>1000</ondown>
 					<onclick>ActivateWindow(OSDVideoSettings)</onclick>
 				</control>
-				
 				<control type="button" id="252">
 					<left>75</left>
 					<top>0</top>
@@ -331,7 +304,6 @@
 					<ondown>1000</ondown>
 					<onclick>ActivateWindow(OSDAudioSettings)</onclick>
 				</control>
-				
 				<control type="button" id="253">
 					<left>150</left>
 					<top>0</top>
@@ -347,7 +319,6 @@
 					<ondown>1000</ondown>
 					<onclick>ActivateWindow(VideoBookmarks)</onclick>
 				</control>
-				
 				<control type="button" id="250">
 					<left>225</left>
 					<top>0</top>
@@ -364,7 +335,6 @@
 					<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 					<onunfocus condition="!Control.HasFocus(410)">Skin.Reset(SubtitleSection)</onunfocus>
 				</control>
-				
 				<control type="image">
 					<left>225</left>
 					<top>0</top>
@@ -373,9 +343,7 @@
 					<texture colordiffuse="$VAR[Colour.500]">OSDSubtitlesNF.png</texture>
 					<visible>Control.HasFocus(410) | Control.HasFocus(250) | ControlGroup(400).HasFocus</visible>
 				</control>
-				
 			</control>
-			
 			<control type="button" id="255">
 				<visible>VideoPlayer.IsStereoscopic</visible>
 				<left>300</left>
@@ -393,7 +361,6 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus condition="!Control.HasFocus(410)">Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 			<control type="image">
 				<left>300</left>
 				<top>0</top>
@@ -402,7 +369,6 @@
 				<texture colordiffuse="$VAR[Colour.500]">OSDStereoscopicNF.png</texture>
 				<visible>Control.HasFocus(255) | ControlGroup(500).HasFocus | Control.HasFocus(520)</visible>
 			</control>
-			
 			<control type="button" id="254">
 				<left>375</left>
 				<top>0</top>
@@ -420,21 +386,17 @@
 				<enable>VideoPlayer.HasMenu</enable>
 				<animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.HasMenu">Conditional</animation>
 			</control>
-			
 		</control>
-		
 		<!-- LiveTV -->
 		<control type="group">
 			<left>765r</left>
 			<top>82r</top>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<visible>VideoPlayer.Content(LiveTV)</visible>
-			
 			<control type="group">
 				<left>0</left>
 				<top>0</top>
 				<animation effect="slide" start="0,0" end="75,0" time="0" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
-				
 				<control type="button" id="350">
 					<left>0</left>
 					<top>0</top>
@@ -450,7 +412,6 @@
 					<ondown>1000</ondown>
 					<onclick>ActivateWindow(Teletext)</onclick>
 				</control>
-				
 				<control type="button" id="351">
 					<left>75</left>
 					<top>0</top>
@@ -466,7 +427,6 @@
 					<ondown>1000</ondown>
 					<onclick>ActivateWindow(OSDVideoSettings)</onclick>
 				</control>
-				
 				<control type="button" id="352">
 					<left>150</left>
 					<top>0</top>
@@ -482,9 +442,7 @@
 					<ondown>1000</ondown>
 					<onclick>ActivateWindow(OSDAudioSettings)</onclick>
 				</control>
-				
 			</control>
-			
 			<control type="button" id="354">
 				<visible>VideoPlayer.IsStereoscopic</visible>
 				<left>225</left>
@@ -502,7 +460,6 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 			<control type="image">
 				<left>225</left>
 				<top>0</top>
@@ -511,7 +468,6 @@
 				<texture colordiffuse="$VAR[Colour.500]">OSDStereoscopicNF.png</texture>
 				<visible>Control.HasFocus(570) | Control.HasFocus(354) | ControlGroup(550).HasFocus</visible>
 			</control>
-			
 			<control type="togglebutton" id="353">
 				<left>300</left>
 				<top>0</top>
@@ -533,7 +489,6 @@
 				<enable>Player.CanRecord</enable>
 				<animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
 			</control>
-			
 			<control type="image">
 				<left>300</left>
 				<top>0</top>
@@ -542,9 +497,7 @@
 				<texture colordiffuse="red">PVR-IsRecording.png</texture>
 				<visible>Player.Recording</visible>
 			</control>
-			
 		</control>
-		
 		<control type="button" id="410">
 			<description>Fake button for mouse control</description>
 			<right>388</right>
@@ -559,7 +512,6 @@
 			<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 			<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 		</control>
-		
 		<control type="grouplist" id="400">
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<animation effect="slide" start="0,0" end="0,120" time="0" condition="![VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled]">Conditional</animation>
@@ -576,12 +528,10 @@
 			<ondown>250</ondown>
 			<orientation>vertical</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
-			
 			<control type="group">
 				<description>Header</description>
 				<width>365</width>
 				<height>80</height>
-				
 				<!--background-->
 				<control type="image">
 					<left>0</left>
@@ -590,7 +540,6 @@
 					<height>80</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-				
 				<!--title bg-->
 				<control type="image">
 					<left>0</left>
@@ -599,7 +548,6 @@
 					<height>70</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-				
 				<!--title shadow-->
 				<control type="image">
 					<left>0</left>
@@ -609,7 +557,6 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 				</control>
-				
 				<control type="label">
 					<left>15</left>
 					<top>3</top>
@@ -620,9 +567,7 @@
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 				</control>
-
 			</control>
-				
 			<!--background-->
 			<control type="image" id="701">
 				<left>0</left>
@@ -631,7 +576,6 @@
 				<height>70</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-		
 			<control type="togglebutton" id="401">
 				<description>Download with Subtitles script</description>
 				<left>15</left>
@@ -645,7 +589,6 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 			<!--background-->
 			<control type="image" id="702">
 				<left>0</left>
@@ -655,7 +598,6 @@
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
 			</control>
-			
 			<control type="button" id="402">
 				<left>15</left>
 				<top>-120</top>
@@ -667,7 +609,6 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 			<control type="button" id="403">
 				<left>15</left>
 				<top>0</top>
@@ -679,7 +620,6 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 			<!--background-->
 			<control type="image" id="704">
 				<left>0</left>
@@ -689,7 +629,6 @@
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				<visible>VideoPlayer.HasSubtitles</visible>
 			</control>
-			
 			<control type="radiobutton" id="404">
 				<left>15</left>
 				<top>-70</top>
@@ -702,9 +641,7 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 		</control>
-		
 		<!-- STEREOSCOPIC 3D !LiveTV -->
 		<control type="button" id="520">
 			<description>Fake button for mouse control</description>
@@ -720,7 +657,6 @@
 			<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 			<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 		</control>
-		
 		<control type="grouplist" id="500">
 			<visible>VideoPlayer.IsStereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 			<animation effect="slide" start="0,0" end="-775,0" time="300" condition="Control.HasFocus(255) | ControlGroup(500).HasFocus | Control.HasFocus(520)">Conditional</animation>
@@ -735,12 +671,10 @@
 			<ondown>255</ondown>
 			<orientation>vertical</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
-			
 			<control type="group">
 				<description>Header</description>
 				<width>365</width>
 				<height>80</height>
-				
 				<!--background-->
 				<control type="image">
 					<left>0</left>
@@ -749,7 +683,6 @@
 					<height>80</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-				
 				<!--title bg-->
 				<control type="image">
 					<left>0</left>
@@ -758,7 +691,6 @@
 					<height>70</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-				
 				<!--title shadow-->
 				<control type="image">
 					<left>0</left>
@@ -768,7 +700,6 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 				</control>
-				
 				<control type="label">
 					<left>15</left>
 					<top>3</top>
@@ -778,9 +709,7 @@
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 				</control>
-				
 			</control>
-			
 			<!--background-->
 			<control type="image" id="711">
 				<left>0</left>
@@ -789,7 +718,6 @@
 				<height>70</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-			
 			<control type="radiobutton" id="503">
 				<left>15</left>
 				<top>-70</top>
@@ -801,7 +729,6 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 			<!--background-->
 			<control type="image" id="712">
 				<left>0</left>
@@ -810,7 +737,6 @@
 				<height>70</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-			
 			<control type="button" id="502">
 				<left>15</left>
 				<top>-70</top>
@@ -821,7 +747,6 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 			<!--background-->
 			<control type="image" id="713">
 				<left>0</left>
@@ -830,7 +755,6 @@
 				<height>70</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-			
 			<control type="radiobutton" id="501">
 				<left>15</left>
 				<top>-70</top>
@@ -842,9 +766,7 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 		</control>
-		
 		<!-- STEREOSCOPIC 3D LiveTV -->
 		<control type="button" id="570">
 			<description>Fake button for mouse control</description>
@@ -860,7 +782,6 @@
 			<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 			<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 		</control>
-		
 		<control type="grouplist" id="550">
 			<visible>VideoPlayer.IsStereoscopic + ![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<animation effect="slide" start="0,0" end="-775,0" time="300" condition="Control.HasFocus(354) | ControlGroup(550).HasFocus | Control.HasFocus(570)">Conditional</animation>
@@ -875,12 +796,10 @@
 			<ondown>354</ondown>
 			<orientation>vertical</orientation>
 			<usecontrolcoords>true</usecontrolcoords>
-			
 			<control type="group">
 				<description>Header</description>
 				<width>365</width>
 				<height>80</height>
-				
 				<!--background-->
 				<control type="image">
 					<left>0</left>
@@ -889,7 +808,6 @@
 					<height>80</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-				
 				<!--title bg-->
 				<control type="image">
 					<left>0</left>
@@ -898,7 +816,6 @@
 					<height>70</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-				
 				<!--title shadow-->
 				<control type="image">
 					<left>0</left>
@@ -908,7 +825,6 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 				</control>
-				
 				<control type="label">
 					<left>15</left>
 					<top>3</top>
@@ -918,9 +834,7 @@
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 				</control>
-				
 			</control>
-			
 			<!--background-->
 			<control type="image" id="715">
 				<left>0</left>
@@ -929,7 +843,6 @@
 				<height>70</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-			
 			<control type="radiobutton" id="553">
 				<left>15</left>
 				<top>-70</top>
@@ -941,7 +854,6 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 			<!--background-->
 			<control type="image" id="716">
 				<left>0</left>
@@ -950,7 +862,6 @@
 				<height>70</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-			
 			<control type="button" id="552">
 				<left>15</left>
 				<top>-70</top>
@@ -961,7 +872,6 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 			<!--background-->
 			<control type="image" id="717">
 				<left>0</left>
@@ -970,7 +880,6 @@
 				<height>70</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-			
 			<control type="radiobutton" id="551">
 				<left>15</left>
 				<top>-70</top>
@@ -982,9 +891,6 @@
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>

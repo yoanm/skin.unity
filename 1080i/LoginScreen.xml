@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-
 	<defaultcontrol always="true">52</defaultcontrol>
-		
 	<controls>
-	
 		<include>CommonBackground</include>
 		<include>Clock</include>
-		
 		<control type="image">
 			<description>LOGO</description>
 			<left>0</left>
@@ -19,14 +14,11 @@
 			<texture>kodi-logo.png</texture>
 			<include>Window_OpenClose_Animation</include>
 		</control>
-		
 		<!--all content-->
 		<control type="group">
 			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-						
 			<animation effect="slide" start="0,0" end="-125,0" time="300" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
-			
 			<!--title bars and backgrounds-->
 			<include name="DynamicDialogBackground">
 				<param name="dialog-left" value="545" />
@@ -34,7 +26,6 @@
 				<param name="glow-width" value="910" />
 				<param name="title-height" value="150" />
 			</include>
-			
 			<control type="label">
 				<left>560</left>
 				<top>25</top>
@@ -46,7 +37,6 @@
 				<aligny>center</aligny>
 				<label>$LOCALIZE[31421]</label>
 			</control>
-			
 			<control type="list" id="52">
 				<left>565</left>
 				<top>170</top>
@@ -59,9 +49,7 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				
 				<itemlayout height="150" width="790">
-									
 					<control type="image">
 						<left>15</left>
 						<top>15</top>
@@ -70,7 +58,6 @@
 						<texture>$INFO[Listitem.Icon]</texture>
 						<visible>!StringCompare(Listitem.Icon,"unknown-user.png")</visible>
 					</control>
-					
 					<control type="image">
 						<left>15</left>
 						<top>15</top>
@@ -79,7 +66,6 @@
 						<texture colordiffuse="text.primary">unknown-user.png</texture>
 						<visible>StringCompare(Listitem.Icon,"unknown-user.png")</visible>
 					</control>
-					
 					<control type="label">
 						<left>165</left>
 						<top>15</top>
@@ -91,7 +77,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="label">
 						<left>165</left>
 						<top>75</top>
@@ -103,11 +88,8 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="150" width="790">
-									
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
@@ -116,7 +98,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 							<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(52)">Conditional</animation>
 					</control>
-					
 					<control type="image">
 						<left>15</left>
 						<top>15</top>
@@ -124,7 +105,6 @@
 						<height>112</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
-					
 					<control type="label">
 						<left>165</left>
 						<top>15</top>
@@ -137,7 +117,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="label">
 						<left>165</left>
 						<top>75</top>
@@ -150,11 +129,8 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 				</focusedlayout>
-				
 			</control>
-			
 			<control type="image">
 				<description>LOGO</description>
 				<left>795</left>
@@ -164,16 +140,13 @@
 				<aspectratio>keep</aspectratio>
 				<texture>Unity_Logo.png</texture>
 			</control>
-						
 		</control>
-		
 		<!--power button-->
 		<control type="group" id="10">
 			<left>314r</left>
 			<top>60</top>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="40,0" time="0" condition="!SubString(System.Time,am) + !SubString(System.Time,pm)">Conditional</animation>
-			
 			<control type="button" id="20">
 				<description>Power push button</description>
 				<left>50</left>
@@ -190,7 +163,6 @@
 				<onup>52</onup>
 				<ondown>52</ondown>
 			</control>
-			
 			<control type="image">
 				<description>Power Icon</description>
 				<left>50</left>
@@ -201,7 +173,6 @@
 				<texture colordiffuse="text.primary">icon_power.png</texture>
 				<visible>!Control.HasFocus(20)</visible>
 			</control>
-			
 			<control type="image">
 				<description>Power Icon</description>
 				<left>50</left>
@@ -212,9 +183,6 @@
 				<texture colordiffuse="white">icon_power.png</texture>
 				<visible>Control.HasFocus(20)</visible>
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>

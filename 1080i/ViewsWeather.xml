@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <includes>
-
 	<include name="WeatherDaily">
-	
 		<control type="group">
 			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-
 			<control type="list" id="51">
 				<left>135</left>
 				<top>200</top>
@@ -21,9 +17,7 @@
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>IsEmpty(Window.Property(Weather.CurrentView))</visible>
-				
 				<itemlayout height="175" width="913" condition="IsEmpty(Window.Property(Daily.IsFetched))">
-				
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -32,7 +26,6 @@
 						<height>165</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-					
 					<control type="label">
 						<left>225</left>
 						<top>8</top>
@@ -45,7 +38,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="image">
 						<left>715</left>
 						<top>7</top>
@@ -54,7 +46,6 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.ActualIcon]</texture>
 					</control>
-					
 					<control type="label">
 						<left>45</left>
 						<top>52</top>
@@ -68,7 +59,6 @@
 						<label>[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[ListItem.Property(HighTemp)]$INFO[ListItem.Property(TempUnits)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[ListItem.Property(LowTemp)]$INFO[ListItem.Property(TempUnits)]</label>
 						<visible>!IsEmpty(ListItem.Property(HighTemp))</visible>
 					</control>
-					
 					<control type="label">
 						<left>45</left>
 						<top>105</top>
@@ -80,11 +70,8 @@
 						<align>left</align>
 						<label>$INFO[ListItem.Property(Outlook)]</label>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="175" width="913" condition="IsEmpty(Window.Property(Daily.IsFetched))">
-
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -94,7 +81,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(51)">Conditional</animation>
 					</control>
-
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
@@ -104,7 +90,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(51)">Conditional</animation>
 					</control>
-
 					<control type="label">
 						<left>225</left>
 						<top>8</top>
@@ -117,7 +102,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="image">
 						<left>715</left>
 						<top>7</top>
@@ -126,7 +110,6 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.ActualIcon]</texture>
 					</control>
-					
 					<control type="label">
 						<left>45</left>
 						<top>52</top>
@@ -140,7 +123,6 @@
 						<label>[COLOR=text.primary]$LOCALIZE[419] : [/COLOR]$INFO[ListItem.Property(HighTemp)]$INFO[ListItem.Property(TempUnits)]     [COLOR=text.primary]$LOCALIZE[418] : [/COLOR]$INFO[ListItem.Property(LowTemp)]$INFO[ListItem.Property(TempUnits)]</label>
 						<visible>!IsEmpty(ListItem.Property(HighTemp))</visible>
 					</control>
-					
 					<control type="label">
 						<left>45</left>
 						<top>105</top>
@@ -152,11 +134,8 @@
 						<align>left</align>
 						<label>$INFO[ListItem.Property(Outlook)]</label>
 					</control>
-					
 				</focusedlayout>
-
 				<itemlayout height="175" width="913" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
-					
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -165,7 +144,6 @@
 						<height>165</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-					
 					<control type="label">
 						<left>0</left>
 						<top>0</top>
@@ -178,7 +156,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="image">
 						<left>165</left>
 						<top>8</top>
@@ -187,7 +164,6 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
-					
 					<control type="label">
 						<left>300</left>
 						<top>0</top>
@@ -200,7 +176,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<control type="label">
 						<left>8</left>
 						<top>90</top>
@@ -212,11 +187,8 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
-					
 				</itemlayout>
-
 				<focusedlayout height="175" width="913" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
-
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -226,7 +198,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(51)">Conditional</animation>
 					</control>
-					
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
@@ -236,7 +207,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(51)">Conditional</animation>
 					</control>
-					
 					<control type="label">
 						<left>0</left>
 						<top>0</top>
@@ -249,7 +219,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="image">
 						<left>165</left>
 						<top>8</top>
@@ -258,7 +227,6 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
-					
 					<control type="label">
 						<left>300</left>
 						<top>0</top>
@@ -271,7 +239,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<control type="label">
 						<left>8</left>
 						<top>90</top>
@@ -283,18 +250,14 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
-					
 				</focusedlayout>
-
 				<content>
-				
 					<item>
 						<label>-</label>
 						<icon>-</icon>
 						<onclick>noop</onclick>
 						<visible>!Weather.IsFetched</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Day0.Title)]</label>
 						<icon>$INFO[Window.Property(Day0.OutlookIcon)]</icon>
@@ -305,7 +268,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day0.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Day1.Title)]</label>
 						<icon>$INFO[Window.Property(Day1.OutlookIcon)]</icon>
@@ -316,7 +278,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day1.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Day2.Title)]</label>
 						<icon>$INFO[Window.Property(Day2.OutlookIcon)]</icon>
@@ -327,7 +288,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day2.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Day3.Title)]</label>
 						<icon>$INFO[Window.Property(Day3.OutlookIcon)]</icon>
@@ -338,7 +298,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day3.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Day4.Title)]</label>
 						<icon>$INFO[Window.Property(Day4.OutlookIcon)]</icon>
@@ -349,7 +308,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day4.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Day5.Title)]</label>
 						<icon>$INFO[Window.Property(Day5.OutlookIcon)]</icon>
@@ -360,7 +318,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day5.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Day6.Title)]</label>
 						<icon>$INFO[Window.Property(Day6.OutlookIcon)]</icon>
@@ -371,7 +328,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day6.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.1.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.1.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.1.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.1.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.1.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.1.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -380,7 +336,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.1.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.2.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.2.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.2.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.2.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.2.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.2.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -389,7 +344,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.2.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.3.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.3.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.3.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.3.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.3.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.3.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -398,7 +352,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.3.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.4.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.4.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.4.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.4.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.4.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.4.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -407,7 +360,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.4.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.5.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.5.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.5.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.5.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.5.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.5.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -416,7 +368,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.5.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.6.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.6.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.6.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.6.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.6.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.6.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -425,7 +376,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.6.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.7.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.7.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.7.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.7.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.7.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.7.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -434,7 +384,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.7.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.8.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.8.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.8.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.8.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.8.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.8.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -443,7 +392,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.8.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.9.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.9.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.9.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.9.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.9.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.9.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -452,7 +400,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.9.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.10.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.10.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.10.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.10.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.10.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.10.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -461,7 +408,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.10.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.11.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.11.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.11.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.11.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.11.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.11.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -470,7 +416,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.11.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.12.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.12.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.12.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.12.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.12.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.12.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -479,7 +424,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.12.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.13.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.13.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.13.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.13.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.13.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.13.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -488,7 +432,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.13.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Daily.14.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.14.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Daily.14.HighTemperature),[COLOR=grey2]$LOCALIZE[419] :[/COLOR] ,]  $INFO[Window.Property(Daily.14.LowTemperature),[COLOR=grey2]$LOCALIZE[418] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.14.Precipitation),[COLOR=grey2]$LOCALIZE[33022] :[/COLOR] ,][CR]$INFO[Window.Property(Daily.14.Cloudiness),[COLOR=grey2]$LOCALIZE[387] :[/COLOR] ,]</label2>
@@ -497,11 +440,8 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.14.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
-					
 				</content>
-
 			</control>
-
 			<!--scrollbar-->
 			<control type="scrollbar" id="61">
 				<left>1058</left>
@@ -512,12 +452,9 @@
 				<showonepage>true</showonepage>
 				<visible>Control.IsVisible(51)</visible>
 			</control>
-			
 		</control>
-		
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
-			
 			<control type="image">
 				<left>64</left>
 				<top>94r</top>
@@ -525,7 +462,6 @@
 				<height>34</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-		
 			<control type="image">
 				<left>60</left>
 				<top>94r</top>
@@ -533,7 +469,6 @@
 				<height>34</height>
 				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 			</control>
-
 			<control type="label">
 				<description>Page Count Label</description>
 				<left>73</left>
@@ -547,17 +482,12 @@
 				<aligny>center</aligny>
 				<label>$INFO[Container(51).NumItems] $LOCALIZE[12393] [COLOR=$VAR[Colour.500]]$INFO[Container(51).CurrentPage, $LOCALIZE[31024] ]$INFO[Container(51).NumPages,/,][/COLOR]</label>
 			</control>
-			
 		</control>
-		
 	</include>
-	
 	<include name="Weather36Hour">
-	
 		<control type="group">
 			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			
 			<control type="list" id="54">
 				<left>135</left>
 				<top>200</top>
@@ -572,7 +502,6 @@
 				<scrolltime>200</scrolltime>
 				<visible>StringCompare(Window.Property(Weather.CurrentView),36hour) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 				<itemlayout height="233" width="913">
-
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -581,7 +510,6 @@
 						<height>223</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-
 					<control type="label">
 						<left>0</left>
 						<top>8</top>
@@ -593,7 +521,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="image">
 						<left>24</left>
 						<top>10</top>
@@ -602,7 +529,6 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
-					
 					<control type="label">
 						<left>200</left>
 						<top>80</top>
@@ -615,7 +541,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(Temp)]</label>
 					</control>
-					
 					<control type="label">
 						<left>300</left>
 						<top>8</top>
@@ -628,7 +553,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<control type="label">
 						<left>8</left>
 						<top>180</top>
@@ -640,11 +564,8 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="233" width="913">
-
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -654,7 +575,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(54)">Conditional</animation>
 					</control>
-
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
@@ -664,7 +584,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(54)">Conditional</animation>
 					</control>
-
 					<control type="label">
 						<left>0</left>
 						<top>8</top>
@@ -676,7 +595,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="image">
 						<left>24</left>
 						<top>10</top>
@@ -685,7 +603,6 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
-					
 					<control type="label">
 						<left>200</left>
 						<top>80</top>
@@ -698,7 +615,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(Temp)]</label>
 					</control>
-					
 					<control type="label">
 						<left>300</left>
 						<top>8</top>
@@ -711,7 +627,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<control type="label">
 						<left>8</left>
 						<top>180</top>
@@ -723,17 +638,13 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
-					
 				</focusedlayout>
-				
 				<content>
-				
 					<item>
 						<icon>$LOCALIZE[31909]</icon>
 						<onclick>noop</onclick>
 						<visible>IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(36Hour.1.Heading)]</label>
 						<property name="Temp">[COLOR=grey2]$INFO[Window.Property(36Hour.1.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.1.Temperature), ,]</property>
@@ -743,7 +654,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(36Hour.1.Outlook)) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(36Hour.2.Heading)]</label>
 						<property name="Temp">[COLOR=grey2]$INFO[Window.Property(36Hour.2.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.2.Temperature), ,]</property>
@@ -753,7 +663,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(36Hour.2.Outlook)) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(36Hour.3.Heading)]</label>
 						<property name="Temp">[COLOR=grey2]$INFO[Window.Property(36Hour.3.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.3.Temperature), ,]</property>
@@ -763,11 +672,8 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(36Hour.3.Outlook)) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 					</item>
-					
 				</content>
-				
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="64">
 				<left>1058</left>
@@ -778,17 +684,12 @@
 				<showonepage>true</showonepage>
 				<visible>Control.IsVisible(54)</visible>
 			</control>
-
 		</control>
-		
 	</include>
-	
 	<include name="WeatherWeekend">
-		
 		<control type="group">
 			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			
 			<control type="list" id="55">
 				<left>135</left>
 				<top>200</top>
@@ -803,7 +704,6 @@
 				<scrolltime>200</scrolltime>
 				<visible>StringCompare(Window.Property(Weather.CurrentView),weekend) + !IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 				<itemlayout height="350" width="913">
-
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -812,7 +712,6 @@
 						<height>340</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-
 					<control type="label">
 						<left>0</left>
 						<top>8</top>
@@ -824,7 +723,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="image">
 						<left>24</left>
 						<top>40</top>
@@ -833,7 +731,6 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
-					
 					<control type="label">
 						<left>200</left>
 						<top>80</top>
@@ -846,7 +743,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(Temp)]</label>
 					</control>
-					
 					<control type="label">
 						<left>300</left>
 						<top>8</top>
@@ -859,7 +755,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<control type="label">
 						<left>8</left>
 						<top>240</top>
@@ -871,11 +766,8 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="350" width="913">
-
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -885,7 +777,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(55)">Conditional</animation>
 					</control>
-
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
@@ -895,7 +786,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(55)">Conditional</animation>
 					</control>
-
 					<control type="label">
 						<left>0</left>
 						<top>8</top>
@@ -907,7 +797,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="image">
 						<left>24</left>
 						<top>40</top>
@@ -916,7 +805,6 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
-					
 					<control type="label">
 						<left>200</left>
 						<top>80</top>
@@ -929,7 +817,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(Temp)]</label>
 					</control>
-					
 					<control type="label">
 						<left>300</left>
 						<top>8</top>
@@ -942,7 +829,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<control type="label">
 						<left>8</left>
 						<top>240</top>
@@ -954,17 +840,13 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
-					
 				</focusedlayout>
-				
 				<content>
-				
 					<item>
 						<icon>$LOCALIZE[31909]</icon>
 						<onclick>noop</onclick>
 						<visible>IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Weekend.1.LongDay)] - $INFO[Window.Property(Weekend.1.ShortDate)]</label>
 						<property name="Temp">[COLOR=grey2]$LOCALIZE[393][CR][/COLOR]$INFO[Window.Property(Weekend.1.HighTemperature), ,][CR][CR][COLOR=grey2]$LOCALIZE[391][CR][/COLOR]$INFO[Window.Property(Weekend.1.LowTemperature), ,]</property>
@@ -974,7 +856,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Weekend.1.Outlook)) + !IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Weekend.2.LongDay)] - $INFO[Window.Property(Weekend.2.ShortDate)]</label>
 						<property name="Temp">[COLOR=grey2]$LOCALIZE[393][CR][/COLOR]$INFO[Window.Property(Weekend.2.HighTemperature), ,][CR][CR][COLOR=grey2]$LOCALIZE[391][CR][/COLOR]$INFO[Window.Property(Weekend.2.LowTemperature), ,]</property>
@@ -984,11 +865,8 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Weekend.2.Outlook)) + !IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 					</item>
-					
 				</content>
-				
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="65">
 				<left>1058</left>
@@ -999,17 +877,12 @@
 				<showonepage>true</showonepage>
 				<visible>Control.IsVisible(55)</visible>
 			</control>
-
 		</control>
-
 	</include>
-	
 	<include name="WeatherHourly">
-	
 		<control type="group">
 			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-
 			<control type="list" id="52">
 				<left>135</left>
 				<top>200</top>
@@ -1023,9 +896,7 @@
 				<pagecontrol>62</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>StringCompare(Window.Property(Weather.CurrentView),hourly) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-				
 				<itemlayout height="175" width="913">
-					
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -1034,7 +905,6 @@
 						<height>165</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
 					</control>
-					
 					<control type="label">
 						<left>0</left>
 						<top>0</top>
@@ -1047,7 +917,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="image">
 						<left>165</left>
 						<top>8</top>
@@ -1056,7 +925,6 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
-					
 					<control type="label">
 						<left>300</left>
 						<top>8</top>
@@ -1069,7 +937,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<control type="label">
 						<left>8</left>
 						<top>95</top>
@@ -1081,11 +948,8 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="175" width="913">
-					
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -1095,7 +959,6 @@
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(52)">Conditional</animation>
 					</control>
-					
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
@@ -1105,7 +968,6 @@
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="75" time="200" condition="!Control.HasFocus(52)">Conditional</animation>
 					</control>
-					
 					<control type="label">
 						<left>0</left>
 						<top>0</top>
@@ -1118,7 +980,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
-					
 					<control type="image">
 						<left>165</left>
 						<top>8</top>
@@ -1127,7 +988,6 @@
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.Thumb]</texture>
 					</control>
-					
 					<control type="label">
 						<left>300</left>
 						<top>8</top>
@@ -1140,7 +1000,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					
 					<control type="label">
 						<left>8</left>
 						<top>95</top>
@@ -1152,17 +1011,13 @@
 						<align>center</align>
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
-					
 				</focusedlayout>
-				
 				<content>
-				
 					<item>
 						<icon>$LOCALIZE[31909]</icon>
 						<onclick>noop</onclick>
 						<visible>IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.1.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.1.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.1.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.1.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.1.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.1.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1171,7 +1026,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.1.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.2.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.2.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.2.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.2.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.2.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.2.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1180,7 +1034,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.2.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.3.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.3.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.3.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.3.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.3.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.3.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1189,7 +1042,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.3.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.4.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.4.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.4.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.4.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.4.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.4.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1198,7 +1050,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.4.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.5.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.5.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.5.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.5.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.5.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.5.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1207,7 +1058,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.5.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.6.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.6.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.6.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.6.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.6.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.6.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1216,7 +1066,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.6.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.7.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.7.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.7.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.7.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.7.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.7.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1225,7 +1074,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.7.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.8.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.8.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.8.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.8.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.8.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.8.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1234,7 +1082,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.8.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.9.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.9.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.9.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.9.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.9.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.9.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1243,7 +1090,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.9.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.10.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.10.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.10.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.10.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.10.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.10.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1252,7 +1098,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.10.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.11.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.11.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.11.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.11.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.11.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.11.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1261,7 +1106,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.11.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.12.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.12.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.12.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.12.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.12.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.12.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1270,7 +1114,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.12.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.13.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.13.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.13.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.13.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.13.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.13.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1279,7 +1122,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.13.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.14.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.14.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.14.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.14.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.14.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.14.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1288,7 +1130,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.14.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.15.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.15.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.15.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.15.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.15.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.15.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1297,7 +1138,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.15.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.16.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.16.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.16.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.16.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.16.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.16.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1306,7 +1146,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.16.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.17.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.17.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.17.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.17.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.17.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.17.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1315,7 +1154,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.17.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.18.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.18.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.18.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.18.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.18.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.18.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1324,7 +1162,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.18.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.19.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.19.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.19.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.19.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.19.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.19.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1333,7 +1170,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.19.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.20.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.20.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.20.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.20.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.20.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.20.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1342,7 +1178,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.20.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.21.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.21.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.21.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.21.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.21.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.21.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1351,7 +1186,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.21.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.22.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.22.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.22.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.22.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.22.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.22.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1360,7 +1194,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.22.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.23.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.23.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.23.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.23.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.23.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.23.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1369,7 +1202,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.23.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Hourly.24.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.24.ShortDate)][/COLOR]</label>
 						<label2>$INFO[Window.Property(Hourly.24.Temperature),[COLOR=grey2]$LOCALIZE[401] :[/COLOR] ,]  $INFO[Window.Property(Hourly.24.FeelsLike),[COLOR=grey2]$LOCALIZE[402] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.24.Humidity),[COLOR=grey2]$LOCALIZE[406] :[/COLOR] ,][CR]$INFO[Window.Property(Hourly.24.Precipitation),[COLOR=grey2]$LOCALIZE[1448] :[/COLOR] ,]</label2>
@@ -1378,11 +1210,8 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.24.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
-					
 				</content>
-			
 			</control>
-			
 			<!--scrollbar-->
 			<control type="scrollbar" id="62">
 				<left>1058</left>
@@ -1393,12 +1222,9 @@
 				<showonepage>true</showonepage>
 				<visible>Control.IsVisible(52)</visible>
 			</control>
-
 		</control>
-		
 		<control type="group">
 			<visible>Control.IsVisible(52)</visible>
-			
 			<control type="image">
 				<left>64</left>
 				<top>94r</top>
@@ -1406,7 +1232,6 @@
 				<height>34</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 			</control>
-		
 			<control type="image">
 				<left>60</left>
 				<top>94r</top>
@@ -1414,7 +1239,6 @@
 				<height>34</height>
 				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 			</control>
-
 			<control type="label">
 				<description>Page Count Label</description>
 				<left>73</left>
@@ -1429,21 +1253,15 @@
 				<label>$INFO[Container(52).NumItems] $LOCALIZE[31025] [COLOR=$VAR[Colour.500]]$INFO[Container(52).CurrentPage, $LOCALIZE[31024] ]$INFO[Container(52).NumPages,/,][/COLOR]</label>
 				<include>Window_OpenClose_Animation</include>
 			</control>
-			
 		</control>
-		
 	</include>
-	
 	<include name="WeatherMaps">
-
 		<control type="group">
 			<visible>StringCompare(Window.Property(Weather.CurrentView),map) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
 			<left>135</left>
 			<top>200</top>
-
 			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-
 			<!--background-->
 			<control type="image">
 				<left>-20</left>
@@ -1452,7 +1270,6 @@
 				<height>730</height>
 				<texture border="20" colordiffuse="tertiary">backgrounds/info bg.png</texture>
 			</control>
-			
 			<!--sub title background-->
 			<control type="image">
 				<left>0</left>
@@ -1461,7 +1278,6 @@
 				<height>50</height>
 				<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
 			</control>
-
 			<control type="button" id="992">
 				<left>645</left>
 				<top>646</top>
@@ -1474,7 +1290,6 @@
 				<onright>9000</onright>
 				<onclick>Control.Move(53,1)</onclick>
 			</control>
-			
 			<control type="button" id="991">
 				<left>243</left>
 				<top>646</top>
@@ -1487,7 +1302,6 @@
 				<onright>992</onright>
 				<onclick>Control.Move(53,-1)</onclick>
 			</control>
-			
 			<control type="label">
 				<description>heading label</description>
 				<left>0</left>
@@ -1500,7 +1314,6 @@
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="list" id="53">
 				<left>0</left>
 				<top>0</top>
@@ -1514,9 +1327,7 @@
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
 				<visible>StringCompare(Window.Property(Weather.CurrentView),map) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
-				
 				<itemlayout height="640" width="930">
-				
 					<control type="image">
 						<description>area image</description>
 						<left>0</left>
@@ -1526,7 +1337,6 @@
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>scale</aspectratio>
 					</control>
-					
 					<control type="image">
 						<description>layer image</description>
 						<left>0</left>
@@ -1537,7 +1347,6 @@
 						<aspectratio>scale</aspectratio>
 						<colordiffuse>70FFFFFF</colordiffuse>
 					</control>
-					
 					<control type="image">
 						<description>legend image</description>
 						<left>580</left>
@@ -1546,11 +1355,8 @@
 						<height>52</height>
 						<texture>$INFO[ListItem.Label2]</texture>
 					</control>
-					
 				</itemlayout>
-				
 				<focusedlayout height="640" width="930">
-				
 					<control type="image">
 						<description>layer image</description>
 						<left>0</left>
@@ -1560,7 +1366,6 @@
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>scale</aspectratio>
 					</control>
-					
 					<control type="image">
 						<description>area image</description>
 						<left>0</left>
@@ -1571,7 +1376,6 @@
 						<aspectratio>scale</aspectratio>
 						<colordiffuse>70FFFFFF</colordiffuse>
 					</control>
-					
 					<control type="image">
 						<description>legend image</description>
 						<left>580</left>
@@ -1580,11 +1384,8 @@
 						<height>52</height>
 						<texture>$INFO[ListItem.Label2]</texture>
 					</control>
-					
 				</focusedlayout>
-				
 				<content>
-				
 					<item>
 						<label>$INFO[Window.Property(Map.1.Heading)]</label>
 						<label2>$INFO[Window.Property(Map.1.Legend)]</label2>
@@ -1593,7 +1394,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.1.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Map.2.Heading)]</label>
 						<label2>$INFO[Window.Property(Map.2.Legend)]</label2>
@@ -1602,7 +1402,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.2.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Map.3.Heading)]</label>
 						<label2>$INFO[Window.Property(Map.3.Legend)]</label2>
@@ -1611,7 +1410,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.3.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Map.4.Heading)]</label>
 						<label2>$INFO[Window.Property(Map.4.Legend)]</label2>
@@ -1620,7 +1418,6 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.4.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
-					
 					<item>
 						<label>$INFO[Window.Property(Map.5.Heading)]</label>
 						<label2>$INFO[Window.Property(Map.5.Legend)]</label2>
@@ -1629,17 +1426,11 @@
 						<onclick>noop</onclick>
 						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.5.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
-					
 				</content>
-				
 			</control>
-			
 		</control>
-		
 	</include>
-	
 	<include name="WeatherAlerts">
-	
 		<control type="button" id="996">
 			<description>Hidden Button for focus</description>
 			<left>-900</left>
@@ -1652,15 +1443,12 @@
 			<onright>9000</onright>
 			<visible>StringCompare(Window.Property(Weather.CurrentView),alerts)</visible>
 		</control>
-	
 		<control type="group">
 			<visible>StringCompare(Window.Property(Weather.CurrentView),alerts) + !IsEmpty(Window.Property(Alerts.IsFetched))</visible>
 			<left>135</left>
 			<top>200</top>
-
 			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-
 			<!--background-->
 			<control type="image">
 				<left>-20</left>
@@ -1669,7 +1457,6 @@
 				<height>730</height>
 				<texture border="20" colordiffuse="tertiary">backgrounds/info bg.png</texture>
 			</control>
-			
 			<!--sub title background-->
 			<control type="image">
 				<left>0</left>
@@ -1678,7 +1465,6 @@
 				<height>50</height>
 				<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
 			</control>
-
 			<control type="label">
 				<left>0</left>
 				<top>0</top>
@@ -1690,10 +1476,8 @@
 				<aligny>center</aligny>
 				<label>$LOCALIZE[33050]</label>
 			</control>
-			
 			<control type="group">
 				<visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
-				
 				<control type="textbox">
 					<left>20</left>
 					<top>82</top>
@@ -1706,9 +1490,7 @@
 					<label>$INFO[Window.Property(Alerts)]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
-				
 			</control>
-			
 			<control type="label">
 				<left>20</left>
 				<top>80</top>
@@ -1721,9 +1503,6 @@
 				<label>$LOCALIZE[19055]</label>
 				<visible>StringCompare(Window.Property(Alerts.Count),0)</visible>
 			</control>
-			
 		</control>
-		
 	</include>
-	
 </includes>

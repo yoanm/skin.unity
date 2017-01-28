@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <window>
-
 	<defaultcontrol>-</defaultcontrol>
-	
 	<controls>
-	
 		<!-- media infos -->
 		<control type="group" id="1">
 			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(SliderDialog) | Window.IsVisible(Seekbar) | Window.IsVisible(OSDAudioDSPSettings)]</visible>
-		
 			<!--channel-->
 			<control type="group" id="1">
 				<visible>VideoPlayer.Content(LiveTV)</visible>
-				
 				<!--channel bg-->
 				<control type="image" id="1">
 					<left>64</left>
@@ -22,7 +16,6 @@
 					<height>45</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-				
 				<!--channel strip-->
 				<control type="image" id="1">
 					<left>60</left>
@@ -31,7 +24,6 @@
 					<height>45</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-				
 				<!--channel labels-->
 				<control type="grouplist" id="1">
 					<left>73</left>
@@ -41,15 +33,12 @@
 					<orientation>horizontal</orientation>
 					<align>left</align>
 					<itemgap>8</itemgap>
-					
 					<control type="label" id="1">
 						<width min="0" max="482">auto</width>
 						<include>WindowTitleCommons</include>
 						<label>$INFO[VideoPlayer.ChannelNumberLabel]. $INFO[VideoPlayer.ChannelName]</label>
 					</control>
-					
 				</control>
-					
 				<!--channel group bg-->
 				<control type="image" id="1">
 					<left>64</left>
@@ -58,7 +47,6 @@
 					<height>34</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-			
 				<!--channel group strip-->
 				<control type="image" id="1">
 					<left>60</left>
@@ -67,7 +55,6 @@
 					<height>34</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-			
 				<!--channel group label-->
 				<control type="label" id="1">
 					<left>73</left>
@@ -80,13 +67,10 @@
 					<textcolor>text.primary</textcolor>
 					<label>$INFO[VideoPlayer.ChannelGroup,$LOCALIZE[31509]: ]</label>
 				</control>
-				
 			</control>
-	
 			<!--time-->
 			<control type="group" id="1">
 				<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
-					
 				<!--time background (12 hour)-->
 				<control type="image" id="1">
 					<left>214r</left>
@@ -96,7 +80,6 @@
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 					<visible>SubString(System.Time,am) | SubString(System.Time,pm)</visible>
 				</control>
-						
 				<!--time background (24 hour)-->
 				<control type="image" id="1">
 					<left>174r</left>
@@ -106,7 +89,6 @@
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 					<visible>!SubString(System.Time,am) + !SubString(System.Time,pm)</visible>
 				</control>
-			
 				<!--time background strip-->
 				<control type="image" id="1">
 					<left>64r</left>
@@ -115,7 +97,6 @@
 					<height>45</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-			
 				<!--time-->
 				<control type="label" id="1">
 					<right>71</right>
@@ -128,7 +109,6 @@
 					<textcolor>text.primary</textcolor>
 					<label>$INFO[System.Time(hh:mm)]$INFO[System.Time(xx), ,]</label>
 				</control>
-				
 				<!--finish background-->
 				<control type="image" id="1">
 					<left>369r</left>
@@ -137,7 +117,6 @@
 					<height>34</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-			
 				<!--finish time background strip-->
 				<control type="image" id="1">
 					<left>64r</left>
@@ -146,7 +125,6 @@
 					<height>34</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-			
 				<!--finish time-->
 				<control type="label" id="1">
 					<right>71</right>
@@ -159,14 +137,11 @@
 					<textcolor>text.primary</textcolor>
 					<label>$LOCALIZE[31049]: $INFO[Player.FinishTime]</label>
 				</control>
-				
 			</control>
-			
 			<!--bottom info-->
 			<control type="group" id="1">
 				<animation effect="slide" start="0,0" end="0,100" time="200" condition="IsEmpty(VideoPlayer.Plot) | !Player.ShowInfo">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-372,0" time="200" delay="100" condition="Skin.HasSetting(SubtitleSection)">Conditional</animation>
-		
 				<!--background-->
 				<control type="image" id="1">
 					<left>390</left>
@@ -176,7 +151,6 @@
 					<texture colordiffuse="tertiary">backgrounds/np info bg.png</texture>
 					<animation effect="zoom" start="390,697,1140,190" end="390,700,1140,290" time="200" condition="!IsEmpty(VideoPlayer.Plot) + Player.ShowInfo">Conditional</animation>
 				</control>
-				
 				<!--title bg-->
 				<control type="image" id="1">
 					<left>400</left>
@@ -185,7 +159,6 @@
 					<height>70</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
-				
 				<!--title shadow-->
 				<control type="image" id="1">
 					<left>400</left>
@@ -195,11 +168,9 @@
 					<texture>homeshadow.png</texture>
 					<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 				</control>
-				
 				<!--info-->
 				<control type="group" id="1">
 					<top>377r</top>
-				
 					<!--title-->
 					<control type="label" id="1"> <!--1-->
 						<left>415</left>
@@ -213,7 +184,6 @@
 						<label>$INFO[Player.Title]</label>
 						<scroll>true</scroll>
 					</control>
-					
 					<!--recording image-->
 					<control type="image" id="1">
 						<top>70</top>
@@ -223,7 +193,6 @@
 						<texture colordiffuse="red">PVR-IsRecording.png</texture>
 						<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
 					</control>
-					
 					<!--tagline-->
 					<control type="label" id="1">
 						<left>415</left>
@@ -236,7 +205,6 @@
 						<label fallback="$INFO[VideoPlayer.Genre]">$INFO[VideoPlayer.Tagline]</label>
 						<visible>VideoPlayer.Content(Movies)</visible>
 					</control>
-					
 					<!--tv show label-->
 					<control type="label" id="1">
 						<left>415</left>
@@ -249,7 +217,6 @@
 						<label>$INFO[VideoPlayer.TVShowTitle] ($INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode])</label>
 						<visible>VideoPlayer.Content(Episodes)</visible>
 					</control>
-					
 					<!--music video info-->
 					<control type="label" id="1">
 						<left>415</left>
@@ -262,7 +229,6 @@
 						<label>$INFO[VideoPlayer.Artist] $INFO[VideoPlayer.Album, - ]</label>
 						<visible>VideoPlayer.Content(MusicVideos)</visible>
 					</control>
-					
 					<!--live tv info (not recording)-->
 					<control type="label" id="1">
 						<left>415</left>
@@ -275,7 +241,6 @@
 						<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: ] ($INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime])</label>
 						<visible>VideoPlayer.Content(LiveTV) + !Player.Recording</visible>
 					</control>
-					
 					<!--live tv info (recording)-->
 					<control type="label" id="1">
 						<left>415</left>
@@ -288,7 +253,6 @@
 						<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: ] ($INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime])</label>
 						<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
 					</control>
-				
 					<!--path-->
 					<control type="label" id="1">
 						<left>415</left>
@@ -301,7 +265,6 @@
 						<label>$INFO[Player.FileNameAndPath]</label>
 						<visible>VideoPlayer.Content(Files)</visible>
 					</control>
-					
 					<!--plot-->
 					<control type="textbox" id="1">
 						<left>415</left>
@@ -317,15 +280,12 @@
 						<animation effect="fade" start="0" end="100" time="100" delay="200">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="100">Hidden</animation>
 					</control>
-					
 				</control>
-				
 				<!--progress-->
 				<control type="group" id="1">
 					<top>250r</top>
 					<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
 					<animation effect="slide" start="0,0" end="0,100" time="200" condition="!IsEmpty(VideoPlayer.Plot) + Player.ShowInfo">Conditional</animation>
-
 					<!--cache-->
 					<control type="progress" id="1">
 						<left>415</left>
@@ -335,7 +295,6 @@
 						<info>Player.ProgressCache</info>
 						<midtexture colordiffuse="$VAR[Colour.900]">backgrounds/white.png</midtexture>
 					</control>
-					
 					<!--progress-->
 					<control type="progress" id="1">
 						<left>415</left>
@@ -345,7 +304,6 @@
 						<info>Player.Progress</info>
 						<texturebg>-</texturebg>
 					</control>
-							
 					<!--current time-->
 					<control type="label" id="1">
 						<left>415</left>
@@ -357,7 +315,6 @@
 						<aligny>center</aligny>
 						<label>$INFO[Player.Time(hh:mm:ss)]</label>
 					</control>
-							
 					<!--chapter-->
 					<control type="label" id="1">
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -371,7 +328,6 @@
 						<label>$INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
 						<visible>!Player.Paused + !Player.Caching + !Player.Seeking + !Player.DisplayAfterSeek + !Player.Forwarding + !Player.Rewinding</visible>
 					</control>
-							
 					<!--chapter (paused)-->
 					<control type="label" id="1">
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -385,7 +341,6 @@
 						<label>$LOCALIZE[31043] • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
 						<visible>[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek</visible>
 					</control>
-							
 					<!--chapter (caching)-->
 					<control type="label" id="1">
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -399,7 +354,6 @@
 						<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]% • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
 						<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
 					</control>
-							
 					<!--chapter (seeking)-->
 					<control type="label" id="1">
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -413,7 +367,6 @@
 						<label>$LOCALIZE[31046] • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
 						<visible>Player.Seeking</visible>
 					</control>
-							
 					<!--chapter (final seek amount)-->
 					<control type="label" id="1">
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -427,7 +380,6 @@
 						<label>$LOCALIZE[31046] $INFO[Player.SeekOffset] • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
 						<visible>Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]</visible>
 					</control>
-							
 					<!--chapter (fast forwarding)-->
 					<control type="label" id="1">
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -441,7 +393,6 @@
 						<label>$VAR[Forwarding] • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
 						<visible>Player.Forwarding</visible>
 					</control>
-							
 					<!--chapter (rewinding)-->
 					<control type="label" id="1">
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -455,7 +406,6 @@
 						<label>$VAR[Rewinding] • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
 						<visible>Player.Rewinding</visible>
 					</control>
-							
 					<!--end time-->
 					<control type="label" id="1">
 						<left>1355</left>
@@ -467,19 +417,14 @@
 						<aligny>center</aligny>
 						<label>$INFO[Player.Duration(hh:mm:ss)]</label>
 					</control>
-					
 				</control>
-				
 			</control>
-			
 		</control>
-		
 		<!-- codec info -->
 		<control type="group" id="0">
 			<left>0</left>
 			<top>30</top>
 			<animation effect="fade" time="200">VisibleChange</animation>
-			
 			<control type="image">
 				<description>media info background image</description>
 				<left>0</left>
@@ -488,7 +433,6 @@
 				<height>210</height>
 				<texture>black-back.png</texture>
 			</control>
-			
 			<control type="label" id="10">
 				<description>row 1 label</description>
 				<left>75</left>
@@ -499,7 +443,6 @@
 				<aligny>center</aligny>
 				<label>-</label>
 			</control>
-			
 			<control type="label" id="11">
 				<description>row 2 label</description>
 				<left>75</left>
@@ -510,7 +453,6 @@
 				<aligny>center</aligny>
 				<label>-</label>
 			</control>
-			
 			<control type="label" id="12">
 				<description>row 3 label</description>
 				<left>75</left>
@@ -521,13 +463,10 @@
 				<aligny>center</aligny>
 				<label>-</label>
 			</control>
-			
 		</control>
-		
 		<control type="group">
 			<visible>Player.ShowCodec + VideoPlayer.Content(LiveTV) + system.getbool(pvrplayback.signalquality)</visible>
 			<top>248</top>
-			
 			<control type="image">
 				<description>media info background image</description>
 				<left>0</left>
@@ -536,7 +475,6 @@
 				<height>330</height>
 				<texture>black-back.png</texture>
 			</control>
-			
 			<control type="label">
 				<description>Header</description>
 				<left>75</left>
@@ -549,7 +487,6 @@
 				<font>font13_title</font>
 				<textcolor>$VAR[Colour.500]</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Backend</description>
 				<left>75</left>
@@ -562,7 +499,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Backend value</description>
 				<left>330</left>
@@ -575,7 +511,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Device</description>
 				<left>75</left>
@@ -588,7 +523,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Device value</description>
 				<left>330</left>
@@ -601,7 +535,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Status</description>
 				<left>75</left>
@@ -614,7 +547,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Status value</description>
 				<left>330</left>
@@ -627,7 +559,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Signal</description>
 				<left>75</left>
@@ -640,7 +571,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="progress">
 				<description>Progressbar</description>
 				<left>330</left>
@@ -649,7 +579,6 @@
 				<height>21</height>
 				<info>PVR.ActStreamProgrSignal</info>
 			</control>
-			
 			<control type="label">
 				<description>Signal value</description>
 				<left>1800</left>
@@ -662,7 +591,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>SNR</description>
 				<left>75</left>
@@ -675,7 +603,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="progress">
 				<description>Progressbar</description>
 				<left>330</left>
@@ -685,7 +612,6 @@
 				<overlaytexture>-</overlaytexture>
 				<info>PVR.ActStreamProgrSNR</info>
 			</control>
-			
 			<control type="label">
 				<description>SNR value</description>
 				<left>1800</left>
@@ -698,7 +624,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>BER</description>
 				<left>75</left>
@@ -711,7 +636,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>BER value</description>
 				<left>330</left>
@@ -724,7 +648,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>UNC</description>
 				<left>585</left>
@@ -737,7 +660,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>UNC value</description>
 				<left>840</left>
@@ -750,7 +672,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Service</description>
 				<left>1095</left>
@@ -763,7 +684,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Service value</description>
 				<left>1350</left>
@@ -776,7 +696,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Encryption</description>
 				<left>75</left>
@@ -789,7 +708,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Encryption value</description>
 				<left>330</left>
@@ -802,7 +720,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Provider</description>
 				<left>585</left>
@@ -815,7 +732,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Provider value</description>
 				<left>840</left>
@@ -828,7 +744,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Mux</description>
 				<left>1095</left>
@@ -841,7 +756,6 @@
 				<font>font12</font>
 				<textcolor>grey2</textcolor>
 			</control>
-			
 			<control type="label">
 				<description>Mux value</description>
 				<left>1350</left>
@@ -854,9 +768,6 @@
 				<font>font12</font>
 				<textcolor>white</textcolor>
 			</control>
-			
 		</control>
-		
 	</controls>
-	
 </window>
