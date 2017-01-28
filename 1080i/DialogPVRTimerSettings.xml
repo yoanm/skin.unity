@@ -127,7 +127,7 @@
 					<onup>5</onup>
 					<ondown>5</ondown>
 					<!--ok button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="28" />
 						<param name="button-width" value="130" />
 						<param name="button-texture" value="yesbutton" />
@@ -138,7 +138,7 @@
 						<param name="button-onright" value="29" />
 					</include>
 					<!--cancel button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="29" />
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="nobutton" />

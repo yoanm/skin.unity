@@ -202,7 +202,7 @@
 				<left>1304</left>
 				<top>609</top>
 				<!--browse button-->
-				<include name="AnimatedCircleButtonGroup">
+				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="20" />
 					<param name="button-width" value="180" />
 					<param name="button-texture" value="browsebutton" />
@@ -226,7 +226,7 @@
 				<onup>17</onup>
 				<ondown>9001</ondown>
 				<!--ok button-->
-				<include name="AnimatedCircleButtonGroup">
+				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="18" />
 					<param name="button-width" value="130" />
 					<param name="button-texture" value="yesbutton" />
@@ -237,7 +237,7 @@
 					<param name="button-onright" value="19" />
 				</include>
 				<!--cancel button-->
-				<include name="AnimatedCircleButtonGroup">
+				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="19" />
 					<param name="button-width" value="180" />
 					<param name="button-texture" value="nobutton" />

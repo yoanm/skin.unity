@@ -11,7 +11,7 @@
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">Hidden</animation>
 			<animation effect="slide" start="0,0" end="-125,0" time="300" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
 			<!--title bars and backgrounds-->
-			<include name="DynamicDialogBackground">
+			<include content="DynamicDialogBackground">
 				<param name="dialog-left" value="265" />
 				<param name="dialog-width" value="1390" />
 				<param name="glow-width" value="1470" />
@@ -64,7 +64,7 @@
 					<onup>49</onup>
 					<ondown>49</ondown>
 					<!--album info button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="12" />
 						<param name="button-width" value="270" />
 						<param name="button-texture" value="tunebutton" />
@@ -78,7 +78,7 @@
 						<param name="button-onright" value="13" />
 					</include>
 					<!--art button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="13" />
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="artbutton" />
@@ -92,7 +92,7 @@
 						<param name="button-onright" value="7" />
 					</include>
 					<!--rating button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="7" />
 						<param name="button-width" value="200" />
 						<param name="button-texture" value="ratingbutton" />

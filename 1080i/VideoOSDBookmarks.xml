@@ -180,7 +180,7 @@
 					<onup>11</onup>
 					<ondown>11</ondown>
 					<!--create bookmark button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="2" />
 						<param name="button-width" value="240" />
 						<param name="button-texture" value="addbutton" />
@@ -189,7 +189,7 @@
 						<param name="button-ondown" value="3" />
 					</include>
 					<!--clear bookmark button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="3" />
 						<param name="button-width" value="240" />
 						<param name="button-texture" value="nobutton" />
@@ -198,7 +198,7 @@
 						<param name="button-ondown" value="4" />
 					</include>
 					<!--set episode bookmark button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="4" />
 						<param name="button-width" value="240" />
 						<param name="button-visible" value="videoplayer.content(episodes)" />

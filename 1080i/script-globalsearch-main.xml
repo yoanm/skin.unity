@@ -16,7 +16,7 @@
 			<animation effect="slide" start="0,950" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,950" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<!--title bars and backgrounds-->
-			<include name="DynamicDialogBackground">
+			<include content="DynamicDialogBackground">
 				<param name="dialog-left" value="265" />
 				<param name="dialog-width" value="1390" />
 				<param name="dialog-height" value="783" />

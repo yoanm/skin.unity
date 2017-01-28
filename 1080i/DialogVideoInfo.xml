@@ -251,7 +251,7 @@
 					<onup>9003</onup>
 					<ondown>49</ondown>
 					<!--play/browse button-->
-					<include name="AnimatedCircleToggleButtonGroup">
+					<include content="AnimatedCircleToggleButtonGroup">
 						<param name="button-id" value="8" />
 						<param name="button-width" value="140" />
 						<param name="button-texture" value="playbutton" />
@@ -268,7 +268,7 @@
 						<param name="button-onright" value="5" />
 					</include>
 					<!--cast button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="5" />
 						<param name="button-width" value="120" />
 						<param name="button-texture" value="castbutton" />
@@ -282,7 +282,7 @@
 						<param name="button-onright" value="11" />
 					</include>
 					<!--trailer button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="11" />
 						<param name="button-width" value="130" />
 						<param name="button-visible" value="!IsEmpty(ListItem.Trailer) + Skin.HasSetting(HideWindowedTrailer)" />
@@ -297,7 +297,7 @@
 						<param name="button-onright" value="15" />
 					</include>
 					<!--windowed trailer button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="15" />
 						<param name="button-width" value="130" />
 						<param name="button-visible" value="!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(HideWindowedTrailer)" />
@@ -313,7 +313,7 @@
 						<param name="button-onright" value="6" />
 					</include>
 					<!--refresh button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="6" />
 						<param name="button-width" value="140" />
 						<param name="button-texture" value="refreshbutton" />
@@ -327,7 +327,7 @@
 						<param name="button-onright" value="10" />
 					</include>
 					<!--art button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="10" />
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="artbutton" />
@@ -341,7 +341,7 @@
 						<param name="button-onright" value="7" />
 					</include>
 					<!--rating button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="7" />
 						<param name="button-width" value="200" />
 						<param name="button-texture" value="ratingbutton" />
@@ -355,7 +355,7 @@
 						<param name="button-onright" value="100" />
 					</include>
 					<!--tv tune button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="100" />
 						<param name="button-width" value="160" />
 						<param name="button-visible">Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</param>

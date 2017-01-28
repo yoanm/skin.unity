@@ -11,7 +11,7 @@
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">Hidden</animation>
 			<animation effect="slide" start="0,0" end="-35,0" time="300" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
 			<!--title bars and backgrounds-->
-			<include name="DynamicDialogBackground">
+			<include content="DynamicDialogBackground">
 				<param name="dialog-left" value="355" />
 				<param name="dialog-width" value="1210" />
 				<param name="glow-width" value="1290" />
@@ -312,7 +312,7 @@
 					<onup>23</onup>
 					<ondown>22</ondown>
 					<!--ok button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="20" />
 						<param name="button-width" value="130" />
 						<param name="button-texture" value="yesbutton" />
@@ -323,7 +323,7 @@
 						<param name="button-onright" value="21" />
 					</include>
 					<!--cancel button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="21" />
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="nobutton" />

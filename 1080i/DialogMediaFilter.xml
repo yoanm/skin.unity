@@ -10,7 +10,7 @@
 			<animation effect="slide" start="850,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
 			<animation effect="slide" start="0,0" end="850,0" time="400" tween="quadratic" easing="out">Hidden</animation>
 			<!--title bars and backgrounds-->
-			<include name="DynamicDialogBackground">
+			<include content="DynamicDialogBackground">
 				<param name="dialog-left" value="1100" />
 				<param name="dialog-width" value="820" />
 				<param name="glow-width" value="910" />
@@ -78,7 +78,7 @@
 				<onup>5</onup>
 				<ondown>5</ondown>
 				<!--ok button-->
-				<include name="AnimatedCircleButtonGroup">
+				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="28" />
 					<param name="button-width" value="130" />
 					<param name="button-texture" value="yesbutton" />
@@ -89,7 +89,7 @@
 					<param name="button-onright" value="27" />
 				</include>
 				<!--cancel button-->
-				<include name="AnimatedCircleButtonGroup">
+				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="27" />
 					<param name="button-width" value="160" />
 					<param name="button-texture" value="nobutton" />

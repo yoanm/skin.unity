@@ -11,7 +11,7 @@
 		<!--all content-->
 		<control type="group">
 			<!--title bars and backgrounds-->
-			<include name="DynamicDialogBackground">
+			<include content="DynamicDialogBackground">
 				<param name="dialog-top" value="385" />
 				<param name="dialog-height" value="310" />
 				<param name="glow-height" value="390" />
@@ -67,7 +67,7 @@
 				<left>1730</left>
 				<top>630</top>
 				<!--ok button-->
-				<include name="AnimatedCircleButtonGroup">
+				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="10" />
 					<param name="button-width" value="160" />
 					<param name="button-texture" value="yesbutton" />

@@ -7,7 +7,7 @@
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="0,0" end="-35,0" time="300" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
 			<!--title bars and backgrounds-->
-			<include name="DynamicDialogBackground">
+			<include content="DynamicDialogBackground">
 				<param name="dialog-left" value="355" />
 				<param name="dialog-width" value="1210" />
 				<param name="glow-width" value="1290" />
@@ -121,7 +121,7 @@
 					<onup>5</onup>
 					<ondown>5</ondown>
 					<!--ok button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="28" />
 						<param name="button-width" value="130" />
 						<param name="button-texture" value="yesbutton" />
@@ -132,7 +132,7 @@
 						<param name="button-onright" value="29" />
 					</include>
 					<!--cancel button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="29" />
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="nobutton" />
@@ -143,7 +143,7 @@
 						<param name="button-onright" value="50" />
 					</include>
 					<!--default button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="50" />
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="refreshbutton" />

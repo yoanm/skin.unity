@@ -8,7 +8,7 @@
 			<include>VisibleFadeEffect</include>
 			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + IsEmpty(Window(videolibrary).Property(PlayingBackgroundMedia))">Conditional</animation>
 			<!--title bars and backgrounds-->
-			<include name="DynamicDialogBackground">
+			<include content="DynamicDialogBackground">
 				<param name="dialog-left" value="265" />
 				<param name="dialog-top" value="205" />
 				<param name="dialog-width" value="1390" />

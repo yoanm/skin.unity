@@ -10,7 +10,7 @@
 			<animation effect="slide" start="-1650,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
 			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">Hidden</animation>
 			<!--title bars and backgrounds-->
-			<include name="DynamicDialogBackground">
+			<include content="DynamicDialogBackground">
 				<param name="dialog-left" value="355" />
 				<param name="dialog-width" value="1210" />
 				<param name="glow-width" value="1290" />
@@ -150,7 +150,7 @@
 					<onup>2</onup>
 					<ondown>2</ondown>
 					<!--ok button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="10" />
 						<param name="button-width" value="130" />
 						<param name="button-texture" value="yesbutton" />
@@ -161,7 +161,7 @@
 						<param name="button-onright" value="11" />
 					</include>
 					<!--cancel button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="11" />
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="nobutton" />
@@ -172,7 +172,7 @@
 						<param name="button-onright" value="12" />
 					</include>
 					<!--default button-->
-					<include name="AnimatedCircleButtonGroup">
+					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="12" />
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="refreshbutton" />
