@@ -4,7 +4,7 @@
 
 	<defaultcontrol always="true">9000</defaultcontrol>
 	
-	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu&amp;options=noGroups)</onload>
 	
 	<controls>
 	
