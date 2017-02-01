@@ -105,7 +105,8 @@
 						<param name="button-onleft" value="13" />
 						<param name="button-onright" value="12" />
 					</include>
-				</control>				<!--song thumb-->
+				</control>
+				<!--song thumb-->
 				<control type="image">
 					<left>305</left>
 					<top>220</top>

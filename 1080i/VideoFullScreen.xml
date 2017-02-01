@@ -172,7 +172,8 @@
 				<control type="group" id="1">
 					<top>377r</top>
 					<!--title-->
-					<control type="label" id="1"> <!--1-->
+					<control type="label" id="1">
+						<!--1-->
 						<left>415</left>
 						<top>3</top>
 						<width>1090</width>

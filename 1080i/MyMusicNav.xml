@@ -207,7 +207,8 @@
 					<enable>!Skin.HasSetting(HideBackGroundFanart)</enable>
 				</control>
 				<!--artists path-->
-				<control type="button" id="32">					<label>31069</label>
+				<control type="button" id="32">
+					<label>31069</label>
 					<include>ButtonCommonValues</include>
 					<label2>$INFO[Skin.String(artists.path)]</label2>
 					<onclick>Skin.SetPath(artists.path)</onclick>

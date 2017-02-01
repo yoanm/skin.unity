@@ -20,7 +20,8 @@
 	</variable>
 	<include name="media.flags">
 		<control type="group">
-			<control type="group"> <!--flag bg-->
+			<control type="group">
+				<!--flag bg-->
 				<control type="image">
 					<width>85</width>
 					<height>40</height>
@@ -56,15 +57,18 @@
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
 			</control>
-			<control type="group"> <!--flags-->
-				<control type="image"> <!--resolution-->
+			<control type="group">
+				<!--flags-->
+				<control type="image">
+					<!--resolution-->
 					<top>2</top>
 					<width>85</width>
 					<height>35</height>
 					<texture fallback="flags/resolution/defaultscreen.png">$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="image"> <!--video codec-->
+				<control type="image">
+					<!--video codec-->
 					<left>90</left>
 					<top>2</top>
 					<width>113</width>
@@ -72,7 +76,8 @@
 					<texture fallback="flags/videocodec/default.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="image"> <!--aspect ratio-->
+				<control type="image">
+					<!--aspect ratio-->
 					<left>213</left>
 					<top>2</top>
 					<width>95</width>
@@ -80,7 +85,8 @@
 					<texture fallback="flags/aspectratio/default.png">$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="image"> <!--audio codec-->
+				<control type="image">
+					<!--audio codec-->
 					<left>330</left>
 					<top>2</top>
 					<width>115</width>
@@ -88,7 +94,8 @@
 					<texture fallback="flags/audio/default.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="image"> <!--audio channels-->
+				<control type="image">
+					<!--audio channels-->
 					<left>445</left>
 					<top>2</top>
 					<width>65</width>
@@ -101,7 +108,8 @@
 	</include>
 	<include name="media.flags.small">
 		<control type="group">
-			<control type="group"> <!--flag bg-->
+			<control type="group">
+				<!--flag bg-->
 				<control type="image">
 					<width>85</width>
 					<height>40</height>
@@ -137,8 +145,10 @@
 					<colordiffuse>$VAR[Colour.500]</colordiffuse>
 				</control>
 			</control>
-			<control type="group"> <!--flags-->
-				<control type="image"> <!--resolution-->
+			<control type="group">
+				<!--flags-->
+				<control type="image">
+					<!--resolution-->
 					<left>5</left>
 					<top>5</top>
 					<width>73</width>
@@ -146,7 +156,8 @@
 					<texture fallback="flags/resolution/defaultscreen.png">$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="image"> <!--video codec-->
+				<control type="image">
+					<!--video codec-->
 					<left>97</left>
 					<top>5</top>
 					<width>97</width>
@@ -154,7 +165,8 @@
 					<texture fallback="flags/videocodec/default.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.VideoCodec,flags/videocodec/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="image"> <!--aspect ratio-->
+				<control type="image">
+					<!--aspect ratio-->
 					<left>222</left>
 					<top>5</top>
 					<width>81</width>
@@ -162,7 +174,8 @@
 					<texture fallback="flags/aspectratio/default.png">$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="image"> <!--audio codec-->
+				<control type="image">
+					<!--audio codec-->
 					<left>342</left>
 					<top>5</top>
 					<width>99</width>
@@ -170,7 +183,8 @@
 					<texture fallback="flags/audio/default.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
-				<control type="image"> <!--audio channels-->
+				<control type="image">
+					<!--audio channels-->
 					<left>451</left>
 					<top>5</top>
 					<width>56</width>

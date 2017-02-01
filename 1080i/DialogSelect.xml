@@ -274,55 +274,55 @@
 				</control>
 			</control>
 			<!--buttons bar-->
-				<control type="group">
-					<visible>Control.IsVisible(5) | Control.IsVisible(7)</visible>
-					<!--buttons bg-->
-					<control type="image">
-						<left>355</left>
-						<top>1010</top>
-						<width>1210</width>
-						<height>70</height>
-						<texture colordiffuse="primary">backgrounds/white.png</texture>
-					</control>
-					<!--buttons shadow-->
-					<control type="image">
-						<left>355</left>
-						<top>1010</top>
-						<width>1210</width>
-						<height>10</height>
-						<texture>homeshadow.png</texture>
-						<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
-					</control>
-					<!--bottom buttons-->
-					<control type="grouplist" id="90">
-						<left>50</left>
-						<top>1015</top>
-						<orientation>horizontal</orientation>
-						<align>center</align>
-						<onleft>3</onleft>
-						<onright>3</onright>
-						<!--add button-->
-						<include content="AnimatedCircleButtonGroup">
-							<param name="button-id" value="5" />
-							<param name="button-width" value="200" />
-							<param name="button-texture" value="addbutton" />
-							<param name="button-onup" value="3" />
-							<param name="button-ondown" value="3" />
-							<param name="button-onleft" value="7" />
-							<param name="button-onright" value="7" />
-						</include>
-						<!--no button-->
-						<include content="AnimatedCircleButtonGroup">
-							<param name="button-id" value="7" />
-							<param name="button-width" value="200" />
-							<param name="button-texture" value="nobutton" />
-							<param name="button-onup" value="3" />
-							<param name="button-ondown" value="3" />
-							<param name="button-onleft" value="5" />
-							<param name="button-onright" value="5" />
-						</include>
-					</control>
+			<control type="group">
+				<visible>Control.IsVisible(5) | Control.IsVisible(7)</visible>
+				<!--buttons bg-->
+				<control type="image">
+					<left>355</left>
+					<top>1010</top>
+					<width>1210</width>
+					<height>70</height>
+					<texture colordiffuse="primary">backgrounds/white.png</texture>
 				</control>
+				<!--buttons shadow-->
+				<control type="image">
+					<left>355</left>
+					<top>1010</top>
+					<width>1210</width>
+					<height>10</height>
+					<texture>homeshadow.png</texture>
+					<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
+				</control>
+				<!--bottom buttons-->
+				<control type="grouplist" id="90">
+					<left>50</left>
+					<top>1015</top>
+					<orientation>horizontal</orientation>
+					<align>center</align>
+					<onleft>3</onleft>
+					<onright>3</onright>
+					<!--add button-->
+					<include content="AnimatedCircleButtonGroup">
+						<param name="button-id" value="5" />
+						<param name="button-width" value="200" />
+						<param name="button-texture" value="addbutton" />
+						<param name="button-onup" value="3" />
+						<param name="button-ondown" value="3" />
+						<param name="button-onleft" value="7" />
+						<param name="button-onright" value="7" />
+					</include>
+					<!--no button-->
+					<include content="AnimatedCircleButtonGroup">
+						<param name="button-id" value="7" />
+						<param name="button-width" value="200" />
+						<param name="button-texture" value="nobutton" />
+						<param name="button-onup" value="3" />
+						<param name="button-ondown" value="3" />
+						<param name="button-onleft" value="5" />
+						<param name="button-onright" value="5" />
+					</include>
+				</control>
+			</control>
 		</control>
 	</controls>
 </window>

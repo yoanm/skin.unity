@@ -116,7 +116,8 @@
 				<textcolor>white</textcolor>
 				<focusedcolor>$VAR[Colour.900]</focusedcolor>
 				<align>right</align>
-				<include>ButtonCommonValues</include>				<label>10037</label>
+				<include>ButtonCommonValues</include>
+				<label>10037</label>
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<onup>3</onup>

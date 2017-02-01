@@ -59,7 +59,8 @@
 				<label>$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]</label>
 			</control>
 			<!--message-->
-			<control type="textbox" id="9"> <!--9-->
+			<control type="textbox" id="9">
+				<!--9-->
 				<left>60</left>
 				<top>475</top>
 				<width>1800</width>

@@ -88,7 +88,8 @@
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<!--title-->
-			<control type="label">				<left>60</left>
+			<control type="label">
+				<left>60</left>
 				<top>425</top>
 				<width>1800</width>
 				<height>60</height>

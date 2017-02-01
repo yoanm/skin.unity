@@ -123,7 +123,8 @@
 				<textcolor>text.primary</textcolor>
 				<label>$INFO[Container.SortMethod,$LOCALIZE[31062] ]</label>
 			</control>
-		</control>	</include>
+		</control>
+	</include>
 	<include name="PVRSideBlade">
 		<control type="group">
 			<left>-375</left>

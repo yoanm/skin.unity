@@ -3,7 +3,8 @@
 	<defaultcontrol>1000</defaultcontrol>
 	<include>dialogeffect</include>
 	<controls>
-		<!--all content-->		<control type="group">
+		<!--all content-->
+		<control type="group">
 			<include>SideBladeRight</include>
 			<visible>!Window.IsActive(shutdownmenu)</visible>
 			<!--close window button-->

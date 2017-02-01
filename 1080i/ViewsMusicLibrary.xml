@@ -498,7 +498,8 @@
 				<aligny>center</aligny>
 				<textcolor>$VAR[Colour.500]</textcolor>
 				<scroll>false</scroll>
-			</control>			<!--info-->
+			</control>
+			<!--info-->
 			<control type="group">
 				<top>55</top>
 				<!--year-->

@@ -122,7 +122,8 @@
 						<texture colordiffuse="white">backgrounds/white.png</texture>
 						<animation effect="fade" start="100" end="30" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
-					<!--label-->					<control type="label">
+					<!--label-->
+					<control type="label">
 						<left>15</left>
 						<top>0</top>
 						<width>325</width>

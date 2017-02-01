@@ -1394,7 +1394,8 @@
 				</control>
 			</control>
 		</control>
-	</include>	<include name="MediaListView3">
+	</include>
+	<include name="MediaListView3">
 		<!--all content-->
 		<control type="group">
 			<visible>Control.IsVisible(503)</visible>
@@ -1613,7 +1614,8 @@
 				<orientation>vertical</orientation>
 				<showonepage>true</showonepage>
 			</control>
-			<!--tv shows info-->			<control type="group">
+			<!--tv shows info-->
+			<control type="group">
 				<left>931</left>
 				<top>200</top>
 				<visible>Container.Content(TVShows)</visible>
@@ -1733,7 +1735,8 @@
 					</control>
 				</control>
 			</control>
-			<!--episodes info-->			<control type="group">
+			<!--episodes info-->
+			<control type="group">
 				<left>931</left>
 				<top>200</top>
 				<visible>Container.Content(Episodes)</visible>
@@ -1853,7 +1856,8 @@
 					</control>
 				</control>
 			</control>
-			<!--seasons info-->			<control type="group">
+			<!--seasons info-->
+			<control type="group">
 				<left>931</left>
 				<top>200</top>
 				<visible>Container.Content(Seasons)</visible>

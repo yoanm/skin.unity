@@ -175,10 +175,10 @@
 		<value></value>
 	</variable>
 	<include name="WindowID">
-			<textcolor>pink</textcolor>
+		<textcolor>pink</textcolor>
 	</include>
 	<include name="DialogID">
-			<textcolor>orange</textcolor>
+		<textcolor>orange</textcolor>
 	</include>
 	<include name="BehindDialogFadeOut">
 		<control type="image">

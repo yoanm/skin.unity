@@ -139,7 +139,7 @@
 		</control>
 		<!--bottom info-->
 		<control type="group" id="1">
-		<!--visible>!Player.ShowInfo</visible-->
+			<!--visible>!Player.ShowInfo</visible-->
 			<animation effect="slide" start="0,0" end="0,100" time="200" condition="!Player.ShowInfo + !VideoPlayer.Content(Files)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,100" time="200" condition="VideoPlayer.Content(Files)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-372,0" time="200" delay="100" condition="Skin.HasSetting(SubtitleSection)">Conditional</animation>
@@ -173,7 +173,8 @@
 			<control type="group" id="1">
 				<top>377r</top>
 				<!--title-->
-				<control type="label" id="1"> <!--1-->
+				<control type="label" id="1">
+					<!--1-->
 					<left>415</left>
 					<top>3</top>
 					<width>1090</width>
