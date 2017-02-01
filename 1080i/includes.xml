@@ -156,19 +156,19 @@
 	</variable>
 	<variable name="Addon.Description">
 		<value condition="String.Contains(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Plot]</value>
-		<value>$INFO[ListItem.Property(Addon.Description)]</value>
+		<value>$INFO[ListItem.AddonDescription]</value>
 	</variable>
 	<variable name="Addon.Secondary.Label">
 		<value condition="String.Contains(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre,, • ]$INFO[ListItem.Studio]</value>
-		<value>$INFO[ListItem.Property(Addon.Version),$LOCALIZE[24051] ,]$INFO[ListItem.Property(Addon.Creator), • $LOCALIZE[21863]: ,]</value>
+		<value>$INFO[ListItem.AddonVersion,$LOCALIZE[24051] ,]$INFO[ListItem.AddonCreator, • $LOCALIZE[21863]: ,]</value>
 	</variable>
 	<variable name="Addon.Secondary.Label.1">
 		<value condition="String.Contains(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Year]</value>
-		<value>$INFO[ListItem.Property(Addon.Creator),,$LOCALIZE[21863]: ]</value>
+		<value>$INFO[ListItem.AddonCreator,,$LOCALIZE[21863]: ]</value>
 	</variable>
 	<variable name="Addon.Secondary.Label.2">
 		<value condition="String.Contains(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Genre]</value>
-		<value>$INFO[ListItem.Property(Addon.Version),,$LOCALIZE[24051] ]</value>
+		<value>$INFO[ListItem.AddonVersion,,$LOCALIZE[24051] ]</value>
 	</variable>
 	<variable name="Addon.Secondary.Label.3">
 		<value condition="String.Contains(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Studio]</value>

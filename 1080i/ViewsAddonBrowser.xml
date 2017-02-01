@@ -52,7 +52,7 @@
 						<selectedcolor>$VAR[Colour.500]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Property(Addon.Status)]</label>
+						<label>$INFO[ListItem.AddonStatus]</label>
 					</control>
 				</itemlayout>
 				<focusedlayout height="70" width="1004">
@@ -98,7 +98,7 @@
 						<selectedcolor>$VAR[Colour.500]</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
-						<label>$INFO[ListItem.Property(Addon.Status)]</label>
+						<label>$INFO[ListItem.AddonStatus]</label>
 					</control>
 				</focusedlayout>
 			</control>
@@ -295,7 +295,7 @@
 						<width>35</width>
 						<height>35</height>
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-						<visible>!String.IsEmpty(ListItem.Property(Addon.broken))</visible>
+						<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="233" width="233">
@@ -393,7 +393,7 @@
 						<width>35</width>
 						<height>35</height>
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-						<visible>!String.IsEmpty(ListItem.Property(Addon.broken))</visible>
+						<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -404,7 +404,9 @@
 				<onleft>551</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
-			</control>			<!--tv shows info-->			<control type="group">
+			</control>
+			<!--tv shows info-->
+			<control type="group">
 				<left>931</left>
 				<top>200</top>
 				<!--info-->
@@ -473,16 +475,6 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$VAR[Addon.Secondary.Label.3]</label>
-					</control>
-					<!--rating-->
-					<control type="image">
-						<description>Rating value</description>
-						<left>15</left>
-						<top>85</top>
-						<width>128</width>
-						<height>32</height>
-						<aspectratio align="left">keep</aspectratio>
-						<texture colordiffuse="white">$INFO[ListItem.Property(Addon.StarRating),LeftRating/]</texture>
 					</control>
 					<!--plot-->
 					<control type="textbox">
