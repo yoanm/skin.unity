@@ -242,59 +242,5 @@
 				</control>
 			</control>
 		</control>
-		<!-- codec & viz infos -->
-		<control type="group" id="0">
-			<left>0</left>
-			<top>125</top>
-			<visible>Player.ShowCodec + ![Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
-			<animation effect="fade" time="200">VisibleChange</animation>
-			<control type="image">
-				<description>media info background image</description>
-				<left>0</left>
-				<top>0</top>
-				<width>1920</width>
-				<height>158</height>
-				<colordiffuse>AAFFFFFF</colordiffuse>
-				<texture>black-back.png</texture>
-			</control>
-			<control type="label">
-				<description>row 1 label</description>
-				<left>75</left>
-				<top>15</top>
-				<label>-</label>
-				<align>left</align>
-				<label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, · $LOCALIZE[623]: ,kbps]$INFO[musicplayer.bitspersample, · $LOCALIZE[612]: ,]$INFO[musicplayer.Samplerate, · $LOCALIZE[613]: ,kHz]$INFO[musicplayer.Channels, · $LOCALIZE[21444]: ]</label>
-				<font>font12</font>
-			</control>
-			<control type="label">
-				<description>row 2 label</description>
-				<left>75</left>
-				<top>60</top>
-				<label>-</label>
-				<align>left</align>
-				<label>$INFO[Visualisation.Name,, [I][COLOR=orange]($LOCALIZE[20166])[/COLOR][/I] · ]fps: $INFO[System.FPS]</label>
-				<font>font12</font>
-				<visible>Visualisation.Locked</visible>
-			</control>
-			<control type="label">
-				<description>Unlocked row 2 label</description>
-				<left>75</left>
-				<top>60</top>
-				<label>-</label>
-				<align>left</align>
-				<label>$INFO[Visualisation.Name,, · ]fps: $INFO[System.FPS]</label>
-				<font>font12</font>
-				<visible>!Visualisation.Locked</visible>
-			</control>
-			<control type="label">
-				<description>row 3 label</description>
-				<left>75</left>
-				<top>105</top>
-				<label>-</label>
-				<align>left</align>
-				<label>$INFO[Visualisation.Preset,$LOCALIZE[13388]: ]</label>
-				<font>font12</font>
-			</control>
-		</control>
 	</controls>
 </window>
