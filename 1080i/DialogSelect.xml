@@ -91,13 +91,13 @@
 					<top>190</top>
 					<width>1155</width>
 					<height>804</height>
-					<onup>5</onup>
-					<ondown>5</ondown>
-					<onleft>61</onleft>
+					<onup>3</onup>
+					<ondown>3</ondown>
+					<onleft>90</onleft>
 					<onright>61</onright>
 					<pagecontrol>61</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5) + !Control.IsVisible(7)">Conditional</animation>
 					<itemlayout height="67">
 						<!--label-->
 						<control type="label">
@@ -144,13 +144,13 @@
 					<top>190</top>
 					<width>1155</width>
 					<height>810</height>
-					<onup>5</onup>
-					<ondown>5</ondown>
-					<onleft>61</onleft>
+					<onup>6</onup>
+					<ondown>6</ondown>
+					<onleft>90</onleft>
 					<onright>61</onright>
 					<pagecontrol>61</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5) + !Control.IsVisible(7)">Conditional</animation>
 					<itemlayout height="135">
 						<!--icon-->
 						<control type="image">
@@ -254,7 +254,7 @@
 					<onright>3</onright>
 					<ondown>61</ondown>
 					<onup>61</onup>
-					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5) + !Control.IsVisible(7)">Conditional</animation>
 					<visible>Control.IsVisible(3)</visible>
 				</control>
 				<control type="scrollbar" id="61">
@@ -269,15 +269,16 @@
 					<onright>6</onright>
 					<ondown>61</ondown>
 					<onup>61</onup>
-					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5)">Conditional</animation>
+					<animation effect="slide" end="0,30" time="0" condition="!Control.IsVisible(5) + !Control.IsVisible(7)">Conditional</animation>
 					<visible>Control.IsVisible(6)</visible>
 				</control>
-				<!--buttons bar-->
+			</control>
+			<!--buttons bar-->
 				<control type="group">
-					<visible>Control.IsVisible(5)</visible>
+					<visible>Control.IsVisible(5) | Control.IsVisible(7)</visible>
 					<!--buttons bg-->
 					<control type="image">
-						<left>0</left>
+						<left>355</left>
 						<top>1010</top>
 						<width>1210</width>
 						<height>70</height>
@@ -285,7 +286,7 @@
 					</control>
 					<!--buttons shadow-->
 					<control type="image">
-						<left>0</left>
+						<left>355</left>
 						<top>1010</top>
 						<width>1210</width>
 						<height>10</height>
@@ -293,15 +294,28 @@
 						<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 					</control>
 					<!--bottom buttons-->
-					<control type="group">
-						<left>955</left>
+					<control type="grouplist" id="90">
+						<left>50</left>
 						<top>1015</top>
+						<orientation>horizontal</orientation>
+						<align>center</align>
+						<onleft>3</onleft>
+						<onright>3</onright>
 						<!--add button-->
 						<include content="AnimatedCircleButtonGroup">
 							<param name="button-id" value="5" />
 							<param name="button-width" value="200" />
 							<param name="button-texture" value="addbutton" />
-							<param name="button-label" value="186" />
+							<param name="button-onup" value="3" />
+							<param name="button-ondown" value="3" />
+							<param name="button-onleft" value="7" />
+							<param name="button-onright" value="7" />
+						</include>
+						<!--no button-->
+						<include content="AnimatedCircleButtonGroup">
+							<param name="button-id" value="7" />
+							<param name="button-width" value="200" />
+							<param name="button-texture" value="nobutton" />
 							<param name="button-onup" value="3" />
 							<param name="button-ondown" value="3" />
 							<param name="button-onleft" value="5" />
@@ -309,7 +323,6 @@
 						</include>
 					</control>
 				</control>
-			</control>
 		</control>
 	</controls>
 </window>
