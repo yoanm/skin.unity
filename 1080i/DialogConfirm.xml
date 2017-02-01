@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">10</defaultcontrol>
 	<animation type="WindowOpen">
 		<effect type="slide" start="0,665" end="0,0" time="300" tween="quadratic" easing="out" />
 	</animation>
@@ -13,11 +12,11 @@
 			<!--title bars and backgrounds-->
 			<include content="DynamicDialogBackground">
 				<param name="dialog-top" value="385" />
-				<param name="dialog-height" value="310" />
+				<param name="dialog-height" value="340" />
 				<param name="glow-height" value="390" />
 				<param name="title-height" value="90" />
 				<param name="buttonbar-visible" value="true" />
-				<param name="buttonbar-top" value="240" />
+				<param name="buttonbar-top" value="270" />
 			</include>
 			<!--close button-->
 			<control type="button">
@@ -31,15 +30,14 @@
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>10</onleft>
-				<onright>10</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<!--title-->
 			<control type="label" id="1">
-				<!--1-->
 				<left>60</left>
 				<top>400</top>
 				<width>1800</width>
@@ -48,7 +46,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-				<label>$LOCALIZE[13406]</label>
+				<label>-</label>
 			</control>
 			<!--message-->
 			<control type="textbox" id="9">
@@ -64,31 +62,42 @@
 				<textcolor>text.primary</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
-			<!--bottom buttons-->
-			<control type="grouplist" id="9001">
-				<left>600</left>
-				<top>630</top>
+			<!--progress bar-->
+			<control type="progress" id="20">
+				<left>605</left>
+				<top>625</top>
 				<width>750</width>
-				<height>60</height>
-				<align>justify</align>
+				<height>7</height>
+				<info>System.Progressbar</info>
+			</control>
+			<!--buttons-->
+			<control type="grouplist" id="9000">
+				<left>50</left>
+				<top>660</top>
 				<orientation>horizontal</orientation>
-				<onleft>9001</onleft>
-				<onright>9001</onright>
+				<align>center</align>
 				<!--yes button-->
 				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="11" />
-					<param name="button-width" value="130" />
+					<param name="button-width" value="200" />
 					<param name="button-texture" value="yesbutton" />
-					<param name="button-onleft" value="10" />
+					<param name="button-onleft" value="12" />
 					<param name="button-onright" value="10" />
 				</include>
 				<!--no button-->
 				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="10" />
-					<param name="button-width" value="160" />
+					<param name="button-width" value="200" />
 					<param name="button-texture" value="nobutton" />
-					<param name="button-label" value="106" />
 					<param name="button-onleft" value="11" />
+					<param name="button-onright" value="12" />
+				</include>
+				<!--custom button-->
+				<include content="AnimatedCircleButtonGroup">
+					<param name="button-id" value="12" />
+					<param name="button-width" value="200" />
+					<param name="button-texture" value="browsebutton" />
+					<param name="button-onleft" value="10" />
 					<param name="button-onright" value="11" />
 				</include>
 			</control>
