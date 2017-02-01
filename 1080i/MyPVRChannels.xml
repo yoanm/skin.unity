@@ -203,7 +203,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<scroll>false</scroll>
-					<visible>!IsEmpty(Container(50).ListItem.NextTitle)</visible>
+					<visible>!String.IsEmpty(Container(50).ListItem.NextTitle)</visible>
 					<label>$LOCALIZE[19031]: $INFO[Container(50).ListItem.NextTitle]</label>
 				</control>
 				<!--info strip shadow-->
@@ -287,7 +287,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Title]</label>
-							<visible>IsEmpty(Listitem.Icon)</visible>
+							<visible>String.IsEmpty(Listitem.Icon)</visible>
 							<scroll>false</scroll>
 						</control>
 						<!--show title (icon)-->
@@ -302,7 +302,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Title]</label>
-							<visible>!IsEmpty(Listitem.Icon)</visible>
+							<visible>!String.IsEmpty(Listitem.Icon)</visible>
 							<scroll>false</scroll>
 						</control>
 						<!--progress-->
@@ -398,7 +398,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Title]</label>
-							<visible>IsEmpty(Listitem.Icon)</visible>
+							<visible>String.IsEmpty(Listitem.Icon)</visible>
 						</control>
 						<!--show title (icon)-->
 						<control type="label">
@@ -412,7 +412,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Title]</label>
-							<visible>!IsEmpty(Listitem.Icon)</visible>
+							<visible>!String.IsEmpty(Listitem.Icon)</visible>
 						</control>
 						<!--progress-->
 						<control type="progress">

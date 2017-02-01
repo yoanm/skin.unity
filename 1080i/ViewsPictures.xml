@@ -4,7 +4,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(510)</visible>
 			<include>VisibleFadeEffect</include>
-			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
 			<left>0</left>
 			<top>660</top>
 			<control type="wraplist" id="510">
@@ -110,7 +110,7 @@
 						<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 						<bordersize>5</bordersize>
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/square shadow small.png</bordertexture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--background (no fallback)-->
 					<control type="image">
@@ -121,7 +121,7 @@
 						<texture background="true" colordiffuse="button.nf">backgrounds/white.png</texture>
 						<bordersize>5</bordersize>
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/square shadow small.png</bordertexture>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--icon (fallback)-->
 					<control type="image">
@@ -130,7 +130,7 @@
 						<width>190</width>
 						<height>190</height>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[Listitem.Icon]</texture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--icon (no fallback)-->
 					<control type="image">
@@ -140,7 +140,7 @@
 						<height>190</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="200" width="200">
@@ -153,7 +153,7 @@
 						<texture background="true" colordiffuse="tertiary2">backgrounds/white.png</texture>
 						<bordersize>5</bordersize>
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--background (no fallback)-->
 					<control type="image">
@@ -164,7 +164,7 @@
 						<texture background="true" colordiffuse="button.nf">backgrounds/white.png</texture>
 						<bordersize>5</bordersize>
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--icon (fallback)-->
 					<control type="image">
@@ -173,7 +173,7 @@
 						<width>190</width>
 						<height>190</height>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[Listitem.Icon]</texture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--icon (no fallback)-->
 					<control type="image">
@@ -183,7 +183,7 @@
 						<height>190</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -280,7 +280,7 @@
 					<font>secondary.info</font>
 					<textcolor>$VAR[Colour.500]</textcolor>
 					<label>$LOCALIZE[31326]</label>
-					<visible>!IsEmpty(ListItem.PictureDateTime)</visible>
+					<visible>!String.IsEmpty(ListItem.PictureDateTime)</visible>
 				</control>
 				<control type="label">
 					<left>155</left>
@@ -299,7 +299,7 @@
 					<font>secondary.info</font>
 					<textcolor>$VAR[Colour.500]</textcolor>
 					<label>$LOCALIZE[31327]</label>
-					<visible>!IsEmpty(ListItem.PictureResolution)</visible>
+					<visible>!String.IsEmpty(ListItem.PictureResolution)</visible>
 				</control>
 				<control type="label">
 					<left>155</left>

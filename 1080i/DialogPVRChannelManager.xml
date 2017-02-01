@@ -51,7 +51,7 @@
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[19199] - $LOCALIZE[19023]</label>
-					<visible>IsEmpty(Window.Property(IsRadio))</visible>
+					<visible>String.IsEmpty(Window.Property(IsRadio))</visible>
 				</control>
 				<!--radio title-->
 				<control type="label">
@@ -64,7 +64,7 @@
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[19199] - $LOCALIZE[19024]</label>
-					<visible>!IsEmpty(Window.Property(IsRadio))</visible>
+					<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
 				</control>
 				<!--scrollbar-->
 				<control type="scrollbar" id="60">
@@ -283,7 +283,7 @@
 							<control type="button" id="34">
 								<description>TV/Radio Button</description>
 								<width>870</width>
-								<visible>IsEmpty(Window.Property(IsRadio))</visible>
+								<visible>String.IsEmpty(Window.Property(IsRadio))</visible>
 								<label>19024</label>
 								<onup>30</onup>
 								<ondown>9000</ondown>
@@ -291,7 +291,7 @@
 							<control type="button" id="34">
 								<description>TV/Radio Button</description>
 								<width>870</width>
-								<visible>!IsEmpty(Window.Property(IsRadio))</visible>
+								<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
 								<label>19023</label>
 								<onup>30</onup>
 								<ondown>9000</ondown>

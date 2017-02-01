@@ -16,8 +16,8 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<visible>IsEmpty(Window.Property(Weather.CurrentView))</visible>
-				<itemlayout height="175" width="913" condition="IsEmpty(Window.Property(Daily.IsFetched))">
+				<visible>String.IsEmpty(Window.Property(Weather.CurrentView))</visible>
+				<itemlayout height="175" width="913" condition="String.IsEmpty(Window.Property(Daily.IsFetched))">
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -57,7 +57,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>[COLOR=grey2]$LOCALIZE[419] : [/COLOR]$INFO[ListItem.Property(HighTemp)]$INFO[ListItem.Property(TempUnits)]     [COLOR=grey2]$LOCALIZE[418] : [/COLOR]$INFO[ListItem.Property(LowTemp)]$INFO[ListItem.Property(TempUnits)]</label>
-						<visible>!IsEmpty(ListItem.Property(HighTemp))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(HighTemp))</visible>
 					</control>
 					<control type="label">
 						<left>45</left>
@@ -71,7 +71,7 @@
 						<label>$INFO[ListItem.Property(Outlook)]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="175" width="913" condition="IsEmpty(Window.Property(Daily.IsFetched))">
+				<focusedlayout height="175" width="913" condition="String.IsEmpty(Window.Property(Daily.IsFetched))">
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -121,7 +121,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>[COLOR=text.primary]$LOCALIZE[419] : [/COLOR]$INFO[ListItem.Property(HighTemp)]$INFO[ListItem.Property(TempUnits)]     [COLOR=text.primary]$LOCALIZE[418] : [/COLOR]$INFO[ListItem.Property(LowTemp)]$INFO[ListItem.Property(TempUnits)]</label>
-						<visible>!IsEmpty(ListItem.Property(HighTemp))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(HighTemp))</visible>
 					</control>
 					<control type="label">
 						<left>45</left>
@@ -135,7 +135,7 @@
 						<label>$INFO[ListItem.Property(Outlook)]</label>
 					</control>
 				</focusedlayout>
-				<itemlayout height="175" width="913" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
+				<itemlayout height="175" width="913" condition="!String.IsEmpty(Window.Property(Daily.IsFetched))">
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -188,7 +188,7 @@
 						<label>$INFO[ListItem.ActualIcon]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="175" width="913" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
+				<focusedlayout height="175" width="913" condition="!String.IsEmpty(Window.Property(Daily.IsFetched))">
 					<!--background-->
 					<control type="image">
 						<left>4</left>
@@ -266,7 +266,7 @@
 						<property name="Outlook">$INFO[Window.Property(Day0.Outlook)]</property>
 						<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day0.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Day0.Outlook)) + String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Day1.Title)]</label>
@@ -276,7 +276,7 @@
 						<property name="Outlook">$INFO[Window.Property(Day1.Outlook)]</property>
 						<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day1.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Day1.Outlook)) + String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Day2.Title)]</label>
@@ -286,7 +286,7 @@
 						<property name="Outlook">$INFO[Window.Property(Day2.Outlook)]</property>
 						<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day2.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Day2.Outlook)) + String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Day3.Title)]</label>
@@ -296,7 +296,7 @@
 						<property name="Outlook">$INFO[Window.Property(Day3.Outlook)]</property>
 						<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day3.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Day3.Outlook)) + String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Day4.Title)]</label>
@@ -306,7 +306,7 @@
 						<property name="Outlook">$INFO[Window.Property(Day4.Outlook)]</property>
 						<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day4.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Day4.Outlook)) + String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Day5.Title)]</label>
@@ -316,7 +316,7 @@
 						<property name="Outlook">$INFO[Window.Property(Day5.Outlook)]</property>
 						<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day5.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Day5.Outlook)) + String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Day6.Title)]</label>
@@ -326,7 +326,7 @@
 						<property name="Outlook">$INFO[Window.Property(Day6.Outlook)]</property>
 						<property name="TempUnits">$INFO[System.TemperatureUnits]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Day6.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Day6.Outlook)) + String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.1.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.1.ShortDate)][/COLOR]</label>
@@ -334,7 +334,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.1.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.1.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.1.WindSpeed)] $INFO[Window.Property(Daily.1.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.1.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.1.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.2.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.2.ShortDate)][/COLOR]</label>
@@ -342,7 +342,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.2.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.2.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.2.WindSpeed)] $INFO[Window.Property(Daily.2.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.2.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.2.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.3.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.3.ShortDate)][/COLOR]</label>
@@ -350,7 +350,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.3.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.3.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.3.WindSpeed)] $INFO[Window.Property(Daily.3.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.3.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.3.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.4.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.4.ShortDate)][/COLOR]</label>
@@ -358,7 +358,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.4.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.4.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.4.WindSpeed)] $INFO[Window.Property(Daily.4.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.4.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.4.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.5.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.5.ShortDate)][/COLOR]</label>
@@ -366,7 +366,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.5.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.5.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.5.WindSpeed)] $INFO[Window.Property(Daily.5.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.5.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.5.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.6.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.6.ShortDate)][/COLOR]</label>
@@ -374,7 +374,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.6.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.6.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.6.WindSpeed)] $INFO[Window.Property(Daily.6.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.6.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.6.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.7.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.7.ShortDate)][/COLOR]</label>
@@ -382,7 +382,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.7.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.7.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.7.WindSpeed)] $INFO[Window.Property(Daily.7.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.7.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.7.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.8.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.8.ShortDate)][/COLOR]</label>
@@ -390,7 +390,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.8.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.8.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.8.WindSpeed)] $INFO[Window.Property(Daily.8.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.8.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.8.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.9.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.9.ShortDate)][/COLOR]</label>
@@ -398,7 +398,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.9.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.9.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.9.WindSpeed)] $INFO[Window.Property(Daily.9.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.9.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.9.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.10.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.10.ShortDate)][/COLOR]</label>
@@ -406,7 +406,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.10.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.10.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.10.WindSpeed)] $INFO[Window.Property(Daily.10.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.10.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.10.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.11.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.11.ShortDate)][/COLOR]</label>
@@ -414,7 +414,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.11.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.11.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.11.WindSpeed)] $INFO[Window.Property(Daily.11.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.11.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.11.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.12.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.12.ShortDate)][/COLOR]</label>
@@ -422,7 +422,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.12.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.12.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.12.WindSpeed)] $INFO[Window.Property(Daily.12.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.12.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.12.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.13.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.13.ShortDate)][/COLOR]</label>
@@ -430,7 +430,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.13.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.13.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.13.WindSpeed)] $INFO[Window.Property(Daily.13.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.13.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.13.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Daily.14.ShortDay)][CR][COLOR=grey2]$INFO[Window.Property(Daily.14.ShortDate)][/COLOR]</label>
@@ -438,7 +438,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Daily.14.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Daily.14.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Daily.14.WindSpeed)] $INFO[Window.Property(Daily.14.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.14.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Daily.14.Outlook)) + !String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
 					</item>
 				</content>
 			</control>
@@ -500,7 +500,7 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>64</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<visible>StringCompare(Window.Property(Weather.CurrentView),36hour) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+				<visible>String.IsEqual(Window.Property(Weather.CurrentView),36hour) + !String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 				<itemlayout height="233" width="913">
 					<!--background-->
 					<control type="image">
@@ -643,7 +643,7 @@
 					<item>
 						<icon>$LOCALIZE[31909]</icon>
 						<onclick>noop</onclick>
-						<visible>IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+						<visible>String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(36Hour.1.Heading)]</label>
@@ -652,7 +652,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(36Hour.1.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(36hour.1.Outlook),[COLOR=grey2]$LOCALIZE[31905] : [/COLOR]]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(36Hour.1.Outlook)) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(36Hour.1.Outlook)) + !String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(36Hour.2.Heading)]</label>
@@ -661,7 +661,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(36Hour.2.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(36hour.2.Outlook),[COLOR=grey2]$LOCALIZE[31905] : [/COLOR]]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(36Hour.2.Outlook)) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(36Hour.2.Outlook)) + !String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(36Hour.3.Heading)]</label>
@@ -670,7 +670,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(36Hour.3.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(36hour.3.Outlook),[COLOR=grey2]$LOCALIZE[31905] : [/COLOR]]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(36Hour.3.Outlook)) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(36Hour.3.Outlook)) + !String.IsEmpty(Window.Property(36Hour.IsFetched))</visible>
 					</item>
 				</content>
 			</control>
@@ -702,7 +702,7 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>65</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<visible>StringCompare(Window.Property(Weather.CurrentView),weekend) + !IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+				<visible>String.IsEqual(Window.Property(Weather.CurrentView),weekend) + !String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 				<itemlayout height="350" width="913">
 					<!--background-->
 					<control type="image">
@@ -845,7 +845,7 @@
 					<item>
 						<icon>$LOCALIZE[31909]</icon>
 						<onclick>noop</onclick>
-						<visible>IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+						<visible>String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Weekend.1.LongDay)] - $INFO[Window.Property(Weekend.1.ShortDate)]</label>
@@ -854,7 +854,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Weekend.1.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Weekend.1.WindSpeed),[COLOR=grey2]$LOCALIZE[404]: [/COLOR]]$INFO[Window.Property(Weekend.1.WindDirection), - ][CR][CR]$INFO[Window.Property(Weekend.1.Outlook),[COLOR=grey2]$LOCALIZE[31905] : [/COLOR]]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Weekend.1.Outlook)) + !IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Weekend.1.Outlook)) + !String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Weekend.2.LongDay)] - $INFO[Window.Property(Weekend.2.ShortDate)]</label>
@@ -863,7 +863,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Weekend.2.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Weekend.2.WindSpeed),[COLOR=grey2]$LOCALIZE[404]: [/COLOR]]$INFO[Window.Property(Weekend.2.WindDirection), - ][CR][CR]$INFO[Window.Property(Weekend.2.Outlook),[COLOR=grey2]$LOCALIZE[31905]: [/COLOR]]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Weekend.2.Outlook)) + !IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Weekend.2.Outlook)) + !String.IsEmpty(Window.Property(Weekend.IsFetched))</visible>
 					</item>
 				</content>
 			</control>
@@ -895,7 +895,7 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>62</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<visible>StringCompare(Window.Property(Weather.CurrentView),hourly) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+				<visible>String.IsEqual(Window.Property(Weather.CurrentView),hourly) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 				<itemlayout height="175" width="913">
 					<!--background-->
 					<control type="image">
@@ -1016,7 +1016,7 @@
 					<item>
 						<icon>$LOCALIZE[31909]</icon>
 						<onclick>noop</onclick>
-						<visible>IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.1.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.1.ShortDate)][/COLOR]</label>
@@ -1024,7 +1024,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.1.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.1.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.1.WindSpeed)] $INFO[Window.Property(Hourly.1.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.1.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.1.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.2.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.2.ShortDate)][/COLOR]</label>
@@ -1032,7 +1032,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.2.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.2.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.2.WindSpeed)] $INFO[Window.Property(Hourly.2.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.2.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.2.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.3.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.3.ShortDate)][/COLOR]</label>
@@ -1040,7 +1040,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.3.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.3.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.3.WindSpeed)] $INFO[Window.Property(Hourly.3.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.3.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.3.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.4.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.4.ShortDate)][/COLOR]</label>
@@ -1048,7 +1048,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.4.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.4.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.4.WindSpeed)] $INFO[Window.Property(Hourly.4.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.4.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.4.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.5.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.5.ShortDate)][/COLOR]</label>
@@ -1056,7 +1056,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.5.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.5.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.5.WindSpeed)] $INFO[Window.Property(Hourly.5.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.5.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.5.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.6.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.6.ShortDate)][/COLOR]</label>
@@ -1064,7 +1064,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.6.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.6.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.6.WindSpeed)] $INFO[Window.Property(Hourly.6.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.6.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.6.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.7.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.7.ShortDate)][/COLOR]</label>
@@ -1072,7 +1072,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.7.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.7.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.7.WindSpeed)] $INFO[Window.Property(Hourly.7.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.7.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.7.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.8.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.8.ShortDate)][/COLOR]</label>
@@ -1080,7 +1080,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.8.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.8.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.8.WindSpeed)] $INFO[Window.Property(Hourly.8.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.8.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.8.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.9.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.9.ShortDate)][/COLOR]</label>
@@ -1088,7 +1088,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.9.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.9.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.9.WindSpeed)] $INFO[Window.Property(Hourly.9.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.9.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.9.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.10.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.10.ShortDate)][/COLOR]</label>
@@ -1096,7 +1096,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.10.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.10.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.10.WindSpeed)] $INFO[Window.Property(Hourly.10.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.10.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.10.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.11.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.11.ShortDate)][/COLOR]</label>
@@ -1104,7 +1104,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.11.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.11.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.11.WindSpeed)] $INFO[Window.Property(Hourly.11.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.11.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.11.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.12.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.12.ShortDate)][/COLOR]</label>
@@ -1112,7 +1112,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.12.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.12.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.12.WindSpeed)] $INFO[Window.Property(Hourly.12.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.12.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.12.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.13.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.13.ShortDate)][/COLOR]</label>
@@ -1120,7 +1120,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.13.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.13.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.13.WindSpeed)] $INFO[Window.Property(Hourly.13.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.13.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.13.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.14.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.14.ShortDate)][/COLOR]</label>
@@ -1128,7 +1128,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.14.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.14.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.14.WindSpeed)] $INFO[Window.Property(Hourly.14.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.14.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.14.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.15.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.15.ShortDate)][/COLOR]</label>
@@ -1136,7 +1136,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.15.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.15.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.15.WindSpeed)] $INFO[Window.Property(Hourly.15.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.15.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.15.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.16.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.16.ShortDate)][/COLOR]</label>
@@ -1144,7 +1144,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.16.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.16.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.16.WindSpeed)] $INFO[Window.Property(Hourly.16.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.16.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.16.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.17.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.17.ShortDate)][/COLOR]</label>
@@ -1152,7 +1152,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.17.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.17.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.17.WindSpeed)] $INFO[Window.Property(Hourly.17.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.17.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.17.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.18.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.18.ShortDate)][/COLOR]</label>
@@ -1160,7 +1160,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.18.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.18.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.18.WindSpeed)] $INFO[Window.Property(Hourly.18.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.18.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.18.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.19.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.19.ShortDate)][/COLOR]</label>
@@ -1168,7 +1168,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.19.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.19.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.19.WindSpeed)] $INFO[Window.Property(Hourly.19.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.19.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.19.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.20.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.20.ShortDate)][/COLOR]</label>
@@ -1176,7 +1176,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.20.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.20.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.20.WindSpeed)] $INFO[Window.Property(Hourly.20.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.20.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.20.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.21.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.21.ShortDate)][/COLOR]</label>
@@ -1184,7 +1184,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.21.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.21.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.21.WindSpeed)] $INFO[Window.Property(Hourly.21.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.21.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.21.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.22.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.22.ShortDate)][/COLOR]</label>
@@ -1192,7 +1192,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.22.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.22.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.22.WindSpeed)] $INFO[Window.Property(Hourly.22.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.22.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.22.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.23.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.23.ShortDate)][/COLOR]</label>
@@ -1200,7 +1200,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.23.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.23.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.23.WindSpeed)] $INFO[Window.Property(Hourly.23.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.23.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.23.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Hourly.24.Time)][CR][COLOR=grey2]$INFO[Window.Property(Hourly.24.ShortDate)][/COLOR]</label>
@@ -1208,7 +1208,7 @@
 						<thumb>resource://resource.images.weathericons.default/$INFO[Window.Property(Hourly.24.OutlookIcon)]</thumb>
 						<icon>$INFO[Window.Property(Hourly.24.Outlook),[COLOR=grey2]$LOCALIZE[33030]: [/COLOR]][CR][COLOR=grey2]$LOCALIZE[383]: [/COLOR]$INFO[Window.Property(Hourly.24.WindSpeed)] $INFO[Window.Property(Hourly.24.WindDirection)]</icon>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.24.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Hourly.24.Outlook)) + !String.IsEmpty(Window.Property(Hourly.IsFetched))</visible>
 					</item>
 				</content>
 			</control>
@@ -1257,7 +1257,7 @@
 	</include>
 	<include name="WeatherMaps">
 		<control type="group">
-			<visible>StringCompare(Window.Property(Weather.CurrentView),map) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+			<visible>String.IsEqual(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 			<left>135</left>
 			<top>200</top>
 			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
@@ -1326,7 +1326,7 @@
 				<viewtype label="535">list</viewtype>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
-				<visible>StringCompare(Window.Property(Weather.CurrentView),map) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+				<visible>String.IsEqual(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 				<itemlayout height="640" width="930">
 					<control type="image">
 						<description>area image</description>
@@ -1392,7 +1392,7 @@
 						<icon>$INFO[Window.Property(Map.1.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.1.Layer)]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.1.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.1.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Map.2.Heading)]</label>
@@ -1400,7 +1400,7 @@
 						<icon>$INFO[Window.Property(Map.2.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.2.Layer)]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.2.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.2.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Map.3.Heading)]</label>
@@ -1408,7 +1408,7 @@
 						<icon>$INFO[Window.Property(Map.3.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.3.Layer)]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.3.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.3.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Map.4.Heading)]</label>
@@ -1416,7 +1416,7 @@
 						<icon>$INFO[Window.Property(Map.4.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.4.Layer)]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.4.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.4.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 					<item>
 						<label>$INFO[Window.Property(Map.5.Heading)]</label>
@@ -1424,7 +1424,7 @@
 						<icon>$INFO[Window.Property(Map.5.Area)]</icon>
 						<property name="Layer">$INFO[Window.Property(Map.5.Layer)]</property>
 						<onclick>noop</onclick>
-						<visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.5.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+						<visible>Weather.IsFetched + !String.IsEmpty(Window.Property(Map.5.Area)) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
 					</item>
 				</content>
 			</control>
@@ -1441,10 +1441,10 @@
 			<texturefocus>-</texturefocus>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
-			<visible>StringCompare(Window.Property(Weather.CurrentView),alerts)</visible>
+			<visible>String.IsEqual(Window.Property(Weather.CurrentView),alerts)</visible>
 		</control>
 		<control type="group">
-			<visible>StringCompare(Window.Property(Weather.CurrentView),alerts) + !IsEmpty(Window.Property(Alerts.IsFetched))</visible>
+			<visible>String.IsEqual(Window.Property(Weather.CurrentView),alerts) + !String.IsEmpty(Window.Property(Alerts.IsFetched))</visible>
 			<left>135</left>
 			<top>200</top>
 			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
@@ -1477,7 +1477,7 @@
 				<label>$LOCALIZE[33050]</label>
 			</control>
 			<control type="group">
-				<visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
+				<visible>!String.IsEqual(Window.Property(Alerts.Count),0)</visible>
 				<control type="textbox">
 					<left>20</left>
 					<top>82</top>
@@ -1501,7 +1501,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[19055]</label>
-				<visible>StringCompare(Window.Property(Alerts.Count),0)</visible>
+				<visible>String.IsEqual(Window.Property(Alerts.Count),0)</visible>
 			</control>
 		</control>
 	</include>

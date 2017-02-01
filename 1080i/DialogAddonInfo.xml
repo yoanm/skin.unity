@@ -212,7 +212,7 @@
 						<textcolor>$VAR[Colour.500]</textcolor>
 					</control>
 					<control type="group">
-						<visible>!IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
 						<control type="label">
 							<description>Description Page Count</description>
 							<left>365</left>
@@ -273,7 +273,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
+						<visible>String.IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
 						<control type="label">
 							<description>Description Page Count</description>
 							<left>365</left>
@@ -413,7 +413,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(Addon.broken))</visible>
 					<left>0</left>
 					<top>950</top>
 					<control type="image">

@@ -29,7 +29,7 @@
 					<height>538</height>
 					<aspectratio>stretch</aspectratio>
 					<texture colordiffuse="tertiary" background="true">backgrounds/white.png</texture>
-					<visible>SubString(ListItem.Icon,Default)</visible>
+					<visible>String.Contains(ListItem.Icon,Default)</visible>
 					<bordersize>5</bordersize>
 					<bordertexture colordiffuse="tertiary">backgrounds/poster shadow small.png</bordertexture>
 				</control>
@@ -41,7 +41,7 @@
 					<height>528</height>
 					<aspectratio>keep</aspectratio>
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
-					<visible>SubString(ListItem.Icon,Default)</visible>
+					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--thumb (no fallback)-->
 				<control type="image">
@@ -53,7 +53,7 @@
 					<texture background="true">$VAR[PosterThumb]</texture>
 					<bordersize>5</bordersize>
 					<bordertexture colordiffuse="tertiary">backgrounds/poster shadow small.png</bordertexture>
-					<visible>!SubString(ListItem.Icon,Default)</visible>
+					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--overlay background-->
 				<control type="image">
@@ -62,7 +62,7 @@
 					<width>45</width>
 					<height>45</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 				</control>
 				<!--watched icon-->
 				<control type="image">
@@ -92,7 +92,7 @@
 					<height>538</height>
 					<aspectratio>stretch</aspectratio>
 					<texture colordiffuse="tertiary2" background="true">backgrounds/white.png</texture>
-					<visible>SubString(ListItem.Icon,Default)</visible>
+					<visible>String.Contains(ListItem.Icon,Default)</visible>
 					<bordersize>5</bordersize>
 					<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
 				</control>
@@ -104,7 +104,7 @@
 					<height>528</height>
 					<aspectratio>keep</aspectratio>
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
-					<visible>SubString(ListItem.Icon,Default)</visible>
+					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--thumb (no fallback)-->
 				<control type="image">
@@ -116,7 +116,7 @@
 					<texture background="true">$VAR[PosterThumb]</texture>
 					<bordersize>5</bordersize>
 					<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
-					<visible>!SubString(ListItem.Icon,Default)</visible>
+					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--info background-->
 				<control type="image">
@@ -157,7 +157,7 @@
 					<width>45</width>
 					<height>45</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-					<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
+					<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 				</control>
 				<!--watched icon-->
 				<control type="image">
@@ -247,7 +247,7 @@
 						<texture colordiffuse="tertiary" background="true">backgrounds/white.png</texture>
 						<bordersize>5</bordersize>
 						<bordertexture>backgrounds/poster shadow small l.png</bordertexture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--thumb (fallback)-->
 					<control type="image">
@@ -257,7 +257,7 @@
 						<height>256</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--thumb (no fallback)-->
 					<control type="image">
@@ -269,7 +269,7 @@
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<bordersize>5</bordersize>
 						<bordertexture>backgrounds/poster shadow small l.png</bordertexture>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--overlay background-->
 					<control type="image">
@@ -278,7 +278,7 @@
 						<width>35</width>
 						<height>35</height>
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-						<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 					</control>
 					<!--watched icon-->
 					<control type="image">
@@ -310,7 +310,7 @@
 						<texture colordiffuse="tertiary2" background="true">backgrounds/white.png</texture>
 						<bordersize>5</bordersize>
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--thumb (fallback)-->
 					<control type="image">
@@ -320,7 +320,7 @@
 						<height>256</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--thumb (no fallback)-->
 					<control type="image">
@@ -332,7 +332,7 @@
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<bordersize>5</bordersize>
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--overlay background-->
 					<control type="image">
@@ -341,7 +341,7 @@
 						<width>35</width>
 						<height>35</height>
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-						<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
+						<visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png) | ListItem.IsResumable</visible>
 					</control>
 					<!--watched icon-->
 					<control type="image">
@@ -1168,7 +1168,7 @@
 					<height>287</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">Fanart_Fallback_Small.png</texture>
-					<visible>IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
 				<!--fanart (no fallback)-->
 				<control type="image">
@@ -1180,7 +1180,7 @@
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture background="true" colordiffuse="tertiary">backgrounds/white.png</bordertexture>
 					<bordersize>0</bordersize>
-					<visible>!IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
 				<!--info strip background-->
 				<control type="image">
@@ -1317,7 +1317,7 @@
 					<height>287</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-					<visible>!SubString(ListItem.Icon,default)</visible>
+					<visible>!String.Contains(ListItem.Icon,default)</visible>
 				</control>
 				<!--thumb (no fallback)-->
 				<control type="image">
@@ -1329,7 +1329,7 @@
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<bordertexture background="true" colordiffuse="tertiary">backgrounds/white.png</bordertexture>
 					<bordersize>0</bordersize>
-					<visible>!SubString(ListItem.Icon,default)</visible>
+					<visible>!String.Contains(ListItem.Icon,default)</visible>
 				</control>
 				<!--info strip background-->
 				<control type="image">
@@ -1628,7 +1628,7 @@
 						<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 						<bordertexture>backgrounds/poster shadow.png</bordertexture>
 						<bordersize>10</bordersize>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--poster (fallback)-->
 					<control type="image">
@@ -1638,7 +1638,7 @@
 						<height>690</height>
 						<aspectratio aligny="center">keep</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--poster-->
 					<control type="image">
@@ -1650,7 +1650,7 @@
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<bordertexture>backgrounds/poster shadow.png</bordertexture>
 						<bordersize>10</bordersize>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 				</control>
 				<!--info-->
@@ -1748,7 +1748,7 @@
 						<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 						<bordertexture>backgrounds/episode shadow.png</bordertexture>
 						<bordersize>10</bordersize>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--poster (fallback)-->
 					<control type="image">
@@ -1758,7 +1758,7 @@
 						<height>345</height>
 						<aspectratio aligny="center">keep</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--poster-->
 					<control type="image">
@@ -1770,7 +1770,7 @@
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<bordertexture>backgrounds/episode shadow.png</bordertexture>
 						<bordersize>10</bordersize>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 				</control>
 				<!--info-->
@@ -1868,7 +1868,7 @@
 						<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 						<bordertexture>backgrounds/poster shadow.png</bordertexture>
 						<bordersize>10</bordersize>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--poster (fallback)-->
 					<control type="image">
@@ -1878,7 +1878,7 @@
 						<height>690</height>
 						<aspectratio aligny="center">keep</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--poster-->
 					<control type="image">
@@ -1890,7 +1890,7 @@
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<bordertexture>backgrounds/poster shadow.png</bordertexture>
 						<bordersize>10</bordersize>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 				</control>
 				<!--info-->
@@ -1963,7 +1963,7 @@
 						<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 						<bordertexture>backgrounds/poster shadow.png</bordertexture>
 						<bordersize>10</bordersize>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--poster (fallback)-->
 					<control type="image">
@@ -1973,7 +1973,7 @@
 						<height>690</height>
 						<aspectratio aligny="center">keep</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--poster-->
 					<control type="image">
@@ -1985,7 +1985,7 @@
 						<texture background="true">$VAR[PosterThumb]</texture>
 						<bordertexture>backgrounds/poster shadow.png</bordertexture>
 						<bordersize>10</bordersize>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 				</control>
 				<!--info-->
@@ -2318,7 +2318,7 @@
 					<height>400</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Art(fanart)]</texture>
-					<visible>IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
 				<!--fanart (no fallback)-->
 				<control type="image">
@@ -2337,7 +2337,7 @@
 					<height>400</height>
 					<aspectratio>keep</aspectratio>
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
-					<visible>SubString(ListItem.Icon,Default)</visible>
+					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--thumb (no fallback)-->
 				<control type="image">
@@ -2347,7 +2347,7 @@
 					<height>402</height>
 					<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 					<texture background="true">$VAR[PosterThumb]</texture>
-					<visible>!SubString(ListItem.Icon,Default)</visible>
+					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--info strip background-->
 				<control type="image">
@@ -2430,7 +2430,7 @@
 					<height>400</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Art(fanart)]</texture>
-					<visible>IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
 				<!--fanart (no fallback)-->
 				<control type="image">
@@ -2449,7 +2449,7 @@
 					<height>400</height>
 					<aspectratio>keep</aspectratio>
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
-					<visible>SubString(ListItem.Icon,Default)</visible>
+					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--thumb (no fallback)-->
 				<control type="image">
@@ -2459,7 +2459,7 @@
 					<height>402</height>
 					<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 					<texture background="true">$VAR[PosterThumb]</texture>
-					<visible>!SubString(ListItem.Icon,Default)</visible>
+					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--info strip background-->
 				<control type="image">
@@ -2535,7 +2535,7 @@
 					<height>400</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Art(fanart)]</texture>
-					<visible>IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
 				<!--fanart (no fallback)-->
 				<control type="image">
@@ -2554,7 +2554,7 @@
 					<height>400</height>
 					<aspectratio>keep</aspectratio>
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
-					<visible>SubString(ListItem.Icon,Default)</visible>
+					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--thumb (no fallback)-->
 				<control type="image">
@@ -2564,7 +2564,7 @@
 					<height>402</height>
 					<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 					<texture background="true">$VAR[PosterThumb]</texture>
-					<visible>!SubString(ListItem.Icon,Default)</visible>
+					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--info strip background-->
 				<control type="image">
@@ -2640,7 +2640,7 @@
 					<height>400</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
-					<visible>SubString(ListItem.Icon,default)</visible>
+					<visible>String.Contains(ListItem.Icon,default)</visible>
 				</control>
 				<!--thumb (no fallback)-->
 				<control type="image">
@@ -2650,7 +2650,7 @@
 					<height>402</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<visible>!SubString(ListItem.Icon,default)</visible>
+					<visible>!String.Contains(ListItem.Icon,default)</visible>
 				</control>
 				<!--poster (fallback)-->
 				<control type="image">
@@ -2660,7 +2660,7 @@
 					<height>400</height>
 					<aspectratio>keep</aspectratio>
 					<texture colordiffuse="$VAR[Colour.500]" background="true">DefaultFolder.png</texture>
-					<visible>IsEmpty(ListItem.Art(tvshow.poster))</visible>
+					<visible>String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
 				</control>
 				<!--poster-->
 				<control type="image">
@@ -2670,7 +2670,7 @@
 					<height>402</height>
 					<aspectratio align="left" aligny="bottom">stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
-					<visible>!IsEmpty(ListItem.Art(tvshow.poster))</visible>
+					<visible>!String.IsEmpty(ListItem.Art(tvshow.poster))</visible>
 				</control>
 				<!--info strip background-->
 				<control type="image">

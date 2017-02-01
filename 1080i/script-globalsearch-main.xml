@@ -297,7 +297,7 @@
 								<height>135</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<visible>!StringCompare(ListItem.Icon,DefaultFolder.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultFolder.png)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -306,7 +306,7 @@
 								<height>135</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-								<visible>StringCompare(ListItem.Icon,DefaultFolder.png)</visible>
+								<visible>String.IsEqual(ListItem.Icon,DefaultFolder.png)</visible>
 							</control>
 							<control type="label">
 								<left>165</left>
@@ -443,7 +443,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							</control>
 							<control type="image">
 								<left>5</left>
@@ -452,7 +452,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-								<visible>StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							</control>
 							<control type="image">
 								<left>65</left>
@@ -460,7 +460,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -480,7 +480,7 @@
 								<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
 								<textcolor>grey2</textcolor>
 								<aligny>center</aligny>
-								<visible>!SubString(ListItem.Property(Duration),min)</visible>
+								<visible>!String.Contains(ListItem.Property(Duration),min)</visible>
 							</control>
 							<control type="label">
 								<left>115</left>
@@ -490,7 +490,7 @@
 								<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration)]</label>
 								<textcolor>grey2</textcolor>
 								<aligny>center</aligny>
-								<visible>SubString(ListItem.Property(Duration),min)</visible>
+								<visible>String.Contains(ListItem.Property(Duration),min)</visible>
 							</control>
 							<control type="textbox">
 								<left>115</left>
@@ -507,7 +507,7 @@
 								<height>75</height>
 								<label>$INFO[ListItem.Property(PlotOutline)]</label>
 								<font>secondary.info.small</font>
-								<visible>IsEmpty(ListItem.Property(TagLine))</visible>
+								<visible>String.IsEmpty(ListItem.Property(TagLine))</visible>
 							</control>
 							<control type="textbox">
 								<left>115</left>
@@ -516,7 +516,7 @@
 								<height>75</height>
 								<label>$INFO[ListItem.Property(Plot)]</label>
 								<font>secondary.info.small</font>
-								<visible>IsEmpty(ListItem.Property(TagLine)) + IsEmpty(ListItem.Property(PlotOutline))</visible>
+								<visible>String.IsEmpty(ListItem.Property(TagLine)) + String.IsEmpty(ListItem.Property(PlotOutline))</visible>
 							</control>
 						</itemlayout>
 						<focusedlayout width="500" height="155">
@@ -541,7 +541,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -562,7 +562,7 @@
 								<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
 								<textcolor>grey</textcolor>
 								<aligny>center</aligny>
-								<visible>!SubString(ListItem.Property(Duration),min)</visible>
+								<visible>!String.Contains(ListItem.Property(Duration),min)</visible>
 							</control>
 							<control type="label">
 								<left>115</left>
@@ -572,7 +572,7 @@
 								<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration)]</label>
 								<textcolor>grey</textcolor>
 								<aligny>center</aligny>
-								<visible>SubString(ListItem.Property(Duration),min)</visible>
+								<visible>String.Contains(ListItem.Property(Duration),min)</visible>
 							</control>
 							<control type="textbox">
 								<left>115</left>
@@ -592,7 +592,7 @@
 								<label>$INFO[ListItem.Property(PlotOutline)]</label>
 								<font>secondary.info.small</font>
 								<textcolor>white</textcolor>
-								<visible>IsEmpty(ListItem.Property(TagLine))</visible>
+								<visible>String.IsEmpty(ListItem.Property(TagLine))</visible>
 								<autoscroll delay="3000" time="2000" repeat="6000">true</autoscroll>
 							</control>
 							<control type="textbox">
@@ -603,7 +603,7 @@
 								<label>$INFO[ListItem.Property(Plot)]</label>
 								<font>secondary.info.small</font>
 								<textcolor>white</textcolor>
-								<visible>IsEmpty(ListItem.Property(TagLine)) + IsEmpty(ListItem.Property(PlotOutline))</visible>
+								<visible>String.IsEmpty(ListItem.Property(TagLine)) + String.IsEmpty(ListItem.Property(PlotOutline))</visible>
 								<autoscroll delay="3000" time="2000" repeat="6000">true</autoscroll>
 							</control>
 						</focusedlayout>
@@ -669,7 +669,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							</control>
 							<control type="image">
 								<left>5</left>
@@ -678,7 +678,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-								<visible>StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							</control>
 							<control type="image">
 								<left>65</left>
@@ -686,7 +686,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -706,7 +706,7 @@
 								<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
 								<textcolor>grey2</textcolor>
 								<aligny>center</aligny>
-								<visible>!SubString(ListItem.Property(Duration),min)</visible>
+								<visible>!String.Contains(ListItem.Property(Duration),min)</visible>
 							</control>
 							<control type="label">
 								<left>115</left>
@@ -716,7 +716,7 @@
 								<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration)]</label>
 								<textcolor>grey2</textcolor>
 								<aligny>center</aligny>
-								<visible>SubString(ListItem.Property(Duration),min)</visible>
+								<visible>String.Contains(ListItem.Property(Duration),min)</visible>
 							</control>
 							<control type="textbox">
 								<left>115</left>
@@ -733,7 +733,7 @@
 								<height>75</height>
 								<label>$INFO[ListItem.Property(PlotOutline)]</label>
 								<font>secondary.info.small</font>
-								<visible>IsEmpty(ListItem.Property(TagLine))</visible>
+								<visible>String.IsEmpty(ListItem.Property(TagLine))</visible>
 							</control>
 							<control type="textbox">
 								<left>115</left>
@@ -742,7 +742,7 @@
 								<height>75</height>
 								<label>$INFO[ListItem.Property(Plot)]</label>
 								<font>secondary.info.small</font>
-								<visible>IsEmpty(ListItem.Property(TagLine)) + IsEmpty(ListItem.Property(PlotOutline))</visible>
+								<visible>String.IsEmpty(ListItem.Property(TagLine)) + String.IsEmpty(ListItem.Property(PlotOutline))</visible>
 							</control>
 						</itemlayout>
 						<focusedlayout width="500" height="155">
@@ -767,7 +767,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -788,7 +788,7 @@
 								<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
 								<textcolor>grey</textcolor>
 								<aligny>center</aligny>
-								<visible>!SubString(ListItem.Property(Duration),min)</visible>
+								<visible>!String.Contains(ListItem.Property(Duration),min)</visible>
 							</control>
 							<control type="label">
 								<left>115</left>
@@ -798,7 +798,7 @@
 								<label>$INFO[ListItem.Property(Year),, - ]$INFO[ListItem.Property(Duration)]</label>
 								<textcolor>grey</textcolor>
 								<aligny>center</aligny>
-								<visible>SubString(ListItem.Property(Duration),min)</visible>
+								<visible>String.Contains(ListItem.Property(Duration),min)</visible>
 							</control>
 							<control type="textbox">
 								<left>115</left>
@@ -818,7 +818,7 @@
 								<label>$INFO[ListItem.Property(PlotOutline)]</label>
 								<font>secondary.info.small</font>
 								<textcolor>white</textcolor>
-								<visible>IsEmpty(ListItem.Property(TagLine))</visible>
+								<visible>String.IsEmpty(ListItem.Property(TagLine))</visible>
 								<autoscroll delay="3000" time="2000" repeat="6000">true</autoscroll>
 							</control>
 							<control type="textbox">
@@ -829,7 +829,7 @@
 								<label>$INFO[ListItem.Property(Plot)]</label>
 								<font>secondary.info.small</font>
 								<textcolor>white</textcolor>
-								<visible>IsEmpty(ListItem.Property(TagLine)) + IsEmpty(ListItem.Property(PlotOutline))</visible>
+								<visible>String.IsEmpty(ListItem.Property(TagLine)) + String.IsEmpty(ListItem.Property(PlotOutline))</visible>
 								<autoscroll delay="3000" time="2000" repeat="6000">true</autoscroll>
 							</control>
 						</focusedlayout>
@@ -895,7 +895,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							</control>
 							<control type="image">
 								<left>5</left>
@@ -904,7 +904,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-								<visible>StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							</control>
 							<control type="image">
 								<left>65</left>
@@ -912,7 +912,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -964,7 +964,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1059,7 +1059,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							</control>
 							<control type="image">
 								<left>5</left>
@@ -1068,7 +1068,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-								<visible>StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							</control>
 							<control type="image">
 								<left>65</left>
@@ -1076,7 +1076,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1120,7 +1120,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1205,7 +1205,7 @@
 								<height>135</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -1214,7 +1214,7 @@
 								<height>135</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-								<visible>StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							</control>
 							<control type="image">
 								<left>65</left>
@@ -1222,7 +1222,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1274,7 +1274,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1369,7 +1369,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<visible>!StringCompare(ListItem.Icon,DefaultMusicVideos.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultMusicVideos.png)</visible>
 							</control>
 							<control type="image">
 								<left>5</left>
@@ -1378,7 +1378,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-								<visible>StringCompare(ListItem.Icon,DefaultMusicVideos.png)</visible>
+								<visible>String.IsEqual(ListItem.Icon,DefaultMusicVideos.png)</visible>
 							</control>
 							<control type="image">
 								<left>65</left>
@@ -1386,7 +1386,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1450,7 +1450,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1556,7 +1556,7 @@
 								<height>135</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<visible>!StringCompare(ListItem.Icon,DefaultArtist.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultArtist.png)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -1565,7 +1565,7 @@
 								<height>135</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-								<visible>StringCompare(ListItem.Icon,DefaultArtist.png)</visible>
+								<visible>String.IsEqual(ListItem.Icon,DefaultArtist.png)</visible>
 							</control>
 							<control type="label">
 								<left>165</left>
@@ -1702,7 +1702,7 @@
 								<height>135</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<visible>!StringCompare(ListItem.Icon,DefaultAlbumCover.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultAlbumCover.png)</visible>
 							</control>
 							<control type="image">
 								<left>10</left>
@@ -1711,7 +1711,7 @@
 								<height>135</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-								<visible>StringCompare(ListItem.Icon,DefaultAlbumCover.png)</visible>
+								<visible>String.IsEqual(ListItem.Icon,DefaultAlbumCover.png)</visible>
 							</control>
 							<control type="label">
 								<left>165</left>
@@ -1848,7 +1848,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
-								<visible>!StringCompare(ListItem.Icon,DefaultAudio.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultAudio.png)</visible>
 							</control>
 							<control type="image">
 								<left>5</left>
@@ -1857,7 +1857,7 @@
 								<height>145</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-								<visible>StringCompare(ListItem.Icon,DefaultAudio.png)</visible>
+								<visible>String.IsEqual(ListItem.Icon,DefaultAudio.png)</visible>
 							</control>
 							<control type="image">
 								<left>65</left>
@@ -1865,7 +1865,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
@@ -1929,7 +1929,7 @@
 								<width>45</width>
 								<height>45</height>
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(PlayCount),0)</visible>
 								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">

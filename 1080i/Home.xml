@@ -77,7 +77,7 @@
 		<control type="group">
 			<left>0</left>
 			<top>140</top>
-			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo) + IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 			<!--cover-->
 			<control type="image">
 				<left>55</left>
@@ -138,7 +138,7 @@
 		<control type="group">
 			<left>795r</left>
 			<top>200</top>
-			<visible>StringCompare(Container(9000).ListItem.Property(defaultID),livetv) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),livetv) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
 			<control type="group">
 				<animation effect="slide" start="0,0" end="0,140" time="0" condition="PVR.IsRecording">conditional</animation>
 				<visible>PVR.HasNonRecordingTimer</visible>
@@ -281,7 +281,7 @@
 		<control type="group">
 			<left>0</left>
 			<top>140</top>
-			<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo) + IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+			<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo) + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 			<!--videos-->
 			<control type="group">
 				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
@@ -513,7 +513,7 @@
 		<control type="group">
 			<left>900r</left>
 			<top>610</top>
-			<visible>IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+			<visible>String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="960,540" easing="out" tween="back" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
@@ -985,8 +985,8 @@
 			<ondown>20</ondown>
 			<animation effect="slide" start="0,0" end="0,-10" time="0" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
 			<control type="fixedlist" id="700">
-				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="StringCompare(Container(700).NumItems,2) | StringCompare(Container(700).NumItems,4)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(defaultID),videos) | StringCompare(Container(9000).ListItem.Property(defaultID),movies) | StringCompare(Container(9000).ListItem.Property(defaultID),tvshows)</visible>
+				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="String.IsEqual(Container(700).NumItems,2) | String.IsEqual(Container(700).NumItems,4)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),videos) | String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) | String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)</visible>
 				<bottom>60</bottom>
 				<onleft>700</onleft>
 				<onright>700</onright>
@@ -998,8 +998,8 @@
 				</content>
 			</control>
 			<control type="fixedlist" id="703">
-				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="StringCompare(Container(703).NumItems,2) | StringCompare(Container(703).NumItems,4)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(defaultID),music)</visible>
+				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="String.IsEqual(Container(703).NumItems,2) | String.IsEqual(Container(703).NumItems,4)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),music)</visible>
 				<bottom>60</bottom>
 				<onleft>703</onleft>
 				<onright>703</onright>
@@ -1011,8 +1011,8 @@
 				</content>
 			</control>
 			<control type="fixedlist" id="704">
-				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="StringCompare(Container(704).NumItems,2) | StringCompare(Container(704).NumItems,4)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(defaultID),pictures)</visible>
+				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="String.IsEqual(Container(704).NumItems,2) | String.IsEqual(Container(704).NumItems,4)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),pictures)</visible>
 				<bottom>60</bottom>
 				<onleft>704</onleft>
 				<onright>704</onright>
@@ -1024,8 +1024,8 @@
 				</content>
 			</control>
 			<control type="fixedlist" id="705">
-				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="StringCompare(Container(705).NumItems,2) | StringCompare(Container(705).NumItems,4)">conditional</animation>
-				<visible>StringCompare(Container(9000).ListItem.Property(defaultID),programs)</visible>
+				<animation effect="slide" start="0,0" end="-136,0" time="0" condition="String.IsEqual(Container(705).NumItems,2) | String.IsEqual(Container(705).NumItems,4)">conditional</animation>
+				<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),programs)</visible>
 				<bottom>60</bottom>
 				<onleft>705</onleft>
 				<onright>705</onright>
@@ -1075,7 +1075,7 @@
 			<left>314r</left>
 			<top>60</top>
 			<include>Window_OpenClose_Animation</include>
-			<animation effect="slide" start="0,0" end="40,0" time="0" condition="!SubString(System.Time,am) + !SubString(System.Time,pm)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="40,0" time="0" condition="!String.Contains(System.Time,am) + !String.Contains(System.Time,pm)">Conditional</animation>
 			<control type="button" id="20">
 				<description>Power push button</description>
 				<left>0</left>
@@ -1153,7 +1153,7 @@
 		<control type="group">
 			<left>60</left>
 			<top>930</top>
-			<visible>Skin.HasSetting(homepageWeatherinfo) + !IsEmpty(Weather.Plugin)</visible>
+			<visible>Skin.HasSetting(homepageWeatherinfo) + !String.IsEmpty(Weather.Plugin)</visible>
 			<include>Window_OpenClose_Animation</include>
 			<!--breadcrumb bg-->
 			<control type="image">
@@ -1218,7 +1218,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[System.TemperatureUnits]</label>
 					<textcolor>text.primary</textcolor>
-					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+					<visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
 				</control>
 				<control type="label">
 					<description>Conditions Label</description>

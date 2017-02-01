@@ -190,7 +190,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Title]</label>
-								<visible>IsEmpty(Listitem.Icon)</visible>
+								<visible>String.IsEmpty(Listitem.Icon)</visible>
 								<scroll>false</scroll>
 							</control>
 							<!--show title (icon)-->
@@ -204,7 +204,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Title]</label>
-								<visible>!IsEmpty(Listitem.Icon)</visible>
+								<visible>!String.IsEmpty(Listitem.Icon)</visible>
 								<scroll>false</scroll>
 							</control>
 							<!--start time-->
@@ -313,7 +313,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Title]</label>
-								<visible>IsEmpty(Listitem.Icon)</visible>
+								<visible>String.IsEmpty(Listitem.Icon)</visible>
 							</control>
 							<!--show title (icon)-->
 							<control type="label">
@@ -327,7 +327,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Title]</label>
-								<visible>!IsEmpty(Listitem.Icon)</visible>
+								<visible>!String.IsEmpty(Listitem.Icon)</visible>
 							</control>
 							<!--start time-->
 							<control type="label">

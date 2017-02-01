@@ -17,7 +17,7 @@
 			<height>1080</height>
 			<texture background="true">$INFO[Player.Art(fanart)]</texture>
 			<colordiffuse>AAFFFFFF</colordiffuse>
-			<visible>!IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
+			<visible>!String.IsEmpty(Player.Art(fanart)) + !Skin.HasSetting(HideVisualizationFanart)</visible>
 			<fadetime>600</fadetime>
 		</control>
 		<!-- media infos -->
@@ -76,7 +76,7 @@
 					<width>150</width>
 					<height>45</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-					<visible>SubString(System.Time,am) | SubString(System.Time,pm)</visible>
+					<visible>String.Contains(System.Time,am) | String.Contains(System.Time,pm)</visible>
 				</control>
 				<!--time background (24 hour)-->
 				<control type="image">
@@ -85,7 +85,7 @@
 					<width>110</width>
 					<height>45</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-					<visible>!SubString(System.Time,am) + !SubString(System.Time,pm)</visible>
+					<visible>!String.Contains(System.Time,am) + !String.Contains(System.Time,pm)</visible>
 				</control>
 				<!--time background strip-->
 				<control type="image">

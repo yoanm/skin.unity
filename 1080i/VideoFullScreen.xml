@@ -78,7 +78,7 @@
 					<width>150</width>
 					<height>45</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-					<visible>SubString(System.Time,am) | SubString(System.Time,pm)</visible>
+					<visible>String.Contains(System.Time,am) | String.Contains(System.Time,pm)</visible>
 				</control>
 				<!--time background (24 hour)-->
 				<control type="image" id="1">
@@ -87,7 +87,7 @@
 					<width>110</width>
 					<height>45</height>
 					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-					<visible>!SubString(System.Time,am) + !SubString(System.Time,pm)</visible>
+					<visible>!String.Contains(System.Time,am) + !String.Contains(System.Time,pm)</visible>
 				</control>
 				<!--time background strip-->
 				<control type="image" id="1">
@@ -140,7 +140,7 @@
 			</control>
 			<!--bottom info-->
 			<control type="group" id="1">
-				<animation effect="slide" start="0,0" end="0,100" time="200" condition="IsEmpty(VideoPlayer.Plot) | !Player.ShowInfo">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,100" time="200" condition="String.IsEmpty(VideoPlayer.Plot) | !Player.ShowInfo">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-372,0" time="200" delay="100" condition="Skin.HasSetting(SubtitleSection)">Conditional</animation>
 				<!--background-->
 				<control type="image" id="1">
@@ -149,7 +149,7 @@
 					<width>1140</width>
 					<height>190</height>
 					<texture colordiffuse="tertiary">backgrounds/np info bg.png</texture>
-					<animation effect="zoom" start="390,697,1140,190" end="390,700,1140,290" time="200" condition="!IsEmpty(VideoPlayer.Plot) + Player.ShowInfo">Conditional</animation>
+					<animation effect="zoom" start="390,697,1140,190" end="390,700,1140,290" time="200" condition="!String.IsEmpty(VideoPlayer.Plot) + Player.ShowInfo">Conditional</animation>
 				</control>
 				<!--title bg-->
 				<control type="image" id="1">
@@ -285,7 +285,7 @@
 				<control type="group" id="1">
 					<top>250r</top>
 					<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
-					<animation effect="slide" start="0,0" end="0,100" time="200" condition="!IsEmpty(VideoPlayer.Plot) + Player.ShowInfo">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,100" time="200" condition="!String.IsEmpty(VideoPlayer.Plot) + Player.ShowInfo">Conditional</animation>
 					<!--cache-->
 					<control type="progress" id="1">
 						<left>415</left>

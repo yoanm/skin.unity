@@ -18,35 +18,35 @@
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 	<variable name="WeatherView">
-		<value condition="IsEmpty(Window.Property(Weather.CurrentView))">$LOCALIZE[31904]</value>
-		<value condition="StringCompare(Window.Property(Weather.CurrentView),36hour)">$LOCALIZE[31901]</value>
-		<value condition="StringCompare(Window.Property(Weather.CurrentView),weekend)">$LOCALIZE[31903]</value>
-		<value condition="StringCompare(Window.Property(Weather.CurrentView),hourly)">$LOCALIZE[31902]</value>
-		<value condition="StringCompare(Window.Property(Weather.CurrentView),map)">$LOCALIZE[31910]</value>
-		<value condition="StringCompare(Window.Property(Weather.CurrentView),alerts)">$LOCALIZE[33050]</value>
+		<value condition="String.IsEmpty(Window.Property(Weather.CurrentView))">$LOCALIZE[31904]</value>
+		<value condition="String.IsEqual(Window.Property(Weather.CurrentView),36hour)">$LOCALIZE[31901]</value>
+		<value condition="String.IsEqual(Window.Property(Weather.CurrentView),weekend)">$LOCALIZE[31903]</value>
+		<value condition="String.IsEqual(Window.Property(Weather.CurrentView),hourly)">$LOCALIZE[31902]</value>
+		<value condition="String.IsEqual(Window.Property(Weather.CurrentView),map)">$LOCALIZE[31910]</value>
+		<value condition="String.IsEqual(Window.Property(Weather.CurrentView),alerts)">$LOCALIZE[33050]</value>
 	</variable>
 	<variable name="HomeWidgetPosterVar">
-		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
-		<value condition="!IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="!String.IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
 		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 	<variable name="HomeWidgetBannerVar">
-		<value condition="!IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
-		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(tvshow.banner))">$INFO[ListItem.Art(tvshow.banner)]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="BannerThumb">
-		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
-		<value condition="IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Icon]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+		<value condition="String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PosterThumb">
-		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Icon]</value>
+		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PlayList">
-		<value condition="Window.IsActive(Videos) + !StringCompare(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</value>
-		<value condition="[Window.IsActive(Music) | Window.IsActive(Music)] + !StringCompare(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</value>
+		<value condition="Window.IsActive(Videos) + !String.IsEqual(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</value>
+		<value condition="[Window.IsActive(Music) | Window.IsActive(Music)] + !String.IsEqual(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</value>
 	</variable>
 	<variable name="SelectBack">
 		<value condition="![Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)]">DialogBack.png</value>
@@ -67,111 +67,111 @@
 		<value condition="Player.Rewinding32x">$LOCALIZE[31045] 32x</value>
 	</variable>
 	<variable name="Colour.500">
-		<value condition="StringCompare(Skin.String(Colour.Theme),Red)">FFe51c23</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Pink)">FFe91e63</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Purple)">FF9c27b0</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Deep Purple)">FF673ab7</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Indigo)">FF3f51b5</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Blue)">FF5677fc</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Light Blue)">FF03a9f4</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Cyan)">FF00bcd4</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Teal)">FF009688</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Green)">FF259b24</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Light Green)">FF8bc34a</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Lime)">FFcddc39</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Yellow)">FFf6e233</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Amber)">FFf6b904</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Orange)">FFff9800</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Deep Orange)">FFff5722</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Brown)">FF795548</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Blue Grey)">FF587482</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Grey)">FF908e8e</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Red)">FFe51c23</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Pink)">FFe91e63</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Purple)">FF9c27b0</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Deep Purple)">FF673ab7</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Indigo)">FF3f51b5</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Blue)">FF5677fc</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Light Blue)">FF03a9f4</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Cyan)">FF00bcd4</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Teal)">FF009688</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Green)">FF259b24</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Light Green)">FF8bc34a</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Lime)">FFcddc39</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Yellow)">FFf6e233</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Amber)">FFf6b904</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Orange)">FFff9800</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Deep Orange)">FFff5722</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Brown)">FF795548</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Blue Grey)">FF587482</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Grey)">FF908e8e</value>
 		<value>FFe51c23</value>
 	</variable>
 	<variable name="Colour.900">
-		<value condition="StringCompare(Skin.String(Colour.Theme),Red)">FF850a04</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Pink)">FF880e4f</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Purple)">FF5b1287</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Deep Purple)">FF341e96</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Indigo)">FF1c2688</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Blue)">FF313ebc</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Light Blue)">FF1275c4</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Cyan)">FF057a7f</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Teal)">FF056857</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Green)">FF156808</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Light Green)">FF4f9833</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Lime)">FFa89b26</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Yellow)">FFefb415</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Amber)">FFff8a00</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Orange)">FFe06603</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Deep Orange)">FFb9330a</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Brown)">FF55322c</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Blue Grey)">FF3a4b5c</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Grey)">FF5d5c5c</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Red)">FF850a04</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Pink)">FF880e4f</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Purple)">FF5b1287</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Deep Purple)">FF341e96</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Indigo)">FF1c2688</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Blue)">FF313ebc</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Light Blue)">FF1275c4</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Cyan)">FF057a7f</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Teal)">FF056857</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Green)">FF156808</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Light Green)">FF4f9833</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Lime)">FFa89b26</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Yellow)">FFefb415</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Amber)">FFff8a00</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Orange)">FFe06603</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Deep Orange)">FFb9330a</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Brown)">FF55322c</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Blue Grey)">FF3a4b5c</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Grey)">FF5d5c5c</value>
 		<value>FF850a04</value>
 	</variable>
 	<variable name="Colour.400">
-		<value condition="StringCompare(Skin.String(Colour.Theme),Red)">FFe84e40</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Pink)">FFec407a</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Purple)">FFab47bc</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Deep Purple)">FF7e57c2</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Indigo)">FF5c6bc0</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Blue)">FF738ffe</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Light Blue)">FF3ebcf5</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Cyan)">FF3fd8eb</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Teal)">FF2ebeb0</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Green)">FF39c439</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Light Green)">FFa0d068</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Lime)">FFddea60</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Yellow)">FFffee58</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Amber)">FFfbcb37</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Orange)">FFfaac3a</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Deep Orange)">FFfb6536</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Brown)">FF8d6e63</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Blue Grey)">FF78909c</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Grey)">FFbdbdbd</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Red)">FFe84e40</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Pink)">FFec407a</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Purple)">FFab47bc</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Deep Purple)">FF7e57c2</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Indigo)">FF5c6bc0</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Blue)">FF738ffe</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Light Blue)">FF3ebcf5</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Cyan)">FF3fd8eb</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Teal)">FF2ebeb0</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Green)">FF39c439</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Light Green)">FFa0d068</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Lime)">FFddea60</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Yellow)">FFffee58</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Amber)">FFfbcb37</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Orange)">FFfaac3a</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Deep Orange)">FFfb6536</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Brown)">FF8d6e63</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Blue Grey)">FF78909c</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Grey)">FFbdbdbd</value>
 		<value>FFe84e40</value>
 	</variable>
 	<variable name="Colour.Alt">
-		<value condition="StringCompare(Skin.String(Colour.Theme),Red)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Pink)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Purple)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Deep Purple)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Indigo)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Blue)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Light Blue)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Cyan)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Teal)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Green)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Light Green)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Lime)">FFe51c23</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Yellow)">FFe51c23</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Amber)">FFe51c23</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Orange)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Deep Orange)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Brown)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Blue Grey)">FFffeb3b</value>
-		<value condition="StringCompare(Skin.String(Colour.Theme),Grey)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Red)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Pink)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Purple)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Deep Purple)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Indigo)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Blue)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Light Blue)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Cyan)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Teal)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Green)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Light Green)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Lime)">FFe51c23</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Yellow)">FFe51c23</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Amber)">FFe51c23</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Orange)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Deep Orange)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Brown)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Blue Grey)">FFffeb3b</value>
+		<value condition="String.IsEqual(Skin.String(Colour.Theme),Grey)">FFffeb3b</value>
 		<value>FFffeb3b</value>
 	</variable>
 	<variable name="Addon.Description">
-		<value condition="SubString(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Plot]</value>
+		<value condition="String.Contains(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Plot]</value>
 		<value>$INFO[ListItem.Property(Addon.Description)]</value>
 	</variable>
 	<variable name="Addon.Secondary.Label">
-		<value condition="SubString(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre,, • ]$INFO[ListItem.Studio]</value>
+		<value condition="String.Contains(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre,, • ]$INFO[ListItem.Studio]</value>
 		<value>$INFO[ListItem.Property(Addon.Version),$LOCALIZE[24051] ,]$INFO[ListItem.Property(Addon.Creator), • $LOCALIZE[21863]: ,]</value>
 	</variable>
 	<variable name="Addon.Secondary.Label.1">
-		<value condition="SubString(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Year]</value>
+		<value condition="String.Contains(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Year]</value>
 		<value>$INFO[ListItem.Property(Addon.Creator),,$LOCALIZE[21863]: ]</value>
 	</variable>
 	<variable name="Addon.Secondary.Label.2">
-		<value condition="SubString(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Genre]</value>
+		<value condition="String.Contains(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Genre]</value>
 		<value>$INFO[ListItem.Property(Addon.Version),,$LOCALIZE[24051] ]</value>
 	</variable>
 	<variable name="Addon.Secondary.Label.3">
-		<value condition="SubString(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Studio]</value>
+		<value condition="String.Contains(Container.FolderPath,plugin.program.advanced.launcher)">$INFO[ListItem.Studio]</value>
 		<value></value>
 	</variable>
 	<include name="WindowID">
@@ -734,7 +734,7 @@
 			<top>60</top>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-			<animation effect="slide" start="0,0" end="40,0" time="0" condition="!SubString(System.Time,am) + !SubString(System.Time,pm)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="40,0" time="0" condition="!String.Contains(System.Time,am) + !String.Contains(System.Time,pm)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
 			<visible>system.getbool(input.enablemouse)</visible>
 			<control type="button" id="122">
@@ -813,7 +813,7 @@
 	</include>
 	<include name="CommonNowPlaying">
 		<control type="group">
-			<visible>Player.HasMedia + IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+			<visible>Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
@@ -988,7 +988,7 @@
 				<include>Window_OpenClose_Animation</include>
 			</control>
 			<control type="group">
-				<visible>!IsEmpty(Container.TotalTime)</visible>
+				<visible>!String.IsEmpty(Container.TotalTime)</visible>
 				<control type="image">
 					<left>64</left>
 					<top>133r</top>
@@ -1532,13 +1532,13 @@
 			<include>ButtonCommonValues</include>
 			<label>13350</label>
 			<onclick>$VAR[PlayList]</onclick>
-			<visible>[Window.IsActive(Videos) + !StringCompare(Playlist.Length(video),0)] | [[Window.IsActive(Music) | Window.IsActive(Music)] + !StringCompare(Playlist.Length(music),0)]</visible>
+			<visible>[Window.IsActive(Videos) + !String.IsEqual(Playlist.Length(video),0)] | [[Window.IsActive(Music) | Window.IsActive(Music)] + !String.IsEqual(Playlist.Length(music),0)]</visible>
 			<visible>!Window.IsVisible(MusicPlaylist) + !Window.IsVisible(VideoPlaylist)</visible>
 		</control>
 	</include>
 	<include name="ScrollOffsetLabel">
 		<control type="group">
-			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
+			<visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
 			<animation effect="slide" start="-55,0" end="0,0" time="100">Visible</animation>
 			<animation effect="slide" start="0,0" end="-55,0" delay="400" time="100">Hidden</animation>
 			<left>0</left>
@@ -1573,7 +1573,7 @@
 				<width>150</width>
 				<height>45</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-				<visible>SubString(System.Time,am) | SubString(System.Time,pm)</visible>
+				<visible>String.Contains(System.Time,am) | String.Contains(System.Time,pm)</visible>
 			</control>
 			<!--time background (24 hour)-->
 			<control type="image">
@@ -1582,7 +1582,7 @@
 				<width>110</width>
 				<height>45</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-				<visible>!SubString(System.Time,am) + !SubString(System.Time,pm)</visible>
+				<visible>!String.Contains(System.Time,am) + !String.Contains(System.Time,pm)</visible>
 			</control>
 			<!--time background strip-->
 			<control type="image">

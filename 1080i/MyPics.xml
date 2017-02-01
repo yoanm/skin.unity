@@ -79,7 +79,7 @@
 					<textcolor>$VAR[Colour.500]</textcolor>
 					<include>WindowTitleCommons</include>
 					<label>[LOWERCASE]$INFO[Container.FolderName][/LOWERCASE]</label>
-					<visible>!IsEmpty(Container.FolderName)</visible>
+					<visible>!String.IsEmpty(Container.FolderName)</visible>
 				</control>
 			</control>
 			<!--sort method bg-->

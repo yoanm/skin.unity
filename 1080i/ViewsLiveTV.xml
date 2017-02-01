@@ -134,7 +134,7 @@
 					<height>287</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">Fanart_Fallback_Small.png</texture>
-					<visible>IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
 				<!--icon-->
 				<control type="image">
@@ -144,7 +144,7 @@
 					<height>287</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<visible>IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
 				<!--fanart-->
 				<control type="image">
@@ -156,7 +156,7 @@
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 					<bordertexture background="true" colordiffuse="tertiary">backgrounds/white.png</bordertexture>
 					<bordersize>0</bordersize>
-					<visible>!IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
 				<!--info strip background-->
 				<control type="image">

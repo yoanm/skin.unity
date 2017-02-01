@@ -6,7 +6,7 @@
 			<description>TV Guide Timeline</description>
 			<visible>Control.IsVisible(10)</visible>
 			<include>VisibleFadeEffect</include>
-			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
 			<!--title bars and backgrounds-->
 			<include content="DynamicDialogBackground">
 				<param name="dialog-left" value="265" />
@@ -213,7 +213,7 @@
 				</focusedlayout>
 			</control>
 			<control type="group">
-				<visible>!IsEmpty(ListItem.Label)</visible>
+				<visible>!String.IsEmpty(ListItem.Label)</visible>
 				<left>240</left>
 				<top>860</top>
 				<control type="image">

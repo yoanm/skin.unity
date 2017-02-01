@@ -18,7 +18,7 @@
 				<viewtype label="$LOCALIZE[31033]">info</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons) | SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+				<visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons) | String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
 				<itemlayout height="70" width="1004">
 					<!--background-->
 					<control type="image">
@@ -131,7 +131,7 @@
 					<height>460</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
-					<visible>SubString(ListItem.Icon,Default)</visible>
+					<visible>String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--thumb (no fallback)-->
 				<control type="image">
@@ -141,7 +141,7 @@
 					<height>460</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
-					<visible>!SubString(ListItem.Icon,Default)</visible>
+					<visible>!String.Contains(ListItem.Icon,Default)</visible>
 				</control>
 				<!--album info-->
 				<control type="group">
@@ -218,7 +218,7 @@
 				<onup>551</onup>
 				<ondown>551</ondown>
 				<viewtype label="$LOCALIZE[31033] 2">biginfo</viewtype>
-				<visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons) | SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+				<visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons) | String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="233" width="233">
@@ -231,7 +231,7 @@
 						<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 						<bordersize>5</bordersize>
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/square shadow small.png</bordertexture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--background (no fallback)-->
 					<control type="image">
@@ -242,7 +242,7 @@
 						<texture background="true" colordiffuse="button.nf">backgrounds/white.png</texture>
 						<bordersize>5</bordersize>
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/square shadow small.png</bordertexture>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--icon (fallback)-->
 					<control type="image">
@@ -252,8 +252,8 @@
 						<height>223</height>
 						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[Listitem.Icon]</texture>
-						<visible>!SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--icon (no fallback)-->
 					<control type="image">
@@ -263,8 +263,8 @@
 						<height>223</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
-						<visible>!SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--advanced launcher thumb (fallback)-->
 					<control type="image">
@@ -274,8 +274,8 @@
 						<height>223</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[Listitem.Icon]</texture>
-						<visible>SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--advanced launcher thumb (no fallback)-->
 					<control type="image">
@@ -285,8 +285,8 @@
 						<height>223</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
-						<visible>SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--overlay background-->
 					<control type="image">
@@ -295,7 +295,7 @@
 						<width>35</width>
 						<height>35</height>
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-						<visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Addon.broken))</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="233" width="233">
@@ -308,7 +308,7 @@
 						<texture background="true" colordiffuse="tertiary2">backgrounds/white.png</texture>
 						<bordersize>5</bordersize>
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--background (no fallback)-->
 					<control type="image">
@@ -319,7 +319,7 @@
 						<texture background="true" colordiffuse="button.nf">backgrounds/white.png</texture>
 						<bordersize>5</bordersize>
 						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--icon (fallback)-->
 					<control type="image">
@@ -329,8 +329,8 @@
 						<height>223</height>
 						<aspectratio>scale</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[Listitem.Icon]</texture>
-						<visible>!SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--icon (no fallback)-->
 					<control type="image">
@@ -340,8 +340,8 @@
 						<height>223</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
-						<visible>!SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>!String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--episode thumb (fallback)-->
 					<control type="image">
@@ -351,8 +351,8 @@
 						<height>223</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[Listitem.Icon]</texture>
-						<visible>SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
-						<visible>SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+						<visible>String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--episode thumb (no fallback)-->
 					<control type="image">
@@ -362,8 +362,8 @@
 						<height>223</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Listitem.Icon]</texture>
-						<visible>SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
-						<visible>!SubString(ListItem.Icon,Default)</visible>
+						<visible>String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 					</control>
 					<!--label background-->
 					<control type="image">
@@ -393,7 +393,7 @@
 						<width>35</width>
 						<height>35</height>
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-						<visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(Addon.broken))</visible>
 					</control>
 				</focusedlayout>
 			</control>

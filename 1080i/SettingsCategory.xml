@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<onload condition="IsEmpty(Skin.String(Colour.Theme))">Skin.SetString(Colour.Theme,Red)</onload>
+	<onload condition="String.IsEmpty(Skin.String(Colour.Theme))">Skin.SetString(Colour.Theme,Red)</onload>
 	<controls>
 		<include>CommonBackground</include>
 		<include>Clock</include>
@@ -56,7 +56,7 @@
 			<animation effect="slide" start="0,0" end="1700,0" time="400" tween="quadratic" easing="out" condition="Window.Next(Settings.xml)">WindowClose</animation>
 			<animation effect="slide" start="-1700,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
 			<animation effect="slide" start="0,0" end="-1700,0" time="400" tween="quadratic" easing="out">Hidden</animation>
-			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
 			<!--title bars and backgrounds-->
 			<include content="DynamicDialogBackground">
 				<param name="dialog-left" value="265" />

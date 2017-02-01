@@ -725,7 +725,7 @@
 				<include>ButtonCommonValues</include>
 				<label>31362</label>
 				<onclick>ToggleStereoMode</onclick>
-				<selected>IntegerGreaterThan(System.StereoscopicMode,0)</selected>
+				<selected>Integer.IsGreater(System.StereoscopicMode,0)</selected>
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
@@ -762,7 +762,7 @@
 				<include>ButtonCommonValues</include>
 				<label>31360</label>
 				<onclick>StereoModeToMono</onclick>
-				<selected>StringCompare(System.StereoscopicMode,7)</selected>
+				<selected>String.IsEqual(System.StereoscopicMode,7)</selected>
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
@@ -850,7 +850,7 @@
 				<include>ButtonCommonValues</include>
 				<label>31362</label>
 				<onclick>ToggleStereoMode</onclick>
-				<selected>IntegerGreaterThan(System.StereoscopicMode,0)</selected>
+				<selected>Integer.IsGreater(System.StereoscopicMode,0)</selected>
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>
@@ -887,7 +887,7 @@
 				<include>ButtonCommonValues</include>
 				<label>31360</label>
 				<onclick>StereoModeToMono</onclick>
-				<selected>StringCompare(System.StereoscopicMode,7)</selected>
+				<selected>String.IsEqual(System.StereoscopicMode,7)</selected>
 				<onfocus>Skin.SetBool(SubtitleSection)</onfocus>
 				<onunfocus>Skin.Reset(SubtitleSection)</onunfocus>
 			</control>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload condition="IsEmpty(Skin.String(Colour.Theme))">Skin.SetString(Colour.Theme,Red)</onload>
+	<onload condition="String.IsEmpty(Skin.String(Colour.Theme))">Skin.SetString(Colour.Theme,Red)</onload>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu&amp;options=noGroups)</onunload>
 	<controls>
 		<include>CommonBackground</include>
@@ -54,7 +54,7 @@
 			<animation effect="slide" start="0,0" end=",950" time="400" tween="quadratic" easing="out" condition="!Window.Next(Settings.xml)">WindowClose</animation>
 			<animation effect="slide" start="1700,0" end="0,0" time="400" tween="quadratic" easing="out" condition="Window.Previous(Settings.xml)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="1700,0" time="400" tween="quadratic" easing="out" condition="Window.Next(Settings.xml)">WindowClose</animation>
-			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-50" time="0" condition="Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))">Conditional</animation>
 			<!--title bars and backgrounds-->
 			<include content="DynamicDialogBackground">
 				<param name="dialog-left" value="265" />
@@ -318,7 +318,7 @@
 						<label>20084</label>
 						<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
 						<selected>Skin.HasSetting(homepageWeatherinfo)</selected>
-						<visible>!IsEmpty(Weather.Plugin)</visible>
+						<visible>!String.IsEmpty(Weather.Plugin)</visible>
 					</control>
 					<control type="label" id="230">
 						<width>995</width>
@@ -466,7 +466,7 @@
 					<control type="button" id="456">
 						<width>995</width>
 						<label>- $LOCALIZE[24020]</label>
-						<enable>!IsEmpty(Skin.String(LyricScript_Path))</enable>
+						<enable>!String.IsEmpty(Skin.String(LyricScript_Path))</enable>
 						<onclick>Addon.OpenSettings($INFO[Skin.String(LyricScript_Path)])</onclick>
 					</control>
 					<control type="label" id="410">

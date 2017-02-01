@@ -56,7 +56,7 @@
 						<width>120</width>
 						<height>112</height>
 						<texture>$INFO[Listitem.Icon]</texture>
-						<visible>!StringCompare(Listitem.Icon,"unknown-user.png")</visible>
+						<visible>!String.IsEqual(Listitem.Icon,"unknown-user.png")</visible>
 					</control>
 					<control type="image">
 						<left>15</left>
@@ -64,7 +64,7 @@
 						<width>120</width>
 						<height>112</height>
 						<texture colordiffuse="text.primary">unknown-user.png</texture>
-						<visible>StringCompare(Listitem.Icon,"unknown-user.png")</visible>
+						<visible>String.IsEqual(Listitem.Icon,"unknown-user.png")</visible>
 					</control>
 					<control type="label">
 						<left>165</left>
@@ -146,7 +146,7 @@
 			<left>314r</left>
 			<top>60</top>
 			<include>Window_OpenClose_Animation</include>
-			<animation effect="slide" start="0,0" end="40,0" time="0" condition="!SubString(System.Time,am) + !SubString(System.Time,pm)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="40,0" time="0" condition="!String.Contains(System.Time,am) + !String.Contains(System.Time,pm)">Conditional</animation>
 			<control type="button" id="20">
 				<description>Power push button</description>
 				<left>50</left>

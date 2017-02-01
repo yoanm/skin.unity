@@ -91,7 +91,7 @@
 						<control type="group">
 							<left>4</left>
 							<top>0</top>
-							<visible>IsEmpty(ListItem.Date)</visible>
+							<visible>String.IsEmpty(ListItem.Date)</visible>
 							<control type="label">
 								<left>85</left>
 								<top>0</top>
@@ -105,7 +105,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>!IsEmpty(ListItem.Date)</visible>
+							<visible>!String.IsEmpty(ListItem.Date)</visible>
 							<control type="image">
 								<left>15</left>
 								<top>8</top>
@@ -113,7 +113,7 @@
 								<height>45</height>
 								<texture border="1">$INFO[ListItem.Icon]</texture>
 								<aspectratio>keep</aspectratio>
-								<visible>!IsEmpty(ListItem.Icon)</visible>
+								<visible>!String.IsEmpty(ListItem.Icon)</visible>
 							</control>
 							<control type="label">
 								<left>85</left>
@@ -125,7 +125,7 @@
 								<textcolor>white</textcolor>
 								<selectedcolor>$VAR[Colour.500]</selectedcolor>
 								<info>ListItem.ChannelName</info>
-								<visible>!IsEmpty(ListItem.Icon)</visible>
+								<visible>!String.IsEmpty(ListItem.Icon)</visible>
 							</control>
 							<control type="label">
 								<left>15</left>
@@ -137,7 +137,7 @@
 								<textcolor>white</textcolor>
 								<selectedcolor>$VAR[Colour.500]</selectedcolor>
 								<info>ListItem.ChannelName</info>
-								<visible>IsEmpty(ListItem.Icon)</visible>
+								<visible>String.IsEmpty(ListItem.Icon)</visible>
 							</control>
 							<control type="label">
 								<left>360</left>
@@ -231,7 +231,7 @@
 						<control type="group">
 							<left>4</left>
 							<top>0</top>
-							<visible>IsEmpty(ListItem.Date)</visible>
+							<visible>String.IsEmpty(ListItem.Date)</visible>
 							<control type="label">
 								<left>85</left>
 								<top>0</top>
@@ -245,7 +245,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>!IsEmpty(ListItem.Date)</visible>
+							<visible>!String.IsEmpty(ListItem.Date)</visible>
 							<control type="image">
 								<left>15</left>
 								<top>8</top>
@@ -253,7 +253,7 @@
 								<height>45</height>
 								<texture border="1">$INFO[ListItem.Icon]</texture>
 								<aspectratio>keep</aspectratio>
-								<visible>!IsEmpty(ListItem.Icon)</visible>
+								<visible>!String.IsEmpty(ListItem.Icon)</visible>
 							</control>
 							<control type="label">
 								<left>85</left>
@@ -265,7 +265,7 @@
 								<textcolor>text.primary</textcolor>
 								<selectedcolor>$VAR[Colour.500]</selectedcolor>
 								<info>ListItem.ChannelName</info>
-								<visible>!IsEmpty(ListItem.Icon)</visible>
+								<visible>!String.IsEmpty(ListItem.Icon)</visible>
 							</control>
 							<control type="label">
 								<left>15</left>
@@ -277,7 +277,7 @@
 								<textcolor>text.primary</textcolor>
 								<selectedcolor>$VAR[Colour.500]</selectedcolor>
 								<info>ListItem.ChannelName</info>
-								<visible>IsEmpty(ListItem.Icon)</visible>
+								<visible>String.IsEmpty(ListItem.Icon)</visible>
 							</control>
 							<control type="label">
 								<left>360</left>

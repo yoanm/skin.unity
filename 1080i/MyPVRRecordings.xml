@@ -117,7 +117,7 @@
 							<height>45</height>
 							<texture background="true" fallback="DefaultVideoCover.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
-							<visible>SubString(ListItem.Icon,default)</visible>
+							<visible>String.Contains(ListItem.Icon,default)</visible>
 						</control>
 						<control type="image">
 							<left>15</left>
@@ -126,7 +126,7 @@
 							<height>45</height>
 							<texture background="true" fallback="DefaultVideoCover.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio>keep</aspectratio>
-							<visible>!SubString(ListItem.Icon,default)</visible>
+							<visible>!String.Contains(ListItem.Icon,default)</visible>
 						</control>
 						<control type="label">
 							<left>75</left>
@@ -230,7 +230,7 @@
 					<height>287</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" colordiffuse="$VAR[Colour.500]">$INFO[Container(50).ListItem.Icon]</texture>
-					<visible>SubString(ListItem.Icon,default)</visible>
+					<visible>String.Contains(ListItem.Icon,default)</visible>
 				</control>
 				<!--fanart (no fallback)-->
 				<control type="image">
@@ -242,7 +242,7 @@
 					<texture background="true">$INFO[Container(50).ListItem.Icon]</texture>
 					<bordertexture background="true" colordiffuse="tertiary">backgrounds/white.png</bordertexture>
 					<bordersize>0</bordersize>
-					<visible>!SubString(ListItem.Icon,default)</visible>
+					<visible>!String.Contains(ListItem.Icon,default)</visible>
 				</control>
 				<!--info strip background-->
 				<control type="image">
@@ -303,7 +303,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>kai.secondary</font>
-					<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
 				<control type="progress">
 					<description>Disk usage bar</description>
@@ -312,7 +312,7 @@
 					<width>480</width>
 					<height>18</height>>
 					<info>PVR.backenddiskspaceprogr</info>
-					<visible>!IntegerGreaterThan(PVR.backenddiskspaceprogr,100)</visible>
+					<visible>!Integer.IsGreater(PVR.backenddiskspaceprogr,100)</visible>
 				</control>
 			</control>
 			<control type="group">
