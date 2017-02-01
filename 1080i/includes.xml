@@ -205,7 +205,8 @@
 		<scroll>false</scroll>
 		<align>left</align>
 		<aligny>center</aligny>
-	</include>	<include name="WindowTitleCommons2">
+	</include>
+	<include name="WindowTitleCommons2">
 		<left>0</left>
 		<top>0</top>
 		<width min="0" max="385">auto</width>
@@ -215,7 +216,8 @@
 		<scroll>false</scroll>
 		<align>left</align>
 		<aligny>center</aligny>
-	</include>	<include name="ButtonCommonValues">
+	</include>
+	<include name="ButtonCommonValues">
 		<height>60</height>
 		<width>355</width>
 		<textoffsetx>15</textoffsetx>
@@ -735,7 +737,7 @@
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 			<animation effect="slide" start="0,0" end="40,0" time="0" condition="!String.Contains(System.Time,am) + !String.Contains(System.Time,pm)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Player.Muted">conditional</animation>
 			<visible>system.getbool(input.enablemouse)</visible>
 			<control type="button" id="122">
 				<description>Back push button</description>
@@ -1565,7 +1567,7 @@
 	</include>
 	<include name="Clock">
 		<control type="group">
-			<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Player.Muted">conditional</animation>
 			<!--time background (12 hour)-->
 			<control type="image">
 				<left>214r</left>

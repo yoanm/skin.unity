@@ -1070,12 +1070,13 @@
 				<headlinecolor>text.primary</headlinecolor>
 			</control>
 		</control>
-		<!--bottom buttons-->
+		<!--top buttons-->
 		<control type="group" id="10">
 			<left>314r</left>
 			<top>60</top>
 			<include>Window_OpenClose_Animation</include>
 			<animation effect="slide" start="0,0" end="40,0" time="0" condition="!String.Contains(System.Time,am) + !String.Contains(System.Time,pm)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Player.Muted">conditional</animation>
 			<control type="button" id="20">
 				<description>Power push button</description>
 				<left>0</left>

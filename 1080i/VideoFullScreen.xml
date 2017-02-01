@@ -70,7 +70,7 @@
 			</control>
 			<!--time-->
 			<control type="group" id="1">
-				<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+				<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Player.Muted">conditional</animation>
 				<!--time background (12 hour)-->
 				<control type="image" id="1">
 					<left>214r</left>
