@@ -67,7 +67,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>secondary.info.big</font>
-					<label>[B]$INFO[ListItem.Property(Addon.Name)][/B]</label>
+					<label>[B]$INFO[ListItem.AddonName][/B]</label>
 					<textcolor>text.primary</textcolor>
 					<scroll>true</scroll>
 				</control>
@@ -92,7 +92,7 @@
 						<top>0</top>
 						<width>585</width>
 						<height>38</height>
-						<label fallback="416">$INFO[ListItem.Property(Addon.Type)]</label>
+						<label fallback="416">$INFO[ListItem.AddonType]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>secondary.info</font>
@@ -116,7 +116,7 @@
 						<top>45</top>
 						<width>585</width>
 						<height>38</height>
-						<label fallback="416">$INFO[ListItem.Property(Addon.Creator)]</label>
+						<label fallback="416">$INFO[ListItem.AddonCreator]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>secondary.info</font>
@@ -140,37 +140,16 @@
 						<top>90</top>
 						<width>585</width>
 						<height>38</height>
-						<label fallback="416">$INFO[ListItem.Property(Addon.Version)]</label>
+						<label fallback="416">$INFO[ListItem.AddonVersion]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>secondary.info</font>
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
-						<description>Rating txt</description>
-						<left>15</left>
-						<top>135</top>
-						<width>210</width>
-						<height>38</height>
-						<label>$LOCALIZE[563]:</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>secondary.info</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
-					</control>
-					<control type="image">
-						<description>Rating value</description>
-						<left>232</left>
-						<top>135</top>
-						<width>240</width>
-						<height>48</height>
-						<aspectratio align="left">keep</aspectratio>
-						<texture fallback="LeftRating/rating0.png">$INFO[ListItem.Property(Addon.StarRating),LeftRating/]</texture>
-					</control>
-					<control type="label">
 						<description>Summary txt</description>
 						<left>15</left>
-						<top>180</top>
+						<top>135</top>
 						<width>210</width>
 						<height>38</height>
 						<label>$LOCALIZE[20037]:</label>
@@ -182,10 +161,10 @@
 					<control type="fadelabel">
 						<description>Summary Value</description>
 						<left>240</left>
-						<top>180</top>
+						<top>135</top>
 						<width>585</width>
 						<height>38</height>
-						<label fallback="416">$INFO[ListItem.Property(Addon.Summary)]</label>
+						<label fallback="416">$INFO[ListItem.AddonSummary]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>secondary.info</font>
@@ -212,7 +191,7 @@
 						<textcolor>$VAR[Colour.500]</textcolor>
 					</control>
 					<control type="group">
-						<visible>!String.IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
+						<visible>!String.IsEmpty(ListItem.AddonDisclaimer)</visible>
 						<control type="label">
 							<description>Description Page Count</description>
 							<left>365</left>
@@ -234,7 +213,7 @@
 							<font>label</font>
 							<align>justify</align>
 							<textcolor>text.primary</textcolor>
-							<label>$INFO[ListItem.Property(Addon.Description)]</label>
+							<label>$INFO[ListItem.AddonDescription]</label>
 							<pagecontrol>60</pagecontrol>
 						</control>
 						<!--scrollbar-->
@@ -268,12 +247,12 @@
 							<font>label</font>
 							<align>left</align>
 							<textcolor>text.primary</textcolor>
-							<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
+							<label>$INFO[ListItem.AddonDisclaimer]</label>
 							<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 						</control>
 					</control>
 					<control type="group">
-						<visible>String.IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
+						<visible>String.IsEmpty(ListItem.AddonDisclaimer)</visible>
 						<control type="label">
 							<description>Description Page Count</description>
 							<left>365</left>
@@ -295,7 +274,7 @@
 							<font>label</font>
 							<align>justify</align>
 							<textcolor>text.primary</textcolor>
-							<label>$INFO[ListItem.Property(Addon.Description)]</label>
+							<label>$INFO[ListItem.AddonDescription]</label>
 							<pagecontrol>61</pagecontrol>
 						</control>
 						<!--scrollbar-->
@@ -413,7 +392,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!String.IsEmpty(ListItem.Property(Addon.broken))</visible>
+					<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
 					<left>0</left>
 					<top>950</top>
 					<control type="image">
@@ -459,7 +438,7 @@
 						<width>1200</width>
 						<height>73</height>
 						<font>kai.secondary</font>
-						<label>$INFO[ListItem.Property(Addon.broken)]</label>
+						<label>$INFO[ListItem.AddonBroken]</label>
 						<align>left</align>
 						<textcolor>text.primary</textcolor>
 					</control>
