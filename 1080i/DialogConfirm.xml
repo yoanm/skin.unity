@@ -72,14 +72,16 @@
 			</control>
 			<!--buttons-->
 			<control type="grouplist" id="9000">
-				<left>50</left>
+				<left>670</left>
 				<top>660</top>
+				<width>600</width>
+				<height>60</height>
 				<orientation>horizontal</orientation>
-				<align>center</align>
+				<align>justify</align>
 				<!--yes button-->
 				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="11" />
-					<param name="button-width" value="200" />
+					<param name="button-width" value="140" />
 					<param name="button-texture" value="yesbutton" />
 					<param name="button-onleft" value="12" />
 					<param name="button-onright" value="10" />
@@ -87,7 +89,7 @@
 				<!--no button-->
 				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="10" />
-					<param name="button-width" value="200" />
+					<param name="button-width" value="140" />
 					<param name="button-texture" value="nobutton" />
 					<param name="button-onleft" value="11" />
 					<param name="button-onright" value="12" />
@@ -95,7 +97,7 @@
 				<!--custom button-->
 				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="12" />
-					<param name="button-width" value="200" />
+					<param name="button-width" value="180" />
 					<param name="button-texture" value="browsebutton" />
 					<param name="button-onleft" value="10" />
 					<param name="button-onright" value="11" />
