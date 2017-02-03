@@ -192,8 +192,23 @@
 				</control>
 				<!--button-->
 				<control type="button" id="7">
+					<width>auto</width>
 					<align>center</align>
 					<aligny>center</aligny>
+				</control>
+				<!--label-->
+				<control type="label" id="8">
+					<width>auto</width>
+					<height>60</height>
+					<font>button.bold</font>
+					<textcolor>$VAR[Colour.500]</textcolor>
+					<aligny>center</aligny>
+				</control>
+				<!--separator-->
+				<control type="image" id="9">
+					<height>0</height>
+					<texture>-</texture>
+					<visible>false</visible>
 				</control>
 				<!--bottom buttons-->
 				<control type="grouplist" id="9001">
