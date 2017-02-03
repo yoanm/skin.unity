@@ -165,22 +165,12 @@
 						<align>center</align>
 						<aligny>center</aligny>
 					</control-->
-					<!--enable auto updates-->
-					<control type="button" id="5">
-						<include>ButtonCommonValues</include>
-						<label>24063</label>
-					</control>
-					<!--no notifications-->
-					<control type="radiobutton" id="6">
-						<include>ButtonCommonValues</include>
-						<label>25000</label>
-					</control>
 					<!--hide foreign addons-->
 					<control type="radiobutton" id="7">
 						<include>ButtonCommonValues</include>
 						<label>25001</label>
 					</control>
-					<!--hide broken-->
+					<!--hide incompatible-->
 					<control type="radiobutton" id="8">
 						<include>ButtonCommonValues</include>
 						<label>24999</label>
@@ -189,6 +179,11 @@
 					<control type="button" id="9">
 						<include>ButtonCommonValues</include>
 						<label>24034</label>
+					</control>
+					<!--settings-->
+					<control type="button" id="5">
+						<include>ButtonCommonValues</include>
+						<label>10004</label>
 					</control>
 					<include>CommonNowPlaying_Controls</include>
 				</control>
