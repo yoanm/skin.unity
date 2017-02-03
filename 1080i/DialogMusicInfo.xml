@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">5</defaultcontrol>
+	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
 		<!--all content-->
 		<control type="group">
@@ -34,39 +34,22 @@
 				<ondown>9000</ondown>
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
-			<!--titles-->
-			<control type="group">
-				<!--album title-->
-				<control type="label">
-					<left>310</left>
-					<top>25</top>
-					<width>1330</width>
-					<height>60</height>
-					<font>info.title</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<label>$INFO[Listitem.Album]</label>
-					<visible>container.content(Albums)</visible>
-				</control>
-				<!--artist title-->
-				<control type="label">
-					<left>310</left>
-					<top>25</top>
-					<width>1330</width>
-					<height>60</height>
-					<font>info.title</font>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<label>$INFO[Listitem.Artist]</label>
-					<visible>container.content(Artists)</visible>
-				</control>
+			<!--title-->
+			<control type="label">
+				<left>310</left>
+				<top>25</top>
+				<width>1330</width>
+				<height>60</height>
+				<font>info.title</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<label>$VAR[MusicInfoHeader]</label>
 			</control>
 			<!--main content-->
 			<control type="group">
 				<control type="group">
-					<visible>Control.HasFocus(12)</visible>
+					<visible>Control.HasFocus(12) + !Container.Content(Songs)</visible>
 					<top>220</top>
 					<left>305</left>
 					<include>VisibleFadeEffect</include>
@@ -104,6 +87,151 @@
 							<aligny>center</aligny>
 							<label>31311</label>
 						</control>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Container.Content(Songs)</visible>
+					<top>220</top>
+					<left>265</left>
+					<include>VisibleFadeEffect</include>
+					<control type="image">
+						<left>40</left>
+						<top>0</top>
+						<width>490</width>
+						<height>460</height>
+						<aspectratio aligny="top">keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="list" id="49">
+						<left>570</left>
+						<top>30</top>
+						<width>1110</width>
+						<height>495</height>
+						<onleft>49</onleft>
+						<onright>49</onright>
+						<onup>9000</onup>
+						<ondown condition="!Control.IsVisible(50)">61</ondown>
+						<ondown condition="Control.IsVisible(50)">50</ondown>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>200</scrolltime>
+						<itemlayout height="35">
+							<control type="label">
+								<left>20</left>
+								<top>0</top>
+								<width>130</width>
+								<height>35</height>
+								<font>secondary.info</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[Colour.500]</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<left>160</left>
+								<top>0</top>
+								<width>630</width>
+								<height>35</height>
+								<font>secondary.info</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>text.primary</textcolor>
+								<selectedcolor>text.primary</selectedcolor>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="35">
+							<control type="image">
+								<left>-3</left>
+								<top>8</top>
+								<width>20</width>
+								<height>20</height>
+								<visible>Control.HasFocus(49)</visible>
+								<texture colordiffuse="$VAR[Colour.500]">buttons/buttoncircle.png</texture>
+							</control>
+							<control type="label">
+								<left>20</left>
+								<top>0</top>
+								<width>130</width>
+								<height>35</height>
+								<font>secondary.info</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[Colour.500]</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<left>160</left>
+								<top>0</top>
+								<width>630</width>
+								<height>35</height>
+								<font>secondary.info</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>text.primary</textcolor>
+								<selectedcolor>text.primary</selectedcolor>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item>
+								<label>$LOCALIZE[557]:</label>
+								<label2>$INFO[ListItem.Artist]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Artist)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[558]:</label>
+								<label2>$INFO[ListItem.Album]$INFO[listitem.discnumber, - $LOCALIZE[427] ]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Album)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[515]:</label>
+								<label2>$INFO[ListItem.Genre]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Genre)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[175]:</label>
+								<label2>$INFO[ListItem.Mood]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Mood)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[562]:</label>
+								<label2>$INFO[ListItem.Year]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Year)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[554]:</label>
+								<label2>$INFO[ListItem.TrackNumber]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.TrackNumber)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[563]:</label>
+								<label2>$INFO[ListItem.RatingAndVotes]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[38018]:</label>
+								<label2>$INFO[ListItem.Userrating]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Userrating)</visible>
+							</item>
+						</content>
+					</control>
+					<control type="image">
+						<left>555</left>
+						<top>460</top>
+						<width>795</width>
+						<height>1</height>
+						<aspectratio>stretch</aspectratio>
+						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -205,12 +333,6 @@
 								<visible>!String.IsEmpty(ListItem.Genre)</visible>
 							</item>
 							<item>
-								<label>$LOCALIZE[563]:</label>
-								<label2>$INFO[ListItem.RatingAndVotes]</label2>
-								<onclick>noop</onclick>
-								<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
-							</item>
-							<item>
 								<label>$LOCALIZE[175]:</label>
 								<label2>$INFO[ListItem.Property(Album_Mood)]</label2>
 								<onclick>noop</onclick>
@@ -245,6 +367,18 @@
 								<label2>$INFO[ListItem.Year]</label2>
 								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Year)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[563]:</label>
+								<label2>$INFO[ListItem.RatingAndVotes]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[38018]:</label>
+								<label2>$INFO[ListItem.Userrating]</label2>
+								<onclick>noop</onclick>
+								<visible>!String.IsEmpty(ListItem.Userrating)</visible>
 							</item>
 						</content>
 					</control>
@@ -466,6 +600,72 @@
 					<pagecontrol>61</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
+					<itemlayout condition="Container.Content(Songs)" height="65" width="525">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>520</width>
+							<height>60</height>
+							<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
+							<animation effect="fade" start="100" end="25" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>0</top>
+							<width>490</width>
+							<height>60</height>
+							<font>button</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>325</left>
+							<top>0</top>
+							<width>180</width>
+							<height>60</height>
+							<font>button</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout condition="Container.Content(Songs)" height="65" width="525">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>520</width>
+							<height>60</height>
+							<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
+							<animation effect="fade" start="100" end="25" time="0" condition="!Control.HasFocus(50)">Conditional</animation>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>0</top>
+							<width>490</width>
+							<height>60</height>
+							<font>button</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>325</left>
+							<top>0</top>
+							<width>180</width>
+							<height>60</height>
+							<font>button</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
 					<itemlayout condition="Container.Content(Albums)" height="65" width="525">
 						<control type="image">
 							<left>0</left>
@@ -588,20 +788,6 @@
 					<onright>9000</onright>
 					<onup>50</onup>
 					<ondown>49</ondown>
-					<!--track button-->
-					<include content="AnimatedCircleButtonGroup">
-						<param name="button-id" value="5" />
-						<param name="button-width" value="175" />
-						<param name="button-texture" value="castbutton" />
-						<param name="button-colormain" value="white" />
-						<param name="button-coloralt" value="$VAR[Colour.900]" />
-						<param name="button-coloranim" value="white" />
-						<param name="button-label" value="206" />
-						<param name="button-onup" value="50" />
-						<param name="button-ondown" value="49" />
-						<param name="button-onleft" value="12" />
-						<param name="button-onright" value="6" />
-					</include>
 					<!--refresh button-->
 					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="6" />
@@ -610,10 +796,9 @@
 						<param name="button-colormain" value="white" />
 						<param name="button-coloralt" value="$VAR[Colour.900]" />
 						<param name="button-coloranim" value="white" />
-						<param name="button-label" value="184" />
 						<param name="button-onup" value="50" />
 						<param name="button-ondown" value="49" />
-						<param name="button-onleft" value="5" />
+						<param name="button-onleft" value="7" />
 						<param name="button-onright" value="10" />
 					</include>
 					<!--thumb button-->
@@ -624,25 +809,36 @@
 						<param name="button-colormain" value="white" />
 						<param name="button-coloralt" value="$VAR[Colour.900]" />
 						<param name="button-coloranim" value="white" />
-						<param name="button-label" value="13405" />
 						<param name="button-onup" value="50" />
 						<param name="button-ondown" value="49" />
 						<param name="button-onleft" value="6" />
 						<param name="button-onright" value="12" />
 					</include>
-					<!--art button-->
+					<!--browse button-->
 					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="12" />
-						<param name="button-width" value="170" />
-						<param name="button-texture" value="artbutton" />
+						<param name="button-width" value="195" />
+						<param name="button-texture" value="browsebutton" />
 						<param name="button-colormain" value="white" />
 						<param name="button-coloralt" value="$VAR[Colour.900]" />
 						<param name="button-coloranim" value="white" />
-						<param name="button-label" value="20413" />
 						<param name="button-onup" value="50" />
 						<param name="button-ondown" value="49" />
 						<param name="button-onleft" value="10" />
-						<param name="button-onright" value="5" />
+						<param name="button-onright" value="7" />
+					</include>
+					<!--rating button-->
+					<include content="AnimatedCircleButtonGroup">
+						<param name="button-id" value="7" />
+						<param name="button-width" value="170" />
+						<param name="button-texture" value="ratingbutton" />
+						<param name="button-colormain" value="white" />
+						<param name="button-coloralt" value="$VAR[Colour.900]" />
+						<param name="button-coloranim" value="white" />
+						<param name="button-onup" value="50" />
+						<param name="button-ondown" value="49" />
+						<param name="button-onleft" value="12" />
+						<param name="button-onright" value="6" />
 					</include>
 				</control>
 			</control>

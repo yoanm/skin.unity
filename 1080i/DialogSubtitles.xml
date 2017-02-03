@@ -217,7 +217,7 @@
 							<top>16</top>
 							<width>135</width>
 							<height>26</height>
-							<texture colordiffuse="text.primary">LeftRating/rating$INFO[ListItem.ActualIcon].png</texture>
+							<texture fallback="ratings/0.png" colordiffuse="text.primary">$INFO[ListItem.ActualIcon,ratings/,.png]]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 					</itemlayout>
@@ -282,7 +282,7 @@
 							<top>16</top>
 							<width>135</width>
 							<height>26</height>
-							<texture>LeftRating/rating$INFO[ListItem.ActualIcon].png</texture>
+							<texture fallback="ratings/0.png">$INFO[ListItem.ActualIcon,ratings/,.png]]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 					</focusedlayout>

@@ -17,6 +17,11 @@
 	<include file="IncludesPVR.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
+	<variable name="MusicInfoHeader">
+		<value condition="Container.Content(Artists)">$INFO[ListItem.Artist]</value>
+		<value condition="Container.Content(Albums)">$INFO[ListItem.Album]</value>
+		<value condition="Container.Content(Songs)">$INFO[ListItem.Title]</value>
+	</variable>
 	<variable name="WeatherView">
 		<value condition="String.IsEmpty(Window.Property(Weather.CurrentView))">$LOCALIZE[31904]</value>
 		<value condition="String.IsEqual(Window.Property(Weather.CurrentView),36hour)">$LOCALIZE[31901]</value>

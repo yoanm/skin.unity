@@ -236,7 +236,7 @@
 						<width>128</width>
 						<height>32</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[Colour.500]">$INFO[ListItem.StarRating,LeftRating/]</texture>
+						<texture fallback="ratings/0.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.UserRating,ratings/,.png]</texture>
 					</control>
 				</control>
 				<!--song info-->
@@ -564,7 +564,7 @@
 					<width>128</width>
 					<height>32</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="$VAR[Colour.500]">$INFO[ListItem.StarRating,LeftRating/]</texture>
+					<texture fallback="ratings/0.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.UserRating,ratings/,.png]</texture>
 				</control>
 			</control>
 			<!--seperator-->
