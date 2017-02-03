@@ -94,6 +94,8 @@
 				<itemgap>0</itemgap>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
+				<onleft>60</onleft>
+				<onright>60</onright>
 				<control type="button" id="95">
 					<description>Button Summary Values</description>
 					<include>ButtonSettingCommonValues</include>
@@ -124,6 +126,28 @@
 					<include>ButtonSettingCommonValues</include>
 					<label>19191</label>
 				</control>
+				<control type="button" id="100">
+					<description>Button PVR</description>
+					<include>ButtonSettingCommonValues</include>
+					<label>12389</label>
+				</control>
+			</control>
+			<control type="textbox" id="30">
+				<left>665</left>
+				<top>125</top>
+				<height>435</height>
+				<width>965</width>
+				<pagecontrol>60</pagecontrol>
+				<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
+			</control>
+			<!--scrollbar-->
+			<control type="scrollbar" id="60">
+				<left>1665</left>
+				<top>110</top>
+				<height>450</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<visible>Control.IsVisible(30)</visible>
 			</control>
 			<control type="grouplist" id="9001">
 				<left>665</left>
