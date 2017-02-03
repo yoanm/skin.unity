@@ -1,3 +1,6 @@
+[B]03/02/2017 - 0.6.0 [/B]
+[CODED] Initial Krypton Release
+
 [B]28/01/2017 - 0.5.1 [/B]
 [CODED] LibreELEC Settings Window
 [CODED] OpenELEC Settings Window
