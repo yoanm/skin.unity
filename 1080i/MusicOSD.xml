@@ -251,6 +251,15 @@
 				<texture>-</texture>
 				<visible>MusicPlayer.Content(LiveTV)</visible>
 			</control>
+			<control type="button" id="705">
+				<width>40</width>
+				<height>40</height>
+				<label>15047</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[Colour.500]">OSDBookmarksNF.png</texturefocus>
+				<texturenofocus colordiffuse="text.primary">OSDBookmarksNF.png</texturenofocus>
+				<onclick>setrating</onclick>
+			</control>
 			<control type="button" id="700">
 				<visible>system.getbool(audiooutput.dspaddonsenabled)</visible>
 				<width>40</width>
