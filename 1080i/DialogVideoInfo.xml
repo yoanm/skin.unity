@@ -206,7 +206,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
-					<visible>String.IsEmpty(ListItem.Tagline + [Container.Content(Movies) | Container.Content(TVShows)])</visible>
+					<visible>String.IsEmpty(ListItem.Tagline + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)])</visible>
 				</control>
 				<!--tv show/season/episode-->
 				<control type="label">
@@ -219,7 +219,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
-					<visible>Container.Content(Episodes)</visible>
+					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 				</control>
 				<!--hint arrow-->
 				<control type="group">
@@ -271,7 +271,7 @@
 						<param name="button-coloranim" value="white" />
 						<param name="button-label" value="208" />
 						<param name="button-altlabel" value="1024" />
-						<param name="button-usealt" value="Container.Content(TVShows)" />
+						<param name="button-usealt" value="String.IsEqual(ListItem.DBType,tvshow)" />
 						<param name="button-onup" value="9003" />
 						<param name="button-ondown" value="49" />
 						<param name="button-onleft" value="100" />
@@ -368,7 +368,7 @@
 					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="100" />
 						<param name="button-width" value="160" />
-						<param name="button-visible">Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(musicvideos)] + String.IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</param>
+						<param name="button-visible">Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)] + String.IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</param>
 						<param name="button-texture" value="tunebutton" />
 						<param name="button-colormain" value="white" />
 						<param name="button-coloralt" value="$VAR[Colour.900]" />
@@ -393,7 +393,7 @@
 						<height>850</height>
 						<aspectratio aligny="top">keep</aspectratio>
 						<texture background="true">$VAR[PosterThumb]</texture>
-						<visible>[!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)]</visible>
+						<visible>[!String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,episode) + !String.IsEqual(ListItem.DBType,musicvideo)]</visible>
 						<visible>!Control.IsVisible(50)</visible>
 					</control>
 					<!--tv shows thumb-->
@@ -404,7 +404,7 @@
 						<height>850</height>
 						<aspectratio aligny="top">stretch</aspectratio>
 						<texture background="true">$VAR[PosterThumb]</texture>
-						<visible>Container.Content(TVShows)</visible>
+						<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
 						<visible>!Control.IsVisible(50)</visible>
 					</control>
 					<!--episode thumb-->
@@ -415,7 +415,7 @@
 						<height>850</height>
 						<aspectratio aligny="top">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<visible>!Container.Content(Movies) + !Container.Content(TVShows)</visible>
+						<visible>!String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,tvshow)</visible>
 						<visible>!Control.IsVisible(50)</visible>
 					</control>
 					<!--actor image-->
@@ -454,12 +454,12 @@
 				<control type="group">
 					<left>1135</left>
 					<top>615</top>
-					<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)] + !Control.HasFocus(15)</visible>
+					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)] + !Control.HasFocus(15)</visible>
 					<include>media.flags.small</include>
 				</control>
 				<!--movies info-->
 				<control type="group">
-					<visible>[!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)]</visible>
+					<visible>[!String.IsEqual(ListItem.DBType,tvshow) + !String.IsEqual(ListItem.DBType,episode) + !String.IsEqual(ListItem.DBType,musicvideo)]</visible>
 					<left>600</left>
 					<top>240</top>
 					<!--info list-->
@@ -608,7 +608,7 @@
 				</control>
 				<!--tv shows info-->
 				<control type="group">
-					<visible>Container.Content(TVShows)</visible>
+					<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
 					<left>600</left>
 					<top>240</top>
 					<control type="list" id="49">
@@ -756,7 +756,7 @@
 				</control>
 				<!--episodes info-->
 				<control type="group">
-					<visible>container.content(episodes)</visible>
+					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 					<left>600</left>
 					<top>240</top>
 					<control type="list" id="49">
@@ -898,7 +898,7 @@
 				</control>
 				<!--music videos info-->
 				<control type="group">
-					<visible>container.content(musicvideos)</visible>
+					<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
 					<left>600</left>
 					<top>240</top>
 					<control type="list" id="49">
@@ -1057,7 +1057,7 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll delay="10000" time="3000" repeat="15000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!Control.IsVisible(50)</visible>
-					<animation effect="slide" start="0,0" end="0,-65" time="0" condition="Container.Content(TVShows)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-65" time="0" condition="String.IsEqual(ListItem.DBType,tvshow)">Conditional</animation>
 				</control>
 				<!--cast-->
 				<control type="list" id="50">
@@ -1073,8 +1073,8 @@
 					<pagecontrol>61</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
-					<animation effect="slide" start="0,0" end="0,-65" time="0" condition="Container.Content(TVShows)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="0,-75" time="0" condition="Container.Content(Episodes)">Conditonal</animation>
+					<animation effect="slide" start="0,0" end="0,-65" time="0" condition="String.IsEqual(ListItem.DBType,tvshow)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-75" time="0" condition="String.IsEqual(ListItem.DBType,episode)">Conditonal</animation>
 					<itemlayout height="60" width="645">
 						<!--label-->
 						<control type="label">
@@ -1124,8 +1124,8 @@
 					<onright>50</onright>
 					<texturesliderbackground colordiffuse="scroll.secondary">backgrounds/white.png</texturesliderbackground>
 					<texturesliderbar colordiffuse="secondary">backgrounds/white.png</texturesliderbar>
-					<animation effect="slide" start="0,0" end="0,-65" time="0" condition="Container.Content(TVShows)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="0,-75" time="0" condition="Container.Content(Episodes)">Conditonal</animation>
+					<animation effect="slide" start="0,0" end="0,-65" time="0" condition="String.IsEqual(ListItem.DBType,tvshow)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,-75" time="0" condition="String.IsEqual(ListItem.DBType,episode)">Conditonal</animation>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
 			</control>

@@ -49,7 +49,7 @@
 			<!--main content-->
 			<control type="group">
 				<control type="group">
-					<visible>Control.HasFocus(12) + !Container.Content(Songs)</visible>
+					<visible>Control.HasFocus(12) + !String.IsEqual(ListItem.DBType,song)</visible>
 					<top>220</top>
 					<left>305</left>
 					<include>VisibleFadeEffect</include>
@@ -90,7 +90,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Container.Content(Songs)</visible>
+					<visible>String.IsEqual(ListItem.DBType,song)</visible>
 					<top>220</top>
 					<left>265</left>
 					<include>VisibleFadeEffect</include>
@@ -235,7 +235,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>container.content(Albums) + !Control.HasFocus(12)</visible>
+					<visible>String.IsEqual(ListItem.DBType,album) + !Control.HasFocus(12)</visible>
 					<top>220</top>
 					<left>265</left>
 					<include>VisibleFadeEffect</include>
@@ -392,7 +392,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>container.content(Artists) + !Control.HasFocus(12)</visible>
+					<visible>String.IsEqual(ListItem.DBType,artist) + !Control.HasFocus(12)</visible>
 					<top>220</top>
 					<left>265</left>
 					<include>VisibleFadeEffect</include>
@@ -600,7 +600,7 @@
 					<pagecontrol>61</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
-					<itemlayout condition="Container.Content(Songs)" height="65" width="525">
+					<itemlayout condition="String.IsEqual(ListItem.DBType,song)" height="65" width="525">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -632,7 +632,7 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="Container.Content(Songs)" height="65" width="525">
+					<focusedlayout condition="String.IsEqual(ListItem.DBType,song)" height="65" width="525">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -666,7 +666,7 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>
-					<itemlayout condition="Container.Content(Albums)" height="65" width="525">
+					<itemlayout condition="String.IsEqual(ListItem.DBType,album)" height="65" width="525">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -698,7 +698,7 @@
 							<label>$INFO[ListItem.Duration]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="Container.Content(Albums)" height="65" width="525">
+					<focusedlayout condition="String.IsEqual(ListItem.DBType,album)" height="65" width="525">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -732,7 +732,7 @@
 							<label>$INFO[ListItem.Duration]</label>
 						</control>
 					</focusedlayout>
-					<itemlayout condition="Container.Content(Artists)" height="65" width="525">
+					<itemlayout condition="String.IsEqual(ListItem.DBType,artist)" height="65" width="525">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -753,7 +753,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="Container.Content(Artists)" height="65" width="525">
+					<focusedlayout condition="String.IsEqual(ListItem.DBType,artist)" height="65" width="525">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
