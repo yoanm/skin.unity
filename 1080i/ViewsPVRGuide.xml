@@ -34,12 +34,12 @@
 				<top>205</top>
 				<width>1385</width>
 				<height>646</height>
-				<pagecontrol>10</pagecontrol>
+				<pagecontrol>60</pagecontrol>
 				<scrolltime>350</scrolltime>
 				<timeblocks>30</timeblocks>
 				<rulerunit>6</rulerunit>
 				<onleft>101</onleft>
-				<onright>101</onright>
+				<onright>60</onright>
 				<onup>10</onup>
 				<ondown>10</ondown>
 				<onback>101</onback>
@@ -211,6 +211,15 @@
 						<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
 					</control>
 				</focusedlayout>
+			</control>
+			<!--scrollbar-->
+			<control type="scrollbar" id="60">
+				<left>1664</left>
+				<top>265</top>
+				<height>585</height>
+				<onleft>10</onleft>
+				<onright>101</onright>
+				<orientation>vertical</orientation>
 			</control>
 			<control type="group">
 				<visible>!String.IsEmpty(ListItem.Label)</visible>
