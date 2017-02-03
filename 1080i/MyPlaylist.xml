@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	<views>50,51</views>
+	<views>50,51,506</views>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="group">
@@ -11,6 +11,8 @@
 			<!-- view id = 50 -->
 			<include>FullWidthList</include>
 			<!-- view id = 51 -->
+			<include>MusicInfoListView</include>
+			<!-- view id = 506 -->
 		</control>
 		<include>Clock</include>
 		<include>CommonPageCount</include>
@@ -46,12 +48,19 @@
 				<align>left</align>
 				<itemgap>8</itemgap>
 				<control type="label">
-					<width min="0" max="280">auto</width>
+					<width min="0" max="274">auto</width>
 					<include>WindowTitleCommons</include>
-					<label>$LOCALIZE[10522]</label>
+					<label>$LOCALIZE[10517]</label>
+					<visible>Window.IsActive(musicplaylist)</visible>
 				</control>
 				<control type="label">
-					<width min="0" max="194">auto</width>
+					<width min="0" max="274">auto</width>
+					<include>WindowTitleCommons</include>
+					<label>$LOCALIZE[10522]</label>
+					<visible>Window.IsActive(videoplaylist)</visible>
+				</control>
+				<control type="label">
+					<width min="0" max="200">auto</width>
 					<include>WindowTitleCommons</include>
 					<label>[LOWERCASE]$INFO[Container.FolderName][/LOWERCASE]</label>
 					<textcolor>$VAR[Colour.500]</textcolor>
@@ -124,9 +133,10 @@
 				<!--clear-->
 				<control type="button" id="22">
 					<label>192</label>
-					<onclick>ReplaceWindow(Videos)</onclick>
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
+					<onclick condition="Window.IsActive(musicplaylist)">ReplaceWindow(Music)</onclick>
+					<onclick condition="Window.IsActive(videoplaylist)">ReplaceWindow(Videos)</onclick>
 				</control>
 				<include>CommonNowPlaying_Controls</include>
 			</control>
