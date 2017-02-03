@@ -124,7 +124,7 @@
 					<width>300</width>
 					<height>100</height>
 					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[Container(20).ListItem.Property(Icon)]</texture>
+					<texture background="true">$INFO[Container(20).ListItem.Icon]</texture>
 					<visible>Control.HasFocus(20) | Control.HasFocus(60)</visible>
 				</control>
 				<control type="image">
@@ -133,7 +133,7 @@
 					<width>300</width>
 					<height>100</height>
 					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[Container(21).ListItem.Property(Icon)]</texture>
+					<texture background="true">$INFO[Container(21).ListItem.Icon]</texture>
 					<visible>Control.HasFocus(21) | Control.HasFocus(61)</visible>
 				</control>
 				<control type="group" id="200">
@@ -170,7 +170,7 @@
 									<width>370</width>
 									<height>45</height>
 									<aligny>center</aligny>
-									<label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+									<label>$INFO[ListItem.Label2]: $INFO[ListItem.Label]</label>
 								</control>
 							</itemlayout>
 							<focusedlayout height="70">
@@ -190,7 +190,7 @@
 									<aligny>center</aligny>
 									<textcolor>white</textcolor>
 									<selectedcolor>selected</selectedcolor>
-									<label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+									<label>$INFO[ListItem.Label2]: $INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
 									<description>ADSP-Mode description on focus</description>
@@ -276,7 +276,7 @@
 									<width>370</width>
 									<height>45</height>
 									<aligny>center</aligny>
-									<label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+									<label>$INFO[ListItem.Label2]: $INFO[ListItem.Label]</label>
 								</control>
 							</itemlayout>
 							<focusedlayout height="70">
@@ -296,7 +296,7 @@
 									<aligny>center</aligny>
 									<textcolor>white</textcolor>
 									<selectedcolor>selected</selectedcolor>
-									<label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+									<label>$INFO[ListItem.Label2]: $INFO[ListItem.Label]</label>
 								</control>
 								<control type="label">
 									<description>ADSP-Mode description on focus</description>
