@@ -178,7 +178,7 @@
 					<top>0</top>
 					<width>355</width>
 					<height>300</height>
-					<texture colordiffuse="$VAR[Colour.500]">unknown-user.png</texture>
+					<texture colordiffuse="$VAR[Colour.500]">DefaultUser.png</texture>
 					<visible>String.IsEmpty(Container(2).Listitem.Icon)</visible>
 					<aspectratio>keep</aspectratio>
 				</control>
@@ -329,7 +329,7 @@
 							<top>5</top>
 							<width>235</width>
 							<height>180</height>
-							<texture colordiffuse="$VAR[Colour.500]">unknown-user.png</texture>
+							<texture colordiffuse="$VAR[Colour.500]">DefaultUser.png</texture>
 							<visible>String.IsEmpty(ListItem.Icon)</visible>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -383,7 +383,7 @@
 							<top>5</top>
 							<width>235</width>
 							<height>180</height>
-							<texture colordiffuse="$VAR[Colour.500]">unknown-user.png</texture>
+							<texture colordiffuse="$VAR[Colour.500]">DefaultUser.png</texture>
 							<visible>String.IsEmpty(ListItem.Icon)</visible>
 							<aspectratio>keep</aspectratio>
 						</control>

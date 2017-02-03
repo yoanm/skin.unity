@@ -56,15 +56,15 @@
 						<width>120</width>
 						<height>112</height>
 						<texture>$INFO[Listitem.Icon]</texture>
-						<visible>!String.IsEqual(Listitem.Icon,"unknown-user.png")</visible>
+						<visible>!String.IsEqual(Listitem.Icon,"DefaultUser.png")</visible>
 					</control>
 					<control type="image">
 						<left>15</left>
 						<top>15</top>
 						<width>120</width>
 						<height>112</height>
-						<texture colordiffuse="text.primary">unknown-user.png</texture>
-						<visible>String.IsEqual(Listitem.Icon,"unknown-user.png")</visible>
+						<texture colordiffuse="text.primary">DefaultUser.png</texture>
+						<visible>String.IsEqual(Listitem.Icon,"DefaultUser.png")</visible>
 					</control>
 					<control type="label">
 						<left>165</left>
