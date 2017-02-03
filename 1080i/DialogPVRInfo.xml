@@ -302,12 +302,24 @@
 				<!--record button-->
 				<include content="AnimatedCircleButtonGroup">
 					<param name="button-id" value="6" />
-					<param name="button-width" value="180" />
+					<param name="button-width" value="130" />
 					<param name="button-visible" value="Window.IsActive(PVRGuideInfo)" />
 					<param name="button-texture" value="recordbutton" />
 					<param name="button-onup" value="60" />
 					<param name="button-ondown" value="49" />
 					<param name="button-onleft" value="8" />
+					<param name="button-onright" value="9" />
+				</include>
+				<!--add timer button-->
+				<include content="AnimatedCircleButtonGroup">
+					<param name="button-id" value="9" />
+					<param name="button-width" value="130" />
+					<param name="button-visible" value="Window.IsActive(PVRGuideInfo)" />
+					<param name="button-texture" value="settingsbutton" />
+					<param name="button-label" value="19061" />
+					<param name="button-onup" value="60" />
+					<param name="button-ondown" value="49" />
+					<param name="button-onleft" value="6" />
 					<param name="button-onright" value="7" />
 				</include>
 				<!--ok button-->
@@ -318,7 +330,7 @@
 					<param name="button-label" value="186" />
 					<param name="button-onup" value="60" />
 					<param name="button-ondown" value="49" />
-					<param name="button-onleft" value="6" />
+					<param name="button-onleft" value="9" />
 					<param name="button-onright" value="4" />
 				</include>
 			</control>
