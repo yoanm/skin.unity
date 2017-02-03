@@ -59,6 +59,12 @@
 				<control type="label">
 					<textcolor>$VAR[Colour.500]</textcolor>
 					<include>WindowTitleCommons</include>
+					<label>[LOWERCASE]$LOCALIZE[19138][/LOWERCASE]</label>
+					<visible>Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)</visible>
+				</control>
+				<control type="label">
+					<textcolor>$VAR[Colour.500]</textcolor>
+					<include>WindowTitleCommons</include>
 					<label>[LOWERCASE]$LOCALIZE[19040][/LOWERCASE]</label>
 					<visible>Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)</visible>
 				</control>
@@ -171,10 +177,20 @@
 					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
 					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
 				</control>
+				<control type="button" id="105">
+					<description>Timer Rules</description>
+					<left>0</left>
+					<top>240</top>
+					<textwidth>352</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>19138</label>
+					<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
+					<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
+				</control>
 				<control type="button" id="103">
 					<description>Timers</description>
 					<left>0</left>
-					<top>240</top>
+					<top>300</top>
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19040</label>
@@ -184,7 +200,7 @@
 				<control type="button" id="104">
 					<description>Search</description>
 					<left>0</left>
-					<top>300</top>
+					<top>360</top>
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>137</label>
@@ -236,7 +252,7 @@
 					<label>587</label>
 					<selected>Container.Filtered</selected>
 					<onclick>right</onclick>
-					<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
+					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
 				<control type="radiobutton" id="5">
 					<description>Group recording items by folder structure</description>
@@ -245,7 +261,7 @@
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19270</label>
-					<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
+					<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
 				</control>
 				<control type="radiobutton" id="6">
 					<description>Show hidden channels</description>
@@ -254,7 +270,7 @@
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19051</label>
-					<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
+					<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 				</control>
 				<control type="radiobutton" id="7">
 					<description>Show deleted recordings</description>
@@ -263,7 +279,14 @@
 					<textwidth>352</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>19184</label>
-					<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
+					<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
+				</control>
+				<control type="radiobutton" id="8">
+					<description>Hide disabled timers</description>
+					<textwidth>235</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>19077</label>
+					<visible>Window.IsActive(MyPVRTimers.xml)</visible>
 				</control>
 				<include>CommonNowPlaying_Controls</include>
 			</control>

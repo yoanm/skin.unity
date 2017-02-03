@@ -75,7 +75,8 @@
 					<height>630</height>
 					<onup>50</onup>
 					<ondown>50</ondown>
-					<onleft>103</onleft>
+					<onleft condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">103</onleft>
+ 					<onleft condition="Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)">105</onleft>
 					<onright>73</onright>
 					<pagecontrol>73</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -276,7 +277,8 @@
 					<top>70</top>
 					<height>620</height>
 					<onleft>50</onleft>
-					<onright>103</onright>
+					<onright condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">103</onright>
+ 					<onright condition="Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)">105</onright>
 					<orientation>vertical</orientation>
 				</control>
 			</control>
@@ -328,7 +330,22 @@
 				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 			</control>
 			<control type="label">
-				<description>Page Count Label</description>
+				<description>Page Count Label for Timer Rules</description>
+				<left>73</left>
+				<top>94r</top>
+				<width>750</width>
+				<height>34</height>
+				<font>breadcrumb.secondary</font>
+				<textcolor>text.primary</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container(50).NumItems] $LOCALIZE[19138] [COLOR=$VAR[Colour.500]]$INFO[Container(50).CurrentPage, $LOCALIZE[31024] ]$INFO[Container(50).NumPages,/,][/COLOR]</label>
+				<visible>Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)</visible>
+				<include>Window_OpenClose_Animation</include>
+			</control>
+			<control type="label">
+				<description>Page Count Label for Timers</description>
 				<left>73</left>
 				<top>94r</top>
 				<width>750</width>
@@ -339,6 +356,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[Container(50).NumItems] $LOCALIZE[19040] [COLOR=$VAR[Colour.500]]$INFO[Container(50).CurrentPage, $LOCALIZE[31024] ]$INFO[Container(50).NumPages,/,][/COLOR]</label>
+				<visible>Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)</visible>
 				<include>Window_OpenClose_Animation</include>
 			</control>
 		</control>
