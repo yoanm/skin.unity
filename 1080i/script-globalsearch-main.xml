@@ -331,7 +331,7 @@
 								<top>45</top>
 								<width>820</width>
 								<height>22</height>
-								<label>$INFO[ListItem.Property(ChannelNumber),,. ]$INFO[ListItem.Property(ChannelName)]</label>
+								<label>$INFO[ListItem.Property(ChannelName)]</label>
 								<textcolor>grey2</textcolor>
 								<aligny>center</aligny>
 							</control>
@@ -375,7 +375,7 @@
 								<top>45</top>
 								<width>820</width>
 								<height>22</height>
-								<label>$INFO[ListItem.Property(ChannelNumber),,. ]$INFO[ListItem.Property(ChannelName)]</label>
+								<label>$INFO[ListItem.Property(ChannelName)]</label>
 								<textcolor>grey</textcolor>
 								<aligny>center</aligny>
 							</control>
