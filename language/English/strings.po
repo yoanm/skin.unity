@@ -341,6 +341,10 @@ msgctxt "#31129"
 msgid "Hide Fanart in full screen visualisation"
 msgstr ""
 
+msgctxt "#31130"
+msgid "Fanart slideshow (Artist Slideshow add-on)"
+msgstr ""
+
 #empty strings from id 31130 to 31131
 
 msgctxt "#31132"

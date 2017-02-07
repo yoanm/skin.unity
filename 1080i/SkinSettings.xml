@@ -374,6 +374,23 @@
 					<onright>60</onright>
 					<onup>9003</onup>
 					<ondown>9003</ondown>
+					<control type="label" id="313">
+						<width>995</width>
+						<height>60</height>
+						<font>button.bold</font>
+						<textcolor>$VAR[Colour.500]</textcolor>
+						<textoffsetx>5</textoffsetx>
+						<aligny>center</aligny>
+						<label>2</label>
+						<visible>System.HasAddon(script.artistslideshow)</visible>
+					</control>
+					<control type="radiobutton" id="314">
+						<width>995</width>
+						<label>31130</label>
+						<onclick>Skin.ToggleSetting(DisableArtistSlideshow)</onclick>
+						<selected>!Skin.HasSetting(DisableArtistSlideshow)</selected>
+						<visible>System.HasAddon(script.artistslideshow)</visible>
+					</control>
 					<control type="label" id="300">
 						<width>995</width>
 						<height>60</height>
@@ -435,6 +452,15 @@
 						<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
 						<enable>Skin.HasSetting(UseCustomBackground)</enable>
 					</control>
+				</control>
+				<!--scrollbar-->
+				<control type="scrollbar" id="60">
+					<left>1665</left>
+					<top>110</top>
+					<height>673</height>
+					<onleft>9003</onleft>
+					<onright>9003</onright>
+					<visible>Container(9000).Hasfocus(3)</visible>
 				</control>
 				<!--add-on options-->
 				<control type="grouplist" id="9004">
