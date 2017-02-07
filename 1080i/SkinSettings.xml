@@ -240,7 +240,7 @@
 					</control>
 					<control type="radiobutton" id="108">
 						<width>995</width>
-						<label>21398</label>
+						<label>31007</label>
 						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
 					</control>

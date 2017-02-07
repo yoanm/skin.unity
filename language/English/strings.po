@@ -40,7 +40,9 @@ msgctxt "#31006"
 msgid "View Options"
 msgstr ""
 
-#empty string with id 31007
+msgctxt "#31007"
+msgid "Enable playlist at startup"
+msgstr ""
 
 msgctxt "#31008"
 msgid "Full screen"
