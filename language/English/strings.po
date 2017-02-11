@@ -52,7 +52,31 @@ msgctxt "#31009"
 msgid "Total Duration"
 msgstr ""
 
-#empty strings from id 31010 to 31021
+msgctxt "#31010"
+msgid "Hardware decoding"
+msgstr ""
+
+msgctxt "#31011"
+msgid "Inactive"
+msgstr ""
+
+msgctxt "#31012"
+msgid "Decoder"
+msgstr ""
+
+msgctxt "#31013"
+msgid "Audio process information"
+msgstr ""
+
+msgctxt "#31014"
+msgid "Memory used"
+msgstr ""
+
+msgctxt "#31015"
+msgid "Video process information"
+msgstr ""
+
+#empty strings from id 31016 to 31021
 
 msgctxt "#31022"
 msgid "Music - Files"
