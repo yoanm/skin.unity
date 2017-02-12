@@ -175,7 +175,7 @@
 						<!--1-->
 						<left>415</left>
 						<top>3</top>
-						<width>1090</width>
+						<width>800</width>
 						<height>60</height>
 						<font>menu.title</font>
 						<align>left</align>
@@ -184,20 +184,11 @@
 						<label>$INFO[Player.Title]</label>
 						<scroll>true</scroll>
 					</control>
-					<!--recording image-->
-					<control type="image" id="1">
-						<top>70</top>
-						<left>1470</left>
-						<width>48</width>
-						<height>48</height>
-						<texture colordiffuse="red">PVR-IsRecording.png</texture>
-						<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
-					</control>
 					<!--tagline-->
 					<control type="label" id="1">
 						<left>415</left>
 						<top>75</top>
-						<width>1090</width>
+						<width>600</width>
 						<height>38</height>
 						<align>left</align>
 						<font>font12</font>
@@ -209,7 +200,7 @@
 					<control type="label" id="1">
 						<left>415</left>
 						<top>75</top>
-						<width>1090</width>
+						<width>600</width>
 						<height>38</height>
 						<align>left</align>
 						<font>font12</font>
@@ -221,7 +212,7 @@
 					<control type="label" id="1">
 						<left>415</left>
 						<top>75</top>
-						<width>1090</width>
+						<width>600</width>
 						<height>38</height>
 						<align>left</align>
 						<font>font12</font>
@@ -233,7 +224,7 @@
 					<control type="label" id="1">
 						<left>415</left>
 						<top>75</top>
-						<width>1090</width>
+						<width>600</width>
 						<height>38</height>
 						<align>left</align>
 						<font>font12</font>
@@ -245,13 +236,19 @@
 					<control type="label" id="1">
 						<left>415</left>
 						<top>75</top>
-						<width>1060</width>
+						<width>600</width>
 						<height>38</height>
 						<align>left</align>
 						<font>font12</font>
 						<textcolor>$VAR[Colour.500]</textcolor>
 						<label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]: ] ($INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime])</label>
 						<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
+					</control>
+					<!--video language and recording flags-->
+					<control type="group" id="1">
+						<left>1045</left>
+						<top>80</top>
+						<include>video.flags.info</include>
 					</control>
 					<!--path-->
 					<control type="label" id="1">
