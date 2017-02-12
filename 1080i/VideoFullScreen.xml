@@ -139,7 +139,7 @@
 			</control>
 			<!--bottom info-->
 			<control type="group" id="1">
-				<animation effect="slide" start="0,0" end="0,100" time="200" condition="String.IsEmpty(VideoPlayer.Plot) | !Player.ShowInfo">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,100" time="200" condition="[!VideoPlayer.Content(Files) + String.IsEmpty(VideoPlayer.Plot)] | !Player.ShowInfo">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-372,0" time="200" delay="100" condition="Skin.HasSetting(SubtitleSection)">Conditional</animation>
 				<!--background-->
 				<control type="image" id="1">
@@ -148,7 +148,7 @@
 					<width>1140</width>
 					<height>190</height>
 					<texture colordiffuse="tertiary">backgrounds/np info bg.png</texture>
-					<animation effect="zoom" start="390,697,1140,190" end="390,700,1140,290" time="200" condition="!String.IsEmpty(VideoPlayer.Plot) + Player.ShowInfo">Conditional</animation>
+					<animation effect="zoom" start="390,697,1140,190" end="390,700,1140,290" time="200" condition="[VideoPlayer.Content(Files) | !String.IsEmpty(VideoPlayer.Plot)] + Player.ShowInfo">Conditional</animation>
 				</control>
 				<!--title bg-->
 				<control type="image" id="1">
@@ -256,14 +256,15 @@
 					<!--path-->
 					<control type="label" id="1">
 						<left>415</left>
-						<top>75</top>
+						<top>110</top>
 						<width>1090</width>
-						<height>38</height>
+						<height>108</height>
 						<align>left</align>
-						<font>font12</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<font>label</font>
+						<textcolor>text.primary</textcolor>
 						<label>$INFO[Player.FileNameAndPath]</label>
-						<visible>VideoPlayer.Content(Files)</visible>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>VideoPlayer.Content(Files) + Player.ShowInfo</visible>
 					</control>
 					<!--plot-->
 					<control type="textbox" id="1">
@@ -284,7 +285,7 @@
 				<control type="group" id="1">
 					<top>250r</top>
 					<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
-					<animation effect="slide" start="0,0" end="0,100" time="200" condition="!String.IsEmpty(VideoPlayer.Plot) + Player.ShowInfo">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,100" time="200" condition="[VideoPlayer.Content(Files) | !String.IsEmpty(VideoPlayer.Plot)] + Player.ShowInfo">Conditional</animation>
 					<!--cache-->
 					<control type="progress" id="1">
 						<left>415</left>
