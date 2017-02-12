@@ -2,9 +2,8 @@
 <window>
 	<defaultcontrol>-</defaultcontrol>
 	<controls>
-		<!-- media infos -->
 		<control type="group" id="1">
-			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] + ![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(SliderDialog) | Window.IsVisible(Seekbar) | Window.IsVisible(OSDAudioDSPSettings)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsVisible(DialogSeekbar.xml)] + ![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(SliderDialog)]</visible>
 			<!--channel-->
 			<control type="group" id="1">
 				<visible>VideoPlayer.Content(LiveTV)</visible>
@@ -279,7 +278,6 @@
 						<autoscroll time="1500" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>Player.ShowInfo</visible>
 						<animation effect="fade" start="0" end="100" time="100" delay="200">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="100">Hidden</animation>
 					</control>
 				</control>
 				<!--progress-->
@@ -327,85 +325,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
-						<visible>!Player.Paused + !Player.Caching + !Player.Seeking + !Player.DisplayAfterSeek + !Player.Forwarding + !Player.Rewinding</visible>
-					</control>
-					<!--chapter (paused)-->
-					<control type="label" id="1">
-						<visible>!VideoPlayer.Content(LiveTV)</visible>
-						<left>415</left>
-						<top>-8</top>
-						<width>1080</width>
-						<height>60</height>
-						<font>breadcrumb.secondary</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$LOCALIZE[31043] • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
-						<visible>[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek</visible>
-					</control>
-					<!--chapter (caching)-->
-					<control type="label" id="1">
-						<visible>!VideoPlayer.Content(LiveTV)</visible>
-						<left>415</left>
-						<top>-8</top>
-						<width>1080</width>
-						<height>60</height>
-						<font>breadcrumb.secondary</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]% • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
-						<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
-					</control>
-					<!--chapter (seeking)-->
-					<control type="label" id="1">
-						<visible>!VideoPlayer.Content(LiveTV)</visible>
-						<left>415</left>
-						<top>-8</top>
-						<width>1080</width>
-						<height>60</height>
-						<font>breadcrumb.secondary</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$LOCALIZE[31046] • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
-						<visible>Player.Seeking</visible>
-					</control>
-					<!--chapter (final seek amount)-->
-					<control type="label" id="1">
-						<visible>!VideoPlayer.Content(LiveTV)</visible>
-						<left>415</left>
-						<top>-8</top>
-						<width>1080</width>
-						<height>60</height>
-						<font>breadcrumb.secondary</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$LOCALIZE[31046] $INFO[Player.SeekOffset] • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
-						<visible>Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]</visible>
-					</control>
-					<!--chapter (fast forwarding)-->
-					<control type="label" id="1">
-						<visible>!VideoPlayer.Content(LiveTV)</visible>
-						<left>415</left>
-						<top>-8</top>
-						<width>1080</width>
-						<height>60</height>
-						<font>breadcrumb.secondary</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$VAR[Forwarding] • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
-						<visible>Player.Forwarding</visible>
-					</control>
-					<!--chapter (rewinding)-->
-					<control type="label" id="1">
-						<visible>!VideoPlayer.Content(LiveTV)</visible>
-						<left>415</left>
-						<top>-8</top>
-						<width>1080</width>
-						<height>60</height>
-						<font>breadcrumb.secondary</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<label>$VAR[Rewinding] • $INFO[player.chapter,$LOCALIZE[21396]  ]$INFO[player.chaptercount, / ]</label>
-						<visible>Player.Rewinding</visible>
+						<visible>!Window.IsVisible(DialogSeekbar.xml)</visible>
 					</control>
 					<!--end time-->
 					<control type="label" id="1">
