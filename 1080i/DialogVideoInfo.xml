@@ -37,7 +37,7 @@
 				<control type="group">
 					<left>535</left>
 					<top>-632</top>
-					<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(15)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(15) | Control.HasFocus(105)">Conditional</animation>
 					<!--background-->
 					<control type="image">
 						<left>0</left>
@@ -73,6 +73,20 @@
 						<texture colordiffuse="white">trailerpause.png</texture>
 						<visible>Player.Paused + Player.HasVideo</visible>
 					</control>
+					<!--fake button for mouse control-->
+					<control type="button" id="105">
+						<left>0</left>
+						<top>0</top>
+						<width>1390</width>
+						<height>782</height>
+						<label>-</label>
+						<font>-</font>
+						<ondown>15</ondown>
+						<onclick condition="!Player.HasVideo">PlayMedia($INFO[ListItem.Trailer],1)</onclick>
+						<onclick condition="Player.HasVideo">PlayerControl(Play)</onclick>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+					</control>
 				</control>
 				<!--fanart-->
 				<control type="image">
@@ -105,8 +119,7 @@
 					<height>20</height>
 					<texture flipy="true">homeshadow.png</texture>
 					<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
-					<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(9003)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(15)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(15) | Control.HasFocus(9003) | Control.HasFocus(105)">Conditional</animation>
 				</control>
 				<!-- left shadow-->
 				<control type="image">
@@ -139,8 +152,7 @@
 					<width>1390</width>
 					<height>80</height>
 					<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
-					<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(9003)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(15)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(15) | Control.HasFocus(9003) | Control.HasFocus(105)">Conditional</animation>
 				</control>
 				<!--title shadow-->
 				<control type="image">
@@ -240,14 +252,13 @@
 						<width>60</width>
 						<height>60</height>
 						<texture colordiffuse="white" flipy="true">hint-arrow-down.png</texture>
-						<animation effect="rotate" start="0" end="180" time="200" center="auto" condition="Control.HasFocus(15) | Control.HasFocus(9003)">Conditional</animation>
+						<animation effect="rotate" start="0" end="180" time="200" center="auto" condition="Control.HasFocus(15) | Control.HasFocus(9003) | Control.HasFocus(105)">Conditional</animation>
 					</control>
 				</control>
 			</control>
 			<!--main content-->
 			<control type="group">
-				<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(9003)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(15)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,782" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(15) | Control.HasFocus(9003) | Control.HasFocus(105)">Conditional</animation>
 				<!--controls-->
 				<control type="grouplist" id="9000">
 					<left>535</left>
@@ -317,7 +328,7 @@
 						<param name="button-coloranim" value="white" />
 						<param name="button-label" value="20410" />
 						<param name="button-onclick" value="PlayMedia($INFO[ListItem.Trailer],1)" />
-						<param name="button-onup" value="-" />
+						<param name="button-onup" value="105" />
 						<param name="button-ondown" value="49" />
 						<param name="button-onleft" value="11" />
 						<param name="button-onright" value="6" />
@@ -454,7 +465,7 @@
 				<control type="group">
 					<left>1135</left>
 					<top>615</top>
-					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)] + !Control.HasFocus(15)</visible>
+					<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)] + ![Control.HasFocus(15) | Control.HasFocus(105)]</visible>
 					<include>media.flags.small</include>
 				</control>
 				<!--movies info-->
