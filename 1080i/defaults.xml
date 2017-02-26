@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<default type="image">
-		<left>0</left>
-		<top>0</top>
 		<texture>-</texture>
 		<colorkey>0</colorkey>
 	</default>
@@ -13,8 +11,6 @@
 		<disabledcolor>disabled</disabledcolor>
 	</default>
 	<default type="fadelabel">
-		<left>120</left>
-		<top>90</top>
 		<font>label</font>
 		<textcolor>text.primary</textcolor>
 		<disabledcolor>disabled</disabledcolor>
@@ -34,8 +30,6 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="togglebutton">
-		<left>210</left>
-		<top>250</top>
 		<width>30</width>
 		<height>30</height>
 		<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
@@ -50,8 +44,6 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="textbox">
-		<left>330</left>
-		<top>332</top>
 		<width>615</width>
 		<height>320</height>
 		<align>left</align>
@@ -59,8 +51,6 @@
 		<font>label</font>
 	</default>
 	<default type="progress">
-		<left>150</left>
-		<top>488</top>
 		<texturebg colordiffuse="secondary">backgrounds/white.png</texturebg>
 		<lefttexture>-</lefttexture>
 		<midtexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</midtexture>
@@ -68,8 +58,6 @@
 		<overlaytexture>-</overlaytexture>
 	</default>
 	<default type="spincontrol">
-		<left>495</left>
-		<top>189</top>
 		<textureup colordiffuse="text.primary">scroll-up-2.png</textureup>
 		<texturedown colordiffuse="text.primary">scroll-down-2.png</texturedown>
 		<textureupfocus colordiffuse="tertiary">scroll-up-2.png</textureupfocus>
@@ -90,8 +78,6 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="spincontrolex">
-		<left>795</left>
-		<top>240</top>
 		<width>450</width>
 		<height>60</height>
 		<spinwidth>32</spinwidth>
@@ -114,8 +100,6 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="radiobutton">
-		<left>450</left>
-		<top>300</top>
 		<width>450</width>
 		<height>60</height>
 		<radiowidth>36</radiowidth>
@@ -159,20 +143,14 @@
 		<disabledcolor>disabled</disabledcolor>
 	</default>
 	<default type="mover">
-		<left>90</left>
-		<top>288</top>
 		<texturefocus>CalibrateTopLeft.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 	</default>
 	<default type="resize">
-		<left>90</left>
-		<top>288</top>
 		<texturefocus>CalibratePixelRatio.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 	</default>
 	<default type="edit">
-		<left>450</left>
-		<top>300</top>
 		<width>450</width>
 		<height>60</height>
 		<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
