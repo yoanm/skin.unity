@@ -239,7 +239,6 @@
 				<control type="radiobutton" id="16">
 					<label>589</label>
 					<include>ButtonCommonValues</include>
-					<visible>Container.Content(MusicVideos)</visible>
 				</control>
 				<!--control type="label" id="203">
 					<width>375</width>
