@@ -18,7 +18,7 @@
 				<movement>2</movement>
 				<orientation>Horizontal</orientation>
 				<animation effect="slide" start="0,0" end="0,-97" time="200" tween="quadratic" easing="out">Hidden</animation>
-				<animation effect="slide" start="0,0" end="-135,0" time="0" condition="StringCompare(Container(9901).NumItems,2) | StringCompare(Container(9901).NumItems,4)">conditional</animation>
+				<animation effect="slide" start="0,0" end="-135,0" time="0" condition="String.IsEqual(Container(9901).NumItems,2) | String.IsEqual(Container(9901).NumItems,4)">conditional</animation>
 				<animation effect="slide" start="0,-97" end="0,0" delay="250" time="200" tween="quadratic">Visible</animation>
 				
 				<itemlayout width="270" height="60">
@@ -153,10 +153,10 @@
 					<!--content list-->
 					<control type="list" id="8011$SKINSHORTCUTS[id]">
 						<skinshortcuts>visibility</skinshortcuts>
-						<animation effect="slide" start="0,0" end="105,0" time="0" condition="StringCompare(Container(8011$SKINSHORTCUTS[id]).NumItems,4)">conditional</animation>
-						<animation effect="slide" start="0,0" end="210,0" time="0" condition="StringCompare(Container(8011$SKINSHORTCUTS[id]).NumItems,3)">conditional</animation>
-						<animation effect="slide" start="0,0" end="315,0" time="0" condition="StringCompare(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
-						<animation effect="slide" start="0,0" end="420,0" time="0" condition="StringCompare(Container(8011$SKINSHORTCUTS[id]).NumItems,1)">conditional</animation>
+						<animation effect="slide" start="0,0" end="105,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,4)">conditional</animation>
+						<animation effect="slide" start="0,0" end="210,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,3)">conditional</animation>
+						<animation effect="slide" start="0,0" end="315,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
+						<animation effect="slide" start="0,0" end="420,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,1)">conditional</animation>
 						<centerleft>50%</centerleft>
 						<top>85</top>
 						<width>1050</width>
@@ -376,9 +376,9 @@
 					<!--content list-->
 					<control type="list" id="8011$SKINSHORTCUTS[id]">
 						<skinshortcuts>visibility</skinshortcuts>
-						<animation effect="slide" start="0,0" end="170,0" time="0" condition="StringCompare(Container(8011$SKINSHORTCUTS[id]).NumItems,3)">conditional</animation>
-						<animation effect="slide" start="0,0" end="340,0" time="0" condition="StringCompare(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
-						<animation effect="slide" start="0,0" end="340,0" time="0" condition="StringCompare(Container(8011$SKINSHORTCUTS[id]).NumItems,1)">conditional</animation>
+						<animation effect="slide" start="0,0" end="170,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,3)">conditional</animation>
+						<animation effect="slide" start="0,0" end="340,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
+						<animation effect="slide" start="0,0" end="340,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,1)">conditional</animation>
 						<centerleft>50%</centerleft>
 						<top>119</top>
 						<width>1020</width>
@@ -631,9 +631,9 @@
 					<!--content list-->
 					<control type="list" id="8011$SKINSHORTCUTS[id]">
 						<skinshortcuts>visibility</skinshortcuts>
-						<animation effect="slide" start="0,0" end="123,0" time="0" condition="StringCompare(Container(8011$SKINSHORTCUTS[id]).NumItems,3)">conditional</animation>
-						<animation effect="slide" start="0,0" end="246,0" time="0" condition="StringCompare(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
-						<animation effect="slide" start="0,0" end="369,0" time="0" condition="StringCompare(Container(8011$SKINSHORTCUTS[id]).NumItems,1)">conditional</animation>
+						<animation effect="slide" start="0,0" end="123,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,3)">conditional</animation>
+						<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
+						<animation effect="slide" start="0,0" end="369,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,1)">conditional</animation>
 						<centerleft>50%</centerleft>
 						<top>119</top>
 						<width>984</width>
