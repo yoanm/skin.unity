@@ -82,7 +82,7 @@
 				<top>-10</top>
 				<width>65</width>
 				<height>65</height>
-				<texture colordiffuse="tertiary">backgrounds/mute.png</texture>
+				<texture colordiffuse="$VAR[Colour.500]">backgrounds/mute.png</texture>
 			</control>
 			<!--background-->
 			<control type="image" id="122">
@@ -90,17 +90,16 @@
 				<top>0</top>
 				<width>45</width>
 				<height>45</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
+				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 			</control>
 			<!--mute icon-->
 			<control type="image">
-				<description>Back Icon</description>
 				<left>0</left>
 				<top>0</top>
 				<width>45</width>
 				<height>45</height>
 				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="text.primary">icon-mute.png</texture>
+				<texture colordiffuse="white">icon-mute.png</texture>
 			</control>
 		</control>
 	</controls>
