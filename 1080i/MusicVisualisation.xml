@@ -42,89 +42,19 @@
 		<control type="group">
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
-			<!--header background-->
-			<control type="image">
-				<left>64</left>
-				<top>60</top>
-				<width>200</width>
-				<height>45</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--header background strip-->
-			<control type="image">
-				<left>60</left>
-				<top>60</top>
-				<width>4</width>
-				<height>45</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<control type="label">
-				<description>Partymode Header label</description>
-				<left>70</left>
-				<top>60</top>
-				<width>186</width>
-				<height>45</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>breadcrumb</font>
-				<textcolor>text.primary</textcolor>
-				<label>$LOCALIZE[589]</label>
-				<visible>MusicPartyMode.Enabled</visible>
-			</control>
-			<control type="label">
-				<description>Normal Header label</description>
-				<left>70</left>
-				<top>60</top>
-				<width>186</width>
-				<height>45</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>breadcrumb</font>
-				<textcolor>text.primary</textcolor>
-				<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</label>
-				<visible>!MusicPartyMode.Enabled</visible>
-			</control>
+			<!--breadcrumbs-->
+			<include content="DynamicLeftBreadcrumb">
+				<param name="breadcrumb1-label" value="$LOCALIZE[589]" />
+				<param name="breadcrumb1-visible" value="MusicPartyMode.Enabled" />
+				<param name="breadcrumb3-label" value="$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]" />
+				<param name="breadcrumb3-visible" value="!MusicPartyMode.Enabled" />
+			</include>
 			<!--time-->
 			<control type="group">
-				<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Player.Muted">conditional</animation>
-				<!--time background (12 hour)-->
-				<control type="image">
-					<left>214r</left>
-					<top>60</top>
-					<width>150</width>
-					<height>45</height>
-					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-					<visible>String.Contains(System.Time,am) | String.Contains(System.Time,pm)</visible>
-				</control>
-				<!--time background (24 hour)-->
-				<control type="image">
-					<left>174r</left>
-					<top>60</top>
-					<width>110</width>
-					<height>45</height>
-					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-					<visible>!String.Contains(System.Time,am) + !String.Contains(System.Time,pm)</visible>
-				</control>
-				<!--time background strip-->
-				<control type="image">
-					<left>64r</left>
-					<top>60</top>
-					<width>4</width>
-					<height>45</height>
-					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-				</control>
-				<!--time-->
-				<control type="label">
-					<right>71</right>
-					<top>60</top>
-					<width>300</width>
-					<height>45</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>breadcrumb</font>
-					<textcolor>text.primary</textcolor>
-					<label>$INFO[System.Time(hh:mm)]$INFO[System.Time(xx), ,]</label>
-				</control>
+				<animation effect="slide" start="0,0" end="-51,0" time="100" condition="Player.Muted">conditional</animation>
+				<include content="DynamicRightBreadcrumb">
+					<param name="breadcrumb1-label" value="$INFO[System.Time(hh:mm)]$INFO[System.Time(xx), ,]" />
+				</include>
 			</control>
 			<control type="image">
 				<description>cover image</description>

@@ -6,46 +6,12 @@
 		<include>CommonBackground</include>
 		<include>Clock</include>
 		<include>CommonNowPlaying</include>
-		<include>MainWindowMouseButtons</include>
 		<!--breadcrumbs-->
-		<control type="group">
-			<!--breadcrumb bg-->
-			<control type="image">
-				<left>64</left>
-				<top>60</top>
-				<width>500</width>
-				<height>45</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--breadcrumb strip-->
-			<control type="image">
-				<left>60</left>
-				<top>60</top>
-				<width>4</width>
-				<height>45</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<!--breadcrumb label-->
-			<control type="grouplist">
-				<left>73</left>
-				<top>60</top>
-				<width>1500</width>
-				<height>45</height>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<itemgap>8</itemgap>
-				<control type="label">
-					<include>WindowTitleCommons</include>
-					<label>$LOCALIZE[5]</label>
-				</control>
-				<control type="label">
-					<width min="0" max="385">auto</width>
-					<textcolor>$VAR[Colour.500]</textcolor>
-					<include>WindowTitleCommons</include>
-					<label>$INFO[Control.GetLabel(2)]</label>
-				</control>
-			</control>
-		</control>
+		<include content="DynamicLeftBreadcrumb">
+			<param name="breadcrumb1-label" value="$LOCALIZE[5]" />
+			<param name="breadcrumb2-label" value="[LOWERCASE]$INFO[Control.GetLabel(2)][/LOWERCASE]" />
+			<param name="breadcrumb2-visible" value="true" />
+		</include>
 		<!--main content-->
 		<control type="group">
 			<top>205</top>

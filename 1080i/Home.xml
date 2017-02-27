@@ -6,73 +6,19 @@
 		<include>CommonBackground</include>
 		<include>Clock</include>
 		<!--breadcrumbs-->
-		<control type="group">
-			<!--breadcrumb bg-->
-			<control type="image">
-				<left>64</left>
-				<top>60</top>
-				<width>500</width>
-				<height>45</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--breadcrumb strip-->
-			<control type="image">
-				<left>60</left>
-				<top>60</top>
-				<width>4</width>
-				<height>45</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<!--breadcrumb labels-->
-			<control type="grouplist">
-				<left>73</left>
-				<top>60</top>
-				<width>1500</width>
-				<height>45</height>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<itemgap>8</itemgap>
-				<control type="label">
-					<width min="0" max="90">auto</width>
-					<include>WindowTitleCommons</include>
-					<label>Kodi</label>
-				</control>
-				<control type="label">
-					<width min="0" max="385">auto</width>
-					<textcolor>$VAR[Colour.500]</textcolor>
-					<include>WindowTitleCommons</include>
-					<label>[LOWERCASE]$LOCALIZE[10000][/LOWERCASE]</label>
-				</control>
-			</control>
-			<!--user profile bg-->
-			<control type="image">
-				<left>64</left>
-				<top>110</top>
-				<width>318</width>
-				<height>34</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--user profile strip-->
-			<control type="image">
-				<left>60</left>
-				<top>110</top>
-				<width>4</width>
-				<height>34</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<!--user profile label-->
-			<control type="label">
-				<left>73</left>
-				<top>110</top>
-				<width>300</width>
-				<height>34</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>breadcrumb.secondary</font>
-				<textcolor>text.primary</textcolor>
-				<label>$LOCALIZE[31940] [COLOR=$VAR[Colour.500]]$INFO[System.ProfileName][/COLOR]</label>
-			</control>
-		</control>
+		<include content="DynamicLeftBreadcrumb">
+			<param name="breadcrumb1-label" value="Kodi" />
+			<param name="breadcrumb2-label" value="[LOWERCASE]$LOCALIZE[10000][/LOWERCASE]" />
+			<param name="breadcrumb2-visible" value="true" />
+		</include>
+		<include content="DynamicLeftBreadcrumb">
+			<param name="breadcrumb-top" value="110" />
+			<param name="breadcrumb-height" value="34" />
+			<param name="breadcrumb-font" value="breadcrumb.secondary" />
+			<param name="breadcrumb1-label" value="$LOCALIZE[31940]" />
+			<param name="breadcrumb2-label" value="$INFO[System.ProfileName]" />
+			<param name="breadcrumb2-visible" value="true" />
+		</include>
 		<!--Now playing music Info-->
 		<control type="group">
 			<left>0</left>
@@ -1068,86 +1014,6 @@
 				<textcolor>$VAR[Colour.500]</textcolor>
 				<titlecolor>$VAR[Colour.500]</titlecolor>
 				<headlinecolor>text.primary</headlinecolor>
-			</control>
-		</control>
-		<!--top buttons-->
-		<control type="group" id="10">
-			<left>314r</left>
-			<top>60</top>
-			<include>Window_OpenClose_Animation</include>
-			<animation effect="slide" start="0,0" end="40,0" time="0" condition="!String.Contains(System.Time,am) + !String.Contains(System.Time,pm)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-50,0" time="100" condition="Player.Muted">conditional</animation>
-			<control type="button" id="20">
-				<description>Power push button</description>
-				<left>0</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<label>31003</label>
-				<font>-</font>
-				<onclick>ActivateWindow(ShutdownMenu)</onclick>
-				<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
-				<texturenofocus colordiffuse="tertiary">backgrounds/white.png</texturenofocus>
-				<onleft>21</onleft>
-				<onright>21</onright>
-				<onup>9002</onup>
-				<ondown>9003</ondown>
-			</control>
-			<control type="image">
-				<description>Power Icon</description>
-				<left>0</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="text.primary">icon_power.png</texture>
-				<visible>!Control.HasFocus(20)</visible>
-			</control>
-			<control type="image">
-				<description>Power Icon</description>
-				<left>0</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="white">icon_power.png</texture>
-				<visible>Control.HasFocus(20)</visible>
-			</control>
-			<control type="button" id="21">
-				<description>Favourites push button</description>
-				<left>50</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
-				<onclick>ActivateWindow(Favourites)</onclick>
-				<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
-				<texturenofocus colordiffuse="tertiary">backgrounds/white.png</texturenofocus>
-				<onleft>20</onleft>
-				<onright>20</onright>
-				<onup>9002</onup>
-				<ondown>9003</ondown>
-			</control>
-			<control type="image">
-				<description>Favourites Icon</description>
-				<left>50</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="text.primary">icon_favourites.png</texture>
-				<visible>!Control.HasFocus(21)</visible>
-			</control>
-			<control type="image">
-				<description>Favourites Icon</description>
-				<left>50</left>
-				<top>0</top>
-				<width>45</width>
-				<height>45</height>
-				<aspectratio>keep</aspectratio>
-				<texture colordiffuse="white">icon_favourites.png</texture>
-				<visible>Control.HasFocus(21)</visible>
 			</control>
 		</control>
 		<!--weather info-->

@@ -5,7 +5,6 @@
 	<views>10,11,12,13</views>
 	<controls>
 		<include>CommonBackground</include>
-		<include>MainWindowMouseButtons</include>
 		<include>PVRHeader</include>
 		<include>Clock</include>
 		<control type="group" id="50">

@@ -6,7 +6,6 @@
 		<include>CommonBackground</include>
 		<include>Clock</include>
 		<include>CommonNowPlaying</include>
-		<include>MainWindowMouseButtons</include>
 		<control type="multiimage">
 			<left>0</left>
 			<top>0</top>
@@ -21,73 +20,17 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<!--breadcrumbs-->
-		<control type="group">
-			<!--breadcrumb bg-->
-			<control type="image">
-				<left>64</left>
-				<top>60</top>
-				<width>500</width>
-				<height>45</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--breadcrumb strip-->
-			<control type="image">
-				<left>60</left>
-				<top>60</top>
-				<width>4</width>
-				<height>45</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<!--breadcrumb labels-->
-			<control type="grouplist">
-				<left>73</left>
-				<top>60</top>
-				<width>1500</width>
-				<height>45</height>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<itemgap>8</itemgap>
-				<control type="label">
-					<width min="0" max="125">auto</width>
-					<include>WindowTitleCommons</include>
-					<label>$LOCALIZE[8]</label>
-				</control>
-				<control type="label">
-					<width min="0" max="365">auto</width>
-					<textcolor>$VAR[Colour.500]</textcolor>
-					<include>WindowTitleCommons</include>
-					<label>[LOWERCASE]$INFO[Window.Property(Location)][/LOWERCASE]</label>
-				</control>
-			</control>
-			<!--sort method bg-->
-			<control type="image">
-				<left>64</left>
-				<top>110</top>
-				<width>225</width>
-				<height>34</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--sort method strip-->
-			<control type="image">
-				<left>60</left>
-				<top>110</top>
-				<width>4</width>
-				<height>34</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<!--weather view label-->
-			<control type="label">
-				<left>73</left>
-				<top>110</top>
-				<width>203</width>
-				<height>34</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>breadcrumb.secondary</font>
-				<textcolor>text.primary</textcolor>
-				<label>$VAR[WeatherView]</label>
-			</control>
-		</control>
+		<include content="DynamicLeftBreadcrumb">
+			<param name="breadcrumb1-label" value="$LOCALIZE[8]" />
+			<param name="breadcrumb2-label" value="[LOWERCASE]$INFO[Window.Property(Location)][/LOWERCASE]" />
+			<param name="breadcrumb2-visible" value="true" />
+		</include>
+		<include content="DynamicLeftBreadcrumb">
+			<param name="breadcrumb-top" value="110" />
+			<param name="breadcrumb-height" value="34" />
+			<param name="breadcrumb-font" value="breadcrumb.secondary" />
+			<param name="breadcrumb1-label" value="$VAR[WeatherView]" />
+		</include>
 		<control type="group">
 			<include>VisibleFadeEffect</include>
 			<control type="group">

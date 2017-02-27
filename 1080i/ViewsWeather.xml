@@ -455,33 +455,14 @@
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
-			<control type="image">
-				<left>64</left>
-				<top>94r</top>
-				<width>280</width>
-				<height>34</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<control type="image">
-				<left>60</left>
-				<top>94r</top>
-				<width>4</width>
-				<height>34</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<control type="label">
-				<description>Page Count Label</description>
-				<left>73</left>
-				<top>94r</top>
-				<width>750</width>
-				<height>34</height>
-				<font>breadcrumb.secondary</font>
-				<textcolor>text.primary</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[Container(51).NumItems] $LOCALIZE[12393] [COLOR=$VAR[Colour.500]]$INFO[Container(51).CurrentPage, $LOCALIZE[31024] ]$INFO[Container(51).NumPages,/,][/COLOR]</label>
-			</control>
+			<include content="DynamicLeftBreadcrumb">
+				<param name="breadcrumb-top" value="94r" />
+				<param name="breadcrumb-height" value="34" />
+				<param name="breadcrumb-font" value="breadcrumb.secondary" />
+				<param name="breadcrumb1-label" value="$INFO[Container(51).NumItems] $LOCALIZE[12393]" />
+				<param name="breadcrumb2-label" value="$INFO[Container(51).CurrentPage,$LOCALIZE[31024] ]$INFO[Container(51).NumPages,/,]" />
+				<param name="breadcrumb2-visible" value="true" />
+			</include>
 		</control>
 	</include>
 	<include name="Weather36Hour">
@@ -1225,34 +1206,14 @@
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(52)</visible>
-			<control type="image">
-				<left>64</left>
-				<top>94r</top>
-				<width>280</width>
-				<height>34</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<control type="image">
-				<left>60</left>
-				<top>94r</top>
-				<width>4</width>
-				<height>34</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<control type="label">
-				<description>Page Count Label</description>
-				<left>73</left>
-				<top>94r</top>
-				<width>750</width>
-				<height>34</height>
-				<font>breadcrumb.secondary</font>
-				<textcolor>text.primary</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[Container(52).NumItems] $LOCALIZE[31025] [COLOR=$VAR[Colour.500]]$INFO[Container(52).CurrentPage, $LOCALIZE[31024] ]$INFO[Container(52).NumPages,/,][/COLOR]</label>
-				<include>Window_OpenClose_Animation</include>
-			</control>
+			<include content="DynamicLeftBreadcrumb">
+				<param name="breadcrumb-top" value="94r" />
+				<param name="breadcrumb-height" value="34" />
+				<param name="breadcrumb-font" value="breadcrumb.secondary" />
+				<param name="breadcrumb1-label" value="$INFO[Container(52).NumItems] $LOCALIZE[31025]" />
+				<param name="breadcrumb2-label" value="$INFO[Container(52).CurrentPage,$LOCALIZE[31024] ]$INFO[Container(52).NumPages,/,]" />
+				<param name="breadcrumb2-visible" value="true" />
+			</include>
 		</control>
 	</include>
 	<include name="WeatherMaps">

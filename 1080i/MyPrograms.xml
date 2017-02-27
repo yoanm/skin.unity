@@ -27,78 +27,22 @@
 			<include>Clock</include>
 			<include>CommonPageCount</include>
 			<include>CommonNowPlaying</include>
-			<include>MainWindowMouseButtons</include>
 			<include>ScrollOffsetLabel</include>
 		</control>
 		<!--breadcrumbs-->
-		<control type="group">
-			<!--breadcrumb bg-->
-			<control type="image">
-				<left>64</left>
-				<top>60</top>
-				<width>500</width>
-				<height>45</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--breadcrumb strip-->
-			<control type="image">
-				<left>60</left>
-				<top>60</top>
-				<width>4</width>
-				<height>45</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<!--breadcrumb labels-->
-			<control type="grouplist">
-				<left>73</left>
-				<top>60</top>
-				<width>1500</width>
-				<height>45</height>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<itemgap>8</itemgap>
-				<control type="label">
-					<width min="0" max="195">auto</width>
-					<include>WindowTitleCommons</include>
-					<label>$LOCALIZE[0]</label>
-				</control>
-				<control type="label">
-					<textcolor>$VAR[Colour.500]</textcolor>
-					<width min="0" max="270">auto</width>
-					<include>WindowTitleCommons</include>
-					<label>[LOWERCASE]$INFO[Container.FolderName][/LOWERCASE]</label>
-					<visible>!String.IsEmpty(Container.FolderName)</visible>
-				</control>
-			</control>
-			<!--sort method bg-->
-			<control type="image">
-				<left>64</left>
-				<top>110</top>
-				<width>225</width>
-				<height>34</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--sort method strip-->
-			<control type="image">
-				<left>60</left>
-				<top>110</top>
-				<width>4</width>
-				<height>34</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<!--sort method label-->
-			<control type="label">
-				<left>73</left>
-				<top>110</top>
-				<width>300</width>
-				<height>34</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>breadcrumb.secondary</font>
-				<textcolor>text.primary</textcolor>
-				<label>$INFO[Container.SortMethod,$LOCALIZE[31062] ]</label>
-			</control>
-		</control>
+		<include content="DynamicLeftBreadcrumb">
+			<param name="breadcrumb1-label" value="$LOCALIZE[0]" />
+			<param name="breadcrumb2-label" value="[LOWERCASE]$INFO[Container.FolderName][/LOWERCASE]" />
+			<param name="breadcrumb2-visible" value="!String.IsEmpty(Container.FolderName)" />
+		</include>
+		<include content="DynamicLeftBreadcrumb">
+			<param name="breadcrumb-top" value="110" />
+			<param name="breadcrumb-height" value="34" />
+			<param name="breadcrumb-font" value="breadcrumb.secondary" />
+			<param name="breadcrumb1-label" value="$LOCALIZE[31062]" />
+			<param name="breadcrumb2-label" value="$INFO[Container.SortMethod]" />
+			<param name="breadcrumb2-visible" value="true" />
+		</include>
 		<!--fake button to hide left blade-->
 		<control type="button" id="73">
 			<left>0</left>

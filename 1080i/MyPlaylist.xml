@@ -17,57 +17,17 @@
 		<include>Clock</include>
 		<include>CommonPageCount</include>
 		<include>CommonNowPlaying</include>
-		<include>MainWindowMouseButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<!--breadcrumbs-->
-		<control type="group">
-			<!--breadcrumb bg-->
-			<control type="image">
-				<left>64</left>
-				<top>60</top>
-				<width>500</width>
-				<height>45</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--breadcrumb strip-->
-			<control type="image">
-				<left>60</left>
-				<top>60</top>
-				<width>4</width>
-				<height>45</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<!--breadcrumb labels-->
-			<control type="grouplist">
-				<left>73</left>
-				<top>60</top>
-				<width>482</width>
-				<height>45</height>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<itemgap>8</itemgap>
-				<control type="label">
-					<width min="0" max="274">auto</width>
-					<include>WindowTitleCommons</include>
-					<label>$LOCALIZE[10517]</label>
-					<visible>Window.IsActive(musicplaylist)</visible>
-				</control>
-				<control type="label">
-					<width min="0" max="274">auto</width>
-					<include>WindowTitleCommons</include>
-					<label>$LOCALIZE[10522]</label>
-					<visible>Window.IsActive(videoplaylist)</visible>
-				</control>
-				<control type="label">
-					<width min="0" max="200">auto</width>
-					<include>WindowTitleCommons</include>
-					<label>[LOWERCASE]$INFO[Container.FolderName][/LOWERCASE]</label>
-					<textcolor>$VAR[Colour.500]</textcolor>
-					<visible>!String.IsEmpty(Container.FolderName)</visible>
-				</control>
-			</control>
-		</control>
+		<include content="DynamicLeftBreadcrumb">
+			<param name="breadcrumb1-label" value="$LOCALIZE[10517]" />
+			<param name="breadcrumb1-visible" value="Window.IsActive(musicplaylist)" />
+			<param name="breadcrumb3-label" value="$LOCALIZE[10522]" />
+			<param name="breadcrumb3-visible" value="Window.IsActive(videoplaylist)" />
+			<param name="breadcrumb4-label" value="[LOWERCASE]$INFO[Container.FolderName][/LOWERCASE]" />
+			<param name="breadcrumb4-visible" value="!String.IsEmpty(Container.FolderName)" />
+		</include>
 		<control type="group">
 			<left>-375</left>
 			<include>SideBladeLeft</include>
