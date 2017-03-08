@@ -376,8 +376,7 @@
 					<!--content list-->
 					<control type="list" id="8011$SKINSHORTCUTS[id]">
 						<skinshortcuts>visibility</skinshortcuts>
-						<animation effect="slide" start="0,0" end="170,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,3)">conditional</animation>
-						<animation effect="slide" start="0,0" end="340,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
+						<animation effect="slide" start="0,0" end="170,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
 						<animation effect="slide" start="0,0" end="340,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,1)">conditional</animation>
 						<centerleft>50%</centerleft>
 						<top>119</top>

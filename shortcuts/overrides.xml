@@ -3,7 +3,8 @@
 
 	<!-- Widgets -->
 	<widget-groupings>
-		<shortcut label="Widgets" icon="DefaultFolder.png" type="32010">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=skinplaylists,librarydataprovider,scriptwidgets,extendedinfo,smartshortcuts,pvr,smartishwidgets</shortcut>
+		<shortcut label="Widgets" type="32010" condition="System.HasAddon(script.skin.helper.service)" icon="DefaultFolder.png">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=scriptwidgets,smartshortcuts,extendedinfo,librarydataprovider,smartishwidgets,favourites</shortcut>
+		<shortcut label="$ADDON[script.skin.helper.service 32025]" type="32053" condition="System.HasAddon(script.skin.helper.service)" icon="DefaultFile.png" widget="addon" widgetType="none" widgetTarget="video">$INCLUDE[skinshortcuts-submenu]</shortcut>
 		<node label="32030">
 			<content>video</content>
 			<content>videosources</content>
@@ -51,6 +52,10 @@
 	<propertyfallback property="widgetLayout" attribute="widgetType" value="weather">Wide</propertyfallback>
 	<propertyfallback property="widgetLayout" attribute="widgetType" value="system">Wide</propertyfallback>
 	<propertyfallback property="widgetLayout" attribute="widgetType" value="custom">Wide</propertyfallback>
-	<propertyfallback property="widgetLayout">Poster</propertyfallback>
+	<propertyfallback property="widgetLayout" attribute="widgetType" value="movies">Poster</propertyfallback>
+	<propertyfallback property="widgetLayout" attribute="widgetType" value="tvshows">Poster</propertyfallback>
+	<propertyfallback property="widgetLayout" attribute="widgetType" value="episodes">Poster</propertyfallback>
+	<propertyfallback property="widgetLayout" attribute="widgetType" value="seasons">Poster</propertyfallback>
+	<propertyfallback property="widgetLayout">Square</propertyfallback>
 	
 </overrides>
