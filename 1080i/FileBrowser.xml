@@ -4,34 +4,21 @@
 	<controls>
 		<!--all content-->
 		<control type="group">
-			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
-			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">Hidden</animation>
-			<animation effect="slide" start="0,0" end="-125,0" time="300" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
+			<centerleft>50%</centerleft>
+			<width>1390</width>
+			<animation effect="slide" start="2015,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-2015,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="0,0" end="-125,0" time="300" condition="Window.IsActive(ShutdownMenu) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<!--title bars and backgrounds-->
 			<include content="DynamicDialogBackground">
-				<param name="dialog-left" value="265" />
 				<param name="dialog-width" value="1390" />
 				<param name="glow-width" value="1470" />
 				<param name="subtitle-visible" value="true" />
 				<param name="subtitle-height" value="55" />
 			</include>
-			<!--fake button to view fanart-->
-			<control type="button" id="9003">
-				<left>0</left>
-				<top>0</top>
-				<width>375</width>
-				<height>1080</height>
-				<label>-</label>
-				<font>-</font>
-				<ondown>9000</ondown>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
-			</control>
 			<!--close window button-->
 			<control type="button">
-				<left>270</left>
+				<left>5</left>
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
@@ -48,10 +35,9 @@
 			</control>
 			<!--main content-->
 			<control type="group">
-				<top>0</top>
 				<!--header-->
 				<control type="label" id="411">
-					<left>310</left>
+					<left>45</left>
 					<top>25</top>
 					<width>1545</width>
 					<height>60</height>
@@ -63,7 +49,7 @@
 				</control>
 				<!--path label-->
 				<control type="label" id="412">
-					<left>310</left>
+					<left>45</left>
 					<top>110</top>
 					<width>825</width>
 					<height>52</height>
@@ -75,7 +61,7 @@
 				</control>
 				<!--top buttons-->
 				<control type="grouplist" id="9000">
-					<left>1250</left>
+					<left>985</left>
 					<top>190</top>
 					<width>320</width>
 					<height>300</height>
@@ -132,7 +118,7 @@
 				<control type="group">
 					<!--thumb (fallback)-->
 					<control type="image">
-						<left>1263</left>
+						<left>998</left>
 						<top>704</top>
 						<width>350</width>
 						<height>350</height>
@@ -142,7 +128,7 @@
 					</control>
 					<!--thumb (no fallback)-->
 					<control type="image">
-						<left>1263</left>
+						<left>998</left>
 						<top>704</top>
 						<width>350</width>
 						<height>350</height>
@@ -153,7 +139,7 @@
 					</control>
 					<!--thumb (no fallback, mirrored-->
 					<control type="image">
-						<left>1263</left>
+						<left>998</left>
 						<top>704</top>
 						<width>350</width>
 						<height>350</height>
@@ -165,10 +151,10 @@
 				</control>
 				<!--content list-->
 				<control type="panel" id="450">
-					<left>305</left>
+					<left>40</left>
 					<top>190</top>
+					<bottom>19</bottom>
 					<width>905</width>
-					<height>871</height>
 					<onleft>9000</onleft>
 					<onright>60</onright>
 					<onup>450</onup>
@@ -256,10 +242,10 @@
 				</control>
 				<!--content list-->
 				<control type="panel" id="451">
-					<left>305</left>
+					<left>40</left>
 					<top>190</top>
+					<bottom>19</bottom>
 					<width>905</width>
-					<height>871</height>
 					<onleft>9000</onleft>
 					<onright>60</onright>
 					<onup>451</onup>
@@ -347,9 +333,9 @@
 				</control>
 				<!--scrollbar-->
 				<control type="scrollbar" id="60">
-					<left>1215</left>
+					<left>950</left>
 					<top>190</top>
-					<height>864</height>
+					<bottom>26</bottom>
 					<orientation>vertical</orientation>
 					<showonepage>false</showonepage>
 					<texturesliderbackground colordiffuse="scroll.secondary">backgrounds/white.png</texturesliderbackground>
@@ -359,7 +345,7 @@
 				</control>
 				<!--item count (450)-->
 				<control type="label">
-					<left>805</left>
+					<left>540</left>
 					<top>110</top>
 					<width>805</width>
 					<height>52</height>
@@ -373,7 +359,7 @@
 				</control>
 				<!--item count(451)-->
 				<control type="label">
-					<left>805</left>
+					<left>540</left>
 					<top>110</top>
 					<width>805</width>
 					<height>52</height>

@@ -9,13 +9,17 @@
 		<include>Clock</include>
 		<include>CommonPageCount</include>
 		<control type="group">
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListPVRSlide</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListPVRSlide</include>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>1650</width>
 			<include>Window_OpenClose_Animation</include>
 			<description>Timers group</description>
 			<visible>Control.IsVisible(50)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
-				<left>135</left>
-				<top>200</top>
+				<top>5</top>
 				<!--title background-->
 				<control type="image">
 					<left>4</left>
@@ -72,7 +76,8 @@
 					<left>0</left>
 					<top>70</top>
 					<width>1654</width>
-					<height>630</height>
+					<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListPVR</include>
+					<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListPVR</include>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<onleft condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">103</onleft>
@@ -184,6 +189,14 @@
 							<height>60</height>
 							<texture background="true" colordiffuse="tertiary">backgrounds/white.png</texture>
 						</control>
+						<!--background nib-->
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>4</width>
+							<height>60</height>
+							<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
+						</control>
 						<control type="group">
 							<left>4</left>
 							<top>0</top>
@@ -273,9 +286,9 @@
 				</control>
 				<!--scrollbar-->
 				<control type="scrollbar" id="73">
-					<left>1664</left>
+					<left>1660</left>
 					<top>70</top>
-					<height>620</height>
+					<bottom>5</bottom>
 					<onleft>50</onleft>
 					<onright condition="Window.IsActive(TVTimers) | Window.IsActive(RadioTimers)">103</onright>
  					<onright condition="Window.IsActive(TVTimerRules) | Window.IsActive(RadioTimerRules)">105</onright>
@@ -283,45 +296,23 @@
 				</control>
 			</control>
 		</control>
+		<!--next timer date-->
 		<control type="group">
 			<visible>PVR.HasTimer</visible>
-			<control type="image">
-				<left>64</left>
-				<top>133r</top>
-				<width>500</width>
-				<height>34</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<control type="image">
-				<left>60</left>
-				<top>133r</top>
-				<width>4</width>
-				<height>34</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<control type="label">
-				<description>Next timer date</description>
-				<left>73</left>
-				<top>133r</top>
-				<width>482</width>
-				<height>34</height>
-				<font>breadcrumb.secondary</font>
-				<textcolor>text.primary</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[PVR.NextTimer]</label>
-				<include>Window_OpenClose_Animation</include>
-			</control>
+			<include>Window_OpenClose_Animation</include>
+			<include content="DynamicLeftBreadcrumb">
+				<param name="breadcrumb-top" value="133r" />
+				<param name="breadcrumb-height" value="34" />
+				<param name="breadcrumb-font" value="breadcrumb.secondary" />
+				<param name="breadcrumb1-label" value="$INFO[PVR.NextTimer]" />
+			</include>
 		</control>
 		<include>CommonNowPlaying</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
+			<width>100%</width>
+			<height>100%</height>
 			<texture>black-back.png</texture>
 			<animation effect="fade" time="400">Visible</animation>
 			<animation effect="fade" time="200">Hidden</animation>

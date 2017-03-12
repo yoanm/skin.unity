@@ -5,12 +5,16 @@
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
 			<include>VisibleFadeEffect</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1501</width>
 			<!--content list-->
 			<control type="list" id="50">
-				<left>220</left>
-				<top>200</top>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListSlide</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListSlide</include>
+				<centertop>50%</centertop>
 				<width>1004</width>
-				<height>700</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>50</onup>
@@ -22,7 +26,7 @@
 					<!--background-->
 					<control type="image">
 						<left>4</left>
-						<top>0</top>
+						<top>5</top>
 						<width>1000</width>
 						<height>60</height>
 						<texture colordiffuse="button.nf">backgrounds/white.png</texture>
@@ -30,7 +34,7 @@
 					<!--main label-->
 					<control type="label">
 						<left>19</left>
-						<top>0</top>
+						<top>5</top>
 						<width>990</width>
 						<height>60</height>
 						<font>label</font>
@@ -43,7 +47,7 @@
 					<!--secondary label (non videos)-->
 					<control type="label">
 						<left>385</left>
-						<top>0</top>
+						<top>5</top>
 						<width>600</width>
 						<height>60</height>
 						<font>secondary.info</font>
@@ -57,7 +61,7 @@
 					<!--secondary label (videos)-->
 					<control type="label">
 						<left>319</left>
-						<top>0</top>
+						<top>5</top>
 						<width>600</width>
 						<height>60</height>
 						<font>secondary.info</font>
@@ -72,7 +76,7 @@
 					<!--hd/sd flag-->
 					<control type="image">
 						<left>918</left>
-						<top>10</top>
+						<top>15</top>
 						<width>56</width>
 						<height>40</height>
 						<texture>$INFO[ListItem.VideoResolution,flagging/lists/,.png]</texture>
@@ -82,7 +86,7 @@
 					<!--3d flag-->
 					<control type="image">
 						<left>918</left>
-						<top>20</top>
+						<top>25</top>
 						<width>56</width>
 						<height>40</height>
 						<texture>flagging/lists/3D.png</texture>
@@ -92,7 +96,7 @@
 					<!--watched icon-->
 					<control type="image">
 						<left>959</left>
-						<top>10</top>
+						<top>15</top>
 						<width>45</width>
 						<height>40</height>
 						<texture colordiffuse="white">$INFO[ListItem.Overlay]</texture>
@@ -101,7 +105,7 @@
 					<!--resumable icon-->
 					<control type="image">
 						<left>959</left>
-						<top>10</top>
+						<top>15</top>
 						<width>45</width>
 						<height>40</height>
 						<texture colordiffuse="white">OverlayWatching.png</texture>
@@ -112,7 +116,7 @@
 					<!--background-->
 					<control type="image">
 						<left>4</left>
-						<top>0</top>
+						<top>5</top>
 						<width>1000</width>
 						<height>60</height>
 						<texture colordiffuse="tertiary">backgrounds/white.png</texture>
@@ -121,7 +125,7 @@
 					<!--background strip-->
 					<control type="image">
 						<left>0</left>
-						<top>0</top>
+						<top>5</top>
 						<width>4</width>
 						<height>60</height>
 						<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
@@ -130,7 +134,7 @@
 					<!--main label-->
 					<control type="label">
 						<left>19</left>
-						<top>0</top>
+						<top>5</top>
 						<width>990</width>
 						<height>60</height>
 						<font>label</font>
@@ -143,7 +147,7 @@
 					<!--secondary label (non videos)-->
 					<control type="label">
 						<left>385</left>
-						<top>0</top>
+						<top>5</top>
 						<width>600</width>
 						<height>60</height>
 						<font>secondary.info</font>
@@ -157,7 +161,7 @@
 					<!--secondary label (videos)-->
 					<control type="label">
 						<left>319</left>
-						<top>0</top>
+						<top>5</top>
 						<width>600</width>
 						<height>60</height>
 						<font>secondary.info</font>
@@ -172,7 +176,7 @@
 					<!--hd/sd flag-->
 					<control type="image">
 						<left>918</left>
-						<top>10</top>
+						<top>15</top>
 						<width>56</width>
 						<height>40</height>
 						<texture>$INFO[ListItem.VideoResolution,flagging/lists/,.png]</texture>
@@ -182,7 +186,7 @@
 					<!--3d flag-->
 					<control type="image">
 						<left>918</left>
-						<top>20</top>
+						<top>25</top>
 						<width>56</width>
 						<height>40</height>
 						<texture>flagging/lists/3D.png</texture>
@@ -192,7 +196,7 @@
 					<!--watched icon-->
 					<control type="image">
 						<left>959</left>
-						<top>10</top>
+						<top>15</top>
 						<width>45</width>
 						<height>40</height>
 						<texture colordiffuse="$VAR[Colour.500]">$INFO[ListItem.Overlay]</texture>
@@ -201,7 +205,7 @@
 					<!--resumable icon-->
 					<control type="image">
 						<left>959</left>
-						<top>10</top>
+						<top>15</top>
 						<width>45</width>
 						<height>40</height>
 						<texture colordiffuse="$VAR[Colour.500]">OverlayWatching.png</texture>
@@ -211,11 +215,11 @@
 			</control>
 			<!--thumb (fallback)-->
 			<control type="image">
-				<left>1241</left>
-				<top>190</top>
+				<left>1021</left>
+				<top>-5</top>
+				<bottom>-5</bottom>
 				<width>480</width>
-				<height>710</height>
-				<aspectratio aligny="top">keep</aspectratio>
+				<aspectratio aligny="center">keep</aspectratio>
 				<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 				<bordertexture>backgrounds/poster shadow fb.png</bordertexture>
 				<bordersize>10</bordersize>
@@ -223,11 +227,11 @@
 			</control>
 			<!--thumb (no fallback)-->
 			<control type="image">
-				<left>1241</left>
-				<top>190</top>
+				<left>1021</left>
+				<top>-5</top>
+				<bottom>-5</bottom>
 				<width>480</width>
-				<height>710</height>
-				<aspectratio aligny="top">keep</aspectratio>
+				<aspectratio aligny="center">keep</aspectratio>
 				<texture background="true">$VAR[PosterThumb]</texture>
 				<bordertexture>backgrounds/poster shadow.png</bordertexture>
 				<bordersize>10</bordersize>
@@ -236,11 +240,11 @@
 			</control>
 			<!--thumb (no fallback)-->
 			<control type="image">
-				<left>1241</left>
-				<top>190</top>
+				<left>1021</left>
+				<top>-5</top>
+				<bottom>-5</bottom>
 				<width>480</width>
-				<height>710</height>
-				<aspectratio aligny="top">keep</aspectratio>
+				<aspectratio aligny="center">keep</aspectratio>
 				<texture background="true">$VAR[PosterThumb]</texture>
 				<bordertexture>backgrounds/episode shadow.png</bordertexture>
 				<bordersize>10</bordersize>
@@ -249,8 +253,9 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
-				<left>1234</left>
-				<top>200</top>
+				<left>1014</left>
+				<top>5</top>
+				<bottom>5</bottom>
 				<onleft>50</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
@@ -262,12 +267,16 @@
 		<control type="group">
 			<visible>Control.IsVisible(500)</visible>
 			<include>VisibleFadeEffect</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1671</width>
 			<!--content list-->
 			<control type="panel" id="500">
-				<left>130</left>
-				<top>195</top>
-				<width>1800</width>
-				<height>700</height>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+				<left>0</left>
+				<right>12</right>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>500</onup>
@@ -635,8 +644,9 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
-				<left>1794</left>
-				<top>200</top>
+				<right>0</right>
+				<top>5</top>
+				<bottom>5</bottom>
 				<onleft>500</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
@@ -647,12 +657,16 @@
 		<control type="group">
 			<visible>Control.IsVisible(505)</visible>
 			<include>VisibleFadeEffect</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1232</width>
 			<control type="panel" id="505">
 				<visible>Container.Content(TVShows)</visible>
-				<centerleft>50%</centerleft>
-				<top>195</top>
-				<width>1220</width>
-				<height>700</height>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+				<left>0</left>
+				<right>12</right>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>505</onup>
@@ -677,9 +691,9 @@
 					<!--banner (fallback)-->
 					<control type="image">
 						<left>3</left>
-						<top>3</top>
+						<top>5</top>
 						<width>604</width>
-						<height>111</height>
+						<height>107</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 						<visible>String.Contains(ListItem.Icon,Default)</visible>
@@ -733,9 +747,9 @@
 					<!--banner (fallback)-->
 					<control type="image">
 						<left>3</left>
-						<top>3</top>
+						<top>5</top>
 						<width>604</width>
-						<height>111</height>
+						<height>107</height>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 						<visible>String.Contains(ListItem.Icon,Default)</visible>
@@ -776,8 +790,9 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
-				<left>1575</left>
-				<top>200</top>
+				<right>0</right>
+				<top>5</top>
+				<bottom>5</bottom>
 				<onleft>505</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
@@ -789,12 +804,16 @@
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
 			<include>VisibleFadeEffect</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1491</width>
 			<!--content list-->
 			<control type="list" id="51">
-				<left>220</left>
-				<top>200</top>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListSlide</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListSlide</include>
+				<centertop>50%</centertop>
 				<width>1474</width>
-				<height>700</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>51</onup>
@@ -1035,8 +1054,8 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
-				<left>1704</left>
-				<top>200</top>
+				<left>1484</left>
+				<bottom>10</bottom>
 				<onleft>50</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>

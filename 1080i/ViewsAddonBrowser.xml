@@ -106,6 +106,7 @@
 			<control type="scrollbar" id="60">
 				<left>1209</left>
 				<top>200</top>
+				<height>690</height>
 				<onleft>550</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
@@ -401,6 +402,7 @@
 			<control type="scrollbar" id="60">
 				<left>1300</left>
 				<top>200</top>
+				<height>690</height>
 				<onleft>551</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>

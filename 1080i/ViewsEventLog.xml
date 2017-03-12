@@ -3,14 +3,18 @@
 	<include name="EventListView">
 		<!--all content-->
 		<control type="group">
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallFatListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1501</width>
 			<visible>Control.IsVisible(570)</visible>
 			<include>VisibleFadeEffect</include>
 			<!--content list-->
 			<control type="list" id="570">
-				<left>220</left>
-				<top>200</top>
+				<top>5</top>
 				<width>1004</width>
-				<height>700</height>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallFatListSlide</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortFatListSlide</include>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>570</onup>
@@ -129,11 +133,11 @@
 			</control>
 			<!--thumb (fallback)-->
 			<control type="image">
-				<left>1241</left>
-				<top>190</top>
+				<left>1021</left>
+				<centertop>50%</centertop>
 				<width>480</width>
 				<height>710</height>
-				<aspectratio aligny="top">keep</aspectratio>
+				<aspectratio aligny="center">keep</aspectratio>
 				<texture colordiffuse="$VAR[Colour.500]" background="true">$VAR[PosterThumb]</texture>
 				<bordertexture>backgrounds/poster shadow fb.png</bordertexture>
 				<bordersize>10</bordersize>
@@ -141,11 +145,11 @@
 			</control>
 			<!--thumb (no fallback)-->
 			<control type="image">
-				<left>1241</left>
-				<top>190</top>
+				<left>1021</left>
+				<centertop>50%</centertop>
 				<width>480</width>
 				<height>710</height>
-				<aspectratio aligny="top">keep</aspectratio>
+				<aspectratio aligny="center">keep</aspectratio>
 				<texture background="true">$VAR[PosterThumb]</texture>
 				<bordertexture>backgrounds/poster shadow.png</bordertexture>
 				<bordersize>10</bordersize>
@@ -153,8 +157,9 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
-				<left>1234</left>
-				<top>200</top>
+				<left>1014</left>
+				<top>5</top>
+				<bottom>5</bottom>
 				<onleft>570</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
@@ -164,14 +169,18 @@
 	<include name="EventBigListView">
 		<!--all content-->
 		<control type="group">
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallFatListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1491</width>
 			<visible>Control.IsVisible(571)</visible>
 			<include>VisibleFadeEffect</include>
 			<!--content list-->
 			<control type="list" id="571">
-				<left>220</left>
-				<top>200</top>
+				<top>5</top>
 				<width>1474</width>
-				<height>700</height>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallFatListSlide</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortFatListSlide</include>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>571</onup>
@@ -330,8 +339,9 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
-				<left>1704</left>
-				<top>200</top>
+				<left>1484</left>
+				<top>5</top>
+				<bottom>5</bottom>
 				<onleft>50</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>

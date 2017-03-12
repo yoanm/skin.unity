@@ -132,14 +132,14 @@
 				<!--recently added movies-->
 				<control type="group">
 					<left>0</left>
-					<top>75</top>
+					<top>12%</top>
 					<skinshortcuts>visibility</skinshortcuts>
 					<include>VisibleFadeEffect</include>
 					
 					<!--title label-->
 					<control type="label">
 						<centerleft>50%</centerleft>
-						<top>50</top>
+						<top>0</top>
 						<height>30</height>
 						<width>810</width>
 						<label>$INFO[Container(9000).ListItem.Property(widgetName)]</label>
@@ -158,7 +158,7 @@
 						<animation effect="slide" start="0,0" end="315,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
 						<animation effect="slide" start="0,0" end="420,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,1)">conditional</animation>
 						<centerleft>50%</centerleft>
-						<top>85</top>
+						<top>35</top>
 						<width>1050</width>
 						<height>330</height>
 						<onleft>8011$SKINSHORTCUTS[id]</onleft>
@@ -252,7 +252,7 @@
 						<!--left arrow bg-->
 						<control type="button" id="80001">
 							<left>380</left>
-							<top>205</top>
+							<top>155</top>
 							<width>50</width>
 							<height>50</height>
 							<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
@@ -265,7 +265,7 @@
 						<!--left arrow-->
 						<control type="image">
 							<left>380</left>
-							<top>205</top>
+							<top>155</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="text.primary">arrow-big-left.png</texture>
@@ -275,7 +275,7 @@
 						<!--left arrow-->
 						<control type="image">
 							<left>380</left>
-							<top>205</top>
+							<top>155</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="white">arrow-big-left.png</texture>
@@ -286,7 +286,7 @@
 						<control type="button" id="80002">
 							<description>right Arrow</description>
 							<left>1490</left>
-							<top>205</top>
+							<top>155</top>
 							<width>50</width>
 							<height>50</height>
 							<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
@@ -299,7 +299,7 @@
 						<!--right arrow-->
 						<control type="image">
 							<left>1490</left>
-							<top>205</top>
+							<top>155</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="text.primary">arrow-big-right.png</texture>
@@ -309,7 +309,7 @@
 						<!--right arrow-->
 						<control type="image">
 							<left>1490</left>
-							<top>205</top>
+							<top>155</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="white">arrow-big-right.png</texture>
@@ -356,13 +356,13 @@
 				<!--recently added episodes-->
 				<control type="group">
 					<left>0</left>
-					<top>75</top>
+					<top>15%</top>
 					<include>VisibleFadeEffect</include>
 					
 					<!--title-->
 					<control type="label">
 						<centerleft>50%</centerleft>
-						<top>84</top>
+						<top>0</top>
 						<height>30</height>
 						<width>720</width>
 						<label>$INFO[Container(9000).ListItem.Property(widgetName)]</label>
@@ -379,7 +379,7 @@
 						<animation effect="slide" start="0,0" end="170,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
 						<animation effect="slide" start="0,0" end="340,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,1)">conditional</animation>
 						<centerleft>50%</centerleft>
-						<top>119</top>
+						<top>35</top>
 						<width>1020</width>
 						<height>330</height>
 						<onleft>8011$SKINSHORTCUTS[id]</onleft>
@@ -507,7 +507,7 @@
 						<!--left arrow bg-->
 						<control type="button" id="80011">
 							<left>395</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
@@ -520,7 +520,7 @@
 						<!--left arrow-->
 						<control type="image">
 							<left>395</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="text.primary">arrow-big-left.png</texture>
@@ -530,7 +530,7 @@
 						<!--left arrow-->
 						<control type="image">
 							<left>395</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="white">arrow-big-left.png</texture>
@@ -540,7 +540,7 @@
 						<!--right arrow bg-->
 						<control type="button" id="80012">
 							<left>1475</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
@@ -553,7 +553,7 @@
 						<!--left arrow-->
 						<control type="image">
 							<left>1475</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="text.primary">arrow-big-right.png</texture>
@@ -563,7 +563,7 @@
 						<!--left arrow-->
 						<control type="image">
 							<left>1475</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="white">arrow-big-right.png</texture>
@@ -610,13 +610,13 @@
 				<!--recently added albums-->
 				<control type="group">
 					<left>0</left>
-					<top>75</top>
+					<top>15%</top>
 					<include>VisibleFadeEffect</include>
 					
 					<!--title-->
 					<control type="label">
 						<centerleft>50%</centerleft>
-						<top>84</top>
+						<top>0</top>
 						<height>30</height>
 						<width>720</width>
 						<label>$INFO[Container(9000).ListItem.Property(widgetName)]</label>
@@ -634,7 +634,7 @@
 						<animation effect="slide" start="0,0" end="246,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,2)">conditional</animation>
 						<animation effect="slide" start="0,0" end="369,0" time="0" condition="String.IsEqual(Container(8011$SKINSHORTCUTS[id]).NumItems,1)">conditional</animation>
 						<centerleft>50%</centerleft>
-						<top>119</top>
+						<top>35</top>
 						<width>984</width>
 						<height>360</height>
 						<onleft>8011$SKINSHORTCUTS[id]</onleft>
@@ -743,7 +743,7 @@
 						<!--left arrow bg-->
 						<control type="button" id="80021">
 							<left>413</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
@@ -756,7 +756,7 @@
 						<!--left arrow-->
 						<control type="image">
 							<left>413</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="text.primary">arrow-big-left.png</texture>
@@ -766,7 +766,7 @@
 						<!--left arrow-->
 						<control type="image">
 							<left>413</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="white">arrow-big-left.png</texture>
@@ -777,7 +777,7 @@
 						<control type="button" id="80022">
 							<description>right Arrow</description>
 							<left>1457</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
@@ -790,7 +790,7 @@
 						<!--left arrow-->
 						<control type="image">
 							<left>1457</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="text.primary">arrow-big-right.png</texture>
@@ -800,7 +800,7 @@
 						<!--left arrow-->
 						<control type="image">
 							<left>1457</left>
-							<top>205</top>
+							<top>121</top>
 							<width>50</width>
 							<height>50</height>
 							<texture colordiffuse="white">arrow-big-right.png</texture>

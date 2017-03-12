@@ -6,8 +6,8 @@
 			<description>videowindow</description>
 			<left>0</left>
 			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
+			<width>100%</width>
+			<height>100%</height>
 			<visible>Player.HasVideo</visible>
 		</control>
 		<control type="group">
@@ -18,8 +18,8 @@
 			<description>Overlay</description>
 			<left>0</left>
 			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
+			<width>100%</width>
+			<height>100%</height>
 			<texture>black-back.png</texture>
 			<include>dialogeffect</include>
 		</control>
@@ -77,11 +77,11 @@
 			<texturenofocus>-</texturenofocus>
 		</control>
 		<control type="group">
-			<left>30</left>
+			<centerleft>50%</centerleft>
 			<top>120</top>
+			<width>1860</width>
 			<control type="label" id="2">
 				<description>coordinates label</description>
-				<left>0</left>
 				<top>15</top>
 				<width>1860</width>
 				<label>-</label>
@@ -90,7 +90,6 @@
 			</control>
 			<control type="label" id="3">
 				<description>help information</description>
-				<left>0</left>
 				<top>60</top>
 				<width>1860</width>
 				<label>-</label>

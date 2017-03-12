@@ -9,7 +9,7 @@
 				<description>media info background image</description>
 				<left>0</left>
 				<top>0</top>
-				<width>1920</width>
+				<width>100%</width>
 				<height>488</height>
 				<texture>black-back.png</texture>
 			</control>

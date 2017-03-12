@@ -4,15 +4,16 @@
 	<controls>
 		<!--all content-->
 		<control type="group">
+			<centerleft>50%</centerleft>
+			<width>1210</width>
 			<visible>!Window.IsActive(PVRGroupManager)</visible>
-			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="-1700,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
-			<animation effect="slide" start="0,0" end="-1700,0" time="400" tween="quadratic" easing="out">Hidden</animation>
-			<animation effect="slide" start="0,0" end="-35,0" time="300" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
+			<animation effect="slide" start="1925,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="1925,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="-1925,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
+			<animation effect="slide" start="0,0" end="-1925,0" time="400" tween="quadratic" easing="out">Hidden</animation>
+			<animation effect="slide" start="0,0" end="-35,0" time="300" condition="Window.IsActive(ShutdownMenu) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<!--title bars and backgrounds-->
 			<include content="DynamicDialogBackground">
-				<param name="dialog-left" value="355" />
 				<param name="dialog-width" value="1210" />
 				<param name="glow-width" value="1290" />
 				<param name="sidebar-visible" value="true" />
@@ -21,7 +22,7 @@
 			</include>
 			<!--close window button-->
 			<control type="button">
-				<left>360</left>
+				<left>5</left>
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
@@ -38,11 +39,9 @@
 			</control>
 			<!--main content-->
 			<control type="group">
-				<left>343</left>
-				<top>0</top>
 				<!--tv title-->
 				<control type="label">
-					<left>57</left>
+					<left>45</left>
 					<top>25</top>
 					<width>1545</width>
 					<height>60</height>
@@ -55,7 +54,7 @@
 				</control>
 				<!--radio title-->
 				<control type="label">
-					<left>57</left>
+					<left>45</left>
 					<top>25</top>
 					<width>1545</width>
 					<height>60</height>
@@ -69,19 +68,19 @@
 				<!--scrollbar-->
 				<control type="scrollbar" id="60">
 					<visible>!Window.IsActive(SelectDialog)</visible>
-					<left>0</left>
+					<left>-12</left>
 					<top>120</top>
-					<height>775</height>
+					<bottom>185</bottom>
 					<texturesliderbackground colordiffuse="scroll.secondary">backgrounds/white.png</texturesliderbackground>
 					<texturesliderbar colordiffuse="secondary">backgrounds/white.png</texturesliderbar>
 					<onleft>9002</onleft>
 					<onright>20</onright>
 				</control>
 				<control type="list" id="20">
-					<left>22</left>
+					<left>10</left>
 					<top>120</top>
+					<bottom>180</bottom>
 					<width>330</width>
-					<height>780</height>
 					<onup>20</onup>
 					<ondown>20</ondown>
 					<onleft>60</onleft>
@@ -171,16 +170,16 @@
 				</control>
 				<control type="group" id="9002">
 					<control type="image">
-						<left>27</left>
-						<top>905</top>
+						<left>15</left>
+						<top>175r</top>
 						<width>300</width>
 						<height>100</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Container(20).ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<left>342</left>
-						<top>970</top>
+						<left>330</left>
+						<top>110r</top>
 						<width>870</width>
 						<height>45</height>
 						<align>right</align>
@@ -189,10 +188,10 @@
 						<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
 					</control>
 					<control type="grouplist">
-						<left>342</left>
+						<left>330</left>
 						<top>120</top>
+						<bottom>115</bottom>
 						<width>870</width>
-						<height>845</height>
 						<itemgap>5</itemgap>
 						<onleft>20</onleft>
 						<onright>20</onright>
@@ -301,8 +300,8 @@
 				</control>
 				<!--bottom buttons-->
 				<control type="grouplist" id="9000">
-					<left>117</left>
-					<top>1015</top>
+					<centerleft>50%</centerleft>
+					<top>65r</top>
 					<width>1000</width>
 					<height>60</height>
 					<align>justify</align>

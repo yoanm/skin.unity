@@ -7,6 +7,7 @@
 		<include>CommonBackground</include>
 		<include>PVRHeader</include>
 		<include>Clock</include>
+		<include>CommonPageCount</include>
 		<control type="group" id="50">
 			<include>Window_OpenClose_Animation</include>
 			<include>PVRGuideViewTimeline</include>
@@ -18,10 +19,8 @@
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
+			<width>100%</width>
+			<height>100%</height>
 			<texture>black-back.png</texture>
 			<animation effect="fade" time="400">Visible</animation>
 			<animation effect="fade" time="200">Hidden</animation>

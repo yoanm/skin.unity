@@ -9,14 +9,19 @@
 		<include>Clock</include>
 		<include>CommonPageCount</include>
 		<control type="group">
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallFatListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1614</width>
 			<include>Window_OpenClose_Animation</include>
 			<description>TV Channels group</description>
 			<visible>Control.IsVisible(50)</visible>
 			<include>VisibleFadeEffect</include>
 			<!--tv info-->
 			<control type="group">
-				<left>781</left>
-				<top>200</top>
+				<left>628</left>
+				<centertop>50%</centertop>
+				<height>700</height>
 				<!--background-->
 				<control type="image">
 					<left>-10</left>
@@ -187,10 +192,9 @@
 			</control>
 			<!--content list-->
 			<control type="list" id="50">
-				<left>151</left>
-				<top>200</top>
 				<width>604</width>
-				<height>700</height>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallFatListSlide</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortFatListSlide</include>
 				<onleft>100</onleft>
 				<onright>70</onright>
 				<onup>50</onup>
@@ -410,8 +414,8 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="70">
-				<left>764</left>
-				<top>200</top>
+				<left>613</left>
+				<bottom>10</bottom>
 				<onleft>50</onleft>
 				<onright>100</onright>
 				<orientation>vertical</orientation>
@@ -423,8 +427,8 @@
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
+			<width>100%</width>
+			<height>100%</height>
 			<texture>black-back.png</texture>
 			<animation effect="fade" time="400">Visible</animation>
 			<animation effect="fade" time="200">Hidden</animation>

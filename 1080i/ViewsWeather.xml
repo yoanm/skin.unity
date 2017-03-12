@@ -2,13 +2,17 @@
 <includes>
 	<include name="WeatherDaily">
 		<control type="group">
-			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>1670</width>
+			<animation effect="slide" start="-2000,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-2000,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="list" id="51">
-				<left>135</left>
-				<top>200</top>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
 				<width>913</width>
-				<height>700</height>
 				<onleft>9000</onleft>
 				<onright>61</onright>
 				<onup>51</onup>
@@ -444,8 +448,8 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="61">
-				<left>1058</left>
-				<top>200</top>
+				<left>923</left>
+				<bottom>10</bottom>
 				<onleft>51</onleft>
 				<onright>9000</onright>
 				<orientation>vertical</orientation>
@@ -467,11 +471,13 @@
 	</include>
 	<include name="Weather36Hour">
 		<control type="group">
-			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>1670</width>
+			<height>700</height>
+			<animation effect="slide" start="-2000,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-2000,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="list" id="54">
-				<left>135</left>
-				<top>200</top>
 				<width>913</width>
 				<height>700</height>
 				<onleft>9000</onleft>
@@ -657,8 +663,8 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="64">
-				<left>1058</left>
-				<top>200</top>
+				<left>923</left>
+				<bottom>10</bottom>
 				<onleft>54</onleft>
 				<onright>9000</onright>
 				<orientation>vertical</orientation>
@@ -669,11 +675,13 @@
 	</include>
 	<include name="WeatherWeekend">
 		<control type="group">
-			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>1670</width>
+			<height>700</height>
+			<animation effect="slide" start="-2000,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-2000,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="list" id="55">
-				<left>135</left>
-				<top>200</top>
 				<width>913</width>
 				<height>700</height>
 				<onleft>9000</onleft>
@@ -850,8 +858,8 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="65">
-				<left>1058</left>
-				<top>200</top>
+				<left>923</left>
+				<bottom>10</bottom>
 				<onleft>55</onleft>
 				<onright>9000</onright>
 				<orientation>vertical</orientation>
@@ -862,13 +870,17 @@
 	</include>
 	<include name="WeatherHourly">
 		<control type="group">
-			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>1670</width>
+			<animation effect="slide" start="-2000,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-2000,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="list" id="52">
-				<left>135</left>
-				<top>200</top>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
 				<width>913</width>
-				<height>700</height>
 				<onleft>9000</onleft>
 				<onright>62</onright>
 				<onup>52</onup>
@@ -1195,8 +1207,8 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="62">
-				<left>1058</left>
-				<top>200</top>
+				<left>923</left>
+				<bottom>10</bottom>
 				<onleft>52</onleft>
 				<onright>9000</onright>
 				<orientation>vertical</orientation>
@@ -1219,10 +1231,12 @@
 	<include name="WeatherMaps">
 		<control type="group">
 			<visible>String.IsEqual(Window.Property(Weather.CurrentView),map) + !String.IsEmpty(Window.Property(Map.IsFetched))</visible>
-			<left>135</left>
-			<top>200</top>
-			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>1670</width>
+			<height>700</height>
+			<animation effect="slide" start="-2000,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-2000,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<!--background-->
 			<control type="image">
 				<left>-20</left>
@@ -1406,10 +1420,12 @@
 		</control>
 		<control type="group">
 			<visible>String.IsEqual(Window.Property(Weather.CurrentView),alerts) + !String.IsEmpty(Window.Property(Alerts.IsFetched))</visible>
-			<left>135</left>
-			<top>200</top>
-			<animation effect="slide" start="-1200,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-1200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>1670</width>
+			<height>700</height>
+			<animation effect="slide" start="-2000,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-2000,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<!--background-->
 			<control type="image">
 				<left>-20</left>

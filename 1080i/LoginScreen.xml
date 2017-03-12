@@ -16,18 +16,18 @@
 		</control>
 		<!--all content-->
 		<control type="group">
-			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="0,0" end="-125,0" time="300" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
+			<centerleft>50%</centerleft>
+			<width>830</width>
+			<animation effect="slide" start="1735,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-1735,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<!--title bars and backgrounds-->
 			<include content="DynamicDialogBackground">
-				<param name="dialog-left" value="545" />
 				<param name="dialog-width" value="830" />
 				<param name="glow-width" value="910" />
 				<param name="title-height" value="150" />
 			</include>
 			<control type="label">
-				<left>560</left>
+				<left>15</left>
 				<top>25</top>
 				<width>800</width>
 				<height>100</height>
@@ -38,10 +38,10 @@
 				<label>$LOCALIZE[31421]</label>
 			</control>
 			<control type="list" id="52">
-				<left>565</left>
+				<left>20</left>
 				<top>170</top>
+				<bottom>160</bottom>
 				<width>790</width>
-				<height>750</height>
 				<onleft>20</onleft>
 				<onright>20</onright>
 				<onup>52</onup>
@@ -133,8 +133,8 @@
 			</control>
 			<control type="image">
 				<description>LOGO</description>
-				<left>795</left>
-				<top>940</top>
+				<centerleft>50%</centerleft>
+				<bottom>20</bottom>
 				<width>330</width>
 				<height>120</height>
 				<aspectratio>keep</aspectratio>

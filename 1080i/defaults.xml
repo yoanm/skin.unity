@@ -166,7 +166,6 @@
 	</default>
 	<default type="scrollbar">
 		<width>7</width>
-		<height>690</height>
 		<texturesliderbackground colordiffuse="secondary">backgrounds/white.png</texturesliderbackground>
 		<texturesliderbar colordiffuse="tertiary">backgrounds/white.png</texturesliderbar>
 		<texturesliderbarfocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturesliderbarfocus>

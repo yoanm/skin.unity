@@ -43,78 +43,69 @@
 			<param name="breadcrumb2-label" value="$INFO[Container.SortMethod]" />
 			<param name="breadcrumb2-visible" value="true" />
 		</include>
-		<!--fake button to hide left blade-->
-		<control type="button" id="73">
-			<left>0</left>
-			<top>0</top>
-			<width>375</width>
-			<height>1080</height>
-			<label>-</label>
-			<font>-</font>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
-			<visible>ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)</visible>
-		</control>
 		<!--dialog fade-->
 		<include>BehindDialogFadeOut</include>
 		<control type="group">
 			<left>-375</left>
 			<include>SideBladeLeft</include>
-			<control type="grouplist" id="9000">
-				<left>10</left>
+			<control type="group">
 				<top>100</top>
-				<width>375</width>
-				<height>975</height>
-				<onleft>9000</onleft>
-				<onright>50</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<onback>50</onback>
-				<itemgap>0</itemgap>
-				<!--control type="label" id="200">
+				<bottom>0</bottom>
+				<control type="grouplist" id="9000">
+					<left>10</left>
 					<width>375</width>
-					<height>52</height>
-					<font>font12</font>
-					<label>31006</label>
-					<textcolor>blue</textcolor>
-					<align>center</align>
-					<aligny>center</aligny>
-				</control-->
-				<!--view as-->
-				<control type="button" id="2">
-					<textwidth>352</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>-</label>
+					<height>100%</height>
+					<onleft>9000</onleft>
+					<onright>50</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<onback>50</onback>
+					<itemgap>0</itemgap>
+					<!--control type="label" id="200">
+						<width>375</width>
+						<height>52</height>
+						<font>font12</font>
+						<label>31006</label>
+						<textcolor>blue</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control-->
+					<!--view as-->
+					<control type="button" id="2">
+						<textwidth>352</textwidth>
+						<include>ButtonCommonValues</include>
+						<label>-</label>
+					</control>
+					<!--sort by-->
+					<control type="button" id="3">
+						<include>ButtonCommonValues</include>
+						<label>103</label>
+					</control>
+					<!--ascending/descending-->
+					<control type="togglebutton" id="4">
+						<include>ButtonCommonValues</include>
+						<label>31051</label>
+						<altlabel>31050</altlabel>
+						<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+					</control>
+					<!--filter basic-->
+					<control type="edit" id="19">
+						<visible>!Container.CanFilterAdvanced</visible>
+						<textwidth>345</textwidth>
+						<include>ButtonCommonValues</include>
+						<label>587</label>
+					</control>
+					<!--filter advanced-->
+					<control type="radiobutton" id="20">
+						<visible>Container.CanFilterAdvanced</visible>
+						<include>ButtonCommonValues</include>
+						<label>587</label>
+						<selected>Container.Filtered</selected>
+						<onclick>right</onclick>
+						<onclick>Filter</onclick>
+					</control>
+					<include>CommonNowPlaying_Controls</include>
 				</control>
-				<!--sort by-->
-				<control type="button" id="3">
-					<include>ButtonCommonValues</include>
-					<label>103</label>
-				</control>
-				<!--ascending/descending-->
-				<control type="togglebutton" id="4">
-					<include>ButtonCommonValues</include>
-					<label>31051</label>
-					<altlabel>31050</altlabel>
-					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-				</control>
-				<!--filter basic-->
-				<control type="edit" id="19">
-					<visible>!Container.CanFilterAdvanced</visible>
-					<textwidth>345</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>587</label>
-				</control>
-				<!--filter advanced-->
-				<control type="radiobutton" id="20">
-					<visible>Container.CanFilterAdvanced</visible>
-					<include>ButtonCommonValues</include>
-					<label>587</label>
-					<selected>Container.Filtered</selected>
-					<onclick>right</onclick>
-					<onclick>Filter</onclick>
-				</control>
-				<include>CommonNowPlaying_Controls</include>
 			</control>
 		</control>
 	</controls>

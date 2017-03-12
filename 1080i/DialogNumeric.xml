@@ -4,20 +4,18 @@
 	<controls>
 		<!--all content-->
 		<control type="group">
-			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
-			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">Hidden</animation>
+			<centerleft>50%</centerleft>
+			<width>390</width>
+			<animation effect="slide" start="1515,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-1515,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<!--title bars and backgrounds-->
 			<include content="DynamicDialogBackground">
-				<param name="dialog-left" value="765" />
 				<param name="dialog-width" value="390" />
 				<param name="glow-width" value="470" />
 				<param name="title-height" value="150" />
 			</include>
 			<!--text entry background-->
 			<control type="image">
-				<left>765</left>
 				<top>150</top>
 				<width>390</width>
 				<height>80</height>
@@ -25,7 +23,6 @@
 			</control>
 			<!--title shadow-->
 			<control type="image">
-				<left>765</left>
 				<top>150</top>
 				<width>390</width>
 				<height>20</height>
@@ -34,7 +31,6 @@
 			</control>
 			<!--text entry shadow-->
 			<control type="image">
-				<left>765</left>
 				<top>230</top>
 				<width>390</width>
 				<height>20</height>
@@ -43,8 +39,7 @@
 			</control>
 			<!--close window button-->
 			<control type="button">
-				<left>770</left>
-				<top>0</top>
+				<left>5</left>
 				<width>50</width>
 				<height>25</height>
 				<label>-</label>
@@ -60,7 +55,6 @@
 			</control>
 			<control type="label" id="4">
 				<description>Edit Text</description>
-				<left>765</left>
 				<top>150</top>
 				<width>390</width>
 				<height>80</height>
@@ -70,7 +64,7 @@
 			</control>
 			<control type="label" id="1">
 				<description>dialog Heading</description>
-				<left>810</left>
+				<left>45</left>
 				<top>50</top>
 				<width>300</width>
 				<height>60</height>
@@ -81,8 +75,9 @@
 				<wrapmultiline>true</wrapmultiline>
 			</control>
 			<control type="group">
-				<left>803</left>
-				<top>383</top>
+				<left>38</left>
+				<centertop>50%</centertop>
+				<height>315</height>
 				<control type="button" id="11">
 					<description>1 button</description>
 					<left>0</left>

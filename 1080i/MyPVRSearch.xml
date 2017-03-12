@@ -9,13 +9,17 @@
 		<include>Clock</include>
 		<include>CommonPageCount</include>
 		<control type="group">
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListPVRSlide</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListPVRSlide</include>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>1650</width>
 			<include>Window_OpenClose_Animation</include>
 			<description>TV Search group</description>
 			<visible>Control.IsVisible(50)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
-				<left>135</left>
-				<top>200</top>
+				<top>5</top>
 				<!--title background-->
 				<control type="image">
 					<left>4</left>
@@ -72,7 +76,8 @@
 					<left>0</left>
 					<top>70</top>
 					<width>1654</width>
-					<height>630</height>
+					<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListPVR</include>
+					<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListPVR</include>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<onleft>104</onleft>
@@ -354,9 +359,9 @@
 				</control>
 				<!--scrollbar-->
 				<control type="scrollbar" id="77">
-					<left>1664</left>
+					<left>1660</left>
 					<top>70</top>
-					<height>620</height>
+					<bottom>5</bottom>
 					<onleft>50</onleft>
 					<onright>104</onright>
 					<orientation>vertical</orientation>
@@ -369,8 +374,8 @@
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
+			<width>100%</width>
+			<height>100%</height>
 			<texture>black-back.png</texture>
 			<animation effect="fade" time="400">Visible</animation>
 			<animation effect="fade" time="200">Hidden</animation>

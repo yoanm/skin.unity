@@ -2,16 +2,19 @@
 <window>
 	<defaultcontrol>1</defaultcontrol>
 	<visible>Window.IsVisible(FullScreenVideo) + [Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime]</visible>
+	<visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(SliderDialog)]</visible>
 	<controls>
 		<!--progress-->
 		<control type="group" id="1">
+			<centerleft>50%</centerleft>
 			<top>150r</top>
+			<width>1140</width>
 			<visible>!VideoPlayer.Content(LiveTV) | [VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg]</visible>
 			<animation effect="slide" start="0,0" end="-372,0" time="200" delay="100" condition="Skin.HasSetting(SubtitleSection)">Conditional</animation>
 			<!--chapter-->
 			<control type="label" id="1">
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<left>415</left>
+				<left>30</left>
 				<top>-8</top>
 				<width>1080</width>
 				<height>60</height>
@@ -24,7 +27,7 @@
 			<!--chapter (paused)-->
 			<control type="label" id="1">
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<left>415</left>
+				<left>30</left>
 				<top>-8</top>
 				<width>1080</width>
 				<height>60</height>
@@ -37,7 +40,7 @@
 			<!--chapter (caching)-->
 			<control type="label" id="1">
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<left>415</left>
+				<left>30</left>
 				<top>-8</top>
 				<width>1080</width>
 				<height>60</height>
@@ -50,7 +53,7 @@
 			<!--chapter (seeking)-->
 			<control type="label" id="1">
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<left>415</left>
+				<left>30</left>
 				<top>-8</top>
 				<width>1080</width>
 				<height>60</height>
@@ -63,7 +66,7 @@
 			<!--chapter (final seek amount)-->
 			<control type="label" id="1">
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<left>415</left>
+				<left>30</left>
 				<top>-8</top>
 				<width>1080</width>
 				<height>60</height>
@@ -76,7 +79,7 @@
 			<!--chapter (fast forwarding)-->
 			<control type="label" id="1">
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<left>415</left>
+				<left>30</left>
 				<top>-8</top>
 				<width>1080</width>
 				<height>60</height>
@@ -89,7 +92,7 @@
 			<!--chapter (rewinding)-->
 			<control type="label" id="1">
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<left>415</left>
+				<left>30</left>
 				<top>-8</top>
 				<width>1080</width>
 				<height>60</height>

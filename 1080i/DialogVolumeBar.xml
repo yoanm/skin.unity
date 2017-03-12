@@ -15,6 +15,7 @@
 			<control type="group">
 				<width>350</width>
 				<height>45</height>
+				<animation effect="fade" start="100" end="0" time="200" delay="1000" condition="Player.Muted">Conditional</animation>
 				<!--glow-->
 				<control type="image">
 					<left>-10</left>

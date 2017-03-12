@@ -13,7 +13,7 @@
 				<left>715</left>
 				<top>0</top>
 				<width>1210</width>
-				<height>1080</height>
+				<height>100%</height>
 				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				<animation effect="fade" start="100" end="85" time="0" condition="true">Conditional</animation>
 			</control>
@@ -22,7 +22,7 @@
 				<left>685</left>
 				<top>0</top>
 				<width>30</width>
-				<height>1080</height>
+				<height>100%</height>
 				<texture flipx="true">sidebarshadow.png</texture>
 			</control>
 			<!--title background-->
@@ -108,8 +108,8 @@
 				<control type="list" id="110">
 					<left>555</left>
 					<top>155</top>
+					<bottom>127</bottom>
 					<width>800</width>
-					<height>798</height>
 					<onleft>111</onleft>
 					<onright>111</onright>
 					<onup>110</onup>
@@ -162,7 +162,7 @@
 				<control type="spincontrol" id="111">
 					<description>Next page button</description>
 					<left>1290</left>
-					<top>975</top>
+					<top>105r</top>
 					<subtype>page</subtype>
 					<onleft>110</onleft>
 					<onright>110</onright>
@@ -192,8 +192,8 @@
 				<control type="list" id="120">
 					<left>555</left>
 					<top>255</top>
+					<bottom>165</bottom>
 					<width>800</width>
-					<height>660</height>
 					<onleft>121</onleft>
 					<onright>121</onright>
 					<onup>120</onup>
@@ -239,7 +239,7 @@
 				<control type="spincontrol" id="121">
 					<description>Next page button</description>
 					<left>1290</left>
-					<top>975</top>
+					<top>105r</top>
 					<subtype>page</subtype>
 					<onleft>120</onleft>
 					<onright>120</onright>
@@ -255,7 +255,7 @@
 				<control type="label">
 					<description>Scraper label</description>
 					<left>550</left>
-					<top>1020</top>
+					<top>60r</top>
 					<width>800</width>
 					<height>45</height>
 					<label>$LOCALIZE[31205] - $INFO[Control.GetLabel(200)]</label>

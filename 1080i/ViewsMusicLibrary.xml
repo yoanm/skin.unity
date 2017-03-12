@@ -5,12 +5,15 @@
 		<control type="group">
 			<visible>Control.IsVisible(506)</visible>
 			<include>VisibleFadeEffect</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1509</width>
 			<!--content list-->
 			<control type="list" id="506">
-				<left>195</left>
-				<top>200</top>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListSlide</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListSlide</include>
 				<width>1004</width>
-				<height>700</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>506</onup>
@@ -104,17 +107,17 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
-				<left>1209</left>
-				<top>200</top>
+				<left>1014</left>
+				<bottom>10</bottom>
 				<onleft>506</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
-				<showonepage>true</showonepage>
 			</control>
 			<!--info-->
 			<control type="group">
-				<left>1226</left>
-				<top>200</top>
+				<left>1031</left>
+				<centertop>50%</centertop>
+				<height>700</height>
 				<!--background-->
 				<control type="image">
 					<left>-18</left>
@@ -168,7 +171,7 @@
 					<control type="image">
 						<left>0</left>
 						<top>95</top>
-						<width>510</width>
+						<width>460</width>
 						<height>10</height>
 						<texture>homeshadow.png</texture>
 						<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
@@ -251,6 +254,24 @@
 						<height>130</height>
 						<texture background="true" colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 					</control>
+					<!--thumb shadow-->
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>460</width>
+						<height>10</height>
+						<texture>homeshadow.png</texture>
+						<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+					</control>
+					<!--info strip shadow-->
+					<control type="image">
+						<left>0</left>
+						<top>130</top>
+						<width>460</width>
+						<height>10</height>
+						<texture>homeshadow.png</texture>
+						<animation effect="fade" start="100" end="100" time="0" condition="true">Conditional</animation>
+					</control>
 					<!--track/title label-->
 					<control type="label">
 						<left>15</left>
@@ -324,15 +345,19 @@
 		</control>
 	</include>
 	<include name="AlbumWrapView2_Fanart">
-		<!--label-->
+		<!--all content-->
 		<control type="group">
-			<left>0</left>
-			<top>525</top>
-			<visible>Control.IsVisible(509) + Skin.HasSetting(View509HideInfo)</visible>
+			<visible>Control.IsVisible(509)</visible>
 			<include>VisibleFadeEffect</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1806</width>
+			<!--label-->
 			<control type="label">
-				<left>60</left>
-				<top>80</top>
+				<visible>Skin.HasSetting(View509HideInfo)</visible>
+				<left>5</left>
+				<top>314r</top>
 				<width>1800</width>
 				<height>30</height>
 				<font>info.title</font>
@@ -343,266 +368,258 @@
 				<aligny>center</aligny>
 				<label>$INFO[ListItem.Label]$INFO[Listitem.Property(Album_Artist), (,)]</label>
 			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(509)</visible>
-			<include>VisibleFadeEffect</include>
-			<left>0</left>
-			<top>645</top>
-			<!--content list-->
-			<control type="list" id="509">
-				<visible>Container.Content(Albums)</visible>
-				<left>55</left>
-				<top>22</top>
-				<width>1810</width>
-				<height>280</height>
-				<onleft>509</onleft>
-				<onright>509</onright>
-				<onup>2</onup>
-				<ondown>60</ondown>
-				<viewtype label="31029">wrap</viewtype>
-				<pagecontrol>60</pagecontrol>
-				<scrolltime>200</scrolltime>
-				<focusposition>5</focusposition>
-				<movement>3</movement>
-				<orientation>horizontal</orientation>
-				<preloaditems>4</preloaditems>
-				<itemlayout height="300" width="258">
-					<!--bg (fallback)-->
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>258</width>
-						<height>258</height>
-						<aspectratio>stretch</aspectratio>
-						<fadetime>200</fadetime>
-						<texture background="true">backgrounds/white.png</texture>
-						<bordersize>5</bordersize>
-						<bordertexture>backgrounds/square shadow small.png</bordertexture>
-						<visible>String.Contains(ListItem.Icon,Default)</visible>
-					</control>
-					<!--thumb (fallback)-->
-					<control type="image">
-						<left>5</left>
-						<top>5</top>
-						<width>248</width>
-						<height>248</height>
-						<aspectratio>stretch</aspectratio>
-						<fadetime>200</fadetime>
-						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
-						<visible>String.Contains(ListItem.Icon,Default)</visible>
-					</control>
-					<!--thumb (no fallback)-->
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>258</width>
-						<height>258</height>
-						<aspectratio>stretch</aspectratio>
-						<fadetime>200</fadetime>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordersize>5</bordersize>
-						<bordertexture>backgrounds/square shadow small.png</bordertexture>
-						<visible>!String.Contains(ListItem.Icon,Default)</visible>
-					</control>
-				</itemlayout>
-				<focusedlayout height="300" width="258">
-					<!--bg (fallback)-->
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>258</width>
-						<height>258</height>
-						<aspectratio>stretch</aspectratio>
-						<fadetime>200</fadetime>
-						<texture background="true">backgrounds/white.png</texture>
-						<bordersize>5</bordersize>
-						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
-						<visible>String.Contains(ListItem.Icon,Default)</visible>
-					</control>
-					<!--thumb (fallback)-->
-					<control type="image">
-						<left>5</left>
-						<top>5</top>
-						<width>248</width>
-						<height>248</height>
-						<aspectratio>stretch</aspectratio>
-						<fadetime>200</fadetime>
-						<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
-						<visible>String.Contains(ListItem.Icon,Default)</visible>
-					</control>
-					<!--thumb-->
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>258</width>
-						<height>258</height>
-						<aspectratio>stretch</aspectratio>
-						<fadetime>200</fadetime>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<bordersize>5</bordersize>
-						<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
-						<visible>!String.Contains(ListItem.Icon,Default)</visible>
-					</control>
-				</focusedlayout>
-			</control>
-			<!--scrollbar-->
-			<control type="scrollbar" id="60">
-				<left>60</left>
-				<top>285</top>
-				<width>1800</width>
-				<height>7</height>
-				<onup>509</onup>
-				<ondown>9000</ondown>
-				<showonepage>false</showonepage>
-				<orientation>horizontal</orientation>
-				<visible>Control.IsVisible(509)</visible>
-			</control>
-		</control>
-		<!--info-->
-		<control type="group">
-			<left>360</left>
-			<top>210</top>
-			<visible>Control.IsVisible(509) + !Skin.HasSetting(View509HideInfo)</visible>
-			<include>VisibleFadeEffect</include>
-			<!--background-->
-			<control type="image">
+			<control type="group">
 				<left>0</left>
-				<top>0</top>
-				<width>1200</width>
-				<height>435</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--title-->
-			<control type="label">
-				<left>30</left>
-				<top>30</top>
-				<width>1140</width>
-				<height>30</height>
-				<font>info.title</font>
-				<textcolor>text.primary</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label]</label>
-			</control>
-			<!--artist-->
-			<control type="label">
-				<left>30</left>
-				<top>65</top>
-				<width>1140</width>
-				<height>60</height>
-				<font>breadcrumb</font>
-				<label>$INFO[Listitem.Property(Album_Artist)]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<textcolor>$VAR[Colour.500]</textcolor>
-				<scroll>false</scroll>
+				<top>280r</top>
+				<!--content list-->
+				<control type="list" id="509">
+					<visible>Container.Content(Albums)</visible>
+					<top>22</top>
+					<width>1806</width>
+					<height>280</height>
+					<onleft>509</onleft>
+					<onright>509</onright>
+					<onup>2</onup>
+					<ondown>60</ondown>
+					<viewtype label="31029">wrap</viewtype>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<focusposition>5</focusposition>
+					<movement>3</movement>
+					<orientation>horizontal</orientation>
+					<preloaditems>4</preloaditems>
+					<itemlayout height="300" width="258">
+						<!--bg (fallback)-->
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>258</width>
+							<height>258</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>200</fadetime>
+							<texture background="true">backgrounds/white.png</texture>
+							<bordersize>5</bordersize>
+							<bordertexture>backgrounds/square shadow small.png</bordertexture>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
+						</control>
+						<!--thumb (fallback)-->
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>248</width>
+							<height>248</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>200</fadetime>
+							<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
+						</control>
+						<!--thumb (no fallback)-->
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>258</width>
+							<height>258</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>200</fadetime>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordersize>5</bordersize>
+							<bordertexture>backgrounds/square shadow small.png</bordertexture>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="300" width="258">
+						<!--bg (fallback)-->
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>258</width>
+							<height>258</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>200</fadetime>
+							<texture background="true">backgrounds/white.png</texture>
+							<bordersize>5</bordersize>
+							<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
+						</control>
+						<!--thumb (fallback)-->
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>248</width>
+							<height>248</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>200</fadetime>
+							<texture colordiffuse="$VAR[Colour.500]" background="true">$INFO[ListItem.Icon]</texture>
+							<visible>String.Contains(ListItem.Icon,Default)</visible>
+						</control>
+						<!--thumb-->
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>258</width>
+							<height>258</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>200</fadetime>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordersize>5</bordersize>
+							<bordertexture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</bordertexture>
+							<visible>!String.Contains(ListItem.Icon,Default)</visible>
+						</control>
+					</focusedlayout>
+				</control>
+				<!--scrollbar-->
+				<control type="scrollbar" id="60">
+					<left>5</left>
+					<top>285</top>
+					<width>1796</width>
+					<height>7</height>
+					<onup>509</onup>
+					<ondown>9000</ondown>
+					<showonepage>false</showonepage>
+					<orientation>horizontal</orientation>
+				</control>
 			</control>
 			<!--info-->
 			<control type="group">
-				<top>55</top>
-				<!--year-->
-				<control type="group">
-					<control type="label">
-						<left>30</left>
-						<top>100</top>
-						<width>240</width>
-						<height>35</height>
-						<font>secondary.info</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>$VAR[Colour.500]</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<label>$LOCALIZE[562]</label>
-					</control>
-					<control type="label">
-						<left>200</left>
-						<top>100</top>
-						<width>240</width>
-						<height>35</height>
-						<font>secondary.info</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<label>$INFO[ListItem.Year]</label>
-					</control>
-				</control>
-				<!--genre-->
-				<control type="group">
-					<top>35</top>
-					<control type="label">
-						<left>30</left>
-						<top>100</top>
-						<width>240</width>
-						<height>35</height>
-						<font>secondary.info</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>$VAR[Colour.500]</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<label>$LOCALIZE[515]</label>
-					</control>
-					<control type="label">
-						<left>200</left>
-						<top>100</top>
-						<width>240</width>
-						<height>35</height>
-						<font>secondary.info</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>text.primary</textcolor>
-						<selectedcolor>selected</selectedcolor>
-						<label>$INFO[ListItem.Genre]</label>
-					</control>
-				</control>
+				<centerleft>50%</centerleft>
+				<width>1200</width>
+				<visible>!Skin.HasSetting(View509HideInfo)</visible>
+				<!--background-->
 				<control type="image">
-					<description>Rating value</description>
-					<left>30</left>
-					<top>180</top>
-					<width>128</width>
-					<height>32</height>
-					<aspectratio>keep</aspectratio>
-					<texture fallback="ratings/0.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.UserRating,ratings/,.png]</texture>
+					<bottom>265</bottom>
+					<width>1200</width>
+					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
 				</control>
-			</control>
-			<!--seperator-->
-			<control type="image">
-				<left>470</left>
-				<top>140</top>
-				<width>1</width>
-				<height>275</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<!--plot-->
-			<control type="textbox">
-				<left>500</left>
-				<top>147</top>
-				<width>665</width>
-				<height>268</height>
-				<font>label</font>
-				<align>justify</align>
-				<textcolor>text.primary</textcolor>
-				<label>$INFO[ListItem.Property(Album_Description)]</label>
-				<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-			</control>
-			<control type="group">
-				<left>60</left>
-				<top>120</top>
+				<!--title-->
+				<control type="label">
+					<left>30</left>
+					<top>30</top>
+					<width>1140</width>
+					<height>30</height>
+					<font>info.title</font>
+					<textcolor>text.primary</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<!--artist-->
+				<control type="label">
+					<left>30</left>
+					<top>65</top>
+					<width>1140</width>
+					<height>60</height>
+					<font>breadcrumb</font>
+					<label>$INFO[Listitem.Property(Album_Artist)]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[Colour.500]</textcolor>
+					<scroll>false</scroll>
+				</control>
+				<!--info-->
+				<control type="group">
+					<top>55</top>
+					<!--year-->
+					<control type="group">
+						<control type="label">
+							<left>30</left>
+							<top>100</top>
+							<width>240</width>
+							<height>35</height>
+							<font>secondary.info</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[Colour.500]</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$LOCALIZE[562]</label>
+						</control>
+						<control type="label">
+							<left>200</left>
+							<top>100</top>
+							<width>240</width>
+							<height>35</height>
+							<font>secondary.info</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>text.primary</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Year]</label>
+						</control>
+					</control>
+					<!--genre-->
+					<control type="group">
+						<top>35</top>
+						<control type="label">
+							<left>30</left>
+							<top>100</top>
+							<width>240</width>
+							<height>35</height>
+							<font>secondary.info</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[Colour.500]</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$LOCALIZE[515]</label>
+						</control>
+						<control type="label">
+							<left>200</left>
+							<top>100</top>
+							<width>240</width>
+							<height>35</height>
+							<font>secondary.info</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>text.primary</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Genre]</label>
+						</control>
+					</control>
+					<control type="image">
+						<description>Rating value</description>
+						<left>30</left>
+						<top>180</top>
+						<width>128</width>
+						<height>32</height>
+						<aspectratio>keep</aspectratio>
+						<texture fallback="ratings/0.png" colordiffuse="$VAR[Colour.500]">$INFO[ListItem.UserRating,ratings/,.png]</texture>
+					</control>
+				</control>
+				<!--seperator-->
+				<control type="image">
+					<left>470</left>
+					<top>140</top>
+					<bottom>285</bottom>
+					<width>1</width>
+					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
+				</control>
+				<!--plot-->
+				<control type="textbox">
+					<left>500</left>
+					<top>147</top>
+					<bottom>280</bottom>
+					<width>665</width>
+					<height></height>
+					<font>label</font>
+					<align>justify</align>
+					<textcolor>text.primary</textcolor>
+					<label>$INFO[ListItem.Property(Album_Description)]</label>
+					<autoscroll time="2000" delay="10000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+				</control>
 			</control>
 		</control>
 	</include>
 	<include name="MusicVideoInfoListView">
 		<control type="group">
-			<left>25</left>
 			<visible>Control.IsVisible(511)</visible>
 			<include>VisibleFadeEffect</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1561</width>
 			<control type="list" id="511">
-				<left>170</left>
-				<top>200</top>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListSlide</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListSlide</include>
 				<width>1004</width>
-				<height>700</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>511</onup>
@@ -772,17 +789,17 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
-				<left>1184</left>
-				<top>200</top>
+				<left>1014</left>
+				<bottom>10</bottom>
 				<onleft>504</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
-				<showonepage>true</showonepage>
 			</control>
 			<!--music video info-->
 			<control type="group">
-				<left>1201</left>
-				<top>200</top>
+				<left>1031</left>
+				<centertop>50%</centertop>
+				<height>700</height>
 				<!--background glow-->
 				<control type="image">
 					<left>-20</left>
@@ -917,12 +934,15 @@
 		<control type="group">
 			<visible>Control.IsVisible(512)</visible>
 			<include>VisibleFadeEffect</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1561</width>
 			<!--content list-->
 			<control type="list" id="512">
-				<left>170</left>
-				<top>200</top>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListSlide</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListSlide</include>
 				<width>1004</width>
-				<height>700</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>512</onup>
@@ -990,8 +1010,8 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
-				<left>1184</left>
-				<top>200</top>
+				<left>1014</left>
+				<bottom>10</bottom>
 				<onleft>512</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
@@ -999,8 +1019,9 @@
 			</control>
 			<!--info-->
 			<control type="group">
-				<left>1201</left>
-				<top>200</top>
+				<left>1031</left>
+				<centertop>50%</centertop>
+				<height>700</height>
 				<!--background-->
 				<control type="image">
 					<left>-20</left>
@@ -1119,12 +1140,15 @@
 		<control type="group">
 			<visible>Control.IsVisible(513)</visible>
 			<include>VisibleFadeEffect</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListContainer</include>
+			<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListContainer</include>
+			<centerleft>50%</centerleft>
+			<width>1541</width>
 			<!--content list-->
 			<control type="list" id="513">
-				<left>170</left>
-				<top>200</top>
+				<include condition="String.IsEqual(Skin.AspectRatio,4:3)">TallListSlide</include>
+				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListSlide</include>
 				<width>1004</width>
-				<height>700</height>
 				<onleft>2</onleft>
 				<onright>60</onright>
 				<onup>504</onup>
@@ -1218,8 +1242,8 @@
 			</control>
 			<!--scrollbar-->
 			<control type="scrollbar" id="60">
-				<left>1184</left>
-				<top>200</top>
+				<left>1014</left>
+				<bottom>10</bottom>
 				<onleft>513</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
@@ -1227,8 +1251,9 @@
 			</control>
 			<!--info-->
 			<control type="group">
-				<left>1201</left>
-				<top>200</top>
+				<left>1031</left>
+				<centertop>50%</centertop>
+				<height>700</height>
 				<!--background-->
 				<control type="image">
 					<left>0</left>

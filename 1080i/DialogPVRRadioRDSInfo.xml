@@ -4,19 +4,20 @@
 	<controls>
 		<!--all content-->
 		<control type="group">
-			<animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="-1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="0,0" end="-35,0" time="300" condition="Window.IsActive(ShutdownMenu)">Conditional</animation>
+			<centerleft>50%</centerleft>
+			<width>1210</width>
+			<animation effect="slide" start="1925,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-1925,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="0,0" end="-35,0" time="300" condition="Window.IsActive(ShutdownMenu) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<!--title bars and backgrounds-->
 			<include content="DynamicDialogBackground">
-				<param name="dialog-left" value="355" />
 				<param name="dialog-width" value="1210" />
 				<param name="glow-width" value="1290" />
 				<param name="buttonbar-visible" value="true" />
 			</include>
 			<!--close window button-->
 			<control type="button">
-				<left>360</left>
+				<left>5</left>
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
@@ -33,7 +34,6 @@
 			</control>
 			<!--main content-->
 			<control type="group">
-				<left>355</left>
 				<top>45</top>
 				<!--title-->
 				<control type="label">
@@ -420,8 +420,8 @@
 				</control>
 				<!--bottom buttons-->
 				<control type="grouplist" id="9000">
-					<left>105</left>
-					<top>970</top>
+					<centerleft>50%</centerleft>
+					<top>65r</top>
 					<width>1000</width>
 					<height>60</height>
 					<align>justify</align>

@@ -11,70 +11,19 @@
 	<controls>
 		<!--all content-->
 		<control type="group">
-			<top>-10</top>
-			<!--background-->
-			<control type="image">
-				<left>0</left>
-				<top>415</top>
-				<width>1920</width>
-				<height>270</height>
-				<texture colordiffuse="tertiary">backgrounds/white.png</texture>
-			</control>
-			<!--title bg-->
-			<control type="image">
-				<left>0</left>
-				<top>415</top>
-				<width>1920</width>
-				<height>40</height>
-				<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
-			</control>
-			<!--title shadow-->
-			<control type="image">
-				<left>0</left>
-				<top>455</top>
-				<width>1920</width>
-				<height>10</height>
-				<texture>homeshadow.png</texture>
-				<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
-			</control>
-			<!--buttons bg-->
-			<control type="image">
-				<left>0</left>
-				<top>655</top>
-				<width>1920</width>
-				<height>70</height>
-				<texture colordiffuse="primary">backgrounds/white.png</texture>
-			</control>
-			<!--buttons shadow-->
-			<control type="image">
-				<left>0</left>
-				<top>655</top>
-				<width>1920</width>
-				<height>10</height>
-				<texture>homeshadow.png</texture>
-				<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
-			</control>
-			<!--top shadow-->
-			<control type="image">
-				<left>0</left>
-				<top>385</top>
-				<width>1920</width>
-				<height>30</height>
-				<texture flipy="true">homeshadow.png</texture>
-			</control>
-			<!--bottom shadow-->
-			<control type="image">
-				<left>0</left>
-				<top>725</top>
-				<width>1920</width>
-				<height>30</height>
-				<texture>homeshadow.png</texture>
-			</control>
+			<centertop>50%</centertop>
+			<height>310</height>
+			<!--title bars and backgrounds-->
+			<include content="DynamicDialogBackground">
+				<param name="dialog-height" value="310" />
+				<param name="glow-height" value="360" />
+				<param name="title-height" value="40" />
+				<param name="buttonbar-visible" value="true" />
+			</include>
 			<!--close button-->
 			<control type="button">
 				<description>Close Window button</description>
 				<left>5</left>
-				<top>415</top>
 				<width>50</width>
 				<height>25</height>
 				<label>-</label>
@@ -89,8 +38,9 @@
 				<visible>system.getbool(input.enablemouse)</visible>
 			</control>
 			<control type="group" id="100">
-				<left>575</left>
-				<top>670</top>
+				<centerleft>50%</centerleft>
+				<top>255</top>
+				<width>790</width>
 				<defaultcontrol always="true">603</defaultcontrol>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
 				<control type="button" id="600">
@@ -326,8 +276,9 @@
 				</control>
 			</control>
 			<control type="group" id="100">
-				<left>690</left>
+				<centerleft>50%</centerleft>
 				<top>670</top>
+				<width>565</width>
 				<defaultcontrol always="true">700</defaultcontrol>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 				<control type="button" id="701">
@@ -451,15 +402,17 @@
 			</control>
 			<!-- Music Info -->
 			<control type="group">
-				<left>465</left>
-				<top>465</top>
+				<centerleft>50%</centerleft>
+				<top>50</top>
+				<width>995</width>
 				<visible>Player.HasAudio</visible>
 				<include>SmallMusicInfo</include>
 			</control>
 			<!-- Video Info -->
 			<control type="group">
-				<left>615</left>
-				<top>465</top>
+				<centerleft>50%</centerleft>
+				<top>50</top>
+				<width>995</width>
 				<visible>Player.HasVideo</visible>
 				<include>SmallVideoInfo</include>
 			</control>
