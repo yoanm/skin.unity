@@ -20,7 +20,7 @@
 			<animation effect="slide" start="0,0" end="-2015,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="-2015,0" end="0,0" time="400" tween="quadratic" easing="out">Visible</animation>
 			<animation effect="slide" start="0,0" end="-2015,0" time="400" tween="quadratic" easing="out">Hidden</animation>
-			<animation effect="slide" start="0,0" end="-125,0" time="300" condition="Window.IsActive(ShutdownMenu) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-125,0" time="300" condition="[Window.IsActive(ShutdownMenu) | Window.IsActive(ContextMenu)] + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<!--title bars and backgrounds-->
 			<include content="DynamicDialogBackground">
 				<param name="dialog-width" value="1390" />
@@ -213,6 +213,12 @@
 							<label>$ADDON[script.skinshortcuts 32072]</label>
 							<visible>String.IsEqual(Window.Property("groupname"),mainmenu)</visible>
 						</control>
+						<!--enable/disable item-->
+						<control type="radiobutton" id="313">
+							<width>760</width>
+							<selected>String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)</selected>
+							<label>$LOCALIZE[24021]</label>
+						</control>
 						<!--add item-->
 						<control type="button" id="301">
 							<width>760</width>
@@ -258,5 +264,6 @@
 				</control>
 			</control>
 		</control>
+		<include>BehindDialogFadeOut</include>
 	</controls>
 </window>
