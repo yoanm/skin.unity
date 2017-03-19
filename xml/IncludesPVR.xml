@@ -144,7 +144,7 @@
 						<textwidth>352</textwidth>
 						<include>ButtonCommonValues</include>
 						<label>-</label>
-						<!-- <visible>Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)</visible> -->
+						<visible>Window.IsActive(MyPVRGuide.xml)</visible>
 					</control>
 					<control type="button" id="3">
 						<description>Sort by button</description>
