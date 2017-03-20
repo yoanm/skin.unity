@@ -43,7 +43,7 @@
 					<top>0</top>
 					<width>984</width>
 					<height>402</height>
-					<texture fallback="special://skin/backgrounds/tv.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
+					<texture fallback="special://skin/extras/backgrounds/tv.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
 					<include>VisibleFadeEffect</include>
 					<visible>!Player.HasVideo</visible>
 				</control>

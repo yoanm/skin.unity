@@ -230,7 +230,7 @@ msgid "Context"
 msgstr ""
 
 msgctxt "#31066"
-msgid "Show extra fanart"
+msgid "Show Extra Fanart"
 msgstr ""
 
 msgctxt "#31067"
@@ -317,7 +317,13 @@ msgctxt "#31112"
 msgid "Options"
 msgstr ""
 
-#empty strings from id 31113 to 31114
+msgctxt "#31113"
+msgid "Multi-Image Background Timer:"
+msgstr ""
+
+msgctxt "#31114"
+msgid "seconds"
+msgstr ""
 
 msgctxt "#31115"
 msgid "Auto-hide the Sub-menu"

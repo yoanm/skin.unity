@@ -230,8 +230,8 @@ msgid "Context"
 msgstr "Context"
 
 msgctxt "#31066"
-msgid "Show extra fanart"
-msgstr "Show extra fanart"
+msgid "Show Extra Fanart"
+msgstr "Show Extra Fanart"
 
 msgctxt "#31067"
 msgid "Path"

@@ -376,8 +376,9 @@
 					<control type="radiobutton" id="302">
 						<width>995</width>
 						<label>31066</label>
-						<onclick>Skin.ToggleSetting(ExtraFanart)</onclick>
-						<selected>Skin.HasSetting(ExtraFanart)</selected>
+						<onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
+						<selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
+						<enable>!Skin.HasSetting(HideBackGroundFanart)</enable>
 					</control>
 					<control type="radiobutton" id="303">
 						<width>995</width>
@@ -397,6 +398,12 @@
 						<onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
 						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
 					</control>
+					<control type="button" id="316">
+						<width>995</width>
+						<label>31113</label>
+						<label2>$INFO[Skin.String(BackgroundSwitchDelay.label)]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=BackgroundSwitchDelay,header=$LOCALIZE[31113])</onclick>
+					</control>
 					<control type="label" id="310">
 						<width>995</width>
 						<height>60</height>
@@ -405,6 +412,12 @@
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31102</label>
+					</control>
+					<control type="radiobutton" id="315">
+						<width>995</width>
+						<label>$LOCALIZE[13319]</label>
+						<onclick>Skin.ToggleSetting(RandomizeBackground)</onclick>
+						<selected>Skin.HasSetting(RandomizeBackground)</selected>
 					</control>
 					<control type="radiobutton" id="311">
 						<width>995</width>
@@ -415,8 +428,8 @@
 					<control type="button" id="312">
 						<width>995</width>
 						<label>- $LOCALIZE[31110]</label>
-						<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2>
-						<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
+						<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath.label)][/COLOR]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=CustomBackgroundPath,allowmulti=true,resourceaddon=resource.images.skinbackgrounds,skinhelperbackgrounds=false)</onclick>
 						<enable>Skin.HasSetting(UseCustomBackground)</enable>
 					</control>
 				</control>
