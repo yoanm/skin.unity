@@ -817,4 +817,96 @@
 				
 	</other>
 
+	<other include="widget">
+		<!-- We're going to use this template for all widgets with a widgetPath element -->
+		<condition tag="property" attribute="name|widgetPath" />
+		<condition tag="property" attribute="name|widgetLayout">Weather</condition>
+		<property name="id" tag="mainmenuid" />
+		<controls>
+			<!--all content-->
+			<control type="group" id="9003">
+				<skinshortcuts>visibility</skinshortcuts>
+				<onup>20</onup>
+				<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
+				<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
+				<visible>!Window.IsVisible(Favourites)</visible>
+				<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
+				<animation effect="fade" time="200">WindowClose</animation>
+				<include>VisibleFadeEffect</include>
+				<!--weather-->
+				<control type="group">
+					<left>0</left>
+					<top>12%</top>
+					<include content="WeatherWidget">
+						<param name="list_id" value="8011$SKINSHORTCUTS[id]" />
+					</include>
+					<!--arrows-->
+					<control type="group">
+						<!--left arrow bg-->
+						<control type="button" id="80001">
+							<left>380</left>
+							<top>155</top>
+							<width>50</width>
+							<height>50</height>
+							<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="tertiary">backgrounds/white.png</texturenofocus>
+							<onclick>Control.Move(8011$SKINSHORTCUTS[id],-1)</onclick>
+							<visible>Container(8011$SKINSHORTCUTS[id]).HasPrevious</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<!--left arrow-->
+						<control type="image">
+							<left>380</left>
+							<top>155</top>
+							<width>50</width>
+							<height>50</height>
+							<texture colordiffuse="text.primary">arrow-big-left.png</texture>
+							<visible>Container(8011$SKINSHORTCUTS[id]).HasPrevious + !Control.HasFocus(80001)</visible>
+						</control>
+						<!--left arrow-->
+						<control type="image">
+							<left>380</left>
+							<top>155</top>
+							<width>50</width>
+							<height>50</height>
+							<texture colordiffuse="white">arrow-big-left.png</texture>
+							<visible>Container(8011$SKINSHORTCUTS[id]).HasPrevious + Control.HasFocus(80001)</visible>
+						</control>
+						<!--right arrow bg-->
+						<control type="button" id="80002">
+							<description>right Arrow</description>
+							<left>1490</left>
+							<top>155</top>
+							<width>50</width>
+							<height>50</height>
+							<texturefocus colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texturefocus>
+							<texturenofocus colordiffuse="tertiary">backgrounds/white.png</texturenofocus>
+							<onclick>Control.Move(8011$SKINSHORTCUTS[id],1)</onclick>
+							<visible>Container(8011$SKINSHORTCUTS[id]).HasNext</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<!--right arrow-->
+						<control type="image">
+							<left>1490</left>
+							<top>155</top>
+							<width>50</width>
+							<height>50</height>
+							<texture colordiffuse="text.primary">arrow-big-right.png</texture>
+							<visible>Container(8011$SKINSHORTCUTS[id]).HasNext + !Control.HasFocus(80002)</visible>
+						</control>
+						<!--right arrow-->
+						<control type="image">
+							<left>1490</left>
+							<top>155</top>
+							<width>50</width>
+							<height>50</height>
+							<texture colordiffuse="white">arrow-big-right.png</texture>
+							<visible>Container(8011$SKINSHORTCUTS[id]).HasNext + Control.HasFocus(80002)</visible>
+						</control>
+					</control>
+				</control>
+			</control>
+		</controls>
+	</other>
+
 </template>

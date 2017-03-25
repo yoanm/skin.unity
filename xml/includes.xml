@@ -16,6 +16,7 @@
 	<include file="IncludesBackgroundBuilding.xml" />
 	<include file="IncludesListAnimations.xml" />
 	<include file="IncludesPVR.xml" />
+	<include file="IncludesWidgets.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 	<variable name="MusicInfoHeader">

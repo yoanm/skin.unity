@@ -16,6 +16,7 @@
 	<widget-groupings>
 		<shortcut label="Widgets" type="32010" condition="System.HasAddon(script.skin.helper.service)" icon="DefaultFolder.png">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=scriptwidgets,smartshortcuts,extendedinfo,librarydataprovider,smartishwidgets,favourites</shortcut>
 		<shortcut label="$ADDON[script.skin.helper.service 32025]" type="32053" condition="System.HasAddon(script.skin.helper.service)" icon="DefaultFile.png" widget="addon" widgetType="none" widgetTarget="video">$INCLUDE[skinshortcuts-submenu]</shortcut>
+		<shortcut label="12600" type="$INFO[Window(weather).Property(WeatherProvider)]" condition="!String.IsEmpty(Weather.Plugin)" icon="DefaultAddonWeather.png" widget="addon" widgetType="weather" widgetTarget="video">weather</shortcut>
 		<node label="32030">
 			<content>video</content>
 			<content>videosources</content>
@@ -52,6 +53,7 @@
 	</widget-groupings>
 	
 	<!-- Widget Default Values If Empty  -->
+	<propertyfallback property="widgetLayout" attribute="widgetType" value="weather">Weather</propertyfallback>
 	<propertyfallback property="widgetLayout" attribute="widgetType" value="musicvideos">Square</propertyfallback>
 	<propertyfallback property="widgetLayout" attribute="widgetType" value="songs">Square</propertyfallback>
 	<propertyfallback property="widgetLayout" attribute="widgetType" value="albums">Square</propertyfallback>
