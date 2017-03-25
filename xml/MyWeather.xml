@@ -159,7 +159,7 @@
 							<description>current temp Value</description>
 							<left>15</left>
 							<top>170</top>
-							<width>200</width>
+							<width>220</width>
 							<height>60</height>
 							<font>WeatherTemp</font>
 							<align>right</align>
