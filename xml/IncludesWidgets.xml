@@ -3,7 +3,7 @@
 	<include name="WeatherWidgetContent">
 		<content>
 			<item>
-				<icon>resource://resource.images.weathericons.default/na.png</icon>
+				<thumb>resource://resource.images.weathericons.default/na.png</thumb>
 				<onclick>noop</onclick>
 				<visible>String.IsEmpty(Window(weather).Property(Daily.IsFetched))</visible>
 			</item>
