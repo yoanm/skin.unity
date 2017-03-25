@@ -66,15 +66,15 @@
 	</variable>
 	<include name="CommonBackground">
 		<!-- global background -->
-        <control type="multiimage">
-            <left>0</left>
+		<control type="multiimage">
+			<left>0</left>
 			<top>0</top>
 			<width>100%</width>
 			<height>100%</height>
-            <imagepath background="true" fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[BackgroundVar]</imagepath>
-            <aspectratio>scale</aspectratio>
-            <fadetime>450</fadetime>
-            <loop>yes</loop>
+			<imagepath background="true" fallback="special://skin/extras/backgrounds/SKINDEFAULT.jpg">$VAR[BackgroundVar]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<fadetime>450</fadetime>
+			<loop>yes</loop>
 			<include>fanartSpeed</include>
 			<include condition="Skin.HasSetting(RandomizeBackground)">RandomizeImages</include>
 			<visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Window.IsVisible(MovieInformation) + !Skin.HasSetting(HideWindowedTrailer)] | Window.IsActive(TVChannels)</visible>
