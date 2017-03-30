@@ -38,7 +38,7 @@ Icon
 
 # Skin debug files
 debug/*
-1080i/Custom_Debug_Overlay.xml
+*/Custom_Debug_Overlay.xml
 
 # Skin shortcuts menu
-1080i/script-skinshortcuts-includes.xml
+*/script-skinshortcuts-includes.xml
