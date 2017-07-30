@@ -35,7 +35,7 @@
 		<disclaimer lang="en_US">More info on the skin can be found at the Kodi Forums.</disclaimer>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
 		<forum>http://forum.kodi.tv/forumdisplay.php?fid=244</forum>
-		<source>https://github.com/bumpaneer/skin.unity/tree/Krypton</source>
+		<source>https://github.com/yoanm/skin.unity/tree/Krypton</source>
 		<platform>all</platform>
 		<assets>
 			<icon>resources/icon.png</icon>
