@@ -405,7 +405,7 @@
 				<top>220</top>
 				<width>412</width>
 				<height>21</height>
-				<overlaytexture>-</overlaytexture>
+				<overlaytexture></overlaytexture>
 				<info>PVR.ActStreamProgrSNR</info>
 			</control>
 			<control type="label">

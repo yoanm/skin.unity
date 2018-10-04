@@ -24,10 +24,10 @@
 				<top>0</top>
 				<width>120</width>
 				<height>100%</height>
-				<label>-</label>
-				<font>-</font>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
+				<label></label>
+				<font></font>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
 				<visible>true</visible>
 				<onfocus>SetFocus(150)</onfocus>
 			</control>
@@ -53,8 +53,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>

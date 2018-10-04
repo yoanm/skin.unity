@@ -26,8 +26,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -72,7 +72,7 @@
 					<onright>49</onright>
 					<onup>9000</onup>
 					<ondown>60</ondown>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="30">
 						<control type="label">
@@ -211,12 +211,12 @@
 					<left>1090</left>
 					<top>547</top>
 					<subtype>page</subtype>
-					<font>-</font>
+					<font></font>
 					<onleft>60</onleft>
 					<onright>60</onright>
 					<ondown>9000</ondown>
 					<onup>49</onup>
-					<textcolor>-</textcolor>
+					<textcolor></textcolor>
 					<showonepage>true</showonepage>
 					<textureupfocus colordiffuse="$VAR[Colour.500]">scroll-up-2.png</textureupfocus>
 					<texturedownfocus colordiffuse="$VAR[Colour.500]">scroll-down-2.png</texturedownfocus>

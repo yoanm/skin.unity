@@ -94,8 +94,8 @@
 					<top>-140</top>
 					<width>50</width>
 					<height>25</height>
-					<label>-</label>
-					<font>-</font>
+					<label></label>
+					<font></font>
 					<onclick>PreviousMenu</onclick>
 					<texturefocus>DialogCloseButton-focus.png</texturefocus>
 					<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -133,8 +133,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -166,8 +166,8 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<focusedcolor>text.primary</focusedcolor>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
 			</control>
 			<control type="group" id="78500">
 				<centerleft>50%</centerleft>

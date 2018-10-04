@@ -23,8 +23,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -46,7 +46,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="grouplist" id="9">
 					<description>button area</description>
@@ -122,7 +122,7 @@
 				</control>
 				<control type="label" id="7">
 					<height>60</height>
-					<label>-</label>
+					<label></label>
 					<font>button.bold</font>
 					<textcolor>$VAR[Colour.500]</textcolor>
 					<textoffsetx>5</textoffsetx>
@@ -131,7 +131,7 @@
 				<control type="image" id="6">
 					<description>Default Seperator</description>
 					<height>0</height>
-					<texture>-</texture>
+					<texture></texture>
 					<visible>false</visible>
 				</control>
 				<!--bottom buttons-->

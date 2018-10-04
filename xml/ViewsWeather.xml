@@ -257,8 +257,8 @@
 				</focusedlayout>
 				<content>
 					<item>
-						<label>-</label>
-						<icon>-</icon>
+						<label></label>
+						<icon></icon>
 						<onclick>noop</onclick>
 						<visible>!Weather.IsFetched</visible>
 					</item>
@@ -1258,7 +1258,7 @@
 				<top>646</top>
 				<width>38</width>
 				<height>38</height>
-				<label>-</label>
+				<label></label>
 				<texturefocus colordiffuse="$VAR[Colour.500]">OSDPlayNF.png</texturefocus>
 				<texturenofocus>OSDPlayNF.png</texturenofocus>
 				<onleft>991</onleft>
@@ -1270,7 +1270,7 @@
 				<top>646</top>
 				<width>38</width>
 				<height>38</height>
-				<label>-</label>
+				<label></label>
 				<texturefocus flipx="true" colordiffuse="$VAR[Colour.500]">OSDPlayNF.png</texturefocus>
 				<texturenofocus flipx="true">OSDPlayNF.png</texturenofocus>
 				<onleft>9000</onleft>
@@ -1412,8 +1412,8 @@
 			<top>-30</top>
 			<width>1</width>
 			<height>1</height>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
+			<texturenofocus></texturenofocus>
+			<texturefocus></texturefocus>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<visible>String.IsEqual(Window.Property(Weather.CurrentView),alerts)</visible>

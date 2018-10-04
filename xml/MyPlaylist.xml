@@ -57,7 +57,7 @@
 					<control type="button" id="2">
 						<textwidth>352</textwidth>
 						<include>ButtonCommonValues</include>
-						<label>-</label>
+						<label></label>
 					</control>
 					<!--choose colour-->
 					<control type="button" id="33">
@@ -84,7 +84,7 @@
 					<control type="button" id="26">
 						<textwidth>352</textwidth>
 						<include>ButtonCommonValues</include>
-						<label>-</label>
+						<label></label>
 					</control>
 					<!--save-->
 					<control type="button" id="21">

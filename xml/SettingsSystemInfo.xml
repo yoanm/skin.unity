@@ -32,8 +32,8 @@
 				<left>5</left>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -53,7 +53,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-				<label>-</label>
+				<label></label>
 			</control>
 			<control type="grouplist" id="9000">
 				<left>10</left>
@@ -133,70 +133,70 @@
 					<width>965</width>
 					<height>40</height>
 					<font>button.bold</font>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="label" id="3">
 					<description>Label 3</description>
 					<width>965</width>
 					<height>40</height>
 					<font>button.bold</font>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="label" id="4">
 					<description>Label 4</description>
 					<width>965</width>
 					<height>40</height>
 					<font>button.bold</font>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="label" id="5">
 					<description>Label 5</description>
 					<width>965</width>
 					<height>40</height>
 					<font>button.bold</font>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="label" id="6">
 					<description>Label 6</description>
 					<width>965</width>
 					<height>40</height>
 					<font>button.bold</font>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="label" id="7">
 					<description>Label 7</description>
 					<width>965</width>
 					<height>40</height>
 					<font>button.bold</font>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="label" id="8">
 					<description>Label 8</description>
 					<width>965</width>
 					<height>40</height>
 					<font>button.bold</font>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="label" id="9">
 					<description>Label 9</description>
 					<width>965</width>
 					<height>40</height>
 					<font>button.bold</font>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="label" id="10">
 					<description>Label 10</description>
 					<width>965</width>
 					<height>40</height>
 					<font>button.bold</font>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="label" id="11">
 					<description>Label 11</description>
 					<width>965</width>
 					<height>40</height>
 					<font>button.bold</font>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="label" id="52">
 					<description>Kodi Build Version</description>

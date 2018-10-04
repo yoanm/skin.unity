@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol>-</defaultcontrol>
+	<defaultcontrol></defaultcontrol>
 	<controls>
 		<control type="group" id="1">
 			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsVisible(DialogSeekbar.xml)] + ![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(SliderDialog)]</visible>
@@ -149,7 +149,7 @@
 						<width>1090</width>
 						<height>7</height>
 						<info>Player.Progress</info>
-						<texturebg>-</texturebg>
+						<texturebg></texturebg>
 					</control>
 					<!--current time-->
 					<control type="label" id="1">
@@ -210,7 +210,7 @@
 				<height>45</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>-</label>
+				<label></label>
 			</control>
 			<control type="label" id="11">
 				<description>row 2 label</description>
@@ -220,7 +220,7 @@
 				<height>45</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>-</label>
+				<label></label>
 			</control>
 			<control type="label" id="12">
 				<description>row 3 label</description>
@@ -230,7 +230,7 @@
 				<height>45</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>-</label>
+				<label></label>
 			</control>
 		</control>
 	</controls>

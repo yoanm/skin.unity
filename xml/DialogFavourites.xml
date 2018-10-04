@@ -13,8 +13,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -58,7 +58,7 @@
 					<onleft>Dialog.Close(Favourites)</onleft>
 					<onright>450</onright>
 					<ondown>450</ondown>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemgap>0</itemgap>
 					<itemlayout height="60">
@@ -67,7 +67,7 @@
 							<top>0</top>
 							<width>355</width>
 							<height>60</height>
-							<texture colordiffuse="button.border">-</texture>
+							<texture colordiffuse="button.border"></texture>
 						</control>
 						<control type="label">
 							<left>15</left>
@@ -88,7 +88,7 @@
 							<width>355</width>
 							<height>60</height>
 							<visible>!Control.HasFocus(450)</visible>
-							<texture colordiffuse="button.border">-</texture>
+							<texture colordiffuse="button.border"></texture>
 						</control>
 						<control type="image">
 							<left>0</left>

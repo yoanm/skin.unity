@@ -528,7 +528,7 @@
 								<font>secondary.info</font>
 								<align>justify</align>
 								<textcolor>text.primary</textcolor>
-								<pagecontrol>-</pagecontrol>
+								<pagecontrol></pagecontrol>
 								<label>$INFO[ListItem.Plot]</label>
 							</control>
 							<control type="image">
@@ -860,7 +860,7 @@
 								<font>secondary.info</font>
 								<align>justify</align>
 								<textcolor>text.primary</textcolor>
-								<pagecontrol>-</pagecontrol>
+								<pagecontrol></pagecontrol>
 								<label>$INFO[ListItem.Plot]</label>
 							</control>
 							<control type="image">
@@ -1191,7 +1191,7 @@
 								<font>secondary.info</font>
 								<align>justify</align>
 								<textcolor>text.primary</textcolor>
-								<pagecontrol>-</pagecontrol>
+								<pagecontrol></pagecontrol>
 								<label>$INFO[ListItem.Plot]</label>
 							</control>
 							<control type="image">

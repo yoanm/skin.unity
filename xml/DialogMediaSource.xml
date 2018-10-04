@@ -26,8 +26,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -217,7 +217,7 @@
 					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>-</label>
+					<label></label>
 					<font>label</font>
 					<textcolor>text.primary</textcolor>
 					<focusedcolor>white</focusedcolor>

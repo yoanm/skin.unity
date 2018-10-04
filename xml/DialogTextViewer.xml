@@ -16,8 +16,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -58,7 +58,7 @@
 					<top>169</top>
 					<bottom>15</bottom>
 					<width>1045</width>
-					<label>-</label>
+					<label></label>
 					<font>label</font>
 					<align>justify</align>
 					<pagecontrol>61</pagecontrol>

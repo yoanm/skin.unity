@@ -135,7 +135,7 @@
 						<right>60</right>
 						<textwidth>352</textwidth>
 						<include>ButtonCommonValues</include>
-						<label>-</label>
+						<label></label>
 					</control>
 					<control type="button" id="2">
 						<description>View As button</description>
@@ -143,7 +143,7 @@
 						<right>60</right>
 						<textwidth>352</textwidth>
 						<include>ButtonCommonValues</include>
-						<label>-</label>
+						<label></label>
 						<visible>Window.IsActive(MyPVRGuide.xml)</visible>
 					</control>
 					<control type="button" id="3">

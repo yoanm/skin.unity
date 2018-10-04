@@ -87,7 +87,7 @@
 					<control type="button" id="2">
 						<textwidth>352</textwidth>
 						<include>ButtonCommonValues</include>
-						<label>-</label>
+						<label></label>
 					</control>
 					<!--sort by-->
 					<control type="button" id="3">

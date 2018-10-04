@@ -36,8 +36,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -79,9 +79,9 @@
 				<top>3000</top>
 				<width>0</width>
 				<height>0</height>
-				<label>-</label>
-				<font>-</font>
-				<textcolor>-</textcolor>
+				<label></label>
+				<font></font>
+				<textcolor></textcolor>
 			</control>
 			<!-- Hide this Control off the screen because we use the label above instead -->
 			<control type="label" id="191">
@@ -89,8 +89,8 @@
 				<top>3000</top>
 				<width>0</width>
 				<height>0</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 			</control>
 			<!--left buttons-->
 			<control type="list" id="9000">
@@ -262,7 +262,7 @@
 				<top>3000</top>
 				<width>15</width>
 				<height>15</height>
-				<label>-</label>
+				<label></label>
 				<onup>101</onup>
 				<ondown>101</ondown>
 				<onleft>101</onleft>
@@ -283,9 +283,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="221">
 						<visible>Container(9000).HasFocus(1)</visible>
@@ -429,9 +429,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="111">
 						<visible>Container(9000).HasFocus(2)</visible>
@@ -655,9 +655,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="211">
 						<visible>Container(9000).HasFocus(3)</visible>
@@ -881,9 +881,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="121">
 						<visible>Container(9000).HasFocus(4)</visible>
@@ -1045,9 +1045,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="131">
 						<visible>Container(9000).HasFocus(5)</visible>
@@ -1191,9 +1191,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="141">
 						<visible>Container(9000).HasFocus(6)</visible>
@@ -1355,9 +1355,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="151">
 						<visible>Container(9000).HasFocus(7)</visible>
@@ -1542,9 +1542,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="161">
 						<visible>Container(9000).HasFocus(8)</visible>
@@ -1688,9 +1688,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="171">
 						<visible>Container(9000).HasFocus(9)</visible>
@@ -1834,9 +1834,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="181">
 						<visible>Container(9000).HasFocus(10)</visible>
@@ -2021,9 +2021,9 @@
 						<top>3000</top>
 						<width>150</width>
 						<height>0</height>
-						<label>-</label>
-						<font>-</font>
-						<textcolor>-</textcolor>
+						<label></label>
+						<font></font>
+						<textcolor></textcolor>
 					</control>
 					<control type="panel" id="231">
 						<visible>Container(9000).HasFocus(11)</visible>

@@ -83,13 +83,13 @@
 				<visible>![Window.IsActive(visualisation) | Window.IsActive(fullscreenvideo)]</visible>
 				<width>99</width>
 				<height>45</height>
-				<font>-</font>
+				<font></font>
 			</control>
 			<control type="label">
 				<visible>Window.IsActive(visualisation) | Window.IsActive(fullscreenvideo)</visible>
 				<width>1</width>
 				<height>45</height>
-				<font>-</font>
+				<font></font>
 			</control>
 			<control type="button">
 				<width max="500">auto</width>

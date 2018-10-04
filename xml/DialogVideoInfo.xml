@@ -20,11 +20,11 @@
 					<top>80</top>
 					<width>60</width>
 					<height>60</height>
-					<label>-</label>
-					<font>-</font>
+					<label></label>
+					<font></font>
 					<ondown>9000</ondown>
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>-</texturefocus>
+					<texturenofocus></texturenofocus>
+					<texturefocus></texturefocus>
 				</control>
 				<!--background-->
 				<control type="image">
@@ -77,14 +77,14 @@
 						<top>0</top>
 						<width>1390</width>
 						<height>800</height>
-						<label>-</label>
-						<font>-</font>
+						<label></label>
+						<font></font>
 						<ondown>15</ondown>
 						<onclick condition="!Player.HasVideo">PlayMedia($INFO[ListItem.Trailer],1)</onclick>
 						<onclick condition="Player.HasVideo">PlayerControl(Play)</onclick>
 						<visible>!Control.HasFocus(9003) + [Control.HasFocus(15) | Control.HasFocus(105)]</visible>
-						<texturenofocus>-</texturenofocus>
-						<texturefocus>-</texturefocus>
+						<texturenofocus></texturenofocus>
+						<texturefocus></texturefocus>
 					</control>
 				</control>
 				<!--fanart-->
@@ -158,8 +158,8 @@
 					<left>5</left>
 					<width>50</width>
 					<height>25</height>
-					<label>-</label>
-					<font>-</font>
+					<label></label>
+					<font></font>
 					<onclick>PreviousMenu</onclick>
 					<texturefocus>DialogCloseButton-focus.png</texturefocus>
 					<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -465,7 +465,7 @@
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>50</ondown>
-						<pagecontrol>-</pagecontrol>
+						<pagecontrol></pagecontrol>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="35">
 							<control type="label">
@@ -613,7 +613,7 @@
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>50</ondown>
-						<pagecontrol>-</pagecontrol>
+						<pagecontrol></pagecontrol>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="35">
 							<control type="label">
@@ -761,7 +761,7 @@
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>50</ondown>
-						<pagecontrol>-</pagecontrol>
+						<pagecontrol></pagecontrol>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="35">
 							<control type="label">
@@ -903,7 +903,7 @@
 						<onright>49</onright>
 						<onup>9000</onup>
 						<ondown>50</ondown>
-						<pagecontrol>-</pagecontrol>
+						<pagecontrol></pagecontrol>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="35">
 							<control type="label">

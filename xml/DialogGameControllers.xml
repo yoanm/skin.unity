@@ -21,8 +21,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -205,7 +205,7 @@
 				<!--separator-->
 				<control type="image" id="9">
 					<height>0</height>
-					<texture>-</texture>
+					<texture></texture>
 					<visible>false</visible>
 				</control>
 				<!--bottom buttons-->

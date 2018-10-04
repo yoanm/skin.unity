@@ -17,8 +17,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -67,7 +67,7 @@
 					<onup>9000</onup>
 					<scrolltime>200</scrolltime>
 					<viewtype label="536">icon</viewtype>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<orientation>vertical</orientation>
 					<itemlayout height="260" width="410">
 						<!--thumb-->

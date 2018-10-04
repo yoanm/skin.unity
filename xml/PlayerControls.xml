@@ -26,8 +26,8 @@
 				<left>5</left>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -48,7 +48,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDPrevTrackNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDPrevTrackNF.png</texturenofocus>
 					<onleft>609</onleft>
@@ -63,7 +63,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDRewindNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDRewindNF.png</texturenofocus>
 					<onleft>600</onleft>
@@ -78,7 +78,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDPauseNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDPauseNF.png</texturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -96,7 +96,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDStopNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDStopNF.png</texturenofocus>
 					<onleft>603</onleft>
@@ -112,7 +112,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDForwardNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDForwardNF.png</texturenofocus>
 					<onleft>602</onleft>
@@ -127,7 +127,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDNextTrackNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDNextTrackNF.png</texturenofocus>
 					<onleft>604</onleft>
@@ -142,7 +142,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDRecordOffNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDRecordOffNF.png</texturenofocus>
 					<onleft>605</onleft>
@@ -161,9 +161,9 @@
 						<top>-5</top>
 						<width>50</width>
 						<height>50</height>
-						<label>-</label>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<label></label>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
 						<onclick>XBMC.PlayerControl(Repeat)</onclick>
 						<onleft>606</onleft>
 						<onright>608</onright>
@@ -236,7 +236,7 @@
 						<top>-5</top>
 						<width>50</width>
 						<height>50</height>
-						<label>-</label>
+						<label></label>
 						<texturefocus colordiffuse="$VAR[Colour.500]">OSDRandomOffNF.png</texturefocus>
 						<texturenofocus colordiffuse="text.primary">OSDRandomOffNF.png</texturenofocus>
 						<usealttexture>Playlist.IsRandom</usealttexture>
@@ -255,7 +255,7 @@
 						<width>40</width>
 						<height>40</height>
 						<label>31128</label>
-						<font>-</font>
+						<font></font>
 						<texturefocus colordiffuse="$VAR[Colour.500]">OSDLyricsNF.png</texturefocus>
 						<texturenofocus colordiffuse="text.primary">OSDLyricsNF.png</texturenofocus>
 						<alttexturefocus colordiffuse="$VAR[Colour.500]">OSDLyricsNF.png</alttexturefocus>
@@ -286,7 +286,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDRewindNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDRewindNF.png</texturenofocus>
 					<onleft>706</onleft>
@@ -303,7 +303,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDStopNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDStopNF.png</texturenofocus>
 					<onleft>701</onleft>
@@ -319,7 +319,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDPauseNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDPauseNF.png</texturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -340,7 +340,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDForwardNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDForwardNF.png</texturenofocus>
 					<onleft>703</onleft>
@@ -357,7 +357,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDChannelUPNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDChannelUPNF.png</texturenofocus>
 					<onleft>704</onleft>
@@ -372,7 +372,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDChannelDownNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDChannelDownNF.png</texturenofocus>
 					<onleft>700</onleft>
@@ -387,7 +387,7 @@
 					<top>0</top>
 					<width>40</width>
 					<height>40</height>
-					<label>-</label>
+					<label></label>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDRecordOffNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDRecordOffNF.png</texturenofocus>
 					<onleft>705</onleft>

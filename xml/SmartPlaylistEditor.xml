@@ -24,8 +24,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -47,7 +47,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
-					<label>-</label>
+					<label></label>
 				</control>
 				<control type="button" id="22">
 					<description>Set Playlist type</description>
@@ -80,7 +80,7 @@
 					<textwidth>1080</textwidth>
 					<align>center</align>
 					<texturenofocus border="5" colordiffuse="text.primary">button-nofocus.png</texturenofocus>
-					<label>-</label>
+					<label></label>
 					<onup>22</onup>
 					<onleft>12</onleft>
 					<onright>12</onright>
@@ -261,7 +261,7 @@
 					<top>773</top>
 					<width>270</width>
 					<height>60</height>
-					<label>-</label>
+					<label></label>
 					<texturenofocus border="5" colordiffuse="text.primary">button-nofocus.png</texturenofocus>
 					<onright>18</onright>
 					<onleft>18</onleft>

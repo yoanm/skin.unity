@@ -41,7 +41,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>210</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDChannelUPNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDChannelUPNF.png</texturenofocus>
 					<onclick>PlayerControl(Previous)</onclick>
@@ -51,7 +51,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>31354</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDChannelDownNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDChannelDownNF.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
@@ -61,7 +61,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>210</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDPrevTrackNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDPrevTrackNF.png</texturenofocus>
 					<onclick>PlayerControl(Previous)</onclick>
@@ -71,7 +71,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>31354</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDRewindNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDRewindNF.png</texturenofocus>
 					<onclick>PlayerControl(Rewind)</onclick>
@@ -81,7 +81,7 @@
 					<height>40</height>
 					<label>31351</label>
 					<altlabel>208</altlabel>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDPauseNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDPauseNF.png</texturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
@@ -93,7 +93,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>31352</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDStopNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDStopNF.png</texturenofocus>
 					<onclick>PlayerControl(Stop)</onclick>
@@ -102,7 +102,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>31353</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDForwardNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDForwardNF.png</texturenofocus>
 					<onclick>PlayerControl(Forward)</onclick>
@@ -111,7 +111,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>209</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDNextTrackNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDNextTrackNF.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
@@ -121,7 +121,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>19019</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDChannelListNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDChannelListNF.png</texturenofocus>
 					<onclick>ActivateWindow(PVROSDChannels)</onclick>
@@ -131,7 +131,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>$LOCALIZE[19029]$INFO[MusicPlayer.ChannelName, - ]</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDepgNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDepgNF.png</texturenofocus>
 					<onclick>ActivateWindow(PVROSDGuide)</onclick>
@@ -141,7 +141,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>209</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDRadioRDSNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDRadioRDSNF.png</texturenofocus>
 					<onclick>ActivateWindow(PVRRadioRDSInfo)</onclick>
@@ -157,9 +157,9 @@
 						<width>50</width>
 						<height>50</height>
 						<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
-						<font>-</font>
-						<texturefocus>-</texturefocus>
-						<texturenofocus>-</texturenofocus>
+						<font></font>
+						<texturefocus></texturefocus>
+						<texturenofocus></texturenofocus>
 						<onclick>XBMC.PlayerControl(Repeat)</onclick>
 						<onleft>605</onleft>
 						<onright>607</onright>
@@ -231,7 +231,7 @@
 						<width>50</width>
 						<height>50</height>
 						<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
-						<font>-</font>
+						<font></font>
 						<texturefocus colordiffuse="$VAR[Colour.500]">OSDRandomOffNF.png</texturefocus>
 						<texturenofocus colordiffuse="text.primary">OSDRandomOffNF.png</texturenofocus>
 						<usealttexture>Playlist.IsRandom</usealttexture>
@@ -262,7 +262,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>15047</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDBookmarksNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDBookmarksNF.png</texturenofocus>
 					<onclick>setrating</onclick>
@@ -272,7 +272,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>15047</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDAudioNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDAudioNF.png</texturenofocus>
 					<onclick>ActivateWindow(OSDAudioDSPSettings)</onclick>
@@ -281,7 +281,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>31128</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDLyricsNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDLyricsNF.png</texturenofocus>
 					<alttexturefocus colordiffuse="$VAR[Colour.500]">OSDLyricsNF.png</alttexturefocus>
@@ -298,7 +298,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>12006</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDVizNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDVizNF.png</texturenofocus>
 				</control>
@@ -306,7 +306,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDPresetSettingsNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDPresetSettingsNF.png</texturenofocus>
 					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
@@ -315,7 +315,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>31048</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDPreNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDPreNF.png</texturenofocus>
 					<onclick>ActivateWindow(122)</onclick>
@@ -326,7 +326,7 @@
 					<width>40</width>
 					<height>40</height>
 					<label>264</label>
-					<font>-</font>
+					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDRecordOffNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDRecordOffNF.png</texturenofocus>
 					<onclick>XBMC.PlayerControl(record)</onclick>

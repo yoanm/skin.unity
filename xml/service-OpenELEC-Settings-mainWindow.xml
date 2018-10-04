@@ -31,8 +31,8 @@
 				<left>5</left>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -61,7 +61,7 @@
 				<width>390</width>
 				<height>520</height>
 				<onleft>1500</onleft>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol></pagecontrol>
 				<scrolltime>300</scrolltime>
 				<itemlayout height="65" width="390">
 					<!--label-->

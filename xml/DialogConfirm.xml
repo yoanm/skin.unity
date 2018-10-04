@@ -21,8 +21,8 @@
 				<left>5</left>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -42,7 +42,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-				<label>-</label>
+				<label></label>
 			</control>
 			<!--message-->
 			<control type="textbox" id="9">
@@ -53,7 +53,7 @@
 				<height>150</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label>-</label>
+				<label></label>
 				<font>label</font>
 				<textcolor>text.primary</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>

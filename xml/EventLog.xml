@@ -61,7 +61,7 @@
 						<control type="button" id="2">
 							<textwidth>352</textwidth>
 							<include>ButtonCommonValues</include>
-							<label>-</label>
+							<label></label>
 						</control>
 						<!--ascending/descending-->
 						<control type="togglebutton" id="4">
@@ -74,11 +74,11 @@
 						<control type="button" id="21">
 							<textwidth>255</textwidth>
 							<include>ButtonCommonValues</include>
-							<label>-</label>
+							<label></label>
 						</control>
 						<!--current level only-->
 						<control type="radiobutton" id="22">
-							<label>-</label>
+							<label></label>
 							<include>ButtonCommonValues</include>
 						</control>
 						<!--clear button-->

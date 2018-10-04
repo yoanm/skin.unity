@@ -29,8 +29,8 @@
 			<top>0</top>
 			<width>96</width>
 			<height>48</height>
-			<label>-</label>
-			<font>-</font>
+			<label></label>
+			<font></font>
 			<onclick>PreviousMenu</onclick>
 			<texturefocus>DialogCloseButton-focus.png</texturefocus>
 			<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -47,7 +47,7 @@
 			<width>192</width>
 			<height>192</height>
 			<texturefocus>CalibrateTopLeft.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 		</control>
 		<control type="mover" id="9">
 			<description>right bottom mover</description>
@@ -56,7 +56,7 @@
 			<width>192</width>
 			<height>192</height>
 			<texturefocus>CalibrateBottomRight.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 		</control>
 		<control type="mover" id="10">
 			<description>subtitle position mover</description>
@@ -65,7 +65,7 @@
 			<width>768</width>
 			<height>192</height>
 			<texturefocus>CalibrateSubtitles.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 		</control>
 		<control type="resize" id="11">
 			<description>pixel aspect ratio box</description>
@@ -74,7 +74,7 @@
 			<width>384</width>
 			<height>384</height>
 			<texturefocus>CalibratePixelRatio.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 		</control>
 		<control type="group">
 			<centerleft>50%</centerleft>
@@ -84,7 +84,7 @@
 				<description>coordinates label</description>
 				<top>15</top>
 				<width>1860</width>
-				<label>-</label>
+				<label></label>
 				<align>center</align>
 				<font>label</font>
 			</control>
@@ -92,7 +92,7 @@
 				<description>help information</description>
 				<top>60</top>
 				<width>1860</width>
-				<label>-</label>
+				<label></label>
 				<align>center</align>
 				<font>label</font>
 			</control>

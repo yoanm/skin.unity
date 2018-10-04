@@ -21,8 +21,8 @@
 				<top>0</top>
 				<width>50</width>
 				<height>25</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>DialogCloseButton.png</texturenofocus>
@@ -57,7 +57,7 @@
 					<onright>902</onright>
 					<onup>9000</onup>
 					<ondown>60</ondown>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="40">
 						<control type="label">
@@ -180,7 +180,7 @@
 					<onright>901</onright>
 					<onup>9000</onup>
 					<ondown>60</ondown>
-					<pagecontrol>-</pagecontrol>
+					<pagecontrol></pagecontrol>
 					<scrolltime>200</scrolltime>
 					<itemlayout height="40">
 						<control type="label">
@@ -396,12 +396,12 @@
 					<left>1095</left>
 					<top>657</top>
 					<subtype>page</subtype>
-					<font>-</font>
+					<font></font>
 					<onleft>60</onleft>
 					<onright>60</onright>
 					<ondown>9000</ondown>
 					<onup>902</onup>
-					<textcolor>-</textcolor>
+					<textcolor></textcolor>
 					<showonepage>true</showonepage>
 					<textureupfocus colordiffuse="$VAR[Colour.500]">scroll-up-2.png</textureupfocus>
 					<texturedownfocus colordiffuse="$VAR[Colour.500]">scroll-down-2.png</texturedownfocus>
@@ -416,7 +416,7 @@
 					<align>justify</align>
 					<textcolor>text.primary</textcolor>
 					<pagecontrol>60</pagecontrol>
-					<label fallback="161">-</label>
+					<label fallback="161"></label>
 				</control>
 				<!--bottom buttons-->
 				<control type="grouplist" id="9000">
