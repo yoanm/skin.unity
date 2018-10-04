@@ -169,6 +169,13 @@
 						<onclick>right</onclick>
 						<visible>Window.IsActive(MyPVRChannels.xml)</visible>
 					</control>
+					<control type="button" id="10">
+						<description>Watched Toggle</description>
+						<include>ButtonCommonValues</include>
+						<label>$LOCALIZE[20367]</label>
+						<label2>[B]$INFO[Container.NumNonFolderItems][/B]</label2>
+						<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
+					</control>
 					<control type="radiobutton" id="5">
 						<description>Group recording items by folder structure</description>
 						<left>0</left>
