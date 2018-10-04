@@ -928,10 +928,10 @@
 				<onup>9901</onup>
 				<ondown>20</ondown>
 				<control type="list" id="700">
-					<animation effect="slide" start="0,0" end="80,0" time="0" condition="StringCompare(Container(700).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="160,0" time="0" condition="StringCompare(Container(700).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="240,0" time="0" condition="StringCompare(Container(700).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="320,0" time="0" condition="StringCompare(Container(700).NumItems,1)">conditional</animation>
+					<animation effect="slide" start="0,0" end="80,0" time="0" condition="String.IsEqual(Container(700).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Container(700).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(700).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container(700).NumItems,1)">conditional</animation>
 					<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),videos) | String.IsEqual(Container(9000).ListItem.Property(defaultID),movies) | String.IsEqual(Container(9000).ListItem.Property(defaultID),tvshows)</visible>
 					<onleft>700</onleft>
 					<onright>700</onright>
@@ -943,10 +943,10 @@
 					</content>
 				</control>
 				<control type="list" id="703">
-					<animation effect="slide" start="0,0" end="80,0" time="0" condition="StringCompare(Container(703).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="160,0" time="0" condition="StringCompare(Container(703).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="240,0" time="0" condition="StringCompare(Container(703).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="320,0" time="0" condition="StringCompare(Container(703).NumItems,1)">conditional</animation>
+					<animation effect="slide" start="0,0" end="80,0" time="0" condition="String.IsEqual(Container(703).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Container(703).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(703).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container(703).NumItems,1)">conditional</animation>
 					<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),music)</visible>
 					<onleft>703</onleft>
 					<onright>703</onright>
@@ -958,10 +958,10 @@
 					</content>
 				</control>
 				<control type="list" id="704">
-					<animation effect="slide" start="0,0" end="80,0" time="0" condition="StringCompare(Container(704).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="160,0" time="0" condition="StringCompare(Container(704).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="240,0" time="0" condition="StringCompare(Container(704).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="320,0" time="0" condition="StringCompare(Container(704).NumItems,1)">conditional</animation>
+					<animation effect="slide" start="0,0" end="80,0" time="0" condition="String.IsEqual(Container(704).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Container(704).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(704).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container(704).NumItems,1)">conditional</animation>
 					<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),pictures)</visible>
 					<onleft>704</onleft>
 					<onright>704</onright>
@@ -973,10 +973,10 @@
 					</content>
 				</control>
 				<control type="list" id="705">
-					<animation effect="slide" start="0,0" end="80,0" time="0" condition="StringCompare(Container(705).NumItems,4)">conditional</animation>
-					<animation effect="slide" start="0,0" end="160,0" time="0" condition="StringCompare(Container(705).NumItems,3)">conditional</animation>
-					<animation effect="slide" start="0,0" end="240,0" time="0" condition="StringCompare(Container(705).NumItems,2)">conditional</animation>
-					<animation effect="slide" start="0,0" end="320,0" time="0" condition="StringCompare(Container(705).NumItems,1)">conditional</animation>
+					<animation effect="slide" start="0,0" end="80,0" time="0" condition="String.IsEqual(Container(705).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="160,0" time="0" condition="String.IsEqual(Container(705).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(705).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container(705).NumItems,1)">conditional</animation>
 					<visible>String.IsEqual(Container(9000).ListItem.Property(defaultID),programs)</visible>
 					<onleft>705</onleft>
 					<onright>705</onright>
