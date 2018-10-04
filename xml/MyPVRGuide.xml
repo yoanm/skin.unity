@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	<views>10,11,12,13</views>
+	<views>10</views>
 	<controls>
 		<include>CommonBackground</include>
 		<include>PVRHeader</include>
@@ -11,9 +11,6 @@
 		<control type="group" id="50">
 			<include>Window_OpenClose_Animation</include>
 			<include>PVRGuideViewTimeline</include>
-			<include>PVRGuideViewNow</include>
-			<include>PVRGuideViewNext</include>
-			<include>PVRGuideViewChannel</include>
 		</control>
 		<include>CommonNowPlaying</include>
 		<include>BehindDialogFadeOut</include>
