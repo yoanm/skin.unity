@@ -3,7 +3,7 @@
 	<defaultcontrol></defaultcontrol>
 	<controls>
 		<control type="group" id="1">
-			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsVisible(DialogSeekbar.xml)] + ![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(SliderDialog)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD) | Window.IsVisible(DialogSeekbar.xml)] + ![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(SliderDialog)]</visible>
 			<control type="group">
 				<visible>VideoPlayer.Content(LiveTV)</visible>
 				<!--breadcrumbs-->

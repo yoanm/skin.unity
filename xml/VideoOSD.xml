@@ -8,7 +8,7 @@
 			<centerleft>50%</centerleft>
 			<top>105r</top>
 			<width>1140</width>
-			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
+			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide)]</visible>
 			<!--background-->
 			<control type="image" id="1">
 				<width>1140</width>
@@ -189,7 +189,7 @@
 					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDepgNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDepgNF.png</texturenofocus>
-					<onclick>ActivateWindow(PVROSDGuide)</onclick>
+					<onclick>ActivateWindow(PVRChannelGuide)</onclick>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 				</control>
 			</control>

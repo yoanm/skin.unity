@@ -12,7 +12,7 @@
 				<width>1140</width>
 				<height>85</height>
 				<texture colordiffuse="tertiary">backgrounds/osd bg.png</texture>
-				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
+				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
 			</control>
 			<control type="slider" id="87">
 				<description>Seek Slider</description>
@@ -24,7 +24,7 @@
 				<ondown>26</ondown>
 				<action>seek</action>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
+				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
 			</control>
 			<control type="grouplist" id="100">
 				<left>30</left>
@@ -36,7 +36,7 @@
 				<orientation>horizontal</orientation>
 				<itemgap>25</itemgap>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
+				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
 				<control type="button" id="300">
 					<width>40</width>
 					<height>40</height>
@@ -134,7 +134,7 @@
 					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDepgNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDepgNF.png</texturenofocus>
-					<onclick>ActivateWindow(PVROSDGuide)</onclick>
+					<onclick>ActivateWindow(PVRChannelGuide)</onclick>
 					<visible>MusicPlayer.Content(LiveTV) + !RDS.HasRadiotextPlus</visible>
 				</control>
 				<control type="button" id="308">
@@ -257,7 +257,7 @@
 				<orientation>horizontal</orientation>
 				<itemgap>25</itemgap>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
+				<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVRChannelGuide) | Window.IsVisible(PVRRadioRDSInfo) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(Addon)]</visible>
 				<control type="button" id="705">
 					<width>40</width>
 					<height>40</height>
