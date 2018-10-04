@@ -329,5 +329,6 @@
 				</control>
 			</control>
 		</control>
+		<include>PVRChannelNumberInput</include>
 	</controls>
 </window>

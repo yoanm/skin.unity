@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>1</defaultcontrol>
-	<visible>Window.IsVisible(FullScreenVideo) + [Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime]</visible>
+	<visible>Window.IsVisible(FullScreenVideo) + [Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowTime] | [[Window.IsActive(fullscreenvideo) | Window.IsActive(visualisation)] + !Window.IsActive(pvrosdchannels) + !String.IsEmpty(PVR.ChannelNumberInput)]</visible>
 	<visible>![Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(OSDAudioDSPSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(SliderDialog)]</visible>
 	<controls>
 		<!--progress-->
@@ -103,5 +103,6 @@
 				<visible>Player.Rewinding | [Player.IsTempo + String.StartsWith(Player.PlaySpeed,0.)]</visible>
 			</control>
 		</control>
+		<include>PVRChannelNumberInput</include>
 	</controls>
 </window>
