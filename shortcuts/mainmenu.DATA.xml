@@ -1,39 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shortcuts>
 	<shortcut>
-		<label>12600</label>
+		<label>8</label>
 		<label2>32034</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
 		<action>ActivateWindow(Weather)</action>
+		<defaultID>weather</defaultID>
 	</shortcut>
 	<shortcut>
-		<label>10002</label>
+		<label>1</label>
 		<label2>32034</label2>
 		<icon>DefaultPicture.png</icon>
 		<thumb />
 		<action>ActivateWindow(Pictures)</action>
+		<defaultID>pictures</defaultID>
 	</shortcut>
 	<shortcut>
-		<label>32087</label>
+		<label>19021</label>
 		<label2>32034</label2>
 		<icon>DefaultAudio.png</icon>
 		<thumb />
 		<action>ActivateWindow(RadioChannels)</action>
+		<defaultID>radio</defaultID>
 	</shortcut>
 	<shortcut>
-		<label>32022</label>
+		<label>19020</label>
 		<label2>32034</label2>
 		<icon>DefaultTVShows.png</icon>
 		<thumb />
 		<action>ActivateWindow(TVChannels)</action>
+		<defaultID>livetv</defaultID>
 	</shortcut>
 	<shortcut>
-		<label>10006</label>
+		<label>3</label>
 		<label2>32034</label2>
 		<icon>DefaultVideo.png</icon>
 		<thumb />
 		<action>ActivateWindow(Videos)</action>
+		<defaultID>videos</defaultID>
 	</shortcut>
 	<shortcut>
 		<label>342</label>
@@ -52,25 +57,28 @@
 		<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
 	</shortcut>
 	<shortcut>
-		<label>10005</label>
+		<label>2</label>
 		<label2>32034</label2>
 		<icon>DefaultMusicAlbums.png</icon>
 		<thumb />
 		<action>ActivateWindow(Music)</action>
+		<defaultID>music</defaultID>
 	</shortcut>
 	<shortcut>
-		<label>10001</label>
+		<label>0</label>
 		<label2>32034</label2>
 		<icon>DefaultProgram.png</icon>
 		<thumb />
 		<action>ActivateWindow(Programs,Addons,return)</action>
+		<defaultID>programs</defaultID>
 	</shortcut>
 	<shortcut>
-		<label>32032</label>
+		<label>341</label>
 		<label2>32034</label2>
 		<icon>DefaultDVDFull.png</icon>
 		<thumb />
 		<action>XBMC.PlayDVD()</action>
+		<defaultID>dvd</defaultID>
 	</shortcut>
 	<shortcut>
 		<label>13000</label>
