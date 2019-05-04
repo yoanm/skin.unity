@@ -303,9 +303,15 @@
 		<texturenofocus colordiffuse="button.border">button-border-180.png</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
-	<include name="ButtonDisabledCommonValues">
+	<include name="LeftBreadcrumbCommonValues">
 		<enable>false</enable>
-		<texturenofocus colordiffuse="tertiary">backgrounds/white.png</texturenofocus>
+		<texturenofocus border="11,0,0,0" colordiffuse="tertiary">backgrounds/left breadcrumb.png</texturenofocus>
+		<disabledcolor>text.primary</disabledcolor>
+		<textoffsetx>10</textoffsetx>
+	</include>
+	<include name="RightBreadcrumbCommonValues">
+		<enable>false</enable>
+		<texturenofocus border="0,0,11,0" colordiffuse="tertiary">backgrounds/right breadcrumb.png</texturenofocus>
 		<disabledcolor>text.primary</disabledcolor>
 		<textoffsetx>10</textoffsetx>
 	</include>
@@ -335,15 +341,15 @@
 				<usecontrolcoords>true</usecontrolcoords>
 				<!--background strip-->
 				<control type="image" id="1">
-					<width>14</width>
+					<width>4</width>
 					<height>$PARAM[breadcrumb-height]</height>
 					<texture colordiffuse="$VAR[Colour.500]">backgrounds/white.png</texture>
 				</control>
 				<!--breadcrumb spacer-->
 				<control type="image" id="1">
-					<width>10</width>
+					<width>20</width>
 					<height>$PARAM[breadcrumb-height]</height>
-					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
+					<texture colordiffuse="tertiary">backgrounds/left breadcrumb.png</texture>
 				</control>
 				<!--breadcrumb 1 label-->
 				<control type="button" id="1">
@@ -351,7 +357,7 @@
 					<height>$PARAM[breadcrumb-height]</height>
 					<font>$PARAM[breadcrumb-font]</font>
 					<label>$PARAM[breadcrumb1-label]</label>
-					<include>ButtonDisabledCommonValues</include>
+					<include>LeftBreadcrumbCommonValues</include>
 					<visible>$PARAM[breadcrumb1-visible]</visible>
 				</control>
 				<!--breadcrumb 2 label-->
@@ -361,7 +367,7 @@
 					<font>$PARAM[breadcrumb-font]</font>
 					<label>$PARAM[breadcrumb2-label]</label>
 					<disabledcolor>$VAR[Colour.500]</disabledcolor>
-					<include>ButtonDisabledCommonValues</include>
+					<include>LeftBreadcrumbCommonValues</include>
 					<visible>$PARAM[breadcrumb2-visible]</visible>
 				</control>
 				<!--breadcrumb 3 label-->
@@ -370,7 +376,7 @@
 					<height>$PARAM[breadcrumb-height]</height>
 					<font>$PARAM[breadcrumb-font]</font>
 					<label>$PARAM[breadcrumb3-label]</label>
-					<include>ButtonDisabledCommonValues</include>
+					<include>LeftBreadcrumbCommonValues</include>
 					<visible>$PARAM[breadcrumb3-visible]</visible>
 				</control>
 				<!--breadcrumb 4 label-->
@@ -380,7 +386,7 @@
 					<font>$PARAM[breadcrumb-font]</font>
 					<label>$PARAM[breadcrumb4-label]</label>
 					<disabledcolor>$VAR[Colour.500]</disabledcolor>
-					<include>ButtonDisabledCommonValues</include>
+					<include>LeftBreadcrumbCommonValues</include>
 					<visible>$PARAM[breadcrumb4-visible]</visible>
 				</control>
 			</control>
@@ -413,7 +419,7 @@
 					<font>$PARAM[breadcrumb-font]</font>
 					<label>$PARAM[breadcrumb2-label]</label>
 					<disabledcolor>$VAR[Colour.500]</disabledcolor>
-					<include>ButtonDisabledCommonValues</include>
+					<include>RightBreadcrumbCommonValues</include>
 					<visible>$PARAM[breadcrumb2-visible]</visible>
 				</control>
 				<!--breadcrumb 1 label-->
@@ -422,14 +428,14 @@
 					<height>$PARAM[breadcrumb-height]</height>
 					<font>$PARAM[breadcrumb-font]</font>
 					<label>$PARAM[breadcrumb1-label]</label>
-					<include>ButtonDisabledCommonValues</include>
+					<include>RightBreadcrumbCommonValues</include>
 					<visible>$PARAM[breadcrumb1-visible]</visible>
 				</control>
 				<!--breadcrumb spacer-->
 				<control type="image" id="1">
 					<width>20</width>
 					<height>$PARAM[breadcrumb-height]</height>
-					<texture colordiffuse="tertiary">backgrounds/white.png</texture>
+					<texture colordiffuse="tertiary">backgrounds/right breadcrumb.png</texture>
 				</control>
 				<!--background strip-->
 				<control type="image" id="1">
