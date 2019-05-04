@@ -29,7 +29,7 @@
 			<param name="breadcrumb4-visible" value="!String.IsEmpty(Container.FolderName)" />
 		</include>
 		<control type="group">
-			<left>-375</left>
+			<left>-383</left>
 			<include>SideBladeLeft</include>
 			<control type="group">
 				<top>100</top>

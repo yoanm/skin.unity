@@ -728,13 +728,13 @@
 		</definition>
 	</include>
 	<include name="SideBladeLeft">
-		<animation effect="slide" start="0,0" end="375,0" time="300" tween="quadratic" easing="out" condition="[ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="383,0" time="300" tween="quadratic" easing="out" condition="[ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)] + ![Window.IsActive(ShutdownMenu) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRadioRDSInfo)]">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-450,0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
 		<animation effect="slide" start="0,0" end="-75,0" time="300" tween="quadratic" easing="out" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
 		<animation effect="slide" start="-75,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
 		<!--side blade tab bg (for fade effect)-->
 		<control type="button" id="9001">
-			<left>363</left>
+			<left>371</left>
 			<centertop>50%</centertop>
 			<width>60</width>
 			<height>128</height>
@@ -744,7 +744,7 @@
 		</control>
 		<!--side blade tab-->
 		<control type="button" id="9001">
-			<left>363</left>
+			<left>371</left>
 			<centertop>50%</centertop>
 			<width>60</width>
 			<height>128</height>
@@ -755,7 +755,7 @@
 		</control>
 		<!--side blade tab arrow bg (for fade effect)-->
 		<control type="image">
-			<left>375</left>
+			<left>383</left>
 			<centertop>50%</centertop>
 			<width>32</width>
 			<height>32</height>
@@ -764,7 +764,7 @@
 		</control>
 		<!--side blade tab arrow-->
 		<control type="image">
-			<left>375</left>
+			<left>383</left>
 			<centertop>50%</centertop>
 			<width>32</width>
 			<height>32</height>
