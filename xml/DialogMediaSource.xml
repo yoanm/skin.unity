@@ -19,6 +19,7 @@
 				<param name="subtitle-visible" value="true" />
 				<param name="subtitle-height" value="75" />
 				<param name="buttonbar-visible" value="true" />
+				<param name="buttonbar-height" value="70" />
 			</include>
 			<!--close window button-->
 			<control type="button">

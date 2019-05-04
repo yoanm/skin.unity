@@ -15,6 +15,7 @@
 				<param name="title-height" value="90" />
 				<param name="buttonbar-visible" value="true" />
 				<param name="buttonbar-top" value="270" />
+				<param name="buttonbar-height" value="70" />
 			</include>
 			<!--close button-->
 			<control type="button">

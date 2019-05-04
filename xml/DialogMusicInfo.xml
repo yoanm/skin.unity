@@ -17,6 +17,7 @@
 				<param name="dialog-width" value="1390" />
 				<param name="glow-width" value="1470" />
 				<param name="subtitle-visible" value="true" />
+				<param name="subtitle-height" value="80" />
 			</include>
 			<!--close window button-->
 			<control type="button">

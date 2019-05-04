@@ -14,6 +14,7 @@
 				<param name="dialog-width" value="1210" />
 				<param name="glow-width" value="1290" />
 				<param name="buttonbar-visible" value="true" />
+				<param name="buttonbar-height" value="70" />
 			</include>
 			<!--text entry bg-->
 			<control type="image">

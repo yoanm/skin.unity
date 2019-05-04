@@ -19,6 +19,7 @@
 				<param name="glow-height" value="360" />
 				<param name="title-height" value="40" />
 				<param name="buttonbar-visible" value="true" />
+				<param name="buttonbar-height" value="70" />
 			</include>
 			<!--close button-->
 			<control type="button">

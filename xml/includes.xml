@@ -455,12 +455,12 @@
 		<param name="glow-height" default="105%" />
 		<param name="title-height" default="110" />
 		<param name="subtitle-visible" default="false" />
-		<param name="subtitle-height" default="80" />
+		<param name="subtitle-height" default="0" />
 		<param name="sidebar-visible" default="false" />
 		<param name="sidebar-width" default="375" />
 		<param name="buttonbar-visible" default="false" />
 		<param name="buttonbar-top" default="70r" />
-		<param name="buttonbar-height" default="70" />
+		<param name="buttonbar-height" default="0" />
 		<param name="background-visible" default="false" />
 		<definition>
 			<control type="group">
@@ -506,30 +506,32 @@
 					<visible>$PARAM[background-visible] + Skin.HasSetting(UseCustomBackground) + !String.IsEmpty(Skin.String(CustomBackgroundPath))</visible>
 				</control>
 				<control type="group">
-					<visible>$PARAM[sidebar-visible]</visible>
-					<!--side bar-->
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>$PARAM[sidebar-width]</width>
-						<height>$PARAM[dialog-height]</height>
-						<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
-					</control>
-					<!--side blade shadow-->
-					<control type="image">
-						<left>$PARAM[sidebar-width]</left>
-						<top>0</top>
-						<width>20</width>
-						<height>$PARAM[dialog-height]</height>
-						<texture background="true">sidebarshadow.png</texture>
-						<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
-					</control>
-				</control>
-				<control type="group">
-					<visible>$PARAM[subtitle-visible]</visible>
 					<top>$PARAM[title-height]</top>
+					<control type="group">
+						<visible>$PARAM[sidebar-visible]</visible>
+						<top>$PARAM[subtitle-height]</top>
+						<bottom>$PARAM[buttonbar-height]</bottom>
+						<!--side bar-->
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>$PARAM[sidebar-width]</width>
+							<height>100%</height>
+							<texture background="true" colordiffuse="$VAR[Colour.900]">backgrounds/white.png</texture>
+						</control>
+						<!--side blade shadow-->
+						<control type="image">
+							<left>$PARAM[sidebar-width]</left>
+							<top>0</top>
+							<width>20</width>
+							<height>100%</height>
+							<texture background="true">sidebarshadow.png</texture>
+							<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
+						</control>
+					</control>
 					<!--subtitle background-->
 					<control type="image">
+						<visible>$PARAM[subtitle-visible]</visible>
 						<left>0</left>
 						<top>0</top>
 						<width>$PARAM[dialog-width]</width>
@@ -538,6 +540,7 @@
 					</control>
 					<!--subtitle shadow-->
 					<control type="image">
+						<visible>$PARAM[subtitle-visible]</visible>
 						<left>0</left>
 						<top>$PARAM[subtitle-height]</top>
 						<width>$PARAM[dialog-width]</width>
@@ -565,10 +568,10 @@
 				</control>
 				<control type="group">
 					<visible>$PARAM[buttonbar-visible]</visible>
+					<top>$PARAM[buttonbar-top]</top>
 					<!--buttons bg-->
 					<control type="image">
 						<left>0</left>
-						<top>$PARAM[buttonbar-top]</top>
 						<width>$PARAM[dialog-width]</width>
 						<height>$PARAM[buttonbar-height]</height>
 						<texture background="true" colordiffuse="primary">backgrounds/white.png</texture>
@@ -576,10 +579,10 @@
 					<!--buttons shadow-->
 					<control type="image">
 						<left>0</left>
-						<top>$PARAM[buttonbar-top]</top>
+						<top>-10</top>
 						<width>$PARAM[dialog-width]</width>
 						<height>10</height>
-						<texture background="true">homeshadow.png</texture>
+						<texture flipy="true" background="true">homeshadow.png</texture>
 						<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
 					</control>
 				</control>
