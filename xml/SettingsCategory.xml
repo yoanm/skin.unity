@@ -83,7 +83,6 @@
 				<focusedcolor>$VAR[Colour.900]</focusedcolor>
 				<align>right</align>
 				<include>ButtonCommonValues</include>
-				<label>10037</label>
 				<onleft>5</onleft>
 				<onright>5</onright>
 				<onup>3</onup>
@@ -181,6 +180,11 @@
 			<left>0</left>
 			<top>0</top>
 			<reverse>yes</reverse>
+		</control>
+		<!--edit control-->
+		<control type="edit" id="12">
+			<left>0</left>
+			<top>0</top>
 		</control>
 		<!--slider control-->
 		<control type="sliderex" id="13">

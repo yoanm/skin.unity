@@ -180,7 +180,7 @@
 				<texturenofocus></texturenofocus>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<onup>20</onup>
+				<onup>920</onup>
 				<ondown>608</ondown>
 				<visible>false</visible>
 			</control>
