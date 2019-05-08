@@ -67,7 +67,7 @@
 						<aligny>center</aligny>
 						<textcolor>white</textcolor>
 						<selectedcolor>white</selectedcolor>
-						<info>ListItem.ChannelNumber</info>
+						<info>ListItem.ChannelNumberLabel</info>
 					</control>
 					<control type="label" id="1">
 						<left>85</left>
@@ -98,7 +98,7 @@
 						<aligny>center</aligny>
 						<textcolor>$VAR[Colour.900]</textcolor>
 						<selectedcolor>$VAR[Colour.900]</selectedcolor>
-						<info>ListItem.ChannelNumber</info>
+						<info>ListItem.ChannelNumberLabel</info>
 					</control>
 					<control type="label" id="1">
 						<left>85</left>
