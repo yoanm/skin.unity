@@ -40,7 +40,7 @@
 			</control>
 			<!--main content-->
 			<control type="group">
-				<!--title-->
+				<!--radio title-->
 				<control type="label">
 					<left>45</left>
 					<top>25</top>
@@ -50,7 +50,21 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
-					<label>19143</label>
+					<label>$LOCALIZE[19143] - $LOCALIZE[19173]</label>
+					<visible>String.IsEmpty(Window.Property(IsRadio))</visible>
+				</control>
+				<!--tv title-->
+				<control type="label">
+					<left>45</left>
+					<top>25</top>
+					<width>1545</width>
+					<height>60</height>
+					<font>info.title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<label>$LOCALIZE[19143] - $LOCALIZE[19174]</label>
+					<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
 				</control>
 				<!--scrollbar-->
 				<control type="scrollbar" id="73">
@@ -65,10 +79,10 @@
 				<control type="list" id="13">
 					<left>10</left>
 					<top>120</top>
-					<bottom>180</bottom>
+					<bottom>240</bottom>
 					<width>330</width>
 					<onup>13</onup>
-					<ondown>13</ondown>
+					<ondown>34</ondown>
 					<onleft>73</onleft>
 					<onright>11</onright>
 					<pagecontrol>73</pagecontrol>
@@ -110,10 +124,29 @@
 						</control>
 					</focusedlayout>
 				</control>
+				<!--settings level-->
+				<control type="togglebutton" id="34">
+					<left>10</left>
+					<top>940</top>
+					<width>300</width>
+					<height>60</height>
+					<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
+					<alttexturefocus colordiffuse="white">backgrounds/white.png</alttexturefocus>
+					<textcolor>white</textcolor>
+					<focusedcolor>$VAR[Colour.900]</focusedcolor>
+					<include>ButtonCommonValues</include>
+					<label>19174</label>
+					<altlabel>19173</altlabel>
+					<onleft>73</onleft>
+					<onright>11</onright>
+					<onup>13</onup>
+					<ondown>9000</ondown>
+					<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
+				</control>
 				<control type="group" id="9002">
 					<control type="image">
 						<left>15</left>
-						<top>900</top>
+						<top>840</top>
 						<width>300</width>
 						<height>100</height>
 						<aspectratio>keep</aspectratio>
@@ -122,7 +155,7 @@
 					</control>
 					<control type="image">
 						<left>15</left>
-						<top>180r</top>
+						<top>240r</top>
 						<width>300</width>
 						<height>100</height>
 						<aspectratio>keep</aspectratio>
@@ -301,16 +334,16 @@
 					<orientation>horizontal</orientation>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
-					<onup>9002</onup>
-					<ondown>9002</ondown>
+					<onup>34</onup>
+					<ondown>34</ondown>
 					<!--add button-->
 					<include content="AnimatedCircleButtonGroup">
 						<param name="button-id" value="26" />
 						<param name="button-width" value="170" />
 						<param name="button-texture" value="addbutton" />
 						<param name="button-label" value="31503" />
-						<param name="button-onup" value="9002" />
-						<param name="button-ondown" value="9002" />
+						<param name="button-onup" value="34" />
+						<param name="button-ondown" value="34" />
 						<param name="button-onleft" value="29" />
 						<param name="button-onright" value="27" />
 					</include>
@@ -320,8 +353,8 @@
 						<param name="button-width" value="220" />
 						<param name="button-texture" value="refreshbutton" />
 						<param name="button-label" value="31504" />
-						<param name="button-onup" value="9002" />
-						<param name="button-ondown" value="9002" />
+						<param name="button-onup" value="34" />
+						<param name="button-ondown" value="34" />
 						<param name="button-onleft" value="26" />
 						<param name="button-onright" value="25" />
 					</include>
@@ -337,8 +370,8 @@
 						<param name="button-width" value="200" />
 						<param name="button-texture" value="nobutton" />
 						<param name="button-label" value="31505" />
-						<param name="button-onup" value="9002" />
-						<param name="button-ondown" value="9002" />
+						<param name="button-onup" value="34" />
+						<param name="button-ondown" value="34" />
 						<param name="button-onleft" value="25" />
 						<param name="button-onright" value="29" />
 					</include>
@@ -348,8 +381,8 @@
 						<param name="button-width" value="115" />
 						<param name="button-texture" value="yesbutton" />
 						<param name="button-label" value="186" />
-						<param name="button-onup" value="9002" />
-						<param name="button-ondown" value="9002" />
+						<param name="button-onup" value="34" />
+						<param name="button-ondown" value="34" />
 						<param name="button-onleft" value="28" />
 						<param name="button-onright" value="26" />
 					</include>
