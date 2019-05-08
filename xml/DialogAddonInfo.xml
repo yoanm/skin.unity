@@ -313,6 +313,18 @@
 						<selectedcolor>$VAR[Colour.900]</selectedcolor>
 						<disabledcolor>$VAR[Colour.400]</disabledcolor>
 					</control>
+					<control type="button" id="10">
+						<description>Addon Dependencies</description>
+						<width>330</width>
+						<height>64</height>
+						<label>39024</label>
+						<align>center</align>
+						<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
+						<textcolor>white</textcolor>
+						<focusedcolor>$VAR[Colour.900]</focusedcolor>
+						<selectedcolor>$VAR[Colour.900]</selectedcolor>
+						<disabledcolor>$VAR[Colour.400]</disabledcolor>
+					</control>
 					<control type="button" id="8">
 						<description>Update Addon button</description>
 						<width>330</width>
