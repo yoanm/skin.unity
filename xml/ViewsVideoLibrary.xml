@@ -17,9 +17,9 @@
 				<onleft>501</onleft>
 				<onright>501</onright>
 				<onup>2</onup>
-				<ondown>60</ondown>
+				<ondown>601</ondown>
 				<viewtype label="31028">bigwrap</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>601</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
 				<preloaditems>4</preloaditems>
@@ -185,7 +185,7 @@
 				</focusedlayout>
 			</control>
 			<!--scrollbar-->
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="601">
 				<left>5</left>
 				<top>-5r</top>
 				<width>1800</width>
@@ -234,9 +234,9 @@
 					<onleft>508</onleft>
 					<onright>508</onright>
 					<onup>2</onup>
-					<ondown>60</ondown>
+					<ondown>608</ondown>
 					<viewtype label="31029">wrap</viewtype>
-					<pagecontrol>60</pagecontrol>
+					<pagecontrol>608</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<focusposition>5</focusposition>
 					<movement>3</movement>
@@ -370,7 +370,7 @@
 					</focusedlayout>
 				</control>
 				<!--scrollbar-->
-				<control type="scrollbar" id="60">
+				<control type="scrollbar" id="608">
 					<left>5</left>
 					<top>285</top>
 					<width>1800</width>
@@ -379,6 +379,7 @@
 					<ondown>9000</ondown>
 					<showonepage>false</showonepage>
 					<orientation>horizontal</orientation>
+					<visible>Control.IsVisible(508)</visible>
 				</control>
 			</control>
 			<!--movies info-->
@@ -937,11 +938,11 @@
 				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListSlide</include>
 				<width>1004</width>
 				<onleft>2</onleft>
-				<onright>60</onright>
+				<onright>604</onright>
 				<onup>504</onup>
 				<ondown>504</ondown>
 				<viewtype label="$LOCALIZE[544]">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>604</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)</visible>
 				<itemlayout height="70" width="1004">
@@ -1136,13 +1137,14 @@
 				</focusedlayout>
 			</control>
 			<!--scrollbar-->
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="604">
 				<left>1014</left>
 				<bottom>10</bottom>
 				<onleft>504</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
 				<showonepage>true</showonepage>
+				<visible>Control.IsVisible(504)</visible>
 			</control>
 			<!--movies / tv shows info-->
 			<control type="group">
@@ -1410,11 +1412,11 @@
 				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListSlide</include>
 				<width>844</width>
 				<onleft>2</onleft>
-				<onright>60</onright>
+				<onright>603</onright>
 				<onup>503</onup>
 				<ondown>503</ondown>
 				<viewtype label="$LOCALIZE[544] 2">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>603</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies)</visible>
 				<itemlayout height="70" width="1004">
@@ -1609,13 +1611,14 @@
 				</focusedlayout>
 			</control>
 			<!--scrollbar-->
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="603">
 				<left>1334</left>
 				<bottom>10</bottom>
 				<onleft>503</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
 				<showonepage>true</showonepage>
+				<visible>Control.IsVisible(503)</visible>
 			</control>
 			<!--tv shows info-->
 			<control type="group">
@@ -2106,11 +2109,11 @@
 				<include condition="!String.IsEqual(Skin.AspectRatio,4:3)">ShortListSlide</include>
 				<width>789</width>
 				<onleft>2</onleft>
-				<onright>60</onright>
+				<onright>615</onright>
 				<onup>515</onup>
 				<ondown>515</ondown>
 				<viewtype label="$LOCALIZE[544] 3">list</viewtype>
-				<pagecontrol>60</pagecontrol>
+				<pagecontrol>615</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
 				<itemlayout height="70" width="518">
@@ -2305,13 +2308,14 @@
 				</focusedlayout>
 			</control>
 			<!--scrollbar-->
-			<control type="scrollbar" id="60">
+			<control type="scrollbar" id="615">
 				<left>799</left>
 				<bottom>10</bottom>
 				<onleft>515</onleft>
 				<onright>2</onright>
 				<orientation>vertical</orientation>
 				<showonepage>true</showonepage>
+				<visible>Control.IsVisible(515)</visible>
 			</control>
 			<!--movie info-->
 			<control type="group">
