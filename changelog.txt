@@ -1,3 +1,6 @@
+[B]08/05/2019 - 0.7.0 [/B]
+[CODED] Initial Leia Release
+
 [B]30/03/2017 - 0.6.3 [/B]
 [CODED] Font Weight Choices Added
 [FIXED] Hide View Button in PVR if One View Available

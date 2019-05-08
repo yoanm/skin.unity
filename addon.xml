@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.unity"
-	version="0.6.3"
+	version="0.7.0"
 	name="Unity"
 	provider-name="Eddage, Bumpaneer">
 	<requires>
-		<import addon="xbmc.gui" version="5.13.0"/>
+		<import addon="xbmc.gui" version="5.14.0"/>
 		<import addon="script.skinshortcuts" version="1.0.8"/>
 		<import addon="script.skin.helper.service" version="1.0.60"/>
 	</requires>
@@ -21,10 +21,10 @@
 		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en_AU">A new skin for Kodi 13 Gotham by Eddage</summary>
-		<summary lang="en_GB">A new skin for Kodi 13 Gotham by Eddage</summary>
-		<summary lang="en_NZ">A new skin for Kodi 13 Gotham by Eddage</summary>
-		<summary lang="en_US">A new skin for Kodi 13 Gotham by Eddage</summary>
+		<summary lang="en_AU">A material skin for Kodi by Eddage</summary>
+		<summary lang="en_GB">A material skin for Kodi by Eddage</summary>
+		<summary lang="en_NZ">A material skin for Kodi by Eddage</summary>
+		<summary lang="en_US">A material skin for Kodi by Eddage</summary>
 		<description lang="en_AU">Unity is an adaptation of Confluence based on a material design.</description>
 		<description lang="en_GB">Unity is an adaptation of Confluence based on a material design.</description>
 		<description lang="en_NZ">Unity is an adaptation of Confluence based on a material design.</description>
