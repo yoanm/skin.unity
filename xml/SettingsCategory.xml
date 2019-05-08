@@ -18,7 +18,7 @@
 			<centertop>50%</centertop>
 			<width>1390</width>
 			<height>783</height>
-			<visible>![Window.IsActive(PVRChannelManager) | Window.IsActive(PVRGroupManager) | Window.IsActive(AudioDSPManager) | Window.IsActive(script-RSS_Editor.xml)]</visible>
+			<visible>![Window.IsActive(PVRChannelManager) | Window.IsActive(PVRGroupManager) | Window.IsActive(script-RSS_Editor.xml)]</visible>
 			<animation effect="slide" start="0,1512" end="0,0" time="400" tween="quadratic" easing="out" condition="!Window.Previous(Settings.xml)">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,1512" time="400" tween="quadratic" easing="out" condition="!Window.Next(Settings.xml)">WindowClose</animation>
 			<animation effect="slide" start="2015,0" end="0,0" time="400" tween="quadratic" easing="out" condition="Window.Previous(Settings.xml)">WindowOpen</animation>
