@@ -531,37 +531,31 @@
 							<item>
 								<label>$LOCALIZE[562]</label>
 								<label2>$INFO[ListItem.Year]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[2050]</label>
 								<label2>$INFO[ListItem.Duration]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Duration)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[31068]</label>
 								<label2>$INFO[ListItem.mpaa]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.mpaa)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[38018]:</label>
 								<label2>$INFO[ListItem.Userrating]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Userrating)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[563]</label>
 								<label2>$INFO[ListItem.RatingAndVotes]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[515]</label>
 								<label2>$INFO[ListItem.Genre]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Genre)</visible>
 							</item>
 							<item>
@@ -573,19 +567,16 @@
 							<item>
 								<label>$LOCALIZE[20417]</label>
 								<label2>$INFO[ListItem.Writer]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Writer)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[572]</label>
 								<label2>$INFO[ListItem.Studio]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Studio)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[31067]</label>
 								<label2>$INFO[ListItem.FilenameAndPath]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 							</item>
 						</content>
@@ -679,61 +670,51 @@
 							<item>
 								<label>$LOCALIZE[562]</label>
 								<label2>$INFO[ListItem.Year]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[31322]</label>
 								<label2>$INFO[ListItem.Premiered]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Premiered)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[31068]</label>
 								<label2>$INFO[ListItem.Mpaa]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[38018]:</label>
 								<label2>$INFO[ListItem.Userrating]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Userrating)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[563]</label>
 								<label2>$INFO[ListItem.RatingAndVotes]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[515]</label>
 								<label2>$INFO[ListItem.Genre]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Genre)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[572]</label>
 								<label2>$INFO[ListItem.Studio]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Studio)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[20360]</label>
 								<label2>$INFO[listitem.episode]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Episode)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[16101]</label>
 								<label2>$INFO[ListItem.Property(UnWatchedEpisodes)]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Episode)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[31067]</label>
 								<label2>$INFO[ListItem.FilenameAndPath]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 							</item>
 						</content>
@@ -827,37 +808,31 @@
 							<item>
 								<label>$LOCALIZE[562]</label>
 								<label2>$INFO[ListItem.Year]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[31322]</label>
 								<label2>$INFO[ListItem.Premiered]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Premiered)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[2050]</label>
 								<label2>$INFO[ListItem.Duration]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Duration)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[38018]:</label>
 								<label2>$INFO[ListItem.Userrating]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Userrating)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[563]</label>
 								<label2>$INFO[ListItem.RatingAndVotes]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.RatingAndVotes)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[515]</label>
 								<label2>$INFO[ListItem.Genre]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Genre)</visible>
 							</item>
 							<item>
@@ -869,13 +844,11 @@
 							<item>
 								<label>$LOCALIZE[20417]</label>
 								<label2>$INFO[ListItem.Writer]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Writer)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[31067]</label>
 								<label2>$INFO[ListItem.FilenameAndPath]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 							</item>
 						</content>
@@ -969,61 +942,51 @@
 							<item>
 								<label>$LOCALIZE[557]</label>
 								<label2>$INFO[ListItem.Artist]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Artist)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[558]</label>
 								<label2>$INFO[ListItem.Album]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Album)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[515]</label>
 								<label2>$INFO[ListItem.Genre]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Genre)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[572]</label>
 								<label2>$INFO[ListItem.Studio]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Studio)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[20417]</label>
 								<label2>$INFO[ListItem.Writer]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Writer)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[20339]</label>
 								<label2>$INFO[ListItem.Director]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Director)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[562]</label>
 								<label2>$INFO[ListItem.Year]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[2050]</label>
 								<label2>$INFO[ListItem.Duration]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Duration)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[38018]:</label>
 								<label2>$INFO[ListItem.Userrating]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.Userrating)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[31067]</label>
 								<label2>$INFO[ListItem.FilenameAndPath]</label2>
-								<onclick>noop</onclick>
 								<visible>!String.IsEmpty(ListItem.FilenameAndPath)</visible>
 							</item>
 						</content>

@@ -109,12 +109,10 @@
 				<content>
 					<item id="1">
 						<label>31420</label>
-						<onclick>noop</onclick>
 						<icon></icon>
 					</item>
 					<item id="2">
 						<label>13200</label>
-						<onclick>noop</onclick>
 						<icon></icon>
 					</item>
 				</content>

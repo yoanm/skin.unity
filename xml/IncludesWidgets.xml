@@ -12,7 +12,6 @@
 		<content>
 			<item>
 				<thumb>resource://resource.images.weathericons.default/na.png</thumb>
-				<onclick>noop</onclick>
 				<visible>String.IsEmpty(Window(weather).Property(Daily.IsFetched))</visible>
 			</item>
 			<include content="WeatherDailyItem">
@@ -71,7 +70,6 @@
 			<property name="ShortDate">$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDate)]</property>
 			<property name="FanartCode">$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode)]</property>
 			<thumb>resource://resource.images.weathericons.default/$INFO[Window(weather).Property(Daily.$PARAM[item_index].OutlookIcon)]</thumb>
-			<onclick>noop</onclick>
 			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].Outlook))</visible>
 		</item>
 	</include>
