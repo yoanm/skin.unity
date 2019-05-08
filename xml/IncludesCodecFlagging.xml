@@ -385,7 +385,7 @@
 			<control type="group" id="1">
 				<width>48</width>
 				<height>48</height>
-				<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
+				<visible>VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel</visible>
 				<control type="image" id="1">
 					<top>-10</top>
 					<width>48</width>

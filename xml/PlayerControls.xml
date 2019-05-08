@@ -150,9 +150,9 @@
 					<onright>607</onright>
 					<onup>300</onup>
 					<ondown>200</ondown>
-					<onclick>XBMC.PlayerControl(record)</onclick>
-					<enable>Player.CanRecord</enable>
-					<animation effect="fade" start="100" end="30" time="100" condition="!Player.CanRecord">Conditional</animation>
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<enable>PVR.CanRecordPlayingChannel</enable>
+					<animation effect="fade" start="100" end="30" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="group">
@@ -395,9 +395,9 @@
 					<onright>701</onright>
 					<onup>300</onup>
 					<ondown>200</ondown>
-					<onclick>XBMC.PlayerControl(record)</onclick>
-					<enable>Player.CanRecord</enable>
-					<animation effect="fade" start="100" end="30" time="100" condition="!Player.CanRecord">Conditional</animation>
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<enable>PVR.CanRecordPlayingChannel</enable>
+					<animation effect="fade" start="100" end="30" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
 			</control>

@@ -719,7 +719,7 @@
 									<onright>607</onright>
 									<onup>9003</onup>
 									<ondown>9000</ondown>
-									<onclick>XBMC.PlayerControl(record)</onclick>
+									<onclick>PVR.ToggleRecordPlayingChannel</onclick>
 								</control>
 							</control>
 						</control>

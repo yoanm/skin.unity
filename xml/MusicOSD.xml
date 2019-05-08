@@ -329,9 +329,9 @@
 					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDRecordOffNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDRecordOffNF.png</texturenofocus>
-					<onclick>XBMC.PlayerControl(record)</onclick>
-					<visible>Player.CanRecord</visible>
-					<animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<visible>PVR.CanRecordPlayingChannel</visible>
+					<animation effect="fade" start="100" end="50" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
 				</control>
 			</control>
 		</control>

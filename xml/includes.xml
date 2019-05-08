@@ -1504,9 +1504,9 @@
 				<onright>606</onright>
 				<onup>610</onup>
 				<ondown>611</ondown>
-				<onclick>XBMC.PlayerControl(record)</onclick>
-				<enable>Player.CanRecord</enable>
-				<animation effect="fade" start="100" end="30" time="100" condition="!Player.CanRecord">Conditional</animation>
+				<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+				<enable>PVR.CanRecordPlayingChannel</enable>
+				<animation effect="fade" start="100" end="30" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
 			</control>
 			<control type="button" id="606">
 				<left>280</left>

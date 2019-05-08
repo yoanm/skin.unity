@@ -368,22 +368,22 @@
 						<font></font>
 						<texturefocus colordiffuse="$VAR[Colour.500]">OSDRecordOffNF.png</texturefocus>
 						<texturenofocus colordiffuse="text.primary">OSDRecordOffNF.png</texturenofocus>
-						<usealttexture>Player.Recording</usealttexture>
+						<usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
 						<alttexturefocus colordiffuse="$VAR[Colour.500]">OSDRecordOffNF.png</alttexturefocus>
 						<alttexturenofocus colordiffuse="text.primary">OSDRecordOffNF.png</alttexturenofocus>
 						<onleft>354</onleft>
 						<onright>300</onright>
 						<onup>1000</onup>
 						<ondown>1000</ondown>
-						<onclick>PlayerControl(Record)</onclick>
-						<enable>Player.CanRecord</enable>
-						<animation effect="fade" start="100" end="50" time="100" condition="!Player.CanRecord">Conditional</animation>
+						<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+						<enable>PVR.CanRecordPlayingChannel</enable>
+						<animation effect="fade" start="100" end="50" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture colordiffuse="red">PVR-IsRecording.png</texture>
-						<visible>Player.Recording</visible>
+						<visible>PVR.IsRecordingPlayingChannel</visible>
 					</control>
 				</control>
 			</control>
