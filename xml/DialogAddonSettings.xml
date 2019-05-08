@@ -38,7 +38,7 @@
 			<!--main content-->
 			<control type="group">
 				<!--title-->
-				<control type="label" id="20">
+				<control type="label" id="2">
 					<left>45</left>
 					<top>25</top>
 					<width>1120</width>
@@ -49,91 +49,97 @@
 					<textcolor>white</textcolor>
 					<label></label>
 				</control>
-				<control type="grouplist" id="9">
+				<control type="grouplist" id="3">
 					<description>button area</description>
 					<left>10</left>
 					<top>120</top>
 					<bottom>120</bottom>
 					<width>330</width>
 					<itemgap>5</itemgap>
-					<pagecontrol>31</pagecontrol>
-					<onleft>31</onleft>
-					<onright>2</onright>
-					<onup>9</onup>
-					<ondown>9</ondown>
+					<pagecontrol>61</pagecontrol>
+					<onleft>61</onleft>
+					<onright>5</onright>
+					<onup>3</onup>
+					<ondown>3</ondown>
 				</control>
 				<!--scrollbar-->
-				<control type="scrollbar" id="31">
+				<control type="scrollbar" id="61">
 					<left>-12</left>
 					<top>120</top>
 					<height>880</height>
-					<onleft>30</onleft>
-					<onright>9</onright>
+					<onleft>60</onleft>
+					<onright>3</onright>
 				</control>
-				<control type="grouplist" id="2">
+				<control type="grouplist" id="5">
 					<description>control area</description>
 					<left>290</left>
 					<top>120</top>
 					<bottom>120</bottom>
 					<width>910</width>
 					<itemgap>5</itemgap>
-					<pagecontrol>30</pagecontrol>
-					<onup>2</onup>
+					<pagecontrol>60</pagecontrol>
+					<onup>5</onup>
 					<ondown>9001</ondown>
-					<onleft>9</onleft>
-					<onright>30</onright>
+					<onleft>3</onleft>
+					<onright>60</onright>
 				</control>
 				<!--scrollbar-->
-				<control type="scrollbar" id="30">
+				<control type="scrollbar" id="60">
 					<left>1215</left>
 					<top>120</top>
 					<height>880</height>
-					<onleft>2</onleft>
-					<onright>31</onright>
+					<onleft>5</onleft>
+					<onright>61</onright>
+				</control>
+				<!--button-->
+				<control type="button" id="7">
+					<left>0</left>
+					<top>0</top>
+					<invalidcolor>invalid</invalidcolor>
+				</control>
+				<!--radio button-->
+				<control type="radiobutton" id="8">
+					<left>0</left>
+					<top>0</top>
+				</control>
+				<!--spin control-->
+				<control type="spincontrolex" id="9">
+					<left>0</left>
+					<top>0</top>
+					<reverse>yes</reverse>
 				</control>
 				<!--category buttons-->
-				<control type="button" id="13">
+				<control type="button" id="10">
 					<width>260</width>
 					<texturefocus colordiffuse="white">backgrounds/white.png</texturefocus>
 					<textcolor>white</textcolor>
 					<focusedcolor>$VAR[Colour.900]</focusedcolor>
 					<include>ButtonCommonValues</include>
 				</control>
-				<!--button-->
-				<control type="button" id="3">
-					<left>0</left>
-					<top>0</top>
-					<invalidcolor>invalid</invalidcolor>
+				<!--seperator-->
+				<control type="image" id="11">
+					<height>0</height>
+					<texture></texture>
+					<visible>false</visible>
 				</control>
-				<!--radio button-->
-				<control type="radiobutton" id="4">
+				<!--edit-->
+				<control type="edit" id="12">
 					<left>0</left>
 					<top>0</top>
-				</control>
-				<!--spin control-->
-				<control type="spincontrolex" id="5">
-					<left>0</left>
-					<top>0</top>
-					<reverse>yes</reverse>
 				</control>
 				<!--slider control-->
-				<control type="sliderex" id="8">
+				<control type="sliderex" id="13">
 					<left>0</left>
 					<top>0</top>
 				</control>
-				<control type="label" id="7">
+				<!--label-->
+				<control type="label" id="14">
 					<height>60</height>
 					<label></label>
 					<font>button.bold</font>
 					<textcolor>$VAR[Colour.500]</textcolor>
 					<textoffsetx>5</textoffsetx>
 					<aligny>center</aligny>
-				</control>
-				<control type="image" id="6">
-					<description>Default Seperator</description>
-					<height>0</height>
-					<texture></texture>
-					<visible>false</visible>
 				</control>
 				<!--bottom buttons-->
 				<control type="grouplist" id="9001">
@@ -145,40 +151,40 @@
 					<orientation>horizontal</orientation>
 					<onleft>9001</onleft>
 					<onright>9001</onright>
-					<onup>2</onup>
-					<ondown>2</ondown>
+					<onup>5</onup>
+					<ondown>5</ondown>
 					<!--ok button-->
 					<include content="AnimatedCircleButtonGroup">
-						<param name="button-id" value="10" />
+						<param name="button-id" value="28" />
 						<param name="button-width" value="130" />
 						<param name="button-texture" value="yesbutton" />
 						<param name="button-label" value="186" />
-						<param name="button-onup" value="2" />
-						<param name="button-ondown" value="2" />
-						<param name="button-onleft" value="12" />
-						<param name="button-onright" value="11" />
+						<param name="button-onup" value="5" />
+						<param name="button-ondown" value="5" />
+						<param name="button-onleft" value="30" />
+						<param name="button-onright" value="29" />
 					</include>
 					<!--cancel button-->
 					<include content="AnimatedCircleButtonGroup">
-						<param name="button-id" value="11" />
+						<param name="button-id" value="29" />
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="nobutton" />
 						<param name="button-label" value="222" />
-						<param name="button-onup" value="2" />
-						<param name="button-ondown" value="2" />
-						<param name="button-onleft" value="10" />
-						<param name="button-onright" value="12" />
+						<param name="button-onup" value="5" />
+						<param name="button-ondown" value="5" />
+						<param name="button-onleft" value="28" />
+						<param name="button-onright" value="30" />
 					</include>
 					<!--default button-->
 					<include content="AnimatedCircleButtonGroup">
-						<param name="button-id" value="12" />
+						<param name="button-id" value="30" />
 						<param name="button-width" value="180" />
 						<param name="button-texture" value="refreshbutton" />
 						<param name="button-label" value="409" />
-						<param name="button-onup" value="2" />
-						<param name="button-ondown" value="2" />
-						<param name="button-onleft" value="11" />
-						<param name="button-onright" value="10" />
+						<param name="button-onup" value="5" />
+						<param name="button-ondown" value="5" />
+						<param name="button-onleft" value="29" />
+						<param name="button-onright" value="28" />
 					</include>
 				</control>
 			</control>
