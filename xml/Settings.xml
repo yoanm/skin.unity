@@ -133,6 +133,13 @@
 						<icon></icon>
 					</item>
 					<item>
+						<label>$LOCALIZE[15016]</label>
+						<label2>31002</label2>
+						<visible>System.GetBool(gamesgeneral.enable)</visible>
+						<onclick>ActivateWindow(GameSettings)</onclick>
+						<icon></icon>
+					</item>
+					<item>
 						<label>14207</label>
 						<label2>31400</label2>
 						<onclick>ActivateWindow(InterfaceSettings)</onclick>

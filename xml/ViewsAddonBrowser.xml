@@ -18,7 +18,7 @@
 				<viewtype label="$LOCALIZE[31033]">info</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons) | String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+				<visible>Window.IsVisible(AddonBrowser) | Window.IsVisible(Games) | Container.Content(Addons) | String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
 				<itemlayout height="70" width="1004">
 					<!--background-->
 					<control type="image">
@@ -219,7 +219,7 @@
 				<onup>551</onup>
 				<ondown>551</ondown>
 				<viewtype label="$LOCALIZE[31033] 2">biginfo</viewtype>
-				<visible>Window.IsVisible(AddonBrowser) | Container.Content(Addons) | String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+				<visible>Window.IsVisible(AddonBrowser) | Window.IsVisible(Games) | Container.Content(Addons) | String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="233" width="233">
