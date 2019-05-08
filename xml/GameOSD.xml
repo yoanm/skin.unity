@@ -8,6 +8,7 @@
 			<left>0r</left>
 			<width>405</width>
 			<include>SideBladeRight</include>
+			<visible>!Window.IsActive(shutdownmenu) + !Window.IsActive(GameVideoFilter) + !Window.IsActive(gamestretchmode) + !Window.IsActive(GameVideoRotation) + !Window.IsActive(GameControllers)</visible>
 			<!--close window button-->
 			<control type="button" id="20">
 				<left>35</left>

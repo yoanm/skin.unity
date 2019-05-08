@@ -229,7 +229,7 @@
 						<param name="button-label" value="186" />
 						<param name="button-onup" value="50" />
 						<param name="button-ondown" value="3" />
-						<param name="button-onleft" value="17" />
+						<param name="button-onleft" value="21" />
 						<param name="button-onright" value="19" />
 					</include>
 					<!--reset button-->
@@ -237,7 +237,7 @@
 						<param name="button-id" value="19" />
 						<param name="button-width" value="160" />
 						<param name="button-texture" value="refreshbutton" />
-						<param name="button-label" value="10035" />
+						<param name="button-label" value="13007" />
 						<param name="button-onup" value="50" />
 						<param name="button-ondown" value="3" />
 						<param name="button-onleft" value="18" />
@@ -263,6 +263,17 @@
 						<param name="button-onup" value="50" />
 						<param name="button-ondown" value="3" />
 						<param name="button-onleft" value="20" />
+						<param name="button-onright" value="21" />
+					</include>
+					<!--ignore button-->
+					<include content="AnimatedCircleButtonGroup">
+						<param name="button-id" value="21" />
+						<param name="button-width" value="165" />
+						<param name="button-texture" value="nobutton" />
+						<param name="button-label" value="35019" />
+						<param name="button-onup" value="50" />
+						<param name="button-ondown" value="3" />
+						<param name="button-onleft" value="17" />
 						<param name="button-onright" value="18" />
 					</include>
 				</control>
