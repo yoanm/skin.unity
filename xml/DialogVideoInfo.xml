@@ -207,7 +207,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>
-					<visible>String.IsEmpty(ListItem.Tagline + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)])</visible>
+					<visible>String.IsEmpty(ListItem.Tagline) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)]</visible>
 				</control>
 				<!--tv show/season/episode-->
 				<control type="label">

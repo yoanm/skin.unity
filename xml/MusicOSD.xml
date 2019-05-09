@@ -261,7 +261,7 @@
 				<control type="button" id="705">
 					<width>40</width>
 					<height>40</height>
-					<label>15047</label>
+					<label>563</label>
 					<font></font>
 					<texturefocus colordiffuse="$VAR[Colour.500]">OSDBookmarksNF.png</texturefocus>
 					<texturenofocus colordiffuse="text.primary">OSDBookmarksNF.png</texturenofocus>

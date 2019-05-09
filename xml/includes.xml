@@ -7,7 +7,6 @@
 	<include file="ViewsFileMode.xml" />
 	<include file="ViewsPictures.xml" />
 	<include file="ViewsAddonBrowser.xml" />
-	<include file="ViewsLiveTV.xml" />
 	<include file="ViewsPVRGuide.xml" />
 	<include file="ViewsWeather.xml" />
 	<include file="ViewsEventLog.xml" />

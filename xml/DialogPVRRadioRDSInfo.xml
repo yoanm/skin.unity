@@ -401,7 +401,7 @@
 					<align>justify</align>
 					<textcolor>text.primary</textcolor>
 					<pagecontrol>60</pagecontrol>
-					<label fallback="161"></label>
+					<label></label>
 				</control>
 				<!--bottom buttons-->
 				<control type="grouplist" id="9000">

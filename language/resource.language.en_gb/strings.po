@@ -79,6 +79,10 @@ msgctxt "#31015"
 msgid "Video process information"
 msgstr ""
 
+msgctxt "#31017"
+msgid "Unavailable"
+msgstr ""
+
 msgctxt "#31022"
 msgid "Music - Files"
 msgstr ""

@@ -52,7 +52,7 @@
 				<top>110</top>
 				<width>1220</width>
 				<height>70</height>
-				<font>font20</font>
+				<font>label</font>
 				<align>left</align>
 				<aligny>center</aligny>
 			</control>
