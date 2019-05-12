@@ -169,6 +169,18 @@
 						<onclick>Skin.ToggleSetting(HideWindowedTrailer)</onclick>
 						<selected>!Skin.HasSetting(HideWindowedTrailer)</selected>
 					</control>
+					<control type="radiobutton" id="110">
+						<width>995</width>
+						<label>31179</label>
+						<onclick>Skin.ToggleSetting(MusicFullscreen)</onclick>
+						<selected>Skin.HasSetting(MusicFullscreen)</selected>
+					</control>
+					<control type="radiobutton" id="111">
+						<width>995</width>
+						<label>31232</label>
+						<onclick>Skin.ToggleSetting(AlwaysShowMusicInfo)</onclick>
+						<selected>Skin.HasSetting(AlwaysShowMusicInfo)</selected>
+					</control>
 					<control type="radiobutton" id="104">
 						<width>995</width>
 						<label>31107</label>

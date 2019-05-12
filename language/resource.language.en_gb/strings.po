@@ -399,6 +399,10 @@ msgctxt "#31142"
 msgid "Settings level"
 msgstr ""
 
+msgctxt "#31179"
+msgid "Always open fullscreen music playback"
+msgstr ""
+
 msgctxt "#31200"
 msgid "Shortcuts"
 msgstr ""
@@ -421,6 +425,10 @@ msgstr ""
 
 msgctxt "#31208"
 msgid "Upcoming Episodes"
+msgstr ""
+
+msgctxt "#31232"
+msgid "Do not hide OSD infopanel on fullscreen music playback"
 msgstr ""
 
 msgctxt "#31300"
