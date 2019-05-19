@@ -711,6 +711,14 @@ msgctxt "#31910"
 msgid "Maps"
 msgstr ""
 
+msgctxt "#31917"
+msgid "Light Theme"
+msgstr ""
+
+msgctxt "#31918"
+msgid "Dark Theme"
+msgstr ""
+
 msgctxt "#31919"
 msgid "Choose colour"
 msgstr ""

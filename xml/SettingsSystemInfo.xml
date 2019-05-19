@@ -204,7 +204,7 @@
 					<height>40</height>
 					<label>144</label>
 					<align>right</align>
-					<textcolor>$VAR[Colour.500]</textcolor>
+					<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 					<font>button.bold</font>
 				</control>
 				<control type="label">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload condition="String.IsEmpty(Skin.String(Colour.Theme))">Skin.SetString(Colour.Theme,Red)</onload>
+	<include>CheckSkinColorsSet</include>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu&amp;options=noGroups)</onunload>
 	<controls>
 		<include>CommonBackground</include>
@@ -102,7 +102,7 @@
 						<width>325</width>
 						<height>60</height>
 						<font>button</font>
-						<textcolor>$VAR[Colour.900]</textcolor>
+						<textcolor>$INFO[Skin.String(color.900)]</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -146,7 +146,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31106</label>
@@ -191,7 +191,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>20343</label>
@@ -208,7 +208,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>512</label>
@@ -230,7 +230,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31030</label>
@@ -269,7 +269,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31101</label>
@@ -300,7 +300,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>$ADDON[script.skinshortcuts 32071]</label>
@@ -353,7 +353,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>2</label>
@@ -370,7 +370,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31106</label>
@@ -416,7 +416,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31102</label>
@@ -467,7 +467,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31140</label>
@@ -488,7 +488,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31134</label>
@@ -527,7 +527,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31135</label>
@@ -566,7 +566,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31136</label>
@@ -605,7 +605,7 @@
 						<width>995</width>
 						<height>60</height>
 						<font>button.bold</font>
-						<textcolor>$VAR[Colour.500]</textcolor>
+						<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 						<textoffsetx>5</textoffsetx>
 						<aligny>center</aligny>
 						<label>31118</label>
