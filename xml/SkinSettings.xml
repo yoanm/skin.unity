@@ -411,7 +411,8 @@
 						<width>995</width>
 						<label>31113</label>
 						<label2>$INFO[Skin.String(BackgroundSwitchDelay.label)]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=setskinsetting,setting=BackgroundSwitchDelay,header=$LOCALIZE[31113])</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=BackgroundSwitchDelay,header=$LOCALIZE[31113])</onclick>
 					</control>
 					<control type="label" id="310">
 						<width>995</width>
@@ -431,14 +432,16 @@
 					<control type="radiobutton" id="311">
 						<width>995</width>
 						<label>31109</label>
-						<onclick>Skin.ToggleSetting(UseCustomBackground)</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">Skin.ToggleSetting(UseCustomBackground)</onclick>
 						<selected>Skin.HasSetting(UseCustomBackground)</selected>
 					</control>
 					<control type="button" id="312">
 						<width>995</width>
 						<label>- $LOCALIZE[31110]</label>
 						<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath.label)][/COLOR]</label2>
-						<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=CustomBackgroundPath,allowmulti=true,resourceaddon=resource.images.skinbackgrounds,skinhelperbackgrounds=false)</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=selectimage,skinstring=CustomBackgroundPath,allowmulti=true,resourceaddon=resource.images.skinbackgrounds,skinhelperbackgrounds=false)</onclick>
 						<enable>Skin.HasSetting(UseCustomBackground)</enable>
 					</control>
 				</control>
