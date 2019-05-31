@@ -18,6 +18,7 @@
 				<param name="glow-height" value="863" />
 				<param name="title-height" value="60" />
 				<param name="sidebar-visible" value="true" />
+				<param name="sidebar-width" value="375" />
 			</include>
 			<!--seperator-->
 			<control type="image">
