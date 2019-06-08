@@ -220,7 +220,7 @@
 				<scroll>true</scroll>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$INFO[ListItem.Label]</label>
+				<label>$INFO[ListItem.Label] LABEL1</label>
 			</control>
 			<control type="group">
 				<left>0</left>
@@ -406,7 +406,7 @@
 					<scroll>false</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
+					<label>$INFO[ListItem.Label] LABEL2</label>
 				</control>
 				<!--movies info-->
 				<control type="group">
@@ -424,7 +424,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[562]</label>
+							<label>$LOCALIZE[562] LABEL3</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -436,7 +436,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Year]</label>
+							<label>$INFO[ListItem.Year] LABEL4</label>
 						</control>
 					</control>
 					<!--duration-->
@@ -452,7 +452,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[2050]</label>
+							<label>$LOCALIZE[2050] LABEL5</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -464,7 +464,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Duration]</label>
+							<label>$INFO[ListItem.Duration] $LOCALIZE[12391] LABEL7</label>
 						</control>
 					</control>
 					<!--mpaa-->
@@ -480,7 +480,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[31068]</label>
+							<label>$LOCALIZE[31068] LABEL8</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -492,7 +492,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Mpaa]</label>
+							<label>$INFO[ListItem.Mpaa] LABEL9</label>
 						</control>
 					</control>
 					<!--rating and votes-->
@@ -508,7 +508,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[563]</label>
+							<label>$LOCALIZE[563] LABEL10</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -520,7 +520,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.RatingAndVotes]</label>
+							<label>$INFO[ListItem.RatingAndVotes] LABEL11</label>
 						</control>
 					</control>
 					<!--genre-->
@@ -536,7 +536,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[515]</label>
+							<label>$LOCALIZE[515] LABEL12</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -548,7 +548,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$INFO[ListItem.Genre] LABEL13</label>
 						</control>
 					</control>
 					<!--director-->
@@ -564,7 +564,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[20339]</label>
+							<label>$LOCALIZE[20339] LABEL14</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -576,7 +576,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Director]</label>
+							<label>$INFO[ListItem.Director] LABEL15</label>
 						</control>
 					</control>
 					<!--writer-->
@@ -592,7 +592,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[20417]</label>
+							<label>$LOCALIZE[20417]LABEL16</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -604,7 +604,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Writer]</label>
+							<label>$INFO[ListItem.Writer] LABEL17</label>
 						</control>
 					</control>
 					<!--studio-->
@@ -620,7 +620,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[572]</label>
+							<label>$LOCALIZE[572] LABEL18</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -632,7 +632,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Studio]</label>
+							<label>$INFO[ListItem.Studio] LABEL19</label>
 						</control>
 					</control>
 				</control>
@@ -652,7 +652,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[562]</label>
+							<label>$LOCALIZE[562] LABEL20</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -664,7 +664,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Year]</label>
+							<label>$INFO[ListItem.Year] LABEL21</label>
 						</control>
 					</control>
 					<!--premiered-->
@@ -680,7 +680,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[31322]</label>
+							<label>$LOCALIZE[31322] LABEL22</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -692,7 +692,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Premiered]</label>
+							<label>$INFO[ListItem.Premiered] LABEL23</label>
 						</control>
 					</control>
 					<!--mpaa-->
@@ -708,7 +708,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[31068]</label>
+							<label>$LOCALIZE[31068] LABEL24</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -720,7 +720,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Mpaa]</label>
+							<label>$INFO[ListItem.Mpaa] LABEL25</label>
 						</control>
 					</control>
 					<!--rating and votes-->
@@ -736,7 +736,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[563]</label>
+							<label>$LOCALIZE[563] LABEL26</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -748,7 +748,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.RatingAndVotes]</label>
+							<label>$INFO[ListItem.RatingAndVotes] LABEL27</label>
 						</control>
 					</control>
 					<!--genre-->
@@ -764,7 +764,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[515]</label>
+							<label>$LOCALIZE[515] LABEL28</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -776,7 +776,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$INFO[ListItem.Genre] LABEL29</label>
 						</control>
 					</control>
 					<!--studio-->
@@ -792,7 +792,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[572]</label>
+							<label>$LOCALIZE[572] LABEL30</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -804,7 +804,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Studio]</label>
+							<label>$INFO[ListItem.Studio] LABEL31</label>
 						</control>
 					</control>
 					<!--episodes-->
@@ -820,7 +820,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[20360]</label>
+							<label>$LOCALIZE[20360] LABEL32</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -832,7 +832,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.episode]</label>
+							<label>$INFO[ListItem.episode] LABEL33</label>
 						</control>
 					</control>
 					<!--unwatched-->
@@ -848,7 +848,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[16101]</label>
+							<label>$LOCALIZE[16101] LABEL34</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -860,7 +860,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+							<label>$INFO[ListItem.Property(UnWatchedEpisodes)] LABEL35</label>
 						</control>
 					</control>
 					<!--path-->
@@ -876,7 +876,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.500)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$LOCALIZE[31067]</label>
+							<label>$LOCALIZE[31067] LABEL36</label>
 						</control>
 						<control type="label">
 							<left>200</left>
@@ -888,7 +888,7 @@
 							<aligny>center</aligny>
 							<textcolor>$INFO[Skin.String(color.text)]</textcolor>
 							<selectedcolor>selected</selectedcolor>
-							<label>$INFO[ListItem.Path]</label>
+							<label>$INFO[ListItem.Path] LABEL37</label>
 						</control>
 					</control>
 				</control>
@@ -908,8 +908,8 @@
 					<width>665</width>
 					<font>label</font>
 					<align>left</align>
-					<textcolor>$INFO[Skin.String(color.text)]</textcolor>
-					<label>$INFO[ListItem.Plot]</label>
+					<textcolor>text.primary</textcolor>
+					<label>$INFO[ListItem.Plot] LABEL38</label>
 					<autoscroll time="2000" delay="15000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<!--audio/video flags-->
